@@ -4,7 +4,7 @@
 	"sites": [
 		{
 			"key": "csp_Czsapp1",
-			"name": "厂长1",
+			"name": "厂长",
 			"type": 3,
 			"api": "csp_Czsapp",
 			"playerType": 2,
@@ -48,7 +48,7 @@
 		},
 		{
 			"key": "双十1",
-			"name": "双十1",
+			"name": "双十",
 			"type": 3,
 			"api": "csp_Dy1010",
 			"playerType": "1",
@@ -208,7 +208,7 @@
 		},
 		{
 			"key": "csp_Czsapp99",
-			"name": "用不了及时找大儿",
+			"name": "用不了及时找大儿！",
 			"type": 3,
 			"api": "",
 			"playerType": 2,
