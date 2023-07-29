@@ -47,15 +47,125 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp99",
-			"name": "用不了及时找大儿",
+			"key": "双十1",
+			"name": "双十1",
 			"type": 3,
-			"api": "csp_Czsapp",
-			"playerType": 2,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.1010dy.cc/"
+		},
+		{
+			"key": "双十2",
+			"name": "双十2",
+			"type": 3,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.1010dy3.com/"
+		},
+		{
+			"key": "双十3",
+			"name": "双十3",
+			"type": 3,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.1010dy4.com/"
+		},
+		{
+			"key": "双十4",
+			"name": "双十4",
+			"type": 3,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.1010dy5.com/"
+		},
+		{
+			"key": "双十5",
+			"name": "双十5",
+			"type": 3,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.1010dy6.com/"
+		},
+		{
+			"key": "双十6",
+			"name": "双十6",
+			"type": 3,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.1010dy.fun/"
+		},
+		{
+			"key": "双十7",
+			"name": "双十7",
+			"type": 3,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.2020dy.cc/"
+		},
+		{
+			"key": "ok",
+			"name": "FreeOK",
+			"type": 3,
+			"api": "csp_XBPQ",
+			"playerType": "1",
+			"ext": {
+				"分类url": "https://www.freeok.vip/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html;;m",
+				"分类": "电影&剧集&动漫&综艺&少儿&今日更新&热榜",
+				"分类值": "1&2&3&4",
+				"嗅探词": "m3u8#.m3u8#.mp4#mp4",
+				"搜索url": "https://www.cupfox.app/s/{wd}",
+				"搜索模式": "1",
+				"搜索二次截取": "type=\"application/json\">&&</script>",
+				"搜索数组": "{\"te&&}[包含:freeok]",
+				"搜索图片": "https://s1.ax1x.com/2023/07/13/pChRQaD.jpg",
+				"搜索标题": "xt\":\"&&\"",
+				"搜索链接": "\"url\":\"&&\"",
+				"搜索副标题": "FREEOK",
+				"导演": "导演：&&</div>",
+				"主演": "主演：&&</div>",
+				"简介": "<p>&&</p>"
+			}
+		},
+		{
+			"key": "非凡资源",
+			"name": "非凡",
+			"type": 1,
+			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "",
-			"filterable": 1
+			"categories": [
+				"连续剧",
+				"国产剧",
+				"韩国剧",
+				"日本剧",
+				"欧美剧",
+				"香港剧",
+				"台湾剧",
+				"泰国剧",
+				"海外剧",
+				"大陆综艺",
+				"港台综艺",
+				"日韩综艺",
+				"欧美综艺",
+				"动漫片",
+				"动作片",
+				"科幻片",
+				"战争片",
+				"奇幻片",
+				"喜剧片",
+				"爱情片",
+				"恐怖片",
+				"犯罪片",
+				"悬疑片",
+				"惊悚片",
+				"剧情片",
+				"冒险片",
+				"记录片"
+			]
+		},
+		{
+			"key": "用不了及时找大儿",
+			"name": "用不了及时找大儿"
 		}
 		
 	],
