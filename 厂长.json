@@ -14,7 +14,7 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp",
+			"key": "csp_Czsapp1",
 			"name": "厂长1",
 			"type": 3,
 			"api": "csp_Czsapp",
@@ -25,7 +25,7 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp",
+			"key": "csp_Czsapp2",
 			"name": "厂长2",
 			"type": 3,
 			"api": "csp_Czsapp",
@@ -36,7 +36,7 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp",
+			"key": "csp_Czsapp3",
 			"name": "厂长3",
 			"type": 3,
 			"api": "csp_Czsapp",
@@ -47,7 +47,7 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp",
+			"key": "csp_Czsapp4",
 			"name": "厂长4",
 			"type": 3,
 			"api": "csp_Czsapp",
