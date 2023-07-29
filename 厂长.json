@@ -164,8 +164,15 @@
 			]
 		},
 		{
-			"key": "用不了及时找大儿",
-			"name": "用不了及时找大儿"
+			"key": "csp_Czsapp99",
+			"name": "用不了及时找大儿",
+			"type": 3,
+			"api": "",
+			"playerType": 2,
+			"searchable": 1,
+			"quickSearch": 1,
+			"ext": "",
+			"filterable": 1
 		}
 		
 	],
