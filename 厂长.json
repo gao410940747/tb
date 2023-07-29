@@ -1,18 +1,7 @@
 {
 	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
 	"wallpaper": "http://xhww.fun:63/img.php",
-	"sites": [  
-		{
-			"key": "csp_Czsapp",
-			"name": "厂长",
-			"type": 3,
-			"api": "csp_Czsapp",
-			"playerType": 2,
-			"searchable": 1,
-			"quickSearch": 1,
-			"ext": "https://www.4kcz.com/",
-			"filterable": 1
-		},
+	"sites": [
 		{
 			"key": "csp_Czsapp1",
 			"name": "厂长1",
