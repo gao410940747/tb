@@ -110,7 +110,7 @@
 			"playerType": "1",
 			"ext": {
 				"分类url": "https://www.freeok.vip/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html;;m",
-				"分类": "电影&剧集&动漫&综艺&少儿&今日更新&热榜",
+				"分类": "电影&剧集&动漫&综艺&少儿&今日更新",
 				"分类值": "1&2&3&4",
 				"嗅探词": "m3u8#.m3u8#.mp4#mp4",
 				"搜索url": "https://www.cupfox.app/s/{wd}",
@@ -134,7 +134,6 @@
 			"searchable": 1,
 			"quickSearch": 1,
 			"categories": [
-				"连续剧",
 				"国产剧",
 				"韩国剧",
 				"日本剧",
