@@ -11,6 +11,7 @@
 			"searchable": 1,
 			"quickSearch": 1,
 			"ext": "https://czzy.fun/",
+			// https://czzy.pro/
 			"filterable": 1
 		},
 		{
@@ -32,23 +33,12 @@
 			"playerType": 2,
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "https://czzy.pro/",
+			"ext": "https://czzy.art/",
 			"filterable": 1
 		},
 		{
 			"key": "csp_Czsapp3",
 			"name": "厂长(备用3)",
-			"type": 3,
-			"api": "csp_Czsapp",
-			"playerType": 2,
-			"searchable": 1,
-			"quickSearch": 1,
-			"ext": "https://czzy.art/",
-			"filterable": 1
-		},
-		{
-			"key": "csp_Czsapp4",
-			"name": "厂长(备用4)",
 			"type": 3,
 			"api": "csp_Czsapp",
 			"playerType": 2,
@@ -64,6 +54,9 @@
 			"api": "csp_Dy1010",
 			"playerType": "1",
 			"ext": "https://www.1010dy.cc/"
+			// https://www.1010dy6.com/
+			// https://www.1010dy.fun/
+			// https://www.2020dy.cc/
 		},
 		{
 			"key": "双十1",
@@ -88,30 +81,6 @@
 			"api": "csp_Dy1010",
 			"playerType": "1",
 			"ext": "https://www.1010dy5.com/"
-		},
-		{
-			"key": "双十4",
-			"name": "双十(备用4)",
-			"type": 3,
-			"api": "csp_Dy1010",
-			"playerType": "1",
-			"ext": "https://www.1010dy6.com/"
-		},
-		{
-			"key": "双十5",
-			"name": "双十(备用5)",
-			"type": 3,
-			"api": "csp_Dy1010",
-			"playerType": "1",
-			"ext": "https://www.1010dy.fun/"
-		},
-		{
-			"key": "双十6",
-			"name": "双十(备用6)",
-			"type": 3,
-			"api": "csp_Dy1010",
-			"playerType": "1",
-			"ext": "https://www.2020dy.cc/"
 		},
 		{
 			"key": "ok",
