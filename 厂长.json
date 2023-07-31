@@ -218,6 +218,15 @@
 			]
 		},
 		{
+			"key":"csp_Bttoo",
+			"name":"比特",
+			"type":3,
+			"api":"csp_Bttwoo",
+			"searchable":1,
+			"quickSearch":1,
+			"changeable":1
+		},
+		{
 			"key": "csp_Czsapp99",
 			"name": "出问题及时找大儿",
 			"type": 3,
