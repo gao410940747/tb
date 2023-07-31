@@ -3,7 +3,7 @@
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
-			"key": "csp_Czsapp1",
+			"key": "csp_Czsapp",
 			"name": "厂长",
 			"type": 3,
 			"api": "csp_Czsapp",
@@ -14,8 +14,8 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp2",
-			"name": "厂长2",
+			"key": "csp_Czsapp1",
+			"name": "厂长(备用1)",
 			"type": 3,
 			"api": "csp_Czsapp",
 			"playerType": 2,
@@ -25,8 +25,8 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp3",
-			"name": "厂长3",
+			"key": "csp_Czsapp2",
+			"name": "厂长(备用2)",
 			"type": 3,
 			"api": "csp_Czsapp",
 			"playerType": 2,
@@ -36,8 +36,8 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp4",
-			"name": "厂长4",
+			"key": "csp_Czsapp3",
+			"name": "厂长(备用3)",
 			"type": 3,
 			"api": "csp_Czsapp",
 			"playerType": 2,
@@ -47,8 +47,8 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp5",
-			"name": "厂长5",
+			"key": "csp_Czsapp4",
+			"name": "厂长(备用4)",
 			"type": 3,
 			"api": "csp_Czsapp",
 			"playerType": 2,
@@ -58,7 +58,7 @@
 			"filterable": 1
 		},
 		{
-			"key": "双十1",
+			"key": "双十",
 			"name": "双十",
 			"type": 3,
 			"api": "csp_Dy1010",
@@ -66,48 +66,48 @@
 			"ext": "https://www.1010dy.cc/"
 		},
 		{
-			"key": "双十2",
-			"name": "双十2",
+			"key": "双十1",
+			"name": "双十(备用1)",
 			"type": 3,
 			"api": "csp_Dy1010",
 			"playerType": "1",
 			"ext": "https://www.1010dy3.com/"
 		},
 		{
-			"key": "双十3",
-			"name": "双十3",
+			"key": "双十",
+			"name": "双十(备用2)",
 			"type": 3,
 			"api": "csp_Dy1010",
 			"playerType": "1",
 			"ext": "https://www.1010dy4.com/"
 		},
 		{
-			"key": "双十4",
-			"name": "双十4",
+			"key": "双十3",
+			"name": "双十(备用3)",
 			"type": 3,
 			"api": "csp_Dy1010",
 			"playerType": "1",
 			"ext": "https://www.1010dy5.com/"
 		},
 		{
-			"key": "双十5",
-			"name": "双十5",
+			"key": "双十4",
+			"name": "双十(备用4)",
 			"type": 3,
 			"api": "csp_Dy1010",
 			"playerType": "1",
 			"ext": "https://www.1010dy6.com/"
 		},
 		{
-			"key": "双十6",
-			"name": "双十6",
+			"key": "双十5",
+			"name": "双十(备用5)",
 			"type": 3,
 			"api": "csp_Dy1010",
 			"playerType": "1",
 			"ext": "https://www.1010dy.fun/"
 		},
 		{
-			"key": "双十7",
-			"name": "双十7",
+			"key": "双十6",
+			"name": "双十(备用6)",
 			"type": 3,
 			"api": "csp_Dy1010",
 			"playerType": "1",
