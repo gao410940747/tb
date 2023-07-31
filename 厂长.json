@@ -82,31 +82,6 @@
 			"playerType": "1",
 			"ext": "https://www.1010dy5.com/"
 		},
-		{
-			"key": "ok",
-			"name": "FreeOK",
-			"type": 3,
-			"api": "csp_XBPQ",
-			"playerType": "1",
-			"ext": {
-				"分类url": "https://www.freeok.vip/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html;;m",
-				"分类": "剧集&综艺&电影&动漫",
-				"分类值": "2&4&1&3",
-				"嗅探词": "m3u8#.m3u8#.mp4#mp4",
-				"搜索url": "https://www.cupfox.app/s/{wd}",
-				"搜索模式": "1",
-				"搜索二次截取": "type=\"application/json\">&&</script>",
-				"搜索数组": "{\"te&&}[包含:freeok]",
-				"搜索图片": "https://s1.ax1x.com/2023/07/13/pChRQaD.jpg",
-				"搜索标题": "xt\":\"&&\"",
-				"搜索链接": "\"url\":\"&&\"",
-				"搜索副标题": "FREEOK",
-				"导演": "导演：&&</div>",
-				"主演": "主演：&&</div>",
-				"简介": "<p>&&</p>",
-				"线路数组": "[排序:高清频道①>高清频道②>高清频道③>备用频道①>OK频道]"
-			}
-		},
 		{	"key":"量子",
 			"name":"量子",
 			"type":0,
@@ -185,6 +160,31 @@
 				"冒险片",
 				"记录片"
 			]
+		},
+		{
+			"key": "ok",
+			"name": "FreeOK",
+			"type": 3,
+			"api": "csp_XBPQ",
+			"playerType": "1",
+			"ext": {
+				"分类url": "https://www.freeok.vip/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html;;m",
+				"分类": "剧集&综艺&电影&动漫",
+				"分类值": "2&4&1&3",
+				"嗅探词": "m3u8#.m3u8#.mp4#mp4",
+				"搜索url": "https://www.cupfox.app/s/{wd}",
+				"搜索模式": "1",
+				"搜索二次截取": "type=\"application/json\">&&</script>",
+				"搜索数组": "{\"te&&}[包含:freeok]",
+				"搜索图片": "https://s1.ax1x.com/2023/07/13/pChRQaD.jpg",
+				"搜索标题": "xt\":\"&&\"",
+				"搜索链接": "\"url\":\"&&\"",
+				"搜索副标题": "FREEOK",
+				"导演": "导演：&&</div>",
+				"主演": "主演：&&</div>",
+				"简介": "<p>&&</p>",
+				"线路数组": "[排序:高清频道①>高清频道②>高清频道③>备用频道①>OK频道]"
+			}
 		},
 		{
 			"key": "csp_Czsapp99",
