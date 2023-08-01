@@ -126,7 +126,7 @@
 			]
 		},
 		{	"key":"量子1",
-			"name":"量子(备用1）",
+			"name":"量子(备用1)",
 			"type":0,
 			"api":"https://cj.lziapi.com/api.php/provide/vod/from/liangzi/at/xml/",
 			"searchable":1,
@@ -169,7 +169,7 @@
 			]
 		},
 		{	"key":"量子2",
-			"name":"量子(备用2）",
+			"name":"量子(备用2)",
 			"type":0,
 			"api":"https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/xml/",
 			"searchable":1,
@@ -212,7 +212,7 @@
 			]
 		},
 		{	"key":"量子3",
-			"name":"量子(备用3）",
+			"name":"量子(备用3)",
 			"type":0,
 			"api":"https://cj.lzcaiji.com/api.php/provide/vod/at/xml/",
 			"searchable":1,
