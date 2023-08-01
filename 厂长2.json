@@ -381,6 +381,20 @@
 			"quickSearch": 1
 		},
 		{
+			"key": "布雷蓝光",
+			"name": "布雷蓝光[js]",
+			"type": 3,
+			"api": "https://github.com/franksun1211/TVBOX/raw/main/APP/dr_py/lib/drpy2.min.js",
+			"ext": "https://github.com/franksun1211/TVBOX/raw/main/APP/dr_py/js/布雷蓝光.js"
+		},
+		{
+			"key": "布雷蓝光v2",
+			"name": "布雷蓝光v2",
+			"type": 3,
+			"api": "https://hub.gitmirror.com/https://raw.githubusercontent.com/franksun1211/TVBOX/main/APP/dr_py/lib/drpy2.min.js",
+			"ext": "https://github.com/franksun1211/TVBOX/raw/main/APP/dr_py/js/布雷蓝光[V2].js"
+		},
+		{
 			"key": "csp_Czsapp99",
 			"name": "出问题及时找大儿",
 			"type": 3,
