@@ -10,7 +10,7 @@
 			"playerType": 2,
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "https://czzy.art/",
+			"ext": "https://www.cz4k.com/",
 			// https://czzy.fun/(打不开)
 			"filterable": 1
 		},
@@ -22,7 +22,7 @@
 			"playerType": 2,
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "https://czzy.pw/",
+			"ext": "https://www.czzy.art/",
 			"filterable": 1
 		},
 		{
@@ -33,7 +33,7 @@
 			"playerType": 2,
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "https://www.cz4k.com/",
+			"ext": "https://www.czzy.pw/",
 			"filterable": 1
 		},
 		{
@@ -44,7 +44,7 @@
 			"playerType": 2,
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "https://czzy.pro/",
+			"ext": "https://www.czzy.pro/",
 			"filterable": 1
 		},
 		{
@@ -82,7 +82,8 @@
 			"playerType": "1",
 			"ext": "https://www.1010dy5.com/"
 		},
-		{	"key":"量子",
+		{
+			"key":"量子",
 			"name":"量子",
 			"type":0,
 			"api":"https://cj.lziapi.com/api.php/provide/vod/at/xml/",
@@ -128,7 +129,7 @@
 		{	"key":"量子1",
 			"name":"量子(备用1)",
 			"type":0,
-			"api":"https://cj.lziapi.com/api.php/provide/vod/from/liangzi/at/xml/",
+			"api":"https://cj.lzcaiji.com/api.php/provide/vod/at/xml/",
 			"searchable":1,
 			"changeable":1,
 			"categories":[
@@ -214,7 +215,7 @@
 		{	"key":"量子3",
 			"name":"量子(备用3)",
 			"type":0,
-			"api":"https://cj.lzcaiji.com/api.php/provide/vod/at/xml/",
+			"api":"https://cj.lziapi.com/api.php/provide/vod/from/liangzi/at/xml/",
 			"searchable":1,
 			"changeable":1,
 			"categories":[
