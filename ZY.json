@@ -1,0 +1,38 @@
+[
+  {
+    "key": "lziapi",
+    "id": 1,
+    "name": "量子资源",
+    "api": "https://cj.lzcaiji.com/api.php/provide/vod/at/xml/",
+    "download": "https://cj.lziapi.com/api.php/providedown/vod/at/xml/",
+    "jiexiUrl": "https://jx.7kjx.com/?url=",
+    "group": "默认",
+    "isActive": true,
+    "reverseOrder": true,
+    "status": "可用"
+  },
+  {
+    "key": "天空云",
+    "id": 2,
+    "name": "天空云",
+    "api": "https://api.tiankongapi.com/api.php/provide/vod/at/xml/from/tkm3u8/",
+    "download": "",
+    "jiexiUrl": "https://jx.7kjx.com/?url=",
+    "group": "默认",
+    "isActive": true,
+    "status": "可用",
+    "reverseOrder": true
+  },
+  {
+    "key": "八戒云",
+    "id": 3,
+    "name": "八戒云",
+    "api": "http://cj.bajiecaiji.com/inc/bjm3u8.php",
+    "download": "",
+    "jiexiUrl": "",
+    "group": "默认",
+    "isActive": true,
+    "status": "可用",
+    "reverseOrder": true
+  }
+]
