@@ -259,6 +259,7 @@
 			"name": "非凡",
 			"type": 1,
 			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
+			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/feifan/at/xml/",
 			"searchable": 1,
 			"quickSearch": 1,
 			"categories": [
@@ -294,43 +295,7 @@
 			"key": "非凡1",
 			"name": "非凡(备用1)",
 			"type": 1,
-			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/feifan/at/xml/",
-			"searchable": 1,
-			"quickSearch": 1,
-			"categories": [
-				"大陆综艺",
-				"国产剧",
-				"韩国剧",
-				"日本剧",
-				"欧美剧",
-				"香港剧",
-				"台湾剧",
-				"泰国剧",
-				"海外剧",
-				"港台综艺",
-				"日韩综艺",
-				"欧美综艺",
-				"动漫片",
-				"动作片",
-				"科幻片",
-				"战争片",
-				"奇幻片",
-				"喜剧片",
-				"爱情片",
-				"恐怖片",
-				"犯罪片",
-				"悬疑片",
-				"惊悚片",
-				"剧情片",
-				"冒险片",
-				"记录片"
-			]
-		},
-		{
-			"key": "非凡2",
-			"name": "非凡(备用2)",
-			"type": 1,
-			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/at/xml/",
+			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/feifan/",
 			"searchable": 1,
 			"quickSearch": 1,
 			"categories": [
@@ -409,51 +374,10 @@
 			// "changeable": 0
 		},
 		{
-			"key": "廠長",
-			"name": "廠長",
-			"type": 3,
-			"api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/czzy_open.js",
-			"searchable": 1,
-			"changeable": 1
-		},
-		{
-			"key": "愛看",
-			"name": "愛看",
-			"type": 3,
-			"api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/ikanbot_open.js",
-			"searchable": 1,
-			"changeable": 1
-		},
-		{
-			"key": "快看",
-			"name": "快看",
-			"type": 3,
-			"api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/kkys_open.js",
-			"searchable": 1,
-			"changeable": 1
-		},
-		{
-			"key": "熊熊",
-			"name": "熊熊",
-			"type": "1",
-			"api": "https://v.3412.net.cn/macapi.php/provide/vod",
-			"playUrl": "https://player.i597.cc/?url=",
-			"searchable": "1",
-			"changeable": "0"
-		},
-		{
 			"key": "影图",
 			"name": "影图",
 			"type": 1,
 			"api": "https://cj.vodimg.top/api.php/provide/vod/",
-			"searchable": 1,
-			"quickSearch": 1
-		},
-		{
-			"key": "Ikun资源",
-			"name": "Ikun",
-			"type": 0,
-			"api": "https://ikunzyapi.com/api.php/provide/vod/at/xml/",
 			"searchable": 1,
 			"quickSearch": 1
 		},
