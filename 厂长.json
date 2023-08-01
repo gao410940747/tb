@@ -363,25 +363,6 @@
 			"changeable": 0
 		},
 		{
-			"key": "888解忧愁",
-			"name": "解忧",
-			"type": 4,
-			"api": "https://private--t410.repl.co/888?",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"changeable": 1
-			// "changeable": 0
-		},
-		{
-			"key": "影图",
-			"name": "影图",
-			"type": 1,
-			"api": "https://cj.vodimg.top/api.php/provide/vod/",
-			"searchable": 1,
-			"quickSearch": 1
-		},
-		{
 			"key": "csp_Czsapp99",
 			"name": "出问题及时找大儿",
 			"type": 3,
