@@ -37,6 +37,16 @@
 			"type": 3,
 			"api": "./APP/dr_py/lib/drpy2.min.js",
 			"ext": "./APP/dr_py/js/布雷蓝光[V2].js"
+		},
+		{
+			"key": "MV_vod",
+			"name": "卡拉OK",
+			"type": 1,
+			"api": "https://tvbox-mv--leosam2048.repl.co/mv/vod",
+			"searchable": 1,
+			"changeable": 1,
+			"filterable": 1,
+			"changeable": 0
 		}
 	],
 	"doh": [{
