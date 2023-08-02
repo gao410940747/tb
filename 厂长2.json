@@ -1,6 +1,5 @@
 {
-//	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
-	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
+	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
@@ -441,7 +440,8 @@
 			"api": "csp_Bdys",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_Ddys",
@@ -450,7 +450,8 @@
 			"api": "csp_Ddys",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_Kunyu77",
@@ -459,7 +460,8 @@
 			"api": "csp_Kunyu77",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_JianPian",
@@ -469,7 +471,8 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_Ikanbot",
@@ -478,7 +481,8 @@
 			"api": "csp_Ikanbot",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_Mp4Mov",
@@ -487,7 +491,8 @@
 			"api": "csp_Mp4Mov",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_New6v",
@@ -497,7 +502,8 @@
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
-			"ext": "http://www.xb6v.com"
+			"ext": "http://www.xb6v.com",
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_SeedHub",
@@ -507,7 +513,8 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_KubaCL",
@@ -517,7 +524,8 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_MeijuTT",
@@ -527,17 +535,8 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "csp_MeijuMi",
-			"name": "🧲美剧迷",
-			"type": 3,
-			"api": "csp_MeijuMi",
-			"playerType": 1,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_XYQHiker_无插件直播",
@@ -547,7 +546,8 @@
 			"searchable": 0,
 			"quickSearch": 0,
 			"filterable": 0,
-			"ext": "./XYQHiker/无插件直播.json"
+			"ext": "./XYQHiker/无插件直播.json",
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_XYQBiu_88看球",
@@ -557,7 +557,8 @@
 			"searchable": 0,
 			"quickSearch": 0,
 			"filterable": 0,
-			"ext": "./XYQBiu/88看球.json"
+			"ext": "./XYQBiu/88看球.json",
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		},
 		{
 			"key": "csp_Yj1211",
@@ -567,7 +568,8 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
 		}
 	],
 	"doh": [{
