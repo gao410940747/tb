@@ -1,5 +1,6 @@
 {
 	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
+//	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
@@ -33,75 +34,6 @@
 			"changeable": 1,
 			"filterable": 1,
 			"changeable": 0
-		},
-		{
-			"key": "快看资源",
-			"name": "快看(高清)",
-			"type": 1,
-			"api": "https://kuaikan-api.com/api.php/provide/vod/?ac=list",
-			"searchable": 1,
-			"quickSearch": 1,
-			"categories": [
-				"国产剧",
-				"韩国剧",
-				"香港剧",
-				"台湾剧",
-				"欧美剧",
-				"动作片",
-				"科幻片",
-				"战争片",
-				"奇幻片",
-				"喜剧片",
-				"爱情片",
-				"恐怖片",
-				"犯罪片",
-				"悬疑片",
-				"惊悚片",
-				"剧情片",
-				"冒险片",
-				"记录片",
-				"国产综艺",
-				"港台综艺",
-				"日本综艺",
-				"韩国综艺",
-				"欧美综艺",
-				"国产动漫",
-				"日本动漫",
-				"韩国动漫",
-				"欧美动漫"
-			]
-		},
-		{
-			"key": "滋滋",
-			"name": "滋滋(高清+极速)",
-			"type": 3,
-			"api": "csp_XBPQ",
-			"playerType": "1",
-			"ext": {
-				"站名": "子子影视",
-				"主页url": "https://www.ziziys.com",
-				"免嗅": "1",
-				"二次截取": "1&&-1+module-item-cover",
-				"数组": "module-item-pic&&module-item-cover",
-				"副标题": "class=\"module-item-text\">&&</div",
-				"导演": "导演：&&</div",
-				"主演": "主演：&&</div",
-				"简介": "<p>&&</p>",
-				"线路数组": "class=\"module-tab-item tab-item&&</div>",
-				"线路标题": "<span>&&</small>[替换:</span><small>>>👉]+集♥",
-				"播放标题": "<span>&&</span>",
-				"播放数组": "class=\"module-blocklist scroll-box&&</div>",
-				"搜索模式": "1",
-				"搜索url": "https://www.ziziys.com/index.php/ajax/suggest?mid=1&wd={wd}&limit=500",
-				"搜索二次截取": "\"list\":[&&]",
-				"搜索数组": "{&&}",
-				"搜索标题": "\"name\":\"&&\"",
-				"搜索图片": "\"pic\":\"&&\"",
-				"搜索链接": "https://www.ziziys.com/vdetail/+\"id\":&&,+html",
-				"分类": "最新推荐$17#国产剧$13#美剧$14#日韩剧$15#动作片$6#剧情片$7#喜剧片$8#爱情片$9#惊悚片$10#奇幻片$11#悬疑片$12#动漫片$23#恐怖片$24#国漫$20#日漫$21#欧美动漫$22",
-				"分类url": "https://www.ziziys.com/list/{cateId}-{catePg}.html;;val",
-				"跳转播放链接": "vod_class*url\":\"&&\""
-			}
 		},
 		{
 			"key": "dr_88看球",
@@ -440,8 +372,7 @@
 			"api": "csp_Bdys",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_Ddys",
@@ -450,8 +381,7 @@
 			"api": "csp_Ddys",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_Kunyu77",
@@ -460,8 +390,7 @@
 			"api": "csp_Kunyu77",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_JianPian",
@@ -471,8 +400,7 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_Ikanbot",
@@ -481,8 +409,7 @@
 			"api": "csp_Ikanbot",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_Mp4Mov",
@@ -491,8 +418,7 @@
 			"api": "csp_Mp4Mov",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_New6v",
@@ -502,8 +428,7 @@
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
-			"ext": "http://www.xb6v.com",
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"ext": "http://www.xb6v.com"
 		},
 		{
 			"key": "csp_SeedHub",
@@ -513,8 +438,7 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_KubaCL",
@@ -524,8 +448,7 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
 		},
 		{
 			"key": "csp_MeijuTT",
@@ -535,8 +458,17 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
+		},
+		{
+			"key": "csp_MeijuMi",
+			"name": "🧲美剧迷",
+			"type": 3,
+			"api": "csp_MeijuMi",
+			"playerType": 1,
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
 		},
 		{
 			"key": "csp_XYQHiker_无插件直播",
@@ -546,8 +478,7 @@
 			"searchable": 0,
 			"quickSearch": 0,
 			"filterable": 0,
-			"ext": "./XYQHiker/无插件直播.json",
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"ext": "./XYQHiker/无插件直播.json"
 		},
 		{
 			"key": "csp_XYQBiu_88看球",
@@ -557,8 +488,7 @@
 			"searchable": 0,
 			"quickSearch": 0,
 			"filterable": 0,
-			"ext": "./XYQBiu/88看球.json",
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"ext": "./XYQBiu/88看球.json"
 		},
 		{
 			"key": "csp_Yj1211",
@@ -568,8 +498,23 @@
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1,
-			"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b"
+			"filterable": 1
+		},
+		{
+			"key": "drpy_js_310直播",
+			"name": "体育 | 310直播[js]",
+			"type": 3,
+			"api": "./lib/drpy2.min.js",
+			"changeable": 0,
+			"ext": "./js/310直播.js"
+		},
+		{
+			"key": "drpy_js_JRKAN直播",
+			"name": "体育 | JRKAN直播[js]",
+			"type": 3,
+			"api": "./lib/drpy.min.js",
+			"changeable": 0,
+			"ext": "./js/JRKAN直播.js"
 		}
 	],
 	"doh": [{
