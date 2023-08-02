@@ -294,7 +294,7 @@
 		},
 		{
 			"key": "非凡1",
-			"name": "非凡(备用1)",
+			"name": "非凡(备用)",
 			"type": 1,
 			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/feifan/",
 			"searchable": 1,
@@ -375,6 +375,14 @@
 				"体育",
 				"电影"
 			]
+		},
+		{
+			"key": "快看1",
+			"name": "快看(备用)",
+			"type": 3,
+			"api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/kkys_open.js",
+			"searchable": 1,
+			"changeable": 1
 		},
 		{
 			"key": "滋滋",
