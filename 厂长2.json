@@ -25,6 +25,20 @@
 			}
 		},
 		{
+			"key": "布雷蓝光",
+			"name": "布雷蓝光[js]",
+			"type": 3,
+			"api": "./APP/dr_py/lib/drpy2.min.js",
+			"ext": "./APP/dr_py/js/布雷蓝光.js"
+		},
+		{
+			"key": "布雷蓝光v2",
+			"name": "布雷蓝光v2",
+			"type": 3,
+			"api": "./APP/dr_py/lib/drpy2.min.js",
+			"ext": "./APP/dr_py/js/布雷蓝光[V2].js"
+		},
+		{
 			"key": "MV_vod",
 			"name": "卡拉OK",
 			"type": 1,
