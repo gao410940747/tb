@@ -1,16 +1,8 @@
 {
-//	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
-	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
+	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
+//	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
-		{
-			"key": "快看1",
-			"name": "快看(备用)",
-			"type": 3,
-			"api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/kkys_open.js",
-			"searchable": 1,
-			"changeable": 1
-		},
 		{
 			"key": "影图",
 			"name": "影图",
@@ -21,6 +13,14 @@
 			"ext": {
 				"线路数组": "[排序:hnm3u8>lzm3u8>wjm3u8>youku>qiyi>qq>mgtv>bilibili]"
 			}
+		},
+		{
+			"key": "快看1",
+			"name": "快看(备用)",
+			"type": 3,
+			"api": "https://fongmi.cachefly.net/FongMi/CatVodOpen/main/open/kkys_open.js",
+			"searchable": 1,
+			"changeable": 1
 		},
 		{
 			"key": "888解忧愁",
@@ -91,17 +91,6 @@
 			"api": "csp_XBPQ",
 			"playerType": "1",
 			"ext": "./XBPQ/蘑菇.json"
-		},
-		{
-			"key": "YQK_spider",
-			"name": "一起(test)",
-			"api": "csp_YQKAPP",
-			"type": 3,
-			"filterable": 1,
-			"playerType": 2,
-			"quickSearch": 1,
-			"searchable": 1,
-			"ext": "https://api-aws.11ty.top"
 		},
 		{
 			"key": "龟龟",
@@ -366,77 +355,6 @@
 			"name": "🔨荐片",
 			"type": 3,
 			"api": "csp_JianPian",
-			"playerType": 1,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "csp_Ikanbot",
-			"name": "👾Ikanbot",
-			"type": 3,
-			"api": "csp_Ikanbot",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": {
-				"线路数组": "[排序:kuaikan>tk线路]"
-			}
-		},
-		{
-			"key": "csp_Mp4Mov",
-			"name": "🧲Mp4电影",
-			"type": 3,
-			"api": "csp_Mp4Mov",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "csp_New6v",
-			"name": "🧲新6V",
-			"type": 3,
-			"api": "csp_New6v",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": "http://www.xb6v.com"
-		},
-		{
-			"key": "csp_SeedHub",
-			"name": "🧲SeedHub",
-			"type": 3,
-			"api": "csp_SeedHub",
-			"playerType": 1,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "csp_KubaCL",
-			"name": "🧲酷吧电影",
-			"type": 3,
-			"api": "csp_KubaCL",
-			"playerType": 1,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "csp_MeijuTT",
-			"name": "🧲美剧天堂",
-			"type": 3,
-			"api": "csp_MeijuTT",
-			"playerType": 1,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "csp_MeijuMi",
-			"name": "🧲美剧迷",
-			"type": 3,
-			"api": "csp_MeijuMi",
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
