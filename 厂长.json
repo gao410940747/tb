@@ -91,28 +91,19 @@
 			]
 		},
 		{
-			"key": "csp_Ikanbot",
+			"key": "爱看机器人",
 			"name": "爱看",
 			"type": 3,
 			"api": "csp_Ikanbot",
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "draikan",
-			"name": "爱看4k",
-			"type": 3,
-			"api": "https://agit.ai/guot54/ygbh/raw/branch/master/JS/lf_ikanbot3_min.js",
-			"searchable": 1,
-			"quickSearch": 1,
 			"filterable": 1,
 			"ext": {
-				"线路数组": "[排序:量子>非凡>快看>暴风>天空>极速>最大>无尽>闪电>光速>快车>卧龙>金鹰>新浪>飞速>樱花>淘片>鱼乐>百度>八戒>番茄>55酷]"
+				"线路数组": "data-toggle=&&</li>[替换:lz线路>>量子#ff线路>>非凡#zuida线路>>最大#bf线路>>暴风#js线路>>极速][排序:量子>非凡>快看>暴风>天空>极速>最大>无尽>闪电>光速>快车>卧龙>金鹰>新浪>飞速>樱花>淘片>鱼乐>百度>八戒>番茄>55酷]"
 			}
 		},
 		{
-			"key":"量子",
+			"key":"量子资源",
 			"name":"量子",
 			"type":0,
 			"api":"https://cj.lziapi.com/api.php/provide/vod/at/xml/",
@@ -159,7 +150,7 @@
 			]
 		},
 		{
-			"key": "非凡",
+			"key": "非凡资源",
 			"name": "非凡",
 			"type": 1,
 			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
@@ -196,7 +187,7 @@
 			]
 		},
 		{
-			"key": "csp_Mp4Mov",
+			"key": "Mp4Mov",
 			"name": "🧲Mp4电影",
 			"type": 3,
 			"api": "csp_Mp4Mov",
@@ -205,7 +196,7 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_New6v",
+			"key": "New6v",
 			"name": "🧲新6V",
 			"type": 3,
 			"api": "csp_New6v",
@@ -232,7 +223,7 @@
 			]
 		},
 		{
-			"key": "csp_KubaCL",
+			"key": "KubaCL",
 			"name": "🧲酷吧",
 			"type": 3,
 			"api": "csp_KubaCL",
@@ -242,7 +233,7 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_SeedHub",
+			"key": "SeedHub",
 			"name": "🧲SeedHub",
 			"type": 3,
 			"api": "csp_SeedHub",
@@ -252,7 +243,18 @@
 			"filterable": 1
 		},
 		{
-			"key": "drpy_js_JRKAN直播",
+			"key": "荐片",
+			"name": "🧲荐片",
+			"type": 3,
+			"playerType": "1",
+			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js",
+			"ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "JRKAN直播",
 			"name": "体育赛事直播",
 			"type": 3,
 			"api": "./lib/drpy.min.js",

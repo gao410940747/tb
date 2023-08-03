@@ -12,24 +12,6 @@
 			"quickSearch": 1,
 			"filterable": 1
 		},
-		{
-			"key": "荐片",
-			"name": "🧲荐片磁力",
-			"type": 3,
-			"playerType": "1",
-			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js",
-			"ext": "http://smallmi.xiaohewanwan.love:63/jp.js"
-		},
-		{
-			"key": "csp_XBPQ_6V",
-			"name": "🌙宝盒4K磁力",
-			"type": 3,
-			"api": "csp_XBPQ",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": "https://agit.ai/guot54/ygbh/raw/branch/master/XB/6V%e7%a3%81.json"
-		},
 
 
 
@@ -240,16 +222,6 @@
 			"quickSearch": 1,
 			"filterable": 1,
 			"ext": "./XYQHiker/盘搜索.json"
-		},
-		{
-			"key": "JS哔哩直播",
-			"name": "哔哩直播[js]",
-			"type": 3,
-			"api": "./lib/drpy2.min.js",
-			"searchable": 0,
-			"quickSearch": 0,
-			"filterable": 0,
-			"ext": "./js/哔哩直播.js"
 		},
 		{
 			"key": "csp_XYQHiker_有声小说吧",
