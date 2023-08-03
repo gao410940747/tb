@@ -4,11 +4,21 @@
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
-			"key": "csp_SeedHub",
-			"name": "🧲SeedHub",
+			"key": "csp_Mp4Mov",
+			"name": "🧲Mp4电影",
 			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
 			"type": 3,
-			"api": "csp_SeedHub",
+			"api": "csp_Mp4Mov",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "csp_KubaCL",
+			"name": "🧲酷吧",
+			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"type": 3,
+			"api": "csp_KubaCL",
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
@@ -70,6 +80,62 @@
 			"quickSearch": 1,
 			"filterable": 1
 		},
+		{
+			"key": "csp_Ikanbot",
+			"name": "爱看",
+			"type": 3,
+			"api": "csp_Ikanbot",
+			"searchable": 1,
+			"quickSearch": 1,
+			//			"ext": {
+			//				"线路数组": "data-toggle=&&</li>[替换:lz线路>>量子#ff线路>>非凡#zuida线路>>最大#bf线路>>暴风#js线路>>极速][排序:量子>非凡>快看>暴风>天空>极速>最大>无尽>闪电>光速>快车>卧龙>金鹰>新浪>飞速>樱花>淘片>鱼乐>百度>八戒>番茄>55酷]"
+			//			},
+			"filterable": 1
+		},
+		{
+			"key": "draikan",
+			"name": "🤖爱看4k",
+			"type": 3,
+			"api": "https://agit.ai/guot54/ygbh/raw/branch/master/JS/lf_ikanbot3_min.js",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "双十",
+			"name": "双十",
+			"type": 3,
+			"api": "csp_Dy1010",
+			"playerType": "1",
+			"ext": "https://www.1010dy.cc/"
+			//			"ext": "https://www.1010dy6.com/"
+			//			"ext": "https://www.1010dy.fun/"
+			//			"ext": "https://www.2020dy.cc/"
+			//			"ext": "https://www.1010dy3.com/"
+			//			"ext": "https://www.1010dy4.com/"
+			//			"ext": "https://www.1010dy5.com/"
+			//			"线路数组": "[排序:量子云>非凡资源>爱奇艺>腾讯云>优酷云>芒果云>哔哩云>无尽备用>飞云>奇热]"
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		{
 			"key": "快看1",
 			"name": "快看(备用)",
