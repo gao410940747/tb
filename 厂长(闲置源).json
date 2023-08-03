@@ -4,6 +4,17 @@
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
+			"key": "csp_SeedHub",
+			"name": "🧲SeedHub",
+			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"type": 3,
+			"api": "csp_SeedHub",
+			"playerType": 1,
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
 			"key": "Mp4Mov",
 			"name": "🧲Mp4电影",
 			"type": 3,
