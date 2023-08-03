@@ -90,9 +90,9 @@
 //			"api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan/",
 			"searchable": 1,
 			"quickSearch": 1,
-			"changeable": 1, // 新增
-			"playerType": 2, // 新增
-			"filterable": 1, // 新增
+//			"changeable": 1, // 新增
+//			"playerType": 2, // 新增
+//			"filterable": 1, // 新增
 			"categories": [
 				"国产综艺",
 				"日本动漫",
