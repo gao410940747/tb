@@ -97,9 +97,18 @@
 			"api": "csp_Ikanbot",
 			"searchable": 1,
 			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "draikan",
+			"name": "爱看4k",
+			"type": 3,
+			"api": "https://agit.ai/guot54/ygbh/raw/branch/master/JS/lf_ikanbot3_min.js",
+			"searchable": 1,
+			"quickSearch": 1,
 			"filterable": 1,
 			"ext": {
-				"线路数组": "[排序:lz线路>ff线路>kuaikan>tk线路]"
+				"线路数组": "[排序:量子>非凡>快看>暴风>天空>极速>最大>无尽>闪电>光速>快车>卧龙>金鹰>新浪>飞速>樱花>淘片>鱼乐>百度>八戒>番茄>55酷]"
 			}
 		},
 		{
