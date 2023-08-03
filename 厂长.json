@@ -1,6 +1,6 @@
 {
-//	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
-	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
+	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
+//	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
@@ -249,6 +249,49 @@
 			"playerType": "1",
 			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js",
 			"ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "csp_Mp4Mov",
+			"name": "🔐Mp4电影",
+			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"type": 3,
+			"api": "csp_Mp4Mov",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "csp_New6v",
+			"name": "🔐新6V",
+			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"type": 3,
+			"api": "csp_New6v",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"ext": "http://www.xb6v.com"
+		},
+		{
+			"key": "csp_SeedHub",
+			"name": "🔐SeedHub",
+			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"type": 3,
+			"api": "csp_SeedHub",
+			"playerType": 1,
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "csp_KubaCL",
+			"name": "🔐酷吧电影",
+			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"type": 3,
+			"api": "csp_KubaCL",
+			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1
