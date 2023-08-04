@@ -1,5 +1,6 @@
 {
-	//	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
+//	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
+//	"spider": "./jar/XBPQ.jar;md5;b753810e87120584cdc72d2476f96713",
 	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
@@ -932,6 +933,16 @@
 			"quickSearch": 1,
 			"filterable": 1,
 			"ext": "http://app.ishen520.com/api.php/v1.vod"
+		},
+		{
+			"key": "csp_XYQHiker_有声小说吧",
+			"name": "有声小说",
+			"type": 3,
+			"api": "csp_XYQHiker",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"ext": "./XYQHiker/有声小说吧.json"
 		}
 	],
 	"parses": [

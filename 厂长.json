@@ -1,6 +1,5 @@
 {
-	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
-//	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
+	"spider": "./jar/XBPQ.jar;md5;b753810e87120584cdc72d2476f96713",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
@@ -49,7 +48,7 @@
 		},
 		{
 			"key": "荐片",
-			"name": "🧲荐片",
+			"name": "荐片(磁)",
 			"type": 3,
 			"playerType": "1",
 			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js",
@@ -60,7 +59,7 @@
 		},
 		{
 			"key": "csp_New6v",
-			"name": "🧲新6V",
+			"name": "新6V(磁)",
 			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
 			"type": 3,
 			"api": "csp_New6v",
@@ -71,7 +70,7 @@
 		},
 		{
 			"key": "csp_Mp4Mov",
-			"name": "🧲Mp4电影",
+			"name": "Mp4电影(磁)",
 			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
 			"type": 3,
 			"api": "csp_Mp4Mov",
@@ -81,7 +80,7 @@
 		},
 		{
 			"key": "csp_SeedHub",
-			"name": "🧲SeedHub",
+			"name": "SeedHub(磁)",
 			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
 			"type": 3,
 			"api": "csp_SeedHub",
@@ -179,14 +178,11 @@
 			"name": "快看",
 			"type": 1,
 			"api": "https://kuaikan-api.com/api.php/provide/vod/?ac=list",
-			//			"api": "https://kuaikan-api.com/api.php/provide/vod/at/xml",
-			//			"api": "https://kuaikan-api.com/api.php/provide/vod",
-			//			"api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan/",
+//			"api": "https://kuaikan-api.com/api.php/provide/vod/at/xml",
+//			"api": "https://kuaikan-api.com/api.php/provide/vod",
+//			"api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan/",
 			"searchable": 1,
 			"quickSearch": 1,
-			//			"changeable": 1, // 新增
-			//			"playerType": 2, // 新增
-			//			"filterable": 1, // 新增
 			"categories": [
 				"国产综艺",
 				"日本动漫",
@@ -218,8 +214,8 @@
 			]
 		},
 		{
-			"key": "滋滋",
-			"name": "滋滋",
+			"key": "子子",
+			"name": "子子",
 			"type": 3,
 			"api": "csp_XBPQ",
 			"playerType": "1",
@@ -294,14 +290,43 @@
 			"ext": "./js/JRKAN直播.js"
 		},
 		{
-			"key": "csp_XYQHiker_有声小说吧",
-			"name": "有声小说",
+			"key": "csp_TT",
+			"name": "影探┃4K",
 			"type": 3,
-			"api": "csp_XYQHiker",
+			"api": "csp_YT",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"ext":"http://yt3353.lfytyl.com/api.php/app/"
+		},
+		{
+			"key": "csp_aote",
+			"name": "奥特┃直连",
+			"type": 3,
+			"api": "csp_Auete",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1
+		},
+		{
+			"key": "小米",
+			"name": "️小米┃APP",
+			"type": 3,
+			"api": "csp_AppYsV2",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
-			"ext": "./XYQHiker/有声小说吧.json"
+			"ext": "http://xn--yeta099v.online:66/api.php/app/"
+		},
+		{
+			"key": "365",
+			"name": "年年┃APP",
+			"type": 3,
+			"api": "csp_AppYsV2",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"ext": "http://zl.yy365.vip/api.php/app/"
 		},
 		{
 			"key": "csp_Czsapp99",
