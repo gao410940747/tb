@@ -51,8 +51,8 @@
 			"name": "荐片(磁)",
 			"type": 3,
 			"playerType": "1",
-			"api":"https://xhdwc.tk/lib/drpy2.min.js", "ext":"https://xhdwc.tk/js/荐片.js",
-//			"api": "./diy/drpy2.min.js", "ext": "./diy/jp.js",
+			"api": "./diy/drpy2.min.js", "ext": "./diy/荐片0.js",
+//			"api":"https://xhdwc.tk/lib/drpy2.min.js", "ext":"https://xhdwc.tk/js/荐片.js",
 //			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
@@ -61,6 +61,16 @@
 //			"api": "http://ftp6284928.host108.abeiyun.cn/drpy/libs/drpy.min.js", "ext": "http://ftp6284928.host108.abeiyun.cn/drpy/js/荐片.js",
 //			"api": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js", "ext": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/荐片.js",
 //			"api": "https://gitcode.net/qq_32394351/dr_py/-/raw/master/libs/drpy.min.js", "ext": "https://ghproxy.com/https://raw.githubusercontent.com/ivancorn/ivancorn.github.io/main/js/荐片.js",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "csp_Mp4Mov",
+			"name": "Mp4电影(磁)",
+			"jar": "./diy/cili.jar",
+			"type": 3,
+			"api": "csp_Mp4Mov",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1
@@ -76,16 +86,6 @@
 			"quickSearch": 1,
 			"filterable": 1,
 			"ext": "http://www.xb6v.com"
-		},
-		{
-			"key": "csp_Mp4Mov",
-			"name": "Mp4电影(磁)",
-			"jar": "./diy/cili.jar",
-			"type": 3,
-			"api": "csp_Mp4Mov",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
 		},
 		{
 			"key": "csp_SeedHub",
@@ -186,10 +186,8 @@
 			"key":"drpy_js_lf_ikanbot",
 			"name":"爱看机器人",
 			"type":3,
-			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js",
-			"ext": {
-				"线路数组": "[排序:量子>非凡>快看>暴风>天空>极速>最大>无尽>闪电>光速>快车>卧龙>金鹰>新浪>飞速>樱花>淘片>鱼乐>百度>八戒>番茄>55酷]"
-			}
+			"api":"./diy/lf_ikanbot3_1_min.js"
+//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
 		},
 		{
 			"key": "csp_TT",
