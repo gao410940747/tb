@@ -51,8 +51,15 @@
 			"name": "荐片(磁)",
 			"type": 3,
 			"playerType": "1",
-			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js",
-			"ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+			"api": "./diy/drpy2.min.js", "ext": "./diy/jp.js",
+//			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+//			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+//			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+//			"api": "http://xhww.fun:63/lib/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+//			"api": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/js/lib/drpy2.min.js", "ext": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/js/荐片.js",
+//			"api": "http://ftp6284928.host108.abeiyun.cn/drpy/libs/drpy.min.js", "ext": "http://ftp6284928.host108.abeiyun.cn/drpy/js/荐片.js",
+//			"api": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js", "ext": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/荐片.js",
+//			"api": "https://gitcode.net/qq_32394351/dr_py/-/raw/master/libs/drpy.min.js", "ext": "https://ghproxy.com/https://raw.githubusercontent.com/ivancorn/ivancorn.github.io/main/js/荐片.js",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1
@@ -60,7 +67,8 @@
 		{
 			"key": "csp_New6v",
 			"name": "新6V(磁)",
-			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"jar": "./diy/cili.jar",
+//			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
 			"type": 3,
 			"api": "csp_New6v",
 			"searchable": 1,
@@ -71,7 +79,7 @@
 		{
 			"key": "csp_Mp4Mov",
 			"name": "Mp4电影(磁)",
-			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"jar": "./diy/cili.jar",
 			"type": 3,
 			"api": "csp_Mp4Mov",
 			"searchable": 1,
@@ -81,7 +89,7 @@
 		{
 			"key": "csp_SeedHub",
 			"name": "SeedHub(磁)",
-			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
+			"jar": "./diy/cili.jar",
 			"type": 3,
 			"api": "csp_SeedHub",
 			"playerType": 1,
@@ -196,7 +204,7 @@
 		},
 		{
 			"key": "快看资源",
-			"name": "快看机器人",
+			"name": "快看",
 			"type": 1,
 			"api": "https://kuaikan-api.com/api.php/provide/vod/?ac=list",
 //			"api": "https://kuaikan-api.com/api.php/provide/vod/at/xml",
@@ -298,6 +306,13 @@
 			"api": "./lib/drpy.min.js",
 			"changeable": 0,
 			"ext": "./js/JRKAN直播.js"
+		},
+		{
+			"key": "drpy_js_爱看机器人",
+			"name": "爱看机器人",
+			"type": 3,
+			"api": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
+			"ext": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/ikanbot2.js"
 		},
 		{
 			"key": "csp_Czsapp99",
