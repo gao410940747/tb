@@ -203,6 +203,15 @@
 			"ext":"http://yt3353.lfytyl.com/api.php/app/"
 		},
 		{
+			"key": "drpy_js_爱看机器人",
+			"name": "爱看机器人",
+			"type": 3,
+//			"api": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
+//			"ext": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/ikanbot2.js",
+			"api": "./diy/drpy2.min.js",
+			"ext": "./diy/ikanbot2.js"
+		},
+		{
 			"key": "快看资源",
 			"name": "快看",
 			"type": 1,
@@ -306,13 +315,6 @@
 			"api": "./lib/drpy.min.js",
 			"changeable": 0,
 			"ext": "./js/JRKAN直播.js"
-		},
-		{
-			"key": "drpy_js_爱看机器人",
-			"name": "爱看机器人",
-			"type": 3,
-			"api": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js",
-			"ext": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/ikanbot2.js"
 		},
 		{
 			"key": "csp_Czsapp99",
