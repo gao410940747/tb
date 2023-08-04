@@ -174,8 +174,29 @@
 			]
 		},
 		{
+			"key": "影图",
+			"name": "影图",
+			"type": 1,
+			"api": "https://cj.vodimg.top/api.php/provide/vod/",
+			"searchable": 1,
+			"quickSearch": 1,
+			"ext": {
+				"线路数组": "[排序:hnm3u8>lzm3u8>wjm3u8>youku>qiyi>qq>mgtv>bilibili]"
+			}
+		},
+		{
+			"key": "csp_TT",
+			"name": "影探",
+			"type": 3,
+			"api": "csp_YT",
+			"searchable": 1,
+			"quickSearch": 1,
+			"changeable": 1,
+			"ext":"http://yt3353.lfytyl.com/api.php/app/"
+		},
+		{
 			"key": "快看资源",
-			"name": "快看",
+			"name": "快看机器人",
 			"type": 1,
 			"api": "https://kuaikan-api.com/api.php/provide/vod/?ac=list",
 //			"api": "https://kuaikan-api.com/api.php/provide/vod/at/xml",
@@ -246,17 +267,6 @@
 			}
 		},
 		{
-			"key": "影图",
-			"name": "影图",
-			"type": 1,
-			"api": "https://cj.vodimg.top/api.php/provide/vod/",
-			"searchable": 1,
-			"quickSearch": 1,
-			"ext": {
-				"线路数组": "[排序:hnm3u8>lzm3u8>wjm3u8>youku>qiyi>qq>mgtv>bilibili]"
-			}
-		},
-		{
 			"key": "ok",
 			"name": "FreeOK",
 			"type": 3,
@@ -288,45 +298,6 @@
 			"api": "./lib/drpy.min.js",
 			"changeable": 0,
 			"ext": "./js/JRKAN直播.js"
-		},
-		{
-			"key": "csp_TT",
-			"name": "影探┃4K",
-			"type": 3,
-			"api": "csp_YT",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"ext":"http://yt3353.lfytyl.com/api.php/app/"
-		},
-		{
-			"key": "csp_aote",
-			"name": "奥特┃直连",
-			"type": 3,
-			"api": "csp_Auete",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1
-		},
-		{
-			"key": "小米",
-			"name": "️小米┃APP",
-			"type": 3,
-			"api": "csp_AppYsV2",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": "http://xn--yeta099v.online:66/api.php/app/"
-		},
-		{
-			"key": "365",
-			"name": "年年┃APP",
-			"type": 3,
-			"api": "csp_AppYsV2",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": "http://zl.yy365.vip/api.php/app/"
 		},
 		{
 			"key": "csp_Czsapp99",
