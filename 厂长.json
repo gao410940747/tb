@@ -51,9 +51,10 @@
 			"name": "荐片(磁)",
 			"type": 3,
 			"playerType": "1",
+			"api":"https://xhdwc.tk/lib/drpy2.min.js", "ext":"https://xhdwc.tk/js/荐片.js",
 //			"api": "./diy/drpy2.min.js", "ext": "./diy/jp.js",
 //			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
-			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
+//			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "http://xhww.fun:63/lib/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/js/lib/drpy2.min.js", "ext": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/js/荐片.js",
@@ -182,25 +183,20 @@
 			]
 		},
 		{
-			"key": "影图",
-			"name": "影图",
-			"type": 1,
-			"api": "https://cj.vodimg.top/api.php/provide/vod/",
-			"searchable": 1,
-			"quickSearch": 1,
-			"ext": {
-				"线路数组": "[排序:hnm3u8>lzm3u8>wjm3u8>youku>qiyi>qq>mgtv>bilibili]"
-			}
-		},
-		{
 			"key": "csp_TT",
-			"name": "影探",
+			"name": "影探(4K)",
 			"type": 3,
 			"api": "csp_YT",
 			"searchable": 1,
 			"quickSearch": 1,
 			"changeable": 1,
 			"ext":"http://yt3353.lfytyl.com/api.php/app/"
+		},
+		{
+			"key":"drpy_js_lf_ikanbot",
+			"name":"爱看机器人",
+			"type":3,
+			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
 		},
 		{
 			"key": "快看资源",
@@ -275,6 +271,17 @@
 			}
 		},
 		{
+			"key": "影图",
+			"name": "影图",
+			"type": 1,
+			"api": "https://cj.vodimg.top/api.php/provide/vod/",
+			"searchable": 1,
+			"quickSearch": 1,
+			"ext": {
+				"线路数组": "[排序:hnm3u8>lzm3u8>wjm3u8>youku>qiyi>qq>mgtv>bilibili]"
+			}
+		},
+		{
 			"key": "ok",
 			"name": "FreeOK",
 			"type": 3,
@@ -301,25 +308,15 @@
 		},
 		{
 			"key": "JRKAN直播",
-			"name": "体育赛事直播",
+			"name": "JRKAN直播",
 			"type": 3,
 			"api": "./lib/drpy.min.js",
 			"changeable": 0,
 			"ext": "./js/JRKAN直播.js"
 		},
 		{
-			"key": "drpy_js_ikanbot3",
-			"name": "爱看机器人[js]",
-			"type": 3,
-			"api": "./lib/drpy2.min.js",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"ext": "./js/ikanbot3.js"
-		},
-		{
 			"key": "88js",
-			"name": "⚽ 88┃看球",
+			"name": "88看球",
 			"type": 3,
 			"api": "http://xhww.fun:63/js/drpy1.min.js",
 			"ext": "https://agit.ai/fantaiying/dr_py/raw/branch/main/js/88看球.js",
@@ -329,39 +326,11 @@
 		},
 		{
 			"key": "drpy_js_JustLive",
-			"name": "直播 | JustLive[js]",
+			"name": "JustLive",
 			"type": 3,
 			"api": "./lib/drpy2.min.js",
 			"changeable": 0,
 			"ext": "./js/JustLive.js"
-		},
-		{
-			"key":"drpy_js_荐片",
-			"name":"荐片[js]",
-			"type":3,
-			"api":"https://xhdwc.tk/lib/drpy2.min.js",
-			"ext":"https://xhdwc.tk/js/荐片.js",
-			"playerType":"1"
-		},
-		{
-			"key":"drpy_js_lf_ikanbot",
-			"name":"ikanbot[js]",
-			"type":3,
-			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
-		},
-		{
-			"key":"drpy_js_低端",
-			"name":"低端[js]",
-			"type":3,
-			"api":"https://xhdwc.tk/lib/drpy2.min.js",
-			"ext":"https://xhdwc.tk/js/ddys.js"
-		},
-		{
-			"key": "drpy_js_两个BT",
-			"name": "影视 | 两个BT[js]",
-			"type": 3,
-			"api": "./lib/drpy2.min.js",
-			"ext": "./js/两个BT.js"
 		},
 		{
 			"key": "csp_Czsapp99",
