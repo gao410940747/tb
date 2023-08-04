@@ -186,7 +186,10 @@
 			"key":"drpy_js_lf_ikanbot",
 			"name":"爱看机器人",
 			"type":3,
-			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
+			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js",
+			"ext": {
+				"线路数组": "[排序:量子>非凡>快看>暴风>天空>极速>最大>无尽>闪电>光速>快车>卧龙>金鹰>新浪>飞速>樱花>淘片>鱼乐>百度>八戒>番茄>55酷]"
+			}
 		},
 		{
 			"key": "csp_TT",
@@ -323,14 +326,6 @@
 			"searchable": 0,
 			"quickSearch": 0,
 			"changeable": 0
-		},
-		{
-			"key": "drpy_js_JustLive",
-			"name": "JustLive",
-			"type": 3,
-			"api": "./lib/drpy2.min.js",
-			"changeable": 0,
-			"ext": "./js/JustLive.js"
 		},
 		{
 			"key": "csp_Czsapp99",
