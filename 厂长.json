@@ -308,7 +308,7 @@
 		},
 		{
 			"key": "JRKAN直播",
-			"name": "JRKAN直播",
+			"name": "体育赛事直播",
 			"type": 3,
 			"api": "./lib/drpy.min.js",
 			"changeable": 0,
