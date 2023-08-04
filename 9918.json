@@ -7,7 +7,8 @@
 ],
 "wallpaper":"https://liu.chuqiuyu.tk",
 "sites":[
-{"key":"sgp","name":"水果派","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"./json/sgp.json","jar":"./jar/fan.jar;md5;89fe4a02b78c136f02442851d659f1c0"},
+{"key":"sgp","name":"水果派","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"./json/sgp.json","jar":"./jar/xo.txt"},
+//{"key":"sgp","name":"水果派","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"./json/sgp.json","jar":"./jar/fan.jar;md5;89fe4a02b78c136f02442851d659f1c0"},
 {"key":"泥巴","name":"泥巴","type":3,"api":"csp_NiNi","searchable":1,"ext":"1;socks5://192.168.5.227:4592"},
 {"key":"量子","name":"量子","type":0,"api":"http://127.0.0.1:10079/?thread=0&proxy=socks5://192.168.5.227:4592&url=https://cj.lziapi.com/api.php/provide/vod/at/xml/","playUrl": "json:http://127.0.0.1:10079/parse/?thread=0&proxy=socks5://192.168.5.227:4592&url=","searchable":1,"changeable":1,"categories":["伦理片"]},
 {"key":"非凡","name":"非凡","type":0,"api":"http://127.0.0.1:10079/?thread=0&proxy=socks5://192.168.5.227:4592&url=http://cj.ffzyapi.com/api.php/provide/vod/at/xml/","playUrl": "json:http://127.0.0.1:10079/parse/?thread=0&proxy=socks5://192.168.5.227:4592&url=","searchable":1,"changeable":1,"categories":["伦理片"]},
