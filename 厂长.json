@@ -10,23 +10,14 @@
 			"playerType": 2,
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "https://www.cz4k.com/",
+			"ext": "https://www.czzy.art/",
+//			"ext": "https://www.cz4k.com/",
+//			"ext": "https://www.czzy.pro/",
 			"filterable": 1
 		},
 		{
 			"key": "csp_Czsapp1",
-			"name": "厂长(备用1)",
-			"type": 3,
-			"api": "csp_Czsapp",
-			"playerType": 2,
-			"searchable": 1,
-			"quickSearch": 1,
-			"ext": "https://www.czzy.art/",
-			"filterable": 1
-		},
-		{
-			"key": "csp_Czsapp2",
-			"name": "厂长(备用2)",
+			"name": "厂长(备用)",
 			"type": 3,
 			"api": "csp_Czsapp",
 			"playerType": 2,
@@ -36,15 +27,21 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_Czsapp3",
-			"name": "厂长(备用3)",
+			"key":"drpy_js_lf_ikanbot",
+			"name":"爱看机器人",
+			"type":3,
+			"api":"./diy/lf_ikanbot3_1_min.js"
+//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
+		},
+		{
+			"key": "csp_TT",
+			"name": "影探(4K)",
 			"type": 3,
-			"api": "csp_Czsapp",
-			"playerType": 2,
+			"api": "csp_YT",
 			"searchable": 1,
 			"quickSearch": 1,
-			"ext": "https://www.czzy.pro/",
-			"filterable": 1
+			"changeable": 1,
+			"ext":"http://yt3353.lfytyl.com/api.php/app/"
 		},
 		{
 			"key": "荐片",
@@ -181,23 +178,6 @@
 				"冒险片",
 				"记录片"
 			]
-		},
-		{
-			"key":"drpy_js_lf_ikanbot",
-			"name":"爱看机器人",
-			"type":3,
-			"api":"./diy/lf_ikanbot3_1_min.js"
-//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
-		},
-		{
-			"key": "csp_TT",
-			"name": "影探(4K)",
-			"type": 3,
-			"api": "csp_YT",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"ext":"http://yt3353.lfytyl.com/api.php/app/"
 		},
 		{
 			"key": "子子",
