@@ -27,16 +27,6 @@
 			"filterable": 1
 		},
 		{
-			"key": "csp_TT",
-			"name": "影探(4K)",
-			"type": 3,
-			"api": "csp_YT",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"ext":"http://yt3353.lfytyl.com/api.php/app/"
-		},
-		{
 			"key":"drpy_js_lf_ikanbot",
 			"name":"爱看机器人",
 			"type":3,
@@ -68,29 +58,6 @@
 			"jar": "./diy/cili.jar",
 			"type": 3,
 			"api": "csp_Mp4Mov",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
-			"key": "csp_New6v",
-			"name": "新6V(磁)",
-			"jar": "./diy/cili.jar",
-//			"jar": "https://ghproxy.liuzhicong.com/https://raw.githubusercontent.com/mu1978jun/KS/main/YY/cili.jar",
-			"type": 3,
-			"api": "csp_New6v",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": "http://www.xb6v.com"
-		},
-		{
-			"key": "csp_SeedHub",
-			"name": "SeedHub(磁)",
-			"jar": "./diy/cili.jar",
-			"type": 3,
-			"api": "csp_SeedHub",
-			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1
@@ -209,31 +176,6 @@
 				"分类": "最新推荐$17#国产剧$13#日漫$21#美剧$14#日韩剧$15#动作片$6#剧情片$7#喜剧片$8#爱情片$9#惊悚片$10#奇幻片$11#悬疑片$12#动漫片$23#恐怖片$24#国漫$20#欧美动漫$22",
 				"分类url": "https://www.ziziys.com/list/{cateId}-{catePg}.html;;val",
 				"跳转播放链接": "vod_class*url\":\"&&\""
-			}
-		},
-		{
-			"key": "ok",
-			"name": "FreeOK",
-			"type": 3,
-			"api": "csp_XBPQ",
-			"playerType": "1",
-			"ext": {
-				"分类url": "https://www.freeok.vip/vodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html;;m",
-				"分类": "剧集&综艺&电影&动漫",
-				"分类值": "2&4&1&3",
-				"嗅探词": "m3u8#.m3u8#.mp4#mp4",
-				"搜索url": "https://www.cupfox.app/s/{wd}",
-				"搜索模式": "1",
-				"搜索二次截取": "type=\"application/json\">&&</script>",
-				"搜索数组": "{\"te&&}[包含:freeok]",
-				"搜索图片": "https://s1.ax1x.com/2023/07/13/pChRQaD.jpg",
-				"搜索标题": "xt\":\"&&\"",
-				"搜索链接": "\"url\":\"&&\"",
-				"搜索副标题": "FREEOK",
-				"导演": "导演：&&</div>",
-				"主演": "主演：&&</div>",
-				"简介": "<p>&&</p>",
-				"线路数组": "[排序:高清频道③>高清频道①>高清频道②>备用频道①>OK频道]"
 			}
 		},
 		{
