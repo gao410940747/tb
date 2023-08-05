@@ -203,8 +203,8 @@
 			"key": "快看资源",
 			"name": "快看",
 			"type": 1,
-			"api": "https://kuaikan-api.com/api.php/provide/vod/?ac=list",
-//			"api": "https://kuaikan-api.com/api.php/provide/vod/at/xml",
+//			"api": "https://kuaikan-api.com/api.php/provide/vod/?ac=list",
+			"api": "https://kuaikan-api.com/api.php/provide/vod/at/xml",
 //			"api": "https://kuaikan-api.com/api.php/provide/vod",
 //			"api": "https://kuaikan-api.com/api.php/provide/vod/from/kuaikan/",
 			"searchable": 1,
@@ -269,17 +269,6 @@
 				"分类": "最新推荐$17#国产剧$13#日漫$21#美剧$14#日韩剧$15#动作片$6#剧情片$7#喜剧片$8#爱情片$9#惊悚片$10#奇幻片$11#悬疑片$12#动漫片$23#恐怖片$24#国漫$20#欧美动漫$22",
 				"分类url": "https://www.ziziys.com/list/{cateId}-{catePg}.html;;val",
 				"跳转播放链接": "vod_class*url\":\"&&\""
-			}
-		},
-		{
-			"key": "影图",
-			"name": "影图",
-			"type": 1,
-			"api": "https://cj.vodimg.top/api.php/provide/vod/",
-			"searchable": 1,
-			"quickSearch": 1,
-			"ext": {
-				"线路数组": "[排序:hnm3u8>lzm3u8>wjm3u8>youku>qiyi>qq>mgtv>bilibili]"
 			}
 		},
 		{

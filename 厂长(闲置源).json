@@ -157,6 +157,17 @@
 
 
 		{
+			"key": "影图",
+			"name": "影图",
+			"type": 1,
+			"api": "https://cj.vodimg.top/api.php/provide/vod/",
+			"searchable": 1,
+			"quickSearch": 1,
+			"ext": {
+				"线路数组": "[排序:hnm3u8>lzm3u8>wjm3u8>youku>qiyi>qq>mgtv>bilibili]"
+			}
+		},
+		{
 			"key": "快看1",
 			"name": "快看(备用)",
 			"type": 3,
