@@ -1,7 +1,8 @@
 {
 //	"spider": "./jar/xm1.jar;md5;8c9dad1c525bb77a2a32978f50a59c14",
 //	"spider": "./jar/XBPQ.jar;md5;b753810e87120584cdc72d2476f96713",
-	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
+//	"spider": "./jar/XYQ.jar;md5;ab7a2bf5947c745657f25c80b337224b",
+	"spider":"https://download.kstore.space/download/2863/custom_spider.jar;md5;8AFC335DF4268F915C45043B349CEFD4",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
