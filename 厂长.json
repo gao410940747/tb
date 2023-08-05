@@ -51,7 +51,7 @@
 			"name": "荐片(磁)",
 			"type": 3,
 			"playerType": "1",
-			"api": "./diy/drpy2.min.0.js", "ext": "./diy/荐片0.js",
+			"api": "./diy/drpy.min.js", "ext": "./diy/荐片0.js",
 //			"api":"https://xhdwc.tk/lib/drpy2.min.js", "ext":"https://xhdwc.tk/js/荐片.js",
 //			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
