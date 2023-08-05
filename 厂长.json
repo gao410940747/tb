@@ -28,7 +28,7 @@
 		},
 		{
 			"key": "荐片",
-			"name": "荐片(磁)",
+			"name": "荐片(磁力)",
 			"type": 3,
 			"playerType": "1",
 			"api": "./diy/drpy.min.js", "ext": "./diy/荐片0.js",
@@ -47,7 +47,7 @@
 		},
 		{
 			"key": "csp_Mp4Mov",
-			"name": "Mp4电影(磁)",
+			"name": "Mp4电影(磁力)",
 			"jar": "./diy/cili.jar",
 			"type": 3,
 			"api": "csp_Mp4Mov",
