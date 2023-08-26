@@ -57,13 +57,6 @@
 			"filterable": 1
 		},
 		{
-			"key":"drpy_js_lf_ikanbot",
-			"name":"爱看机器人",
-			"type":3,
-			"api":"./diy/lf_ikanbot3_1_min.js"
-//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
-		},
-		{
 			"key":"量子资源",
 			"name":"量子",
 			"type":0,
@@ -146,6 +139,13 @@
 				"冒险片",
 				"记录片"
 			]
+		},
+		{
+			"key":"drpy_js_lf_ikanbot",
+			"name":"爱看机器人",
+			"type":3,
+			"api":"./diy/lf_ikanbot3_1_min.js"
+//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
 		},
 		{
 			"key": "子子",
