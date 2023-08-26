@@ -47,16 +47,6 @@
 			"filterable": 1
 		},
 		{
-			"key": "荐片2",
-			"name": "荐片(2)",
-			"type": 3,
-			"playerType": "1",
-			"api": "http://xhww.fun:63/lib/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1
-		},
-		{
 			"key": "csp_Mp4Mov",
 			"name": "Mp4电影(磁力)",
 			"jar": "./diy/cili.jar",
