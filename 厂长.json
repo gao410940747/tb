@@ -51,7 +51,7 @@
 			"name": "荐片(2)",
 			"type": 3,
 			"playerType": "1",
-			"api": "http://ftp6284928.host108.abeiyun.cn/drpy/libs/drpy.min.js", "ext": "http://ftp6284928.host108.abeiyun.cn/drpy/js/荐片.js",
+			"api": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/js/lib/drpy2.min.js", "ext": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/js/荐片.js",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1
