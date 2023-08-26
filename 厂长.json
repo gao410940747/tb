@@ -32,8 +32,8 @@
 			"name": "荐片(磁力)",
 			"type": 3,
 			"playerType": "1",
-//			"api": "./diy/drpy.min.js", "ext": "./diy/荐片0.js",
-			"api": "https://xhdwc.tk/lib/drpy2.min.js", "ext":"https://xhdwc.tk/js/荐片.js",
+			"api": "./diy/drpy.min.js", "ext": "./diy/荐片0.js",
+//			"api": "https://xhdwc.tk/lib/drpy2.min.js", "ext":"https://xhdwc.tk/js/荐片.js",
 //			"api": "http://alist.xn--z7x900a.love:63/drpy2.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
 //			"api": "http://xhww.fun:63/js/drpy1.min.js", "ext": "http://smallmi.xiaohewanwan.love:63/jp.js",
@@ -42,6 +42,16 @@
 //			"api": "http://ftp6284928.host108.abeiyun.cn/drpy/libs/drpy.min.js", "ext": "http://ftp6284928.host108.abeiyun.cn/drpy/js/荐片.js",
 //			"api": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js", "ext": "https://ghproxy.com/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/荐片.js",
 //			"api": "https://gitcode.net/qq_32394351/dr_py/-/raw/master/libs/drpy.min.js", "ext": "https://ghproxy.com/https://raw.githubusercontent.com/ivancorn/ivancorn.github.io/main/js/荐片.js",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "荐片2",
+			"name": "荐片(2)",
+			"type": 3,
+			"playerType": "1",
+			"api": "https://gitcode.net/qq_32394351/dr_py/-/raw/master/libs/drpy.min.js", "ext": "https://ghproxy.com/https://raw.githubusercontent.com/ivancorn/ivancorn.github.io/main/js/荐片.js",
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1
