@@ -144,8 +144,8 @@
 			"key":"drpy_js_lf_ikanbot",
 			"name":"爱看机器人",
 			"type":3,
-			"api":"./diy/lf_ikanbot3_1_min.js"
-//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
+//			"api":"./diy/lf_ikanbot3_1_min.js"
+			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
 		},
 		{
 			"key": "子子",
