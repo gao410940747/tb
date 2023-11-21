@@ -151,16 +151,6 @@
 			"ext":"https://ghproxy.com/https://raw.githubusercontent.com/lengxiaobingege/TVBOX/master/JS/js/ikanbot2.js"
 		},
 		{
-	            "key": "新6V",
-	            "name": "新6V磁力",
-	            "type": 3,
-	            "api": "csp_SixV",
-	            "searchable": 1,
-	            "quickSearch": 1,
-	            "changeable": 0,
-	            "ext": "http://www.xb6v.com/"
-	        },
-		{
 			"key": "88js",
 			"name": "88看球",
 			"type": 3,
