@@ -143,10 +143,10 @@
 			"key":"drpy_js_lf_ikanbot",
 			"name":"爱看机器人",
 			"type":3,
-			"api":"./diy/lf_ikanbot3_1_min.js"
-//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
-//			"api":"https://cdn.staticaly.com/gh/qcfree/tvbox804/master/js/lf_ikanbot3_1_min.js"
-//			"api":"https://ghproxy.com/https://raw.githubusercontent.com/lengxiaobingege/TVBOX/master/JS/js/lf_ikanbot3_1_min.js"
+			"api":"./diy/lf_ikanbot3_1_min.js",
+//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js",
+//			"api":"https://cdn.staticaly.com/gh/qcfree/tvbox804/master/js/lf_ikanbot3_1_min.js",
+//			"api":"https://ghproxy.com/https://raw.githubusercontent.com/lengxiaobingege/TVBOX/master/JS/js/lf_ikanbot3_1_min.js",
 //			"api":"https://ghproxy.com/https://raw.githubusercontent.com/lengxiaobingege/TVBOX/master/JS/lib/drpy2.min.js",
 			"ext":"https://ghproxy.com/https://raw.githubusercontent.com/lengxiaobingege/TVBOX/master/JS/js/ikanbot2.js"
 		},
