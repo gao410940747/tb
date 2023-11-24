@@ -154,21 +154,6 @@ CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
 广西卫视,https://live.goodiptv.club/api/cqyx.php?id=guangxiHD
 广东卫视,https://live.goodiptv.club/api/cqyx.php?id=guangdongHD
 东南卫视,https://live.goodiptv.club/api/cqyx.php?id=henanHD
-第一剧场,https://live.goodiptv.club/api/cqyx.php?id=diyijuchangHD
-都市剧场,https://live.goodiptv.club/api/cqyx.php?id=dsjcHD
-动漫秀场,https://live.goodiptv.club/api/cqyx.php?id=dmxcHD
-魅力足球,https://live.goodiptv.club/api/cqyx.php?id=mlzqHD
-风云剧场,https://live.goodiptv.club/api/cqyx.php?id=fyjcHD
-求索纪录,https://live.goodiptv.club/api/cqyx.php?id=qsjlHD
-兵器科技,https://live.goodiptv.club/api/cqyx.php?id=bqkjHD
-游戏风云,https://live.goodiptv.club/api/cqyx.php?id=yxfyHD
-怀旧剧场,https://live.goodiptv.club/api/cqyx.php?id=hjjcHD
-风云音乐,https://live.goodiptv.club/api/cqyx.php?id=fyyyHD
-央视台球,https://live.goodiptv.club/api/cqyx.php?id=ystqHD
-风云足球,https://live.goodiptv.club/api/cqyx.php?id=fyzqHD
-文化精品,https://live.goodiptv.club/api/cqyx.php?id=yswhHD
-高尔夫网球,https://live.goodiptv.club/api/cqyx.php?id=golfHD
-早期教育,https://live.goodiptv.club/api/cqyx.php?id=zaojiaoHD
 
 #cfss#
 黑龙江卫视,http://cfss.cc/api/ysp/hljws.m3u8
@@ -220,6 +205,23 @@ CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
 安多卫视,http://stream.qhbtv.com/adws/sd/live.m3u8
 三沙卫视,https://pullsstv90080111.ssws.tv/live/SSTV20220729.m3u8
 人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
+第一剧场,https://live.goodiptv.club/api/cqyx.php?id=diyijuchangHD
+都市剧场,https://live.goodiptv.club/api/cqyx.php?id=dsjcHD
+动漫秀场,https://live.goodiptv.club/api/cqyx.php?id=dmxcHD
+魅力足球,https://live.goodiptv.club/api/cqyx.php?id=mlzqHD
+风云剧场,https://live.goodiptv.club/api/cqyx.php?id=fyjcHD
+求索纪录,https://live.goodiptv.club/api/cqyx.php?id=qsjlHD
+兵器科技,https://live.goodiptv.club/api/cqyx.php?id=bqkjHD
+游戏风云,https://live.goodiptv.club/api/cqyx.php?id=yxfyHD
+怀旧剧场,https://live.goodiptv.club/api/cqyx.php?id=hjjcHD
+风云音乐,https://live.goodiptv.club/api/cqyx.php?id=fyyyHD
+央视台球,https://live.goodiptv.club/api/cqyx.php?id=ystqHD
+风云足球,https://live.goodiptv.club/api/cqyx.php?id=fyzqHD
+文化精品,https://live.goodiptv.club/api/cqyx.php?id=yswhHD
+高尔夫网球,https://live.goodiptv.club/api/cqyx.php?id=golfHD
+早期教育,https://live.goodiptv.club/api/cqyx.php?id=zaojiaoHD
+
+
 
 其他, #genre#
 名侦探柯南,http://epg.112114.xyz/douyu/7620081
