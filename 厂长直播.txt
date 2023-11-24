@@ -91,9 +91,9 @@ CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
 东方卫视,http://cfss.cc/api/ysp/dfws.m3u8
 江苏卫视,http://cfss.cc/api/ysp/jsws.m3u8
 北京卫视,http://cfss.cc/api/ysp/bjws.m3u8
-辽宁卫视,http://cfss.cc/api/ysp/lnws.m3u8
+天津卫视,http://cfss.cc/api/ysp/tjws.m3u8
 深圳卫视,http://cfss.cc/api/ysp/szws.m3u8
-山东卫视,http://cfss.cc/api/ysp/sdws.m3u8
+湖南卫视,http://cfss.cc/api/ysp/hunws.m3u8
 重庆卫视,http://cfss.cc/api/ysp/cqws.m3u8
 河南卫视,http://cfss.cc/api/ysp/hnws.m3u8
 
