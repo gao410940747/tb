@@ -144,9 +144,9 @@ CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
 
 其他, #genre#
 名侦探柯南,http://epg.112114.xyz/douyu/7620081
-http://epg.112114.xyz/douyu/7050342
-http://epg.112114.xyz/douyu/1783144
-http://epg.112114.xyz/douyu/6484910
+名侦探柯南,http://epg.112114.xyz/douyu/7050342
+名侦探柯南,http://epg.112114.xyz/douyu/1783144
+名侦探柯南,http://epg.112114.xyz/douyu/6484910
 
 猫和老鼠,https://epg.112114.xyz/huya/11352879
 
