@@ -80,10 +80,10 @@ CCTV-13,https://live.goodiptv.club/api/cqyx.php?id=cctv13HD
 CCTV-14,https://live.goodiptv.club/api/cqyx.php?id=cctv14HD
 CCTV-15,https://live.goodiptv.club/api/cqyx.php?id=cctv15HD
 CCTV-16,https://live.goodiptv.club/api/cqyx.php?id=cctv16HD
+CCTV-16,https://live.goodiptv.club/api/cqyx.php?id=CCTV16_4K
 CCTV-17,https://live.goodiptv.club/api/cqyx.php?id=cctv17HD
 CCTV-5+,https://live.goodiptv.club/api/cqyx.php?id=cctv5SportHD
 CCTV-4K,https://live.goodiptv.club/api/cqyx.php?id=CCTV4K
-CCTV-16 4K,https://live.goodiptv.club/api/cqyx.php?id=CCTV16_4K
 
 #cctv.com#
 CCTV-13,https://live-play.cctvnews.cctv.com/cctv/merge_cctv13.m3u8
