@@ -143,11 +143,11 @@
 			"key":"ikanbot",
 			"name":"爱看机器人",
 //			"api":"./diy/lf_ikanbot3_1_min.js",
-//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js",
+			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js",
 //			"api":"https://cdn.staticaly.com/gh/qcfree/tvbox804/master/js/lf_ikanbot3_1_min.js",
 //			"api":"https://ghproxy.com/https://raw.githubusercontent.com/lengxiaobingege/TVBOX/master/JS/js/lf_ikanbot3_1_min.js",
 //			"api":"https://ghproxy.com/https://raw.githubusercontent.com/lengxiaobingege/TVBOX/master/JS/lib/drpy2.min.js",
-			"api":"https://fongmi.cachefly.net/FongMi/CatVodSpider/main/js/ikanbot_open.js",
+//			"api":"https://fongmi.cachefly.net/FongMi/CatVodSpider/main/js/ikanbot_open.js",
 			"type":3
 		},
 		{
@@ -269,7 +269,6 @@
 		"name": "厂长直播",
 		"type": 0,
 		"url": "./厂长直播.txt",
-
 		"ua": "okhttp/3.12.13",
 		"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
