@@ -93,7 +93,7 @@ CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
 北京卫视,http://cfss.cc/api/ysp/bjws.m3u8
 天津卫视,http://cfss.cc/api/ysp/tjws.m3u8
 深圳卫视,http://cfss.cc/api/ysp/szws.m3u8
-湖南卫视,http://cfss.cc/api/ysp/hunws.m3u8
+广东卫视,http://cfss.cc/api/ysp/gdws.m3u8
 重庆卫视,http://cfss.cc/api/ysp/cqws.m3u8
 河南卫视,http://cfss.cc/api/ysp/hnws.m3u8
 
@@ -103,5 +103,10 @@ CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
 
 浙江卫视,http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 浙江卫视,https://iptv.luas.edu.cn/liverespath/f650ba03bb4883fe67a1fb7c193a00a4c0c93881/a2d2162784-0-0-56b13eabd03cd0ff33e9bc019e1fb073/index.m3u8
+
+湖南卫视,http://[2409:8087:7000:20:1000::22]:6060/yinhe/2/ch00000090990000001339/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
+湖南卫视,http://zteres.sn.chinamobile.com:6060/000000001000/1000000001000032695/1.m3u8?channel-id=ystenlive&Contentid=1000000001000032695&livemode=1&stbId=3
+湖南卫视,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226193/1.m3u8
+
   
 其他, #genre#
