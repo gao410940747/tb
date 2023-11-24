@@ -6,7 +6,6 @@ CCTV-2,http://cfss.cc/api/ysp/cctv2.m3u8
 CCTV-3,http://cfss.cc/api/ysp/cctv3.m3u8
 CCTV-4,http://cfss.cc/api/ysp/cctv4.m3u8
 CCTV-5,http://cfss.cc/api/ysp/cctv5.m3u8
-CCTV-5+,http://cfss.cc/api/ysp/cctv5+.m3u8
 CCTV-6,http://cfss.cc/api/ysp/cctv6.m3u8
 CCTV-7,http://cfss.cc/api/ysp/cctv7.m3u8
 CCTV-8,http://cfss.cc/api/ysp/cctv8.m3u8
@@ -29,21 +28,24 @@ CCTV-13,https://live-play.cctvnews.cctv.com/cctv/merge_cctv13_mhd.m3u8?auth_key=
 #olelive#
 CCTV-1,https://node1.olelive.com:6443/live/CCTV1HD/hls.m3u8
 CCTV-2,https://node1.olelive.com:6443/live/CCTV2HD/hls.m3u8
+CCTV-5,https://node1.olelive.com:6443/live/CCTV5HD/hls.m3u8
+CCTV-7,https://node1.olelive.com:6443/live/CCTV7HD/hls.m3u8
+CCTV-8,https://node1.olelive.com:6443/live/CCTV8HD/hls.m3u8
+CCTV-9,https://node1.olelive.com:6443/live/CCTV9HD/hls.m3u8
+CCTV-10,https://node1.olelive.com:6443/live/CCTV10HD/hls.m3u8
+CCTV-17,https://node1.olelive.com:6443/live/CCTV17HD/hls.m3u8
+
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV3HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV4HD/hls.m3u8
-CCTV-T2,https://node1.olelive.com:6443/live/CCTV5HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV6HD/hls.m3u8
-CCTV-T2,https://node1.olelive.com:6443/live/CCTV7HD/hls.m3u8
-CCTV-T2,https://node1.olelive.com:6443/live/CCTV8HD/hls.m3u8
-CCTV-T2,https://node1.olelive.com:6443/live/CCTV9HD/hls.m3u8
-CCTV-T2,https://node1.olelive.com:6443/live/CCTV10HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV11HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV12HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV13HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV14HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV15HD/hls.m3u8
 CCTV-T2,https://node1.olelive.com:6443/live/CCTV16HD/hls.m3u8
-CCTV-T2,https://node1.olelive.com:6443/live/CCTV17HD/hls.m3u8
+CCTV-T2,https://node1.olelive.com:6443/live/CCTV5+HD/hls.m3u8
+CCTV-T2,https://node1.olelive.com:6443/live/CCTV4KHD/hls.m3u8
 
 #移动#
 CCTV-1,http://zteres.sn.chinamobile.com:6060/000000001000/6000000001000029752/1.m3u8?channel-id=wasusyt&Contentid=6000000001000029752&livemode=1&stbId=3
@@ -89,9 +91,9 @@ CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
 江苏卫视,http://cfss.cc/api/ysp/jsws.m3u8
 黑龙江卫视,http://cfss.cc/api/ysp/hljws.m3u8
 
-凤凰资讯,http://50.7.238.114:8278/phoenixinfo_hd/playlist.m3u8?tid=m7f4a830029be&ct=18336&tsum=74f57bddc0725f74838380086dce3e44
 凤凰资讯,http://php.17186.eu.org/phtv/fhzx.m3u8
 凤凰资讯,http://113.117.74.18:8081/hls/36/index.m3u8
+凤凰资讯,http://50.7.238.114:8278/phoenixinfo_hd/playlist.m3u8?tid=m7f4a830029be&ct=18336&tsum=74f57bddc0725f74838380086dce3e44
 
 浙江卫视,http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 浙江卫视,https://iptv.luas.edu.cn/liverespath/f650ba03bb4883fe67a1fb7c193a00a4c0c93881/a2d2162784-0-0-56b13eabd03cd0ff33e9bc019e1fb073/index.m3u8
