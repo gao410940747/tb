@@ -206,6 +206,42 @@ CCTV-1,  http://tvpull.dxhmt.cn/tv/11481-4.m3u8
 湖北卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226206/1.m3u8
 辽宁卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226201/1.m3u8
 重庆卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226202/1.m3u8
+大湾区卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
+大湾区卫视, http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
+
+#兰州文理学院IPTV#
+湖南卫视,https://iptv.luas.edu.cn/liverespath/9b1ccba5a2c611bb5d7c96243695572090cca5fd/5f70a343b7-0-0-8c240b8ce149dabb7eb23b82dc73d8a1/index.m3u8
+浙江卫视,https://iptv.luas.edu.cn/liverespath/f650ba03bb4883fe67a1fb7c193a00a4c0c93881/cd5877e894-0-0-a92d7cd4d77ad5168439fadf8fae4364/index.m3u8
+江苏卫视,https://iptv.luas.edu.cn/liverespath/0be64515076e489456de2f33e7b58ff1b392d3b3/c4b57ebe67-0-0-a6aa35a2c077d4d9fc9c7ba85c437047/index.m3u8
+东方卫视,https://iptv.luas.edu.cn/liverespath/4015e6015b3b818a4cbc2247960b8536a3cd0153/0d87647423-0-0-dfb8e32f349e649fa82256fe83250a9a/index.m3u8
+安徽卫视,https://iptv.luas.edu.cn/liverespath/6e91e17de838dbf7c77f9ed8e41726bd4a1516f5/422b1ad4fd-0-0-03f3fcb2a4aeb27d7915419e9d0f0d61/index.m3u8
+黑龙江卫视,https://iptv.luas.edu.cn/liverespath/fe1745c7599e85d0a34fa0ad3986ef25c2ed7c6f/9ab87d96e7-0-0-8a2df2ee980912d8ac7804f2286482db/index.m3u8
+辽宁卫视,https://iptv.luas.edu.cn/liverespath/73aedb8ffd21b3b8afe4664591d4cb3a5cced827/8936401008-0-0-221303a1ba673859565eb1f80994c321/index.m3u8
+深圳卫视,https://iptv.luas.edu.cn/liverespath/536ebe8b7165b25c8670e42eb8b7b4b6d178f158/085fcbef75-0-0-665c13aa80e2eb631a7d8e3e98c94b07/index.m3u8
+广东卫视,https://iptv.luas.edu.cn/liverespath/57e80ee85ec1f4e523e1bca55f5a676abd292db8/15e00532c5-0-0-f8afedb62ed5c0308ca616fca9aa3a6c/index.m3u8
+天津卫视,https://iptv.luas.edu.cn/liverespath/41433c450cf4747cf2600adecc560bc90f344182/7d8a017fce-0-0-bee31d0ebf08ec55a9c6aae43aa04d02/index.m3u8
+湖北卫视,https://iptv.luas.edu.cn/liverespath/a8e4cf2bade25844b998d7743d83331412ea841f/54956ea315-0-0-654b42e4baba402db524b7b60106a01b/index.m3u8
+山东卫视,https://iptv.luas.edu.cn/liverespath/8b205af319dcc92c60a69a96423af21b24a29ca0/88adefa814-0-0-711eccb128ef4748b97633c50741a489/index.m3u8
+重庆卫视,https://iptv.luas.edu.cn/liverespath/b14734af7f740eb61419248c57e25551a7d1093f/e649369c62-0-0-985b5ec260cb34a31d46af6e78a0cdae/index.m3u8
+四川卫视,https://iptv.luas.edu.cn/liverespath/ca3f021632b48e6960797776657926074723d276/c6332a897d-0-0-f99cfe63216943c7765464267daa4857/index.m3u8
+东南卫视,https://iptv.luas.edu.cn/liverespath/7a202b5f39c56db4ca3ca7a3dc21b073c9bc472a/bf2079415e-0-0-ce936327a3c2114f04f9b5dc762c8f17/index.m3u8
+河北卫视,https://iptv.luas.edu.cn/liverespath/0d0303a991ca71e06290b546e34104dbe0d0c64a/00255fbdf5-0-0-35b9d761e7ced8291ed9d9b7dc409dad/index.m3u8
+江西卫视,https://iptv.luas.edu.cn/liverespath/5262d7f97311b82a4a460f3b8221e4a7d394c2c0/5d72ea47eb-0-0-bfabaac50a62d10683c8197c88ced0a7/index.m3u8
+
+#others#
+
+湖南卫视,  http://zteres.sn.chinamobile.com:6060/000000001000/1000000001000032695/1.m3u8?channel-id=ystenlive&Contentid=1000000001000032695&livemode=1&stbId=3
+浙江卫视,  http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
+大湾区卫视, https://php.17186.eu.org/gdtv/nfws.m3u8
+大湾区卫视, http://hms2864nc1972666630.live.aikan.miguvideo.com/wh7f454c46tw1593455810_973699600/wd_r3/2018/nfmedia/nfws/1000/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=139.198.127.250&timestamp=20230816073743&ContentId=265218882&timezone=UTC&mtv_session=69490e0f5d2243e8aa4627ecf0058de1&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=095412c3a2f0236b02fe898002af482a&咪咕
+哈尔滨综合, https://stream.hrbtv.net/xwzh/playlist.m3u8
+
+延边卫视,  http://live.ybtvyun.com/video/s10006-28bc40431485/index.m3u8
+青海卫视,  http://stream.qhbtv.com/qhws/playlist.m3u8
+三沙卫视,  https://pullsstv90080111.ssws.tv/live/SSTV20220729.m3u8
+人間衛視,  https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
+中天新聞,  http://198.16.100.90:8278/ctinews/playlist.m3u8?tid=MC3C3915550439155504&ct=19193&tsum=a8168b7967dda9bfebdd5b1403dc19b0
+
 超级综艺, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226009/1.m3u8
 兵器科技, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226975/1.m3u8
 怀旧剧场, http://dbiptv.sn.chinamobile.com/PLTV/88888893/224/3221226972/1.m3u8
@@ -232,40 +268,9 @@ CCTV-1,  http://tvpull.dxhmt.cn/tv/11481-4.m3u8
 快乐垂钓, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226805/1.m3u8
 欢笑剧场, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226582/1.m3u8
 乐游, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226580/1.m3u8
-
-#兰州文理学院IPTV#
-湖南卫视,https://iptv.luas.edu.cn/liverespath/9b1ccba5a2c611bb5d7c96243695572090cca5fd/5f70a343b7-0-0-8c240b8ce149dabb7eb23b82dc73d8a1/index.m3u8
-浙江卫视,https://iptv.luas.edu.cn/liverespath/f650ba03bb4883fe67a1fb7c193a00a4c0c93881/cd5877e894-0-0-a92d7cd4d77ad5168439fadf8fae4364/index.m3u8
-江苏卫视,https://iptv.luas.edu.cn/liverespath/0be64515076e489456de2f33e7b58ff1b392d3b3/c4b57ebe67-0-0-a6aa35a2c077d4d9fc9c7ba85c437047/index.m3u8
-东方卫视,https://iptv.luas.edu.cn/liverespath/4015e6015b3b818a4cbc2247960b8536a3cd0153/0d87647423-0-0-dfb8e32f349e649fa82256fe83250a9a/index.m3u8
-安徽卫视,https://iptv.luas.edu.cn/liverespath/6e91e17de838dbf7c77f9ed8e41726bd4a1516f5/422b1ad4fd-0-0-03f3fcb2a4aeb27d7915419e9d0f0d61/index.m3u8
-黑龙江卫视,https://iptv.luas.edu.cn/liverespath/fe1745c7599e85d0a34fa0ad3986ef25c2ed7c6f/9ab87d96e7-0-0-8a2df2ee980912d8ac7804f2286482db/index.m3u8
-辽宁卫视,https://iptv.luas.edu.cn/liverespath/73aedb8ffd21b3b8afe4664591d4cb3a5cced827/8936401008-0-0-221303a1ba673859565eb1f80994c321/index.m3u8
-深圳卫视,https://iptv.luas.edu.cn/liverespath/536ebe8b7165b25c8670e42eb8b7b4b6d178f158/085fcbef75-0-0-665c13aa80e2eb631a7d8e3e98c94b07/index.m3u8
-广东卫视,https://iptv.luas.edu.cn/liverespath/57e80ee85ec1f4e523e1bca55f5a676abd292db8/15e00532c5-0-0-f8afedb62ed5c0308ca616fca9aa3a6c/index.m3u8
-天津卫视,https://iptv.luas.edu.cn/liverespath/41433c450cf4747cf2600adecc560bc90f344182/7d8a017fce-0-0-bee31d0ebf08ec55a9c6aae43aa04d02/index.m3u8
-湖北卫视,https://iptv.luas.edu.cn/liverespath/a8e4cf2bade25844b998d7743d83331412ea841f/54956ea315-0-0-654b42e4baba402db524b7b60106a01b/index.m3u8
-山东卫视,https://iptv.luas.edu.cn/liverespath/8b205af319dcc92c60a69a96423af21b24a29ca0/88adefa814-0-0-711eccb128ef4748b97633c50741a489/index.m3u8
-重庆卫视,https://iptv.luas.edu.cn/liverespath/b14734af7f740eb61419248c57e25551a7d1093f/e649369c62-0-0-985b5ec260cb34a31d46af6e78a0cdae/index.m3u8
-四川卫视,https://iptv.luas.edu.cn/liverespath/ca3f021632b48e6960797776657926074723d276/c6332a897d-0-0-f99cfe63216943c7765464267daa4857/index.m3u8
-东南卫视,https://iptv.luas.edu.cn/liverespath/7a202b5f39c56db4ca3ca7a3dc21b073c9bc472a/bf2079415e-0-0-ce936327a3c2114f04f9b5dc762c8f17/index.m3u8
-河北卫视,https://iptv.luas.edu.cn/liverespath/0d0303a991ca71e06290b546e34104dbe0d0c64a/00255fbdf5-0-0-35b9d761e7ced8291ed9d9b7dc409dad/index.m3u8
-江西卫视,https://iptv.luas.edu.cn/liverespath/5262d7f97311b82a4a460f3b8221e4a7d394c2c0/5d72ea47eb-0-0-bfabaac50a62d10683c8197c88ced0a7/index.m3u8
 上海纪实,https://iptv.luas.edu.cn/liverespath/98a578339579ce91ec2443bfbd1fc3af10ee02bd/dfc077e366-0-0-ef61065823146be6b28ae6a9952f4eda/index.m3u8
 金鹰纪实,https://iptv.luas.edu.cn/liverespath/d623386366118b9f7e610c167dbb8dc552b7660c/3457936b33-0-0-f6d38330c42d9cb0f458281488e3f546/index.m3u8
 全纪实,https://iptv.luas.edu.cn/liverespath/56840359360f071dfdd9568e7ab86d1b3232a9ee/09414e7f4f-0-0-64acbb149e9215819519043fd0cbb620/index.m3u8
-
-#others#
-
-湖南卫视,  http://zteres.sn.chinamobile.com:6060/000000001000/1000000001000032695/1.m3u8?channel-id=ystenlive&Contentid=1000000001000032695&livemode=1&stbId=3
-浙江卫视,  http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
-哈尔滨综合, https://stream.hrbtv.net/xwzh/playlist.m3u8
-
-延边卫视,  http://live.ybtvyun.com/video/s10006-28bc40431485/index.m3u8
-青海卫视,  http://stream.qhbtv.com/qhws/playlist.m3u8
-三沙卫视,  https://pullsstv90080111.ssws.tv/live/SSTV20220729.m3u8
-人間衛視,  https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
-
 第一剧场,  https://live.goodiptv.club/api/cqyx.php?id=diyijuchangHD
 都市剧场,  https://live.goodiptv.club/api/cqyx.php?id=dsjcHD
 动漫秀场,  https://live.goodiptv.club/api/cqyx.php?id=dmxcHD
@@ -306,6 +311,7 @@ CCTV-5,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225818/index.m3u8
 CCTV-5,http://[2409:8087:2001:20:2800:0:df6e:eb22]/ott.mobaibox.com/PLTV/4/224/3221228502/index.m3u8
 CCTV-5,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226019/index.m3u8
 CCTV-5,http://[2409:8087:2001:20:2800:0:df6e:eb03]:80/wh7f454c46tw86526066_-132010276/ott.mobaibox.com/PLTV/3/224/3221227686/index.m3u8?icpid=3&RTS=1674380201&from=40&ocs=2_2409:8087:2004:20:2800:0:df6e:ec03_80&popid=40&hms_devid=2039&prioritypopid=40&vqe=3
+CCTV-6,http://[2409:8087:2001:20:2800:0:df6e:eb22]/ott.mobaibox.com/PLTV/4/224/3221228516/index.m3u8
 CCTV-6,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226148/1.m3u8
 CCTV-7,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226432/1.m3u8
 CCTV-8,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226150/1.m3u8
@@ -336,6 +342,9 @@ CCTV-16,http://[2409:8087:2001:20:2800:0:df6e:eb04]:80/wh7f454c46tw3303805862_14
 CCTV-16,http://[2409:8087:7004:20:1000::22]:6610/yinhe/2/ch00000090990000002395/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
 CCTV-17,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226407/1.m3u8
 CCTV-17,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001241/index.m3u8
+CCTV-8K,http://[2409:8087:2001:20:2800:0:df6e:eb02]/ott.mobaibox.com/PLTV/3/224/3221228165/index.m3u8
+http://[2409:8087:2001:20:2800:0:df6e:eb02]/wh7f454c46tw3737653395_1580816352/ott.mobaibox.com/PLTV/3/224/3221228165/index.m3u8?icpid=3&RTS=1678665935&from=40&popid=40&hms_devid=2039&prioritypopid=40&vqe=3
+http://[2409:8087:2001:20:2800:0:df6e:eb03]/wh7f454c46tw1981574683_-2118700426/ott.mobaibox.com/PLTV/3/224/3221228165/index.m3u8?icpid=3&RTS=1659435610&from=40&popid=40&hms_devid=2039&prioritypopid=40&vqe=3
 
 黑龙江卫视,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226142/1.m3u8
 黑龙江卫视,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001031/index.m3u8
@@ -490,6 +499,8 @@ CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/ind
 名侦探柯南,http://epg.112114.xyz/douyu/7620081
 
 猫和老鼠,https://epg.112114.xyz/huya/11352879
+
+爱情公寓,http://epg.112114.xyz/douyu/6863367
 
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=177331
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=177333
