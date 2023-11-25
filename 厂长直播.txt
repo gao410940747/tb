@@ -484,10 +484,10 @@ CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/ind
 
 其他, #genre#
 
-名侦探柯南,http://epg.112114.xyz/douyu/7620081
 名侦探柯南,http://epg.112114.xyz/douyu/7050342
 名侦探柯南,http://epg.112114.xyz/douyu/1783144
 名侦探柯南,http://epg.112114.xyz/douyu/6484910
+名侦探柯南,http://epg.112114.xyz/douyu/7620081
 
 猫和老鼠,https://epg.112114.xyz/huya/11352879
 
