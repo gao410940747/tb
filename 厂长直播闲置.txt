@@ -1,0 +1,8 @@
+
+CCTV-1,http://39.165.35.152:9901/tsfile/live/0001_1.m3u8?key=txiptv
+
+CCTV-3,http://58.220.219.14:9901/tsfile/live/0003_1.m3u8?key=txiptv
+CCTV-13,http://58.220.219.14:9901/tsfile/live/0013_1.m3u8?key=txiptv
+
+CCTV-5,http://jltpc.x3322.net:9901/tsfile/live/0005_1.m3u8?key=txiptv
+CCTV-13,http://jltpc.x3322.net:9901/tsfile/live/0013_1.m3u8?key=txiptv
