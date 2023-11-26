@@ -399,10 +399,6 @@ CCTV-1,  http://stream10.fjtv.net/cctv1/playlist.m3u8?_upt=f28ac5ee1700907395
 CCTV-13, http://stream10.fjtv.net/cctv13/playlist.m3u8?_upt=a7a3bead1700907543
 CCTV-1,  http://tvpull.dxhmt.cn/tv/11481-4.m3u8
 
-CHC动作电影, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226465/1.m3u8
-CHC家庭影院, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226462/1.m3u8
-CHC高清电影, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226463/1.m3u8
-CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e695b342c1d1eca0/1b8d1b9dde-0-0-1758c2714122d62c33fe41558687491c/index.m3u8
 CCTV-兵器科技, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226975/1.m3u8
 CCTV-怀旧剧场, http://dbiptv.sn.chinamobile.com/PLTV/88888893/224/3221226972/1.m3u8
 CCTV-世界地理, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226947/1.m3u8
@@ -424,6 +420,15 @@ CCTV-央视台球,  https://live.goodiptv.club/api/cqyx.php?id=ystqHD
 CCTV-风云足球,  https://live.goodiptv.club/api/cqyx.php?id=fyzqHD
 CCTV-央视文化精品,  https://live.goodiptv.club/api/cqyx.php?id=yswhHD
 CCTV-高尔夫网球,https://live.goodiptv.club/api/cqyx.php?id=golfHD
+
+CHC动作电影, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226465/1.m3u8
+CHC家庭影院, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226462/1.m3u8
+CHC高清电影, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226463/1.m3u8
+CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e695b342c1d1eca0/1b8d1b9dde-0-0-1758c2714122d62c33fe41558687491c/index.m3u8
+
+
+
+
 
 
 
