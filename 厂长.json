@@ -240,22 +240,7 @@
             "changeable": 0,
             "api": "./lib/drpy.min.js",
             "ext": "./js/JRKAN直播.js"
-        },
-        {
-            "key":"drpy_js_lf_ikanbot",
-            "name":"爱看机器人",
-            "type":3,
-            "api":"./diy/lf_ikanbot3_1_min.js"
-//			"api":"https://xhdwc.tk/js/lf_ikanbot3_1_min.js"
-        },
-        {
-            "key": "ikanbot_open",
-            "name": "爱看机器人(Cat)",
-            "timeout": 10,
-            "api": "https://raw.githubusercontent.com/13998394872/TVBox/main/Cat/ikanbot_open.js"
-        },
-        {"key":"drpy_js_ikanbot2","name":"影视 | 爱看机器人2[js]","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./js/ikanbot2.js"},
-        {"key":"drpy_js_ikanbot3","name":"影视 | 爱看机器人3[js]","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./js/ikanbot3.js"}
+        }
     ],
     "rules": [
         {
