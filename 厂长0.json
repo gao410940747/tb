@@ -22,53 +22,6 @@
 //            "ext": "https://www.czz9.com/"
             "ext": "https://www.czzy88.com/"
         },
-        {
-            "key": "drpy_js_荐片",
-            "name": "荐片",
-            "type": 3,
-            "api": "./lib/drpy2.min.js",
-            "ext": "./js/荐片.js",
-            "playerType": "1"
-        },
-        {
-            "key": "csp_WoGG",
-            "name": "玩偶哥哥(饭太硬)",
-            "type": 3,
-            "api": "csp_WoGG",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 0,
-            "ext": "http://127.0.0.1:9978/file/tvfan/token.json+4k|auto|fhd$$$http://www.wogg.xyz/$$$弹"
-        },
-        {
-            "key": "一起看 ",
-            "name": "一起看",
-            "type": 3,
-            "api": "csp_YQKan",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 1
-        },
-        {
-            "key": "新6V",
-            "name": "新6V磁力",
-            "type": 3,
-            "api": "csp_SixV",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 0,
-            "ext": "http://www.xb6v.com/"
-        },
-                { 
-                         "key": "csp_Mp4Mov", 
-                         "name": "Mp4电影(磁力)", 
-                         "jar": "./diy/cili.jar", 
-                         "type": 3, 
-                         "api": "csp_Mp4Mov", 
-                         "searchable": 1, 
-                         "quickSearch": 1, 
-                         "filterable": 1 
-                 },
 		{
 			"key":"量子资源",
 			"name":"量子",
@@ -154,6 +107,53 @@
 				"记录片"
 			]
 		},
+        {
+            "key": "一起看 ",
+            "name": "一起看",
+            "type": 3,
+            "api": "csp_YQKan",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 1
+        },
+        {
+            "key": "drpy_js_荐片",
+            "name": "荐片(磁力)",
+            "type": 3,
+            "api": "./lib/drpy2.min.js",
+            "ext": "./js/荐片.js",
+            "playerType": "1"
+        },
+        {
+            "key": "新6V",
+            "name": "新6V(磁力)",
+            "type": 3,
+            "api": "csp_SixV",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0,
+            "ext": "http://www.xb6v.com/"
+        },
+                { 
+                         "key": "csp_Mp4Mov", 
+                         "name": "Mp4电影(磁力)", 
+                         "jar": "./diy/cili.jar", 
+                         "type": 3, 
+                         "api": "csp_Mp4Mov", 
+                         "searchable": 1, 
+                         "quickSearch": 1, 
+                         "filterable": 1 
+                 },
+        {
+            "key": "csp_WoGG",
+            "name": "玩偶哥哥(饭太硬)",
+            "type": 3,
+            "api": "csp_WoGG",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0,
+            "ext": "http://127.0.0.1:9978/file/tvfan/token.json+4k|auto|fhd$$$http://www.wogg.xyz/$$$弹"
+        },
                 { 
                          "key": "88js", 
                          "name": "88看球", 
