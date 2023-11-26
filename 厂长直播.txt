@@ -869,8 +869,6 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 湖北卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226206/1.m3u8
 辽宁卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226201/1.m3u8
 重庆卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226202/1.m3u8
-大湾区卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
-大湾区卫视, http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
 
     #兰州文理学院IPTV#
 湖南卫视,https://iptv.luas.edu.cn/liverespath/9b1ccba5a2c611bb5d7c96243695572090cca5fd/5f70a343b7-0-0-8c240b8ce149dabb7eb23b82dc73d8a1/index.m3u8
@@ -899,6 +897,8 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 青海卫视,  http://stream.qhbtv.com/qhws/playlist.m3u8
 三沙卫视,  https://pullsstv90080111.ssws.tv/live/SSTV20220729.m3u8
 
+大湾区卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
+大湾区卫视, http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
 大湾区卫视, https://php.17186.eu.org/gdtv/nfws.m3u8
 大湾区卫视, http://hms2864nc1972666630.live.aikan.miguvideo.com/wh7f454c46tw1593455810_973699600/wd_r3/2018/nfmedia/nfws/1000/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=139.198.127.250&timestamp=20230816073743&ContentId=265218882&timezone=UTC&mtv_session=69490e0f5d2243e8aa4627ecf0058de1&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=095412c3a2f0236b02fe898002af482a&咪咕
 
@@ -1137,8 +1137,8 @@ BesTV频道, http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226132/
 全纪实,  https://iptv.luas.edu.cn/liverespath/56840359360f071dfdd9568e7ab86d1b3232a9ee/09414e7f4f-0-0-64acbb149e9215819519043fd0cbb620/index.m3u8
 金鹰纪实, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226351/1.m3u8
 金鹰纪实, https://iptv.luas.edu.cn/liverespath/d623386366118b9f7e610c167dbb8dc552b7660c/3457936b33-0-0-f6d38330c42d9cb0f458281488e3f546/index.m3u8
-茶友频道, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226808/1.m3u8
 快乐垂钓, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226805/1.m3u8
+茶频道, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226808/1.m3u8
 
     #IHOT频道#
 IHOT爱电竞,http://[2409:8087:7000:20:1000::22]:6060/000000001000/6000000006000230630/index.m3u8?channel-id=wasusyt&Contentid=6000000006000230630&livemode=1&stbId=3
@@ -1204,7 +1204,7 @@ NewTV精品体育,http://[2409:8087:2001:20:2800:0:df6e:eb1a]:80/wh7f454c46tw520
 NewTV精品大剧,http://[2409:8087:2001:20:2800:0:df6e:eb1b]:80/wh7f454c46tw1755993626_-1194432913/ott.mobaibox.com/PLTV/3/224/3221227618/index.m3u8?icpid=3&RTS=1674386166&from=40&popid=40&hms_devid=2116&prioritypopid=40&vqe=3
 NewTV精品纪录,http://[2409:8087:2001:20:2800:0:df6e:eb1b]:80/wh7f454c46tw1933659217_-1788924400/ott.mobaibox.com/PLTV/3/224/3221227547/index.m3u8?icpid=3&RTS=1674386344&from=40&popid=40&hms_devid=2116&prioritypopid=40&vqe=3
 NewTV金牌综艺,http://[2409:8087:2001:20:2800:0:df6e:eb19]:80/wh7f454c46tw2614190807_1624483481/ott.mobaibox.com/PLTV/3/224/3221227541/index.m3u8?icpid=3&RTS=1674387024&from=40&popid=40&hms_devid=2113&prioritypopid=40&vqe=3
-NewTV武博世界, http://[2409:8087:2001:20:2800:0:df6e:eb19]:80/wh7f454c46tw2554338791_49940138/ott.mobaibox.com/PLTV/3/224/3221227533/index.m3u8
+NewTV武搏世界, http://[2409:8087:2001:20:2800:0:df6e:eb19]:80/wh7f454c46tw2554338791_49940138/ott.mobaibox.com/PLTV/3/224/3221227533/index.m3u8
 NewTV中国功夫, http://[2409:8087:2001:20:2800:0:df6e:eb19]:80/wh7f454c46tw1934355864_2070028581/ott.mobaibox.com/PLTV/3/224/3221227530/index.m3u8
 NewTV军旅剧场, http://[2409:8087:2001:20:2800:0:df6e:eb06]:80/wh7f454c46tw1807611386_-262631246/ott.mobaibox.com/PLTV/3/224/3221227603/index.m3u8
 NewTV炫舞未来, http://[2409:8087:2001:20:2800:0:df6e:eb09]:80/wh7f454c46tw2582593423_1721070986/ott.mobaibox.com/PLTV/3/224/3221227475/index.m3u8
@@ -1214,7 +1214,6 @@ NewTV精品纪录, http://[2409:8087:2001:20:2800:0:df6e:eb1a]:80/wh7f454c46tw28
 NewTV精品大剧, http://[2409:8087:2001:20:2800:0:df6e:eb1a]:80/wh7f454c46tw2817459161_-1430429466/ott.mobaibox.com/PLTV/3/224/3221227618/index.m3u8
 NewTV军事评论, http://[2409:8087:2001:20:2800:0:df6e:eb18]:80/wh7f454c46tw3373254713_-1111569189/ott.mobaibox.com/PLTV/3/224/3221227544/index.m3u8
 NewTV明星大片, http://[2409:8087:2001:20:2800:0:df6e:eb18]:80/wh7f454c46tw2856695654_946966165/ott.mobaibox.com/PLTV/3/224/3221227594/index.m3u8
-NewTV精品萌宠,http://[2409:8087:2001:20:2800:0:df6e:eb24]:80/wh7f454c46tw2442197200_-2076384633/ott.mobaibox.com/PLTV/3/224/3221228430/index.m3u8?icpid=3&RTS=1674369672&from=40&popid=40&hms_devid=2292&prioritypopid=40&vqe=3
 NewTV武搏世界,http://[2409:8087:2001:20:2800:0:df6e:eb18]:80/wh7f454c46tw1556325430_664703954/ott.mobaibox.com/PLTV/3/224/3221227533/index.m3u8?icpid=3&RTS=1674385966&from=40&popid=40&hms_devid=2113&prioritypopid=40&vqe=3
 
 NewTV东北热剧,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225741/index.m3u8
@@ -1241,8 +1240,8 @@ NewTV超级综艺,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225714/
 NewTV金牌综艺,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225666/index.m3u8
 NewTV超级综艺, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226009/1.m3u8
 NewTV武搏世界,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225680/index.m3u8
+NewTV精品萌宠,http://[2409:8087:2001:20:2800:0:df6e:eb24]:80/wh7f454c46tw2442197200_-2076384633/ott.mobaibox.com/PLTV/3/224/3221228430/index.m3u8?icpid=3&RTS=1674369672&from=40&popid=40&hms_devid=2292&prioritypopid=40&vqe=3
 NewTV精品萌宠,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226505/index.m3u8
-NewTV体育休闲, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226232/1.m3u8
 
     #SITV频道#
 SITV动漫秀场,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001196/index.m3u8
