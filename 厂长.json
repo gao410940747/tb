@@ -133,17 +133,7 @@
             "quickSearch": 1,
             "changeable": 0,
             "ext": "http://www.xb6v.com/"
-        },
-                { 
-                         "key": "csp_Mp4Mov", 
-                         "name": "Mp4电影(磁力)", 
-                         "jar": "./diy/cili.jar", 
-                         "type": 3, 
-                         "api": "csp_Mp4Mov", 
-                         "searchable": 1, 
-                         "quickSearch": 1, 
-                         "filterable": 1 
-                 },
+        },                
         {
             "key": "csp_WoGG",
             "name": "玩偶哥哥(饭太硬)",
@@ -154,6 +144,50 @@
             "changeable": 0,
             "ext": "http://127.0.0.1:9978/file/tvfan/token.json+4k|auto|fhd$$$http://www.wogg.xyz/$$$弹"
         },
+        { 
+             "key": "七夜", 
+             "name": "七夜(阿里搜索)", 
+             "type": 3, 
+             "api": "csp_Dovx", 
+             "searchable": 1, 
+             "quickSearch": 1, 
+             "filterable": 0, 
+             "changeable": 0, 
+             "ext": "http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto" 
+         }, 
+         { 
+             "key": "YiSo", 
+             "name": "一搜(阿里搜索)", 
+             "type": 3, 
+             "api": "csp_YiSo", 
+             "searchable": 1, 
+             "quickSearch": 1, 
+             "filterable": 0, 
+             "changeable": 0, 
+             "ext": "http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto" 
+         }, 
+         { 
+             "key": "UpYun", 
+             "name": "云搜(阿里搜索)", 
+             "type": 3, 
+             "api": "csp_UpYun", 
+             "searchable": 1, 
+             "quickSearch": 1, 
+             "filterable": 0, 
+             "changeable": 0, 
+             "ext": "http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto" 
+         }, 
+         { 
+             "key": "PanSearch", 
+             "name": "盘搜索(阿里搜索)", 
+             "type": 3, 
+             "api": "csp_PanSearch", 
+             "searchable": 1, 
+             "quickSearch": 1, 
+             "filterable": 0, 
+             "changeable": 0, 
+             "ext": "http://127.0.0.1:9978/file/tvfan/token.txt+4k|fhd|auto" 
+         },
                 { 
                          "key": "88js", 
                          "name": "88看球", 
