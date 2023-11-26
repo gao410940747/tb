@@ -19,6 +19,7 @@
             "searchable": 1,
             "quickSearch": 1,
             "changeable": 1,
+            "timeout": 10,
 //			"ext": "https://www.czz9.com/"
             "ext": "https://www.czzy88.com/"
         },
@@ -32,7 +33,7 @@
 //			"api":"https://cj.lziapi.com/api.php/provide/vod/from/liangzi/at/xml/",
 			"searchable":1,
 			"changeable":1,
-            "timeout": 3,
+            "timeout": 1,
 			"categories":[
 				"大陆综艺",
 				"国产剧",
@@ -79,6 +80,7 @@
 //			"api": "http://cj.ffzyapi.com/api.php/provide/vod/from/feifan/",
 			"searchable": 1,
 			"quickSearch": 1,
+            "timeout": 10,
 			"categories": [
 				"大陆综艺",
 				"国产剧",
@@ -109,48 +111,12 @@
 			]
 		},
         {
-            "key": "一起看 ",
-            "name": "一起看",
-            "type": 3,
-            "api": "csp_YQKan",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 1
-        },
-        {
-            "key": "drpy_js_荐片",
-            "name": "荐片(磁力)",
-            "type": 3,
-            "api": "./lib/drpy2.min.js",
-            "ext": "./js/荐片.js",
-            "playerType": "1"
-        },
-        {
-            "key": "新6V",
-            "name": "新6V(磁力)",
-            "type": 3,
-            "api": "csp_SixV",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 0,
-            "ext": "http://www.xb6v.com/"
-        },                
-        {
-            "key": "csp_WoGG",
-            "name": "玩偶哥哥(饭太硬)",
-            "type": 3,
-            "api": "csp_WoGG",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 0,
-            "ext": "http://127.0.0.1:9978/file/tvfan/token.json+4k|auto|fhd$$$http://www.wogg.xyz/$$$弹"
-        },
-        {
             "key": "子子",
             "name": "子子",
             "type": 3,
             "api": "csp_XBPQ",
             "playerType": "1",
+            "timeout": 10,
             "ext": {
                 "站名": "子子影视",
                 "主页url": "https://www.ziziys.com",
@@ -176,6 +142,47 @@
                 "分类url": "https://www.ziziys.com/list/{cateId}-{catePg}.html;;val",
                 "跳转播放链接": "vod_class*url\":\"&&\""
             }
+        },
+        {
+            "key": "drpy_js_荐片",
+            "name": "荐片(磁力)",
+            "type": 3,
+            "api": "./lib/drpy2.min.js",
+            "ext": "./js/荐片.js",
+            "timeout": 10,
+            "playerType": "1"
+        },
+        {
+            "key": "新6V",
+            "name": "新6V(磁力)",
+            "type": 3,
+            "api": "csp_SixV",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0,
+            "timeout": 10,
+            "ext": "http://www.xb6v.com/"
+        },                
+        {
+            "key": "csp_WoGG",
+            "name": "玩偶哥哥(饭太硬)",
+            "type": 3,
+            "api": "csp_WoGG",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0,
+            "timeout": 10,
+            "ext": "http://127.0.0.1:9978/file/tvfan/token.json+4k|auto|fhd$$$http://www.wogg.xyz/$$$弹"
+        },
+        {
+            "key": "一起看 ",
+            "name": "一起看",
+            "type": 3,
+            "api": "csp_YQKan",
+            "searchable": 1,
+            "quickSearch": 1,
+            "timeout": 10,
+            "changeable": 1
         },
         { 
             "key": "七夜",
@@ -231,6 +238,7 @@
 //			"ext": "https://agit.ai/fantaiying/dr_py/raw/branch/main/js/88看球.js",
             "searchable": 0,
             "quickSearch": 0,
+            "timeout": 10,
             "changeable": 0
         },
         {
@@ -238,6 +246,7 @@
             "name": "体育赛事直播",
             "type": 3,
             "changeable": 0,
+            "timeout": 10,
             "api": "./lib/drpy.min.js",
             "ext": "./js/JRKAN直播.js"
         }
