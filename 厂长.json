@@ -1,5 +1,6 @@
 {
-	"spider": "./jar/XBPQ.jar;md5;b753810e87120584cdc72d2476f96713",
+//	"spider": "./jar/XBPQ.jar;md5;b753810e87120584cdc72d2476f96713",
+	"spider": "./jar/cc.jar;md5;gd5ic01b6d4922692401eac6018178d033d06",
 	"wallpaper": "http://xhww.fun:63/img.php",
 	"sites": [
 		{
