@@ -241,6 +241,7 @@ CCTV-1,  http://tvpull.dxhmt.cn/tv/11481-4.m3u8
 三沙卫视,  https://pullsstv90080111.ssws.tv/live/SSTV20220729.m3u8
 人間衛視,  https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
 中天新聞,  http://198.16.100.90:8278/ctinews/playlist.m3u8?tid=MC3C3915550439155504&ct=19193&tsum=a8168b7967dda9bfebdd5b1403dc19b0
+緯來體育, https://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4b390289143a8e1b2a898&t=1840341130
 
 超级综艺, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226009/1.m3u8
 兵器科技, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226975/1.m3u8
