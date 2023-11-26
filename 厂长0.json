@@ -69,6 +69,16 @@
             "changeable": 0,
             "ext": "http://www.xb6v.com/"
         },
+                { 
+                         "key": "csp_Mp4Mov", 
+                         "name": "Mp4电影(磁力)", 
+                         "jar": "./diy/cili.jar", 
+                         "type": 3, 
+                         "api": "csp_Mp4Mov", 
+                         "searchable": 1, 
+                         "quickSearch": 1, 
+                         "filterable": 1 
+                 },
 		{
 			"key":"量子资源",
 			"name":"量子",
