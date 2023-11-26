@@ -33,7 +33,7 @@
 //			"api":"https://cj.lziapi.com/api.php/provide/vod/from/liangzi/at/xml/",
 			"searchable":1,
 			"changeable":1,
-            "timeout": 1,
+            "timeout": 10,
 			"categories":[
 				"大陆综艺",
 				"国产剧",
@@ -130,6 +130,17 @@
             "playerType": "1"
         },
         {
+            "key": "csp_WoGG",
+            "name": "玩偶哥哥(饭太硬)",
+            "type": 3,
+            "api": "csp_WoGG",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0,
+            "timeout": 10,
+            "ext": "http://127.0.0.1:9978/file/tvfan/token.json+4k|auto|fhd$$$http://www.wogg.xyz/$$$弹"
+        },
+        {
             "key": "新6V",
             "name": "新6V(磁力)",
             "type": 3,
@@ -150,17 +161,6 @@
             "quickSearch": 1,
             "timeout": 10,
             "filterable": 1
-        },
-        {
-            "key": "csp_WoGG",
-            "name": "玩偶哥哥(饭太硬)",
-            "type": 3,
-            "api": "csp_WoGG",
-            "searchable": 1,
-            "quickSearch": 1,
-            "changeable": 0,
-            "timeout": 10,
-            "ext": "http://127.0.0.1:9978/file/tvfan/token.json+4k|auto|fhd$$$http://www.wogg.xyz/$$$弹"
         },
         { 
             "key": "七夜",
@@ -197,7 +197,7 @@
         },
         {
             "key": "PanSearch",
-            "name": "盘搜索(阿里搜索)",
+            "name": "盘搜(阿里搜索)",
             "type": 3,
             "api": "csp_PanSearch",
             "searchable": 1,
