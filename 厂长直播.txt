@@ -1,4 +1,4 @@
-央视IPTV, #genre#
+央视, #genre#
 
     #魔百盒-1#
 CCTV-1,http://[2409:8087:2001:20:2800:0:df6e:eb12]:80/wh7f454c46tw3964344116_67852184/ott.mobaibox.com/PLTV/3/224/3221227675/index.m3u8?icpid=3&RTS=1674379784&from=40&ocs=2_2409:8087:2001:20:2800:0:df6e:eb0f_80&popid=40&hms_devid=2112&prioritypopid=40&vqe=3
@@ -456,7 +456,7 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 
 
 
-卫视IPTV, #genre#
+卫视, #genre#
 
     #银河#
 黑龙江卫视,http://[2409:8087:7004:20:1000::22]:6610/yinhe/2/ch00000090990000001338/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
