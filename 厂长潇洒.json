@@ -5,26 +5,19 @@
 "sites":
 	[
 	{"key":"厂长","name":"厂长","type":3,"api":"csp_Czsapp","playerType":2,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.czzy88.com"},
-	{"key":"荐片","name":"磁力｜荐片","type":3,"api":"csp_JianPian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ownjpykxttjzuhy.jiesiwa.com"},
+	{"key":"荐片","name":"荐片","type":3,"api":"csp_JianPian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://ownjpykxttjzuhy.jiesiwa.com"},
 	{"key":"量子","name":"量子","type":1,"api":"https://cj.lziapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"categories":["动作片","喜剧片","科幻片","恐怖片","爱情片","剧情片","战争片","记录片","国产剧","欧美剧","香港剧","韩国剧","台湾剧","日本剧","海外剧","泰国剧","国产动漫","日韩动漫","欧美动漫","港台动漫","海外动漫","大陆综艺","港台综艺","日韩综艺","欧美综艺"]},
 	{"key":"非凡","name":"非凡","type":1,"api":"http://cj.ffzyapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"categories":["动作片","喜剧片","科幻片","恐怖片","爱情片","剧情片","战争片","记录片","国产剧","欧美剧","香港剧","韩国剧","台湾剧","日本剧","海外剧","泰国剧","国产动漫","日韩动漫","欧美动漫","港台动漫","海外动漫","大陆综艺","港台综艺","日韩综艺","欧美综艺"]},
 	{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1},
 	{"key":"一起看","name":"一起看","type":3,"api":"csp_YQKan","searchable":1,"quickSearch":1,"changeable":1},
-	{"key":"New6v","name":"磁力｜New6V","type":3,"api":"csp_New6v","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com"},
-	{"key":"Mp4电影","name":"磁力｜Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1},
-        {
-            "key": "88js",
-            "name": "88看球",
-            "type": 3,
-            "api": "./diy/drpy.min.js",
-            "ext": "./js/88看球.js",
-//			"api": "http://xhww.fun:63/js/drpy1.min.js",
-//			"ext": "https://agit.ai/fantaiying/dr_py/raw/branch/main/js/88看球.js",
-            "searchable": 0,
-            "quickSearch": 0,
-            "timeout": 10,
-            "changeable": 0
-        },
+	{"key":"New6v","name":"New6V","type":3,"api":"csp_New6v","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com"},
+	{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1},
+//	{"key":"子子影视","name":"子子影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/子子影视.json"},
+	{"key":"玩偶哥哥","name":"云盘｜玩偶","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/玩偶哥哥.json"},
+	{"key":"我的小站","name":"云盘｜小站","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/我的小站.json"},
+	{"key":"云盘资源分享","name":"云盘｜分享","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/云盘资源分享.json"},
+	{"key":"土拨鼠搜索","name":"云盘｜土拨鼠","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/土拨鼠搜索.json"},
+ {"key": "88js", "name": "88看球", "type": 3, "api": "./diy/drpy.min.js", "ext": "./js/88看球.js", "searchable": 0, "quickSearch": 0, "timeout": 10, "changeable": 0},
         {
             "key": "JRKAN直播",
             "name": "JRKAN直播",
@@ -33,21 +26,7 @@
             "timeout": 10,
             "api": "./lib/drpy.min.js",
             "ext": "./js/JRKAN直播.js"
-        },
-	{"key":"子子影视","name":"子子影视","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/子子影视.json"},
-	{"key":"高清MP4","name":"磁力｜高清MP4","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/高清MP4.json"},
-	{"key":"玩偶哥哥","name":"云盘｜玩偶","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/玩偶哥哥.json"},
-	{"key":"云盘搜索","name":"云盘｜搜索","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/云盘搜索.json"},
-	{"key":"橘子盘搜","name":"云盘｜橘子","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/橘子盘搜.json"},
-	{"key":"我的小站","name":"云盘｜小站","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/我的小站.json"},
-	{"key":"阿里苏苏","name":"云盘｜苏苏","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/阿里苏苏.json"},
-	{"key":"云盘论坛","name":"云盘｜论坛","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/云盘论坛.json"},
-	{"key":"云盘资源","name":"云盘｜资源","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/云盘资源.json"},
-	{"key":"云盘资源分享","name":"云盘｜分享","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/云盘资源分享.json"},
-	{"key":"土拨鼠搜索","name":"云盘｜土拨鼠","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/土拨鼠搜索.json"},
-	{"key":"豆豆飞搜索","name":"云盘｜豆豆飞","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/豆豆飞搜索.json"},
-	{"key":"阿里云盘网","name":"云盘｜云盘网","type":3,"api":"csp_XYQHikerAL","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/阿里云盘网.json"},
-	{"key":"云盘分享社","name":"云盘｜分享社","type":3,"api":"csp_XYQBiu","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQBiu/云盘分享社.json"}
+        }
 	],
 "parses":
 	[{"name":"聚合","type":3,"url":"Demo"},
