@@ -1498,7 +1498,7 @@ CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/ind
 电台, #genre#
 
 凤凰卫视资讯台, http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
-凤凰卫视中文台, http://223.109.210.41/1301-tx.otvstream.otvcloud.com/otv/skcc/live/channel52003/2300.m3u8
+凤凰卫视中文台, http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
 
 哈尔滨综合广播, https://stream.hrbtv.net/xwpl/playlist.m3u8?_upt=376dbf461700913546
 哈尔滨文艺广播, https://stream.hrbtv.net/wypl/playlist.m3u8?_upt=20991e861700913598
@@ -1584,6 +1584,7 @@ CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/ind
 爱情公寓,http://112.90.95.75/hw.flv.huya.com/src/1388474069-1388474069-5963450717699047424-2777071594-10057-A-0-1.flv?cdn_redirect=true&policy=6&wsSecret=a4c8886792376ee8fa1aca2696fed0a1&wsTime=65647c65&sphdDC=huya&sphd=264_*-265_*&exsphd=264_500%2C264_2000%2C&t=103&fs=bgct&cdn_redirect_tag=1700997862&uid=1466767523011&ctype=tars_mobile&sv=2110211124&seqid=3167765385530&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&cdn_redirect_domain=beb464067721a8c596d329b0627b833f.livehwc3.cn&uuid=1430107504&ver=1
 
 花花与三猫CatLive, https://www.goodiptv.club/douyu/7348194
+
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=177331
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=177333
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=45586
