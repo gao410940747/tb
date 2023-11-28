@@ -495,42 +495,26 @@ CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/ind
 凤凰卫视资讯台, http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
 凤凰卫视中文台, http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
 
-CCTV-1,
-http://piccpndali.v.myalicdn.com/audio/cctv1_2.m3u8
-CCTV-2,
-http://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8
-CCTV-3,
-http://piccpndali.v.myalicdn.com/audio/cctv3_2.m3u8
-CCTV-4
-http://piccpndali.v.myalicdn.com/audio/cctv4_2.m3u8
-CCTV-5,
-http://piccpndali.v.myalicdn.com/audio/cctv5_2.m3u8
-CCTV-6,
-http://piccpndali.v.myalicdn.com/audio/cctv6_2.m3u8
+CCTV-1,http://piccpndali.v.myalicdn.com/audio/cctv1_2.m3u8
+CCTV-2,http://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8
+CCTV-3,http://piccpndali.v.myalicdn.com/audio/cctv3_2.m3u8
+CCTV-4http://piccpndali.v.myalicdn.com/audio/cctv4_2.m3u8
+CCTV-5,http://piccpndali.v.myalicdn.com/audio/cctv5_2.m3u8
+CCTV-6,http://piccpndali.v.myalicdn.com/audio/cctv6_2.m3u8
 CCTV-7,
 http://piccpndali.v.myalicdn.com/audio/cctv7_2.m3u8
-CCTV-8,
-http://piccpndali.v.myalicdn.com/audio/cctv8_2.m3u8
-CCTV-9,
-http://piccpndali.v.myalicdn.com/audio/cctv9_2.m3u8
-CCTV-10,
-http://piccpndali.v.myalicdn.com/audio/cctv10_2.m3u8
+CCTV-8,http://piccpndali.v.myalicdn.com/audio/cctv8_2.m3u8
+CCTV-9,http://piccpndali.v.myalicdn.com/audio/cctv9_2.m3u8
+CCTV-10,http://piccpndali.v.myalicdn.com/audio/cctv10_2.m3u8
 CCTV-11,
 http://piccpndali.v.myalicdn.com/audio/cctv11_2.m3u8
-CCTV-12,
-http://piccpndali.v.myalicdn.com/audio/cctv12_2.m3u8
-CCTV-13,
-http://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8
-CCTV-14,
-http://piccpndali.v.myalicdn.com/audio/cctv14_2.m3u8
-CCTV-15,
-http://piccpndali.v.myalicdn.com/audio/cctv15_2.m3u8
-CCTV-16,
-http://piccpndali.v.myalicdn.com/audio/cctv16_2.m3u8
-CCTV-17,
-http://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8
-CCTV-5+,
-http://piccpndali.v.myalicdn.com/audio/cctv5plus_2.m3u8
+CCTV-12,http://piccpndali.v.myalicdn.com/audio/cctv12_2.m3u8
+CCTV-13,http://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8
+CCTV-14,http://piccpndali.v.myalicdn.com/audio/cctv14_2.m3u8
+CCTV-15,http://piccpndali.v.myalicdn.com/audio/cctv15_2.m3u8
+CCTV-16,http://piccpndali.v.myalicdn.com/audio/cctv16_2.m3u8
+CCTV-17,http://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8
+CCTV-5+,http://piccpndali.v.myalicdn.com/audio/cctv5plus_2.m3u8
 
 哈尔滨综合广播, https://stream.hrbtv.net/xwpl/playlist.m3u8?_upt=376dbf461700913546
 哈尔滨文艺广播, https://stream.hrbtv.net/wypl/playlist.m3u8?_upt=20991e861700913598
