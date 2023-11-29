@@ -123,25 +123,6 @@
 		"changeable": 1
 	},
 	{
-		"key": "New6v",
-		"name": "New6V",
-		"type": 3,
-		"api": "csp_New6v",
-		"searchable": 1,
-		"quickSearch": 1,
-		"filterable": 1,
-		"ext": "http://www.xb6v.com"
-	},
-	{
-		"key": "Mp4电影",
-		"name": "Mp4电影",
-		"type": 3,
-		"api": "csp_Mp4Mov",
-		"searchable": 1,
-		"quickSearch": 1,
-		"filterable": 1
-	},
-	{
 		"key": "爱迪",
 		"name": "爱迪",
 		"type": 3,
@@ -220,6 +201,25 @@
 		"filterable": 0,
 		"changeable": 0,
 		"ext": "http://127.0.0.1:9978/TVBox/token.txt+4k|fhd|auto"
+	},
+	{
+		"key": "New6v",
+		"name": "New6V",
+		"type": 3,
+		"api": "csp_New6v",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 1,
+		"ext": "http://www.xb6v.com"
+	},
+	{
+		"key": "Mp4电影",
+		"name": "Mp4电影",
+		"type": 3,
+		"api": "csp_Mp4Mov",
+		"searchable": 1,
+		"quickSearch": 1,
+		"filterable": 1
 	},
 	{
 		"key": "88js",
