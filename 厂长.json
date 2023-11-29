@@ -18,7 +18,7 @@
 		"key": "荐片",
 		"name": "荐片",
 		"type": 3,
-		"api": "csp_JianPian",
+		"api": "csp_Jianpian",
 		"playerType": 1,
 		"searchable": 1,
 		"quickSearch": 1,
