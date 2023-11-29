@@ -200,6 +200,7 @@
 		"api": "./lib/drpy.min.js",
 		"ext": "./js/JRKAN直播.js"
 	},
+	{"key":"三六零弹幕","name":"360弹幕","type":3,"api":"csp_Sp360","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true}},
 	{
 		"key": "直播转点播",
 		"name": "电视直播",
