@@ -4,9 +4,6 @@
 	"spider": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar",
 	"wallpaper": "https://api.likepoems.com/img/bing",
 	"sites": [
-		{"key":"drpy_js_爱看机器人","name":"影视 | 爱看机器人[js]","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./js/爱看机器人.js"},
-		{"key":"drpy_js_ikanbot2","name":"影视 | 爱看机器人2[js]","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./js/ikanbot2.js"},
-		{"key":"drpy_js_ikanbot3","name":"影视 | 爱看机器人3[js]","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./js/ikanbot3.js"},
 		{"key":"drpy_js_爱看机器人_1","name":"影视 | 爱看机器人[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/爱看机器人.js"},
 		{"key":"drpy_js_ikanbot2_1","name":"影视 | 爱看机器人2[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/ikanbot2.js"},
 		{"key":"drpy_js_ikanbot3_1","name":"影视 | 爱看机器人3[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/ikanbot3.js"},
