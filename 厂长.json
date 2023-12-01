@@ -16,14 +16,17 @@
 			"ext": "https://www.czzy88.com"
 		},
 		{
-			"key": "荐片",
+			"key": "荐片弹幕",
 			"name": "荐片",
 			"type": 3,
-			"api": "csp_JianPian",
+			"api": "csp_Jianpian",
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
-			"filterable": 1
+			"filterable": 1,
+			"ext": {
+				"danmu": true
+			}
 		},
 		{
 			"key": "量子",
@@ -202,19 +205,6 @@
 			"timeout": 10,
 			"api": "./lib/drpy.min.js",
 			"ext": "./js/JRKAN直播.js"
-		},
-		{
-			"key": "荐片弹幕",
-			"name": "荐片弹幕",
-			"type": 3,
-			"api": "csp_Jianpian",
-			"playerType": 1,
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 1,
-			"ext": {
-				"danmu": true
-			}
 		},
 		{
 			"key": "直播转点播",
@@ -520,6 +510,7 @@
 		"type": 0,
 		"url": "./厂长直播.txt",
 		"playerType": 1,
+		"boot": true,
 		"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
 	}],
