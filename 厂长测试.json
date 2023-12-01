@@ -342,15 +342,6 @@
 			"ips": ["9.9.9.9",
 				"149.112.112.112"]
 		}],
-	"lives": [{
-		"name": "厂长直播",
-		"type": 0,
-		"url": "./厂长直播.txt",
-		"playerType": 1,
-		"boot": true,
-		"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-		"logo": "https://epg.112114.xyz/logo/{name}.png"
-	}],
 	"flags": ["youku",
 		"优酷",
 		"优 酷",
