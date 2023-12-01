@@ -249,6 +249,7 @@ CCTV-2,	 http://cfss.cc/api/ysp/cctv2.m3u8
 CCTV-3,	 http://cfss.cc/api/ysp/cctv3.m3u8
 CCTV-4,	 http://cfss.cc/api/ysp/cctv4.m3u8
 CCTV-5,	 http://cfss.cc/api/ysp/cctv5.m3u8
+CCTV-5+, http://cfss.cc/api/ysp/cctv5p.m3u8
 CCTV-6,	 http://cfss.cc/api/ysp/cctv6.m3u8
 CCTV-7,	 http://cfss.cc/api/ysp/cctv7.m3u8
 CCTV-8,	 http://cfss.cc/api/ysp/cctv8.m3u8
@@ -260,9 +261,30 @@ CCTV-13, http://cfss.cc/api/ysp/cctv13.m3u8
 CCTV-14, http://cfss.cc/api/ysp/cctv14.m3u8
 CCTV-15, http://cfss.cc/api/ysp/cctv15.m3u8
 CCTV-16, http://cfss.cc/api/ysp/cctv16.m3u8
+CCTV-16, http://cfss.cc/api/ysp/cctv16-4k.m3u8
 CCTV-17, http://cfss.cc/api/ysp/cctv17.m3u8
 CCTV-4K, http://cfss.cc/api/ysp/cctv4k.m3u8
-CCTV-5+, http://cfss.cc/api/ysp/cctv5p.m3u8
+CCTV-8K, http://cfss.cc/api/ysp/cctv8k.m3u8
+
+CGTN,http://cfss.cc/api/ysp/cgtn.m3u8
+CGTN-纪录,http://cfss.cc/api/ysp/cgtnjl.m3u8
+CGTN-西语,http://cfss.cc/api/ysp/cgtne.m3u8
+CGTN-法语,http://cfss.cc/api/ysp/cgtnf.m3u8
+CGTN-阿语,http://cfss.cc/api/ysp/cgtna.m3u8
+CGTN-俄语,http://cfss.cc/api/ysp/cgtnr.m3u8
+CCTV-兵器科技,http://cfss.cc/api/ysp/bqkj.m3u8
+CCTV-第一剧场,http://cfss.cc/api/ysp/dyjc.m3u8
+CCTV-怀旧剧场,http://cfss.cc/api/ysp/hjjc.m3u8
+CCTV-风云剧场,http://cfss.cc/api/ysp/fyjc.m3u8
+CCTV-风云音乐,http://cfss.cc/api/ysp/fyyy.m3u8
+CCTV-风云足球,http://cfss.cc/api/ysp/fyzq.m3u8
+CCTV-电视指南,http://cfss.cc/api/ysp/dszn.m3u8
+CCTV-女性时尚,http://cfss.cc/api/ysp/nxss.m3u8
+CCTV-央视文化精品,http://cfss.cc/api/ysp/whjp.m3u8
+CCTV-世界地理,http://cfss.cc/api/ysp/sjdl.m3u8
+CCTV-高尔夫网球,http://cfss.cc/api/ysp/gefwq.m3u8
+CCTV-央视台球,http://cfss.cc/api/ysp/ystq.m3u8
+CCTV-卫生健康,http://cfss.cc/api/ysp/wsjk.m3u8
 
     #goodiptv#
 CCTV-1,  https://live.goodiptv.club/api/cqyx.php?id=cctv1HD
@@ -821,6 +843,33 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
                             #IPV4#
                                 #IPV4#
                                     #IPV4#
+    #cfss#
+黑龙江卫视,http://cfss.cc/api/ysp/hljws.m3u8
+浙江卫视,http://cfss.cc/api/ysp/zjws.m3u8
+湖南卫视,http://cfss.cc/api/ysp/hunws.m3u8
+东方卫视,http://cfss.cc/api/ysp/dfws.m3u8
+江苏卫视,http://cfss.cc/api/ysp/jsws.m3u8
+北京卫视,http://cfss.cc/api/ysp/bjws.m3u8
+辽宁卫视,http://cfss.cc/api/ysp/lnws.m3u8
+重庆卫视,http://cfss.cc/api/ysp/cqws.m3u8
+深圳卫视,http://cfss.cc/api/ysp/szws.m3u8
+天津卫视,http://cfss.cc/api/ysp/tjws.m3u8
+东南卫视,http://cfss.cc/api/ysp/dnws.m3u8
+安徽卫视,http://cfss.cc/api/ysp/ahws.m3u8
+广东卫视,http://cfss.cc/api/ysp/gdws.m3u8
+山东卫视,http://cfss.cc/api/ysp/sdws.m3u8
+湖北卫视,http://cfss.cc/api/ysp/hubws.m3u8
+吉林卫视,http://cfss.cc/api/ysp/jlws.m3u8
+四川卫视,http://cfss.cc/api/ysp/scws.m3u8
+海南卫视,http://cfss.cc/api/ysp/hinws.m3u8
+广西卫视,http://cfss.cc/api/ysp/gxws.m3u8
+贵州卫视,http://cfss.cc/api/ysp/gzws.m3u8
+河北卫视,http://cfss.cc/api/ysp/hbws.m3u8
+河南卫视,http://cfss.cc/api/ysp/hnws.m3u8
+江西卫视,http://cfss.cc/api/ysp/jxws.m3u8
+山西卫视,http://cfss.cc/api/ysp/sxws.m3u8
+新疆卫视,http://cfss.cc/api/ysp/xjws.m3u8
+
     #goodiptv#
 黑龙江卫视,https://live.goodiptv.club/api/cqyx.php?id=heilongjiangHD
 浙江卫视,https://live.goodiptv.club/api/cqyx.php?id=zhejiangHD
@@ -842,18 +891,6 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 广西卫视,https://live.goodiptv.club/api/cqyx.php?id=guangxiHD
 中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiHD
 中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiSD
-
-    #cfss#
-黑龙江卫视,http://cfss.cc/api/ysp/hljws.m3u8
-浙江卫视,http://cfss.cc/api/ysp/zjws.m3u8
-东方卫视,http://cfss.cc/api/ysp/dfws.m3u8
-江苏卫视,http://cfss.cc/api/ysp/jsws.m3u8
-北京卫视,http://cfss.cc/api/ysp/bjws.m3u8
-天津卫视,http://cfss.cc/api/ysp/tjws.m3u8
-深圳卫视,http://cfss.cc/api/ysp/szws.m3u8
-广东卫视,http://cfss.cc/api/ysp/gdws.m3u8
-重庆卫视,http://cfss.cc/api/ysp/cqws.m3u8
-河南卫视,http://cfss.cc/api/ysp/hnws.m3u8
 
     #PLTV#
 黑龙江卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226010/1.m3u8
