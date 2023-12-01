@@ -8,7 +8,6 @@
 		"type": 0,
 		"url": "./厂长直播.txt",
 		"playerType": 1,
-		"boot": true,
 		"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
 	}],
