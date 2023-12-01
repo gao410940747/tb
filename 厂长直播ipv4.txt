@@ -759,8 +759,12 @@ CCTV-17,http://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8
 
 猫和老鼠,https://epg.112114.xyz/huya/11352879
 
+爱情公寓,http://epg.112114.xyz/douyu/4105989
 爱情公寓,http://epg.112114.xyz/douyu/6863367
-爱情公寓,http://112.90.95.75/hw.flv.huya.com/src/1388474069-1388474069-5963450717699047424-2777071594-10057-A-0-1.flv?cdn_redirect=true&policy=6&wsSecret=a4c8886792376ee8fa1aca2696fed0a1&wsTime=65647c65&sphdDC=huya&sphd=264_*-265_*&exsphd=264_500%2C264_2000%2C&t=103&fs=bgct&cdn_redirect_tag=1700997862&uid=1466767523011&ctype=tars_mobile&sv=2110211124&seqid=3167765385530&sphdcdn=al_7-tx_3-js_3-ws_7-bd_2-hw_2&cdn_redirect_domain=beb464067721a8c596d329b0627b833f.livehwc3.cn&uuid=1430107504&ver=1
+爱情公寓,http://159.75.85.63:35455/huya/11336726
+爱情公寓,https://yang-1989.eu.org/live/huya/11336726
+爱情公寓,https://epg.112114.xyz/huya/11336726
+爱情公寓,http://159.75.85.63:35455/huya/11336726
 
 花花与三猫CatLive, https://www.goodiptv.club/douyu/7348194
 
