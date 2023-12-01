@@ -4,6 +4,13 @@
 	"spider": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar",
 	"wallpaper": "https://api.likepoems.com/img/bing",
 	"sites": [
+		{"key":"drpy_js_ikanbot3","name":"爱看机器人[js]","type":3,"api":"https://gh-proxy.com/https://github.com/ltxxjs/gao/raw/master/lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"https://gh-proxy.com/https://github.com/ltxxjs/gao/raw/master/js/ikanbot3.js"},
+		{
+			"key": "drpy_js_ikanbot3_1",
+			"name": "爱看机器人3(js)",
+			"api": "https://gh-proxy.com/https://raw.githubusercontent.com/13998394872/TVBox/main/lib/drpy2.min.js",
+			"ext": "https://gh-proxy.com/https://raw.githubusercontent.com/13998394872/TVBox/main/js/ikanbot3.js"
+		},
 		{"key":"热播","name":"热播","type":1,"api":"https://api.iku.cool/api.php/provide/vod/?ac=list","searchable":1,"quickSearch":1,"filterable":0,"categories":["连续剧","动漫"]},
 		{"key":"酷影视","name":"酷影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.tvkuys.xyz/api.php/app/"},
 		{"key":"极速播","name":"极速播","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.gsjtlxy.top/xgapp.php/v3/"},
