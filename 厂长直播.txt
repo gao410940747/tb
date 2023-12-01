@@ -840,6 +840,8 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 广西卫视,https://live.goodiptv.club/api/cqyx.php?id=guangxiHD
 广东卫视,https://live.goodiptv.club/api/cqyx.php?id=guangdongHD
 东南卫视,https://live.goodiptv.club/api/cqyx.php?id=henanHD
+中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiHD
+中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiSD
 
     #cfss#
 黑龙江卫视,http://cfss.cc/api/ysp/hljws.m3u8
@@ -868,6 +870,12 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 湖北卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226206/1.m3u8
 辽宁卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226201/1.m3u8
 重庆卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226202/1.m3u8
+兵团卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226214/index.m3u8
+大湾区卫视,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
+厦门卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226219/index.m3u8
+农林卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226229/index.m3u8
+康巴卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226234/index.m3u8
+安多卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226228/index.m3u8
 
     #兰州文理学院IPTV#
 湖南卫视,https://iptv.luas.edu.cn/liverespath/9b1ccba5a2c611bb5d7c96243695572090cca5fd/5f70a343b7-0-0-8c240b8ce149dabb7eb23b82dc73d8a1/index.m3u8
@@ -897,11 +905,14 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 三沙卫视,  https://pullsstv90080111.ssws.tv/live/SSTV20220729.m3u8
 
 大湾区卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
-大湾区卫视, http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
 大湾区卫视, https://php.17186.eu.org/gdtv/nfws.m3u8
 大湾区卫视, http://hms2864nc1972666630.live.aikan.miguvideo.com/wh7f454c46tw1593455810_973699600/wd_r3/2018/nfmedia/nfws/1000/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=139.198.127.250&timestamp=20230816073743&ContentId=265218882&timezone=UTC&mtv_session=69490e0f5d2243e8aa4627ecf0058de1&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=095412c3a2f0236b02fe898002af482a&咪咕
 
-
+大湾区卫视, http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
+延边卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226220/index.m3u8
+兵团卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226214/index.m3u8
+农林卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226229/index.m3u8
+南方卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8?
 
 
 
@@ -1306,7 +1317,18 @@ SITV乐游, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226580/1.m3u8
 哒啵电竞, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226951/1.m3u8
 哒啵赛事, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226954/1.m3u8
 
-
+健康养生,https://live.goodiptv.club/api/bestv.php?id=jkys8m/8000000
+百变课堂,https://live.goodiptv.club/api/bestv.php?id=bbkt8m/8000000
+看天下精选,https://live.goodiptv.club/api/bestv.php?id=ktxjx8m/8000000
+华语影院,https://live.goodiptv.club/api/bestv.php?id=hyyy8m/8000000
+电竞天堂,https://live.goodiptv.club/api/bestv.php?id=djtt8m/8000000
+青春动漫,https://live.goodiptv.club/api/bestv.php?id=qcdm8m/8000000
+宝宝动画,https://live.goodiptv.club/api/bestv.php?id=bbdh8m/8000000
+星光影院,https://live.goodiptv.club/api/bestv.php?id=xgyy8m/8000000
+谍战剧场,https://live.goodiptv.club/api/bestv.php?id=dzjc8m/8000000
+全球大片,https://live.goodiptv.club/api/bestv.php?id=qqdp8m/8000000
+热门剧场,https://live.goodiptv.club/api/bestv.php?id=rmjc8m/8000000
+陶瓷高清,https://live.goodiptv.club/api/bestv.php?id=taocihd/8000000
 
 
 
@@ -1632,6 +1654,33 @@ DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extensi
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=45588
 
 体育主播, http://hls.szsummer.cn/live/30613190/playlist.m3u8?k=be62aedbe9dbce34b3f393f7f0bffa13&t=1857956810
+
+    #守望先锋#
+Limpid三渡,http://epg.112114.xyz/bili/10152831
+张又心,http://epg.112114.xyz/bili/26022252
+五喵v,http://epg.112114.xyz/bili/4236688
+鬼鬼goghost,http://epg.112114.xyz/bili/22412734
+聽風看海3000,http://epg.112114.xyz/bili/7727033
+浅葱_Asagi,http://epg.112114.xyz/bili/2765642
+Kyo_ow,http://epg.112114.xyz/bili/7395955
+ow成毅,http://epg.112114.xyz/bili/13550856
+缘来是库巴啊,http://epg.112114.xyz/bili/64897
+土拨鼠小屁,http://epg.112114.xyz/bili/284620
+安妮很忙,http://epg.112114.xyz/bili/3854969
+太藍了BLuE,http://epg.112114.xyz/bili/22226628
+斯兰Sein,http://epg.112114.xyz/bili/376432
+KausLy,http://epg.112114.xyz/bili/10981271
+一只扣喵喵,http://epg.112114.xyz/bili/24017296
+青橘耶_,http://epg.112114.xyz/bili/22271112
+肯尼亞-NR,http://epg.112114.xyz/bili/3006101
+
+
+
+
+
+
+
+
 
 
 
