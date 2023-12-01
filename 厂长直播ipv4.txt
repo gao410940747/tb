@@ -238,6 +238,8 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 江西卫视,https://live.goodiptv.club/api/cqyx.php?id=jiangxiHD
 吉林卫视,https://live.goodiptv.club/api/cqyx.php?id=jilinHD
 广西卫视,https://live.goodiptv.club/api/cqyx.php?id=guangxiHD
+中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiHD
+中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiSD
 
     #cfss#
 黑龙江卫视,http://cfss.cc/api/ysp/hljws.m3u8
