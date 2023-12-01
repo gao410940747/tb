@@ -116,9 +116,6 @@ CHC家庭影院,http://[2409:8087:7000:20:1000::22]:6060/yinhe/2/ch0000009099000
 安多卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226228/index.m3u8
 
 三沙卫视,http://[2409:8087:5e01:34::20]:6610/ZTE_CMS/08984400000000060000000000000319/index.m3u8?IAS
-延边卫视,http://live.ybtvyun.com/video/s10006-28bc40431485/index.m3u8
-南方卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8?
-中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiSD
 
 
 
