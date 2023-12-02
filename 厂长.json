@@ -24,7 +24,7 @@
 			"ext": "https://www.czzy88.com"
 		},
 		{
-			"key": "荐片弹幕",
+			"key": "荐片",
 			"name": "荐片",
 			"type": 3,
 			"api": "csp_Jianpian",
@@ -115,16 +115,6 @@
 				"冒险片",
 				"记录片"
 			]
-		},
-		{
-			"key": "爱看机器人",
-			"name": "爱看机器人",
-			"type": 3,
-			"api": "csp_Ikanbot",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"ext": "[排序:lz线路,ff线路,bfzy线路,tp线路]"
 		},
 		{
 			"key": "爱看机器人",
