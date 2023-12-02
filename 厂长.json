@@ -214,12 +214,6 @@
 			"api": "./lib/drpy.min.js",
 			"ext": "./js/JRKAN直播.js"
 		},
-		{"key":"酷影视","name":"酷影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.tvkuys.xyz/api.php/app/"},
-		{"key":"drpy_js_ikanbot2_1","name":"爱看机器人2[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/ikanbot2.js"},
-		{"key":"drpy_js_ikanbot3_1","name":"爱看机器人3[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/ikanbot3.js"},
-
-		{"key":"夸克玩偶弹幕","name":"夸克｜玩偶","type":3,"api":"csp_Wobg","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"token":"clan://localhost/TVBox/token.txt","cookie":"clan://localhost/TVBox/quark.txt","danmu":true}},
-		{"key":"趣盘搜弹幕","name":"夸克｜趣盘搜","type":3,"api":"csp_QuPanSou","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"clan://localhost/TVBox/quark.txt","danmu":true}},
 		{
 			"key": "直播转点播",
 			"name": "电视直播",

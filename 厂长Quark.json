@@ -12,7 +12,6 @@
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
 	}],
 	"sites": [
-
 		{"key":"玩偶弹幕","name":"弹幕｜玩偶","type":3,"api":"csp_Wogg","searchable":1,"quickSearch":1,"filterable":1,"ext":{"filter":"./DM/玩偶哥哥.json","token":"http://127.0.0.1:9978/file/TVBox/token.txt","danmu":true}},
 		{"key":"云盘弹幕","name":"弹幕｜云盘","type":3,"api":"csp_Yunpan4k","searchable":1,"filterable":0,"changeable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","danmu":true}},
 		{"key":"UpYun","name":"弹幕｜云搜","type":3,"api":"csp_UpYun","searchable":1,"filterable":0,"changeable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","danmu":true}},
