@@ -248,7 +248,6 @@
 		{"key":"夸克玩偶弹幕","name":"夸克｜玩偶","type":3,"api":"csp_Wobg","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"clan://localhost/TVBox/quark.txt","danmu":true}},
 		{"key":"趣盘搜弹幕","name":"夸克｜趣盘搜","type":3,"api":"csp_QuPanSou","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"clan://localhost/TVBox/quark.txt","danmu":true}}
 	],
-	],
 	"rules": [
 		{
 			"name": "proxy",
