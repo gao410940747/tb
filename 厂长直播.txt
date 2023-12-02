@@ -889,8 +889,6 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 江西卫视,https://live.goodiptv.club/api/cqyx.php?id=jiangxiHD
 吉林卫视,https://live.goodiptv.club/api/cqyx.php?id=jilinHD
 广西卫视,https://live.goodiptv.club/api/cqyx.php?id=guangxiHD
-中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiHD
-中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiSD
 
     #PLTV#
 黑龙江卫视, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226010/1.m3u8
@@ -937,7 +935,6 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 湖南卫视,  http://zteres.sn.chinamobile.com:6060/000000001000/1000000001000032695/1.m3u8?channel-id=ystenlive&Contentid=1000000001000032695&livemode=1&stbId=3
 浙江卫视,  http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 
-延边卫视,  http://live.ybtvyun.com/video/s10006-28bc40431485/index.m3u8
 青海卫视,  http://stream.qhbtv.com/qhws/playlist.m3u8
 三沙卫视,  https://pullsstv90080111.ssws.tv/live/SSTV20220729.m3u8
 
@@ -945,10 +942,9 @@ CHC高清电影, https://iptv.luas.edu.cn/liverespath/bca6167afdef7fc773405c38e6
 大湾区卫视, http://hms2864nc1972666630.live.aikan.miguvideo.com/wh7f454c46tw1593455810_973699600/wd_r3/2018/nfmedia/nfws/1000/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=139.198.127.250&timestamp=20230816073743&ContentId=265218882&timezone=UTC&mtv_session=69490e0f5d2243e8aa4627ecf0058de1&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=095412c3a2f0236b02fe898002af482a&咪咕
 
 大湾区卫视, http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8
-延边卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226220/index.m3u8
+大湾区卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8?
 兵团卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226214/index.m3u8
 农林卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226229/index.m3u8
-南方卫视,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226218/index.m3u8?
 
 
 
