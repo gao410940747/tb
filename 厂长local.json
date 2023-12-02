@@ -1,0 +1,10 @@
+{
+	"lives": [{
+		"name": "厂长直播",
+		"type": 0,
+		"url": "https://raw.gitmirror.com/gao410940747/tb/master/厂长直播.txt",
+		"playerType": 1,
+		"boot": true,
+		"epg": "http://epg.112114.xyz/?ch={name}&date={date}"
+	}]
+}
