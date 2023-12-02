@@ -755,12 +755,11 @@ CCTV-17,http://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8
 
 猫和老鼠,https://epg.112114.xyz/huya/11352879
 
-爱情公寓,http://epg.112114.xyz/douyu/4105989
 爱情公寓,http://epg.112114.xyz/douyu/6863367
-爱情公寓,http://159.75.85.63:35455/huya/11336726
-爱情公寓,https://yang-1989.eu.org/live/huya/11336726
 爱情公寓,https://epg.112114.xyz/huya/11336726
 爱情公寓,http://159.75.85.63:35455/huya/11336726
+爱情公寓,https://yang-1989.eu.org/live/huya/11336726
+爱情公寓,http://epg.112114.xyz/douyu/4105989
 
 花花与三猫CatLive, https://www.goodiptv.club/douyu/7348194
 
@@ -771,25 +770,6 @@ DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extensi
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=45588
 
 体育主播, http://hls.szsummer.cn/live/30613190/playlist.m3u8?k=be62aedbe9dbce34b3f393f7f0bffa13&t=1857956810
-
-    #守望先锋#
-Limpid三渡,http://epg.112114.xyz/bili/10152831
-张又心,http://epg.112114.xyz/bili/26022252
-五喵v,http://epg.112114.xyz/bili/4236688
-鬼鬼goghost,http://epg.112114.xyz/bili/22412734
-聽風看海3000,http://epg.112114.xyz/bili/7727033
-浅葱_Asagi,http://epg.112114.xyz/bili/2765642
-Kyo_ow,http://epg.112114.xyz/bili/7395955
-ow成毅,http://epg.112114.xyz/bili/13550856
-缘来是库巴啊,http://epg.112114.xyz/bili/64897
-土拨鼠小屁,http://epg.112114.xyz/bili/284620
-安妮很忙,http://epg.112114.xyz/bili/3854969
-太藍了BLuE,http://epg.112114.xyz/bili/22226628
-斯兰Sein,http://epg.112114.xyz/bili/376432
-KausLy,http://epg.112114.xyz/bili/10981271
-一只扣喵喵,http://epg.112114.xyz/bili/24017296
-青橘耶_,http://epg.112114.xyz/bili/22271112
-肯尼亞-NR,http://epg.112114.xyz/bili/3006101
 
 
 

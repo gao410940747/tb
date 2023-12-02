@@ -225,17 +225,6 @@
 			"ext": "./js/JRKAN直播.js"
 		},
 		{
-			"key": "爱看机器人1",
-			"name": "爱看机器人1",
-			"type": 3,
-			"api": "csp_Ikanbot",
-			"searchable": 1,
-			"quickSearch": 1,
-			"changeable": 1,
-			"ext": "./diy/ikanbot2.js"
-		},
-		{"key":"drpy_js_ikanbot2_1","name":"爱看机器人2[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/ikanbot2.js"},
-		{
 			"key": "直播转点播",
 			"name": "电视直播",
 			"type": 3,
