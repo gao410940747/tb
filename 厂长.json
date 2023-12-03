@@ -17,7 +17,7 @@
 			"name": "厂长",
 			"type": 3,
 			"api": "csp_Czsapp",
-			"playerType": 2,
+			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
@@ -196,6 +196,7 @@
 			"key": "88看球",
 			"name": "88看球",
 			"type": 3,
+			"playerType": 1,
 			"api": "./diy/drpy.min.js",
 			"ext": "./diy/88看球.js"
 		},
@@ -203,6 +204,7 @@
 			"key": "JRKAN直播",
 			"name": "JRS看比赛",
 			"type": 3,
+			"playerType": 1,
 			"api": "./lib/drpy.min.js",
 			"ext": "./diy/JRKAN直播.js"
 		},
