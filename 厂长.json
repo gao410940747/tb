@@ -197,9 +197,7 @@
 			"name": "88看球",
 			"type": 3,
 			"api": "./diy/drpy.min.js",
-			"ext": "./js/88看球.js",
-		//		"api": "http://xhww.fun:63/js/drpy1.min.js",
-		//		"ext": "https://agit.ai/fantaiying/dr_py/raw/branch/main/js/88看球.js",
+			"ext": "./diy/88看球.js",
 			"searchable": 0,
 			"quickSearch": 0,
 			"timeout": 10,
@@ -212,7 +210,7 @@
 			"changeable": 0,
 			"timeout": 10,
 			"api": "./lib/drpy.min.js",
-			"ext": "./js/JRKAN直播.js"
+			"ext": "./diy/JRKAN直播.js"
 		},
 		{
 			"key": "直播转点播",
