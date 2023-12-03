@@ -27,7 +27,7 @@
 			"key": "荐片",
 			"name": "荐片",
 			"type": 3,
-			"api": "csp_Jianpian",
+			"api": "csp_JianPian",
 			"playerType": 1,
 			"searchable": 1,
 			"quickSearch": 1,
@@ -208,6 +208,8 @@
 			"api": "./js/drpy.min.js",
 			"ext": "./js/JRKAN直播.js"
 		},
+		{"key":"drpy_js_ikanbot2_1","name":"爱看机器人2[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/ikanbot2.js"},
+		{"key":"drpy_js_ikanbot3_1","name":"爱看机器人3[js]","type":3,"api":"./diy/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/ikanbot3.js"},
 		{
 			"key": "直播转点播",
 			"name": "电视直播",
