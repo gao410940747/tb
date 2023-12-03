@@ -1,0 +1,3 @@
+订阅链接：
+
+clan://localhost/TVBoxOSC/本地仓/本地仓.txt

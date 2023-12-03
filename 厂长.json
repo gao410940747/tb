@@ -1,7 +1,7 @@
 {
 	//潇洒哥底包
-//	"spider": "./diy/spider.jar",
-	"spider": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar",
+	"spider": "./diy/spider.jar",
+//	"spider": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar",
 	"wallpaper": "https://api.likepoems.com/img/bing",
 	"lives": [{
 		"name": "厂长直播",
@@ -197,16 +197,16 @@
 			"name": "88看球",
 			"type": 3,
 			"playerType": 1,
-			"api": "./diy/drpy.min.js",
-			"ext": "./diy/88看球.js"
+			"api": "./js/drpy.min.js",
+			"ext": "./js/88看球.js"
 		},
 		{
 			"key": "JRKAN直播",
 			"name": "JRS看比赛",
 			"type": 3,
 			"playerType": 1,
-			"api": "./diy/drpy.min.js",
-			"ext": "./diy/JRKAN直播.js"
+			"api": "./js/drpy.min.js",
+			"ext": "./js/JRKAN直播.js"
 		},
 		{
 			"key": "直播转点播",
