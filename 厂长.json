@@ -1,7 +1,7 @@
 {
 	//潇洒哥底包
-//	"spider": "./diy/spider.jar",
-	"spider": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar",
+	"spider": "./diy/spider.jar",
+//	"spider": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar",
 	"wallpaper": "https://api.likepoems.com/img/bing",
 	"lives": [{
 		"name": "厂长直播",
