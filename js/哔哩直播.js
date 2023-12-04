@@ -27,7 +27,6 @@ var rule = {
     filterable: 1,
     filter_url: '{{fl.area}}',
     filter_def:{
-        87:{area:'87'},
         10:{area:'624'},
         // 默认守望先锋"87"
         2:{area:'87'},
