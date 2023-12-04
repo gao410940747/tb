@@ -342,6 +342,18 @@ ELEVEN體育,http://50.7.238.114:8278/golfchannel_twn/playlist.m3u8?tid=MFBF2798
 咪咕直播98, http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226409/1.m3u8
 
 BesTV频道,#genre#
+BesTV健康养生,https://live.goodiptv.club/api/bestv.php?id=jkys8m/8000000
+BesTV百变课堂,https://live.goodiptv.club/api/bestv.php?id=bbkt8m/8000000
+BesTV看天下精选,https://live.goodiptv.club/api/bestv.php?id=ktxjx8m/8000000
+BesTV华语影院,https://live.goodiptv.club/api/bestv.php?id=hyyy8m/8000000
+BesTV电竞天堂,https://live.goodiptv.club/api/bestv.php?id=djtt8m/8000000
+BesTV青春动漫,https://live.goodiptv.club/api/bestv.php?id=qcdm8m/8000000
+BesTV宝宝动画,https://live.goodiptv.club/api/bestv.php?id=bbdh8m/8000000
+BesTV星光影院,https://live.goodiptv.club/api/bestv.php?id=xgyy8m/8000000
+BesTV谍战剧场,https://live.goodiptv.club/api/bestv.php?id=dzjc8m/8000000
+BesTV全球大片,https://live.goodiptv.club/api/bestv.php?id=qqdp8m/8000000
+BesTV热门剧场,https://live.goodiptv.club/api/bestv.php?id=rmjc8m/8000000
+BesTV陶瓷高清,https://live.goodiptv.club/api/bestv.php?id=taocihd/8000000
 BesTV频道1, http://[2409:8087:1e03:21::42]:6610/cms001/ch00000090990000001148/index.m3u8?
 BesTV频道2, http://[2409:8087:1e03:21::42]:6610/cms001/ch00000090990000001149/index.m3u8?
 BesTV频道3, http://[2409:8087:1e03:21::42]:6610/cms001/ch00000090990000001150/index.m3u8?
@@ -471,47 +483,6 @@ CCTV-1,  http://l6.weihai.tv:8081/hls/rSwuMs738z.m3u8
 CCTV-1,  https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv1_2/index.m3u8
 CCTV-13, https://live-play.cctvnews.cctv.com/cctv/merge_cctv13_mhd.m3u8
 CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/index.m3u8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-守望先锋, #genre#
-Limpid三渡,http://epg.112114.xyz/bili/10152831
-张又心,http://epg.112114.xyz/bili/26022252
-五喵v,http://epg.112114.xyz/bili/4236688
-鬼鬼goghost,http://epg.112114.xyz/bili/22412734
-聽風看海3000,http://epg.112114.xyz/bili/7727033
-浅葱_Asagi,http://epg.112114.xyz/bili/2765642
-Kyo_ow,http://epg.112114.xyz/bili/7395955
-ow成毅,http://epg.112114.xyz/bili/13550856
-缘来是库巴啊,http://epg.112114.xyz/bili/64897
-土拨鼠小屁,http://epg.112114.xyz/bili/284620
-安妮很忙,http://epg.112114.xyz/bili/3854969
-太藍了BLuE,http://epg.112114.xyz/bili/22226628
-斯兰Sein,http://epg.112114.xyz/bili/376432
-KausLy,http://epg.112114.xyz/bili/10981271
-一只扣喵喵,http://epg.112114.xyz/bili/24017296
-青橘耶_,http://epg.112114.xyz/bili/22271112
-肯尼亞-NR,http://epg.112114.xyz/bili/3006101
 
 
 
