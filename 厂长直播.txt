@@ -1562,8 +1562,9 @@ CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/ind
 
 电台, #genre#
 
-凤凰卫视资讯台, http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
-凤凰卫视中文台, http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
+央视新闻,http://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8
+凤凰资讯, http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
+凤凰中文, http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
 
 CCTV-1,http://piccpndali.v.myalicdn.com/audio/cctv1_2.m3u8
 CCTV-2,http://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8
