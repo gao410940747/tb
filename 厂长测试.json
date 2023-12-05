@@ -13,9 +13,7 @@
 	}],
 	"sites": [
 		{"key":"drpy_js_新视觉影视","name":"影视 | 新视觉影视[js]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/新视觉影视.js"},
-		{"key":"drpy_js_555电影[V2]","name":"影视 | 555电影[V2]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/555电影[V2].js"},
-		{"key":"drpy_js_LIBVIO","name":"影视 | LIBVIO[js]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/LIBVIO.js"},
-		{"key":"drpy_js_两个BT","name":"影视 | 两个BT[js]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/两个BT.js"}
+		{"key":"drpy_js_555电影[V2]","name":"影视 | 555电影[V2]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/555电影[V2].js"}
 	],
 	"rules": [
 		{
