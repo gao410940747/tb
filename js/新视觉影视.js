@@ -21,8 +21,6 @@ var rule={
 	filterable:0,//是否启用分类筛选,
 	// class_parse:'.nav-menu-items&&li;a&&Text;a&&href;.*/(.*?).html',
 	class_parse:'.nav-menu-items&&li;a&&Text;a&&href;.*/(\\d).html',
-//	class_name:'1&2&3&4',
-//	class_url:'1&2&3&4',
 	play_parse:true,
 	lazy:'',
 	limit:6,
