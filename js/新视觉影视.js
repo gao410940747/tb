@@ -15,6 +15,8 @@ var rule={
         4:{cateId:'4'},
         3:{cateId:'3'}
     },
+	class_name:'1&2&3&4',
+	class_url:'1&2&3&4',
 	searchUrl:'/vodsearch/**----------fypage---.html',
 	searchable:2,//是否启用全局搜索,
 	quickSearch:0,//是否启用快速搜索,
