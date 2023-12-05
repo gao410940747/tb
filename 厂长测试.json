@@ -12,8 +12,8 @@
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
 	}],
 	"sites": [
-		{"key":"drpy_js_新视觉影视","name":"影视 | 新视觉影视[js]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/新视觉影视.js"},
-		{"key":"drpy_js_555电影[V2]","name":"影视 | 555电影[V2]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/555电影[V2].js"}
+		{"key":"新视觉","name":"新视觉","type":3,"api":"./lib/drpy2.min.js","ext":"./js/新视觉影视.js"},
+		{"key":"555","name":"555","type":3,"api":"./lib/drpy2.min.js","ext":"./js/555电影[V2].js"}
 	],
 	"rules": [
 		{
