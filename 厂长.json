@@ -33,6 +33,7 @@
 		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1},
 
 		{"key":"美剧天堂","name":"美剧天堂","type":3,"api":"csp_MeijuTT","searchable":1,"quickSearch":1,"filterable":1},
+		{"key":"荐片0","name":"荐片0","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/荐片0.js","playerType":"1"},
 		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:lz线路,ff线路,bfzy线路,tp线路]"}
 	],
 	"parses": [{
