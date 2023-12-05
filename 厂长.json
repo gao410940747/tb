@@ -28,8 +28,6 @@
 		{"key":"zy_天空","name":"天空","type":1,"api":"https://tiankongzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","体育赛事","国产剧","香港剧","台湾剧","美国剧","韩国剧","日本剧","泰剧","海外剧","日韩综艺","港台综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","悬疑片","动画片","犯罪片","奇幻片"]},
 
 		{"key":"zy_卧龙","name":"卧龙","type":1,"api":"https://collect.wolongzyw.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","篮球","足球","国产剧","香港剧","韩国剧","欧美剧","台湾剧","日本剧","泰国剧","海外剧","动画片","国产动漫","欧美动漫","日本动漫","港台综艺","韩国综艺","欧美综艺","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","记录片","惊悚片","家庭片","古装片","历史片","悬疑片","犯罪片","电影解说","短片"]},
-		{"key":"zy_快车","name":"快车","type":1,"api":"https://caiji.kczyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","电视剧","国产剧","香港剧","台湾剧","欧美剧","韩国剧","日本剧","泰国剧","海外剧","动漫","国产动漫","日本动漫","欧美动漫","综艺","日韩综艺","港台综艺","欧美综艺","动作片","喜剧片","爱情片","科幻片","恐怖片","战争片","剧情片","动画片"]},
-		{"key":"酷吧电影","name":"酷吧","type":3,"api":"csp_KubaCL","searchable":1,"quickSearch":1,"filterable":1},
 		{"key":"电影港","name":"电影港","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./XYQHiker/电影港.json"},
 
 		{"key":"New6v","name":"New6V","type":3,"api":"csp_New6v","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com"},
