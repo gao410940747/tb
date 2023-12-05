@@ -14,16 +14,7 @@
 	}],
 	"sites": [
 		{"key":"厂长","name":"厂长","type":3,"api":"csp_Czsapp","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.czzy88.com"},
-		{"key":"荐片","name":"荐片","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true}},
-		{
-			"key": "drpy_js_荐片",
-			"name": "荐片(磁力)",
-			"type": 3,
-			"api": "./lib/drpy2.min.js",
-			"ext": "./js/荐片.js",
-			"timeout": 10,
-			"playerType": "1"
-		},
+		{"key":"荐片","name":"荐片","type":3,"api":"./lib/drpy2.min.js","ext":"./js/荐片.js","playerType":"1"},
 		{"key":"88看球","name":"88看球","type":3,"playerType":1,"api":"./js/drpy.min.js","ext":"./js/88看球.js"},
 		{"key":"JRKAN直播","name":"JRS看比赛","type":3,"playerType":1,"api":"./js/drpy.min.js","ext":"./js/JRKAN直播.js"},
 
@@ -40,10 +31,7 @@
 		{"key":"卧龙","name":"卧龙","type":1,"api":"https://collect.wolongzyw.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","篮球","足球","国产剧","香港剧","韩国剧","欧美剧","台湾剧","日本剧","泰国剧","海外剧","动画片","国产动漫","欧美动漫","日本动漫","港台综艺","韩国综艺","欧美综艺","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","记录片","惊悚片","家庭片","古装片","历史片","悬疑片","犯罪片","电影解说","短片"]},
 		{"key":"iKun","name":"iKun","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","国产剧","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","惊悚片","家庭片","古装片","历史片","悬疑片","犯罪片","灾难片","记录片","短片","动画片","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日本动漫"]},
 		{"key":"New6v","name":"New6V","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com"},
-		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1},
-
-		{"key":"美剧天堂","name":"美剧天堂","type":3,"api":"csp_MeijuTT","searchable":1,"quickSearch":1,"filterable":1},
-		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:lz线路,ff线路,bfzy线路,tp线路]"}
+		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","jar":"./diy/cili.jar","searchable":1,"quickSearch":1,"filterable":1}
 	],
 	"rules": [
 		{
