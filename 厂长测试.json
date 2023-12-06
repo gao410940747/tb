@@ -14,6 +14,7 @@
 		{"key":"py_czspp","name":"厂长","type":3,"api":"py_czspp","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/py_czspp.py"},
 		{"key":"py_huya","name":"虎牙","type":3,"api":"py_huya","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_huya.py"},
 		{"key":"py_douyu","name":"斗鱼","type":3,"api":"py_douyu","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_douyu.py"},
+		{"key":"虎牙直播","name":"🐯虎牙直播","type":3,"api":"./lib/drpy2.min.js","searchable":0,"quickSearch":0,"filterable":1,"ext":"./lib/huyazhibo.js"},
 		{"key":"drpy_js_影探[V2]","name":"影视 | 影探[V2]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/影探[V2].js"},
 		{
 			"key": "爱看机器人",
