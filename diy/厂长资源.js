@@ -1,6 +1,6 @@
 var rule={
     title:'厂长资源', 
-    host:'http://www.cz01.tv',
+    host:'http://www.czz9.com',
     // 发布页：www.czzy.site
     // 主节点：www.cz01.tv
     // 联通节点：www.czz9.com/  www.czzy33.com/  www.czzy88.com/
