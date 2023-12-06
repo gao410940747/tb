@@ -9,11 +9,7 @@
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
 	}],
 	"sites": [
-		{"key":"py_央视片库","name":"🇨🇳CCTV","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/央视片库.py"},
-		{"key":"py_cctv_full","name":"央视大全","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"},
 		{"key":"drpy_js_影探","name":"影探","type":3,"api":"./lib/drpy2.min.js","ext":"./js/影探[V2].js"},
-		{"key":"drpy_js_好趣网3","name":"好趣网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./js/好趣网.js"},
-
 
 		{"key":"py_huya","name":"虎牙","type":3,"api":"py_huya","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_huya.py"},
 		{"key":"py_douyu","name":"斗鱼","type":3,"api":"py_douyu","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_douyu.py"},
