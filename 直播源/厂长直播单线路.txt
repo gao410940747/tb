@@ -1,3 +1,93 @@
+电台, #genre#
+
+央视新闻,http://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8
+凤凰资讯, http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
+凤凰中文, http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
+
+CCTV-1,http://piccpndali.v.myalicdn.com/audio/cctv1_2.m3u8
+CCTV-2,http://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8
+CCTV-3,http://piccpndali.v.myalicdn.com/audio/cctv3_2.m3u8
+CCTV-4,http://piccpndali.v.myalicdn.com/audio/cctv4_2.m3u8
+CCTV-5,http://piccpndali.v.myalicdn.com/audio/cctv5_2.m3u8
+CCTV-5+,http://piccpndali.v.myalicdn.com/audio/cctv5plus_2.m3u8
+CCTV-6,http://piccpndali.v.myalicdn.com/audio/cctv6_2.m3u8
+CCTV-7,http://piccpndali.v.myalicdn.com/audio/cctv7_2.m3u8
+CCTV-8,http://piccpndali.v.myalicdn.com/audio/cctv8_2.m3u8
+CCTV-9,http://piccpndali.v.myalicdn.com/audio/cctv9_2.m3u8
+CCTV-10,http://piccpndali.v.myalicdn.com/audio/cctv10_2.m3u8
+CCTV-11,http://piccpndali.v.myalicdn.com/audio/cctv11_2.m3u8
+CCTV-12,http://piccpndali.v.myalicdn.com/audio/cctv12_2.m3u8
+CCTV-13,http://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8
+CCTV-14,http://piccpndali.v.myalicdn.com/audio/cctv14_2.m3u8
+CCTV-15,http://piccpndali.v.myalicdn.com/audio/cctv15_2.m3u8
+CCTV-16,http://piccpndali.v.myalicdn.com/audio/cctv16_2.m3u8
+CCTV-17,http://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8
+
+哈尔滨综合广播, https://stream.hrbtv.net/xwpl/playlist.m3u8?_upt=376dbf461700913546
+哈尔滨文艺广播, https://stream.hrbtv.net/wypl/playlist.m3u8?_upt=20991e861700913598
+哈尔滨交通广播, https://stream.hrbtv.net/jtpl/playlist.m3u8?_upt=9bb5f6681700913632
+哈尔滨音乐广播, https://stream.hrbtv.net/yypl/playlist.m3u8?_upt=6defbb9a1700913720
+哈尔滨经济广播, https://stream.hrbtv.net/876pl/playlist.m3u8?_upt=288d0dae1700913648
+哈尔滨古典音乐广播, https://stream.hrbtv.net/gdpl/playlist.m3u8?_upt=86e94fc81700913738
+
+龙广新闻台, https://live.ximalaya.com/radio-first-page-app/live/375/64.m3u8?transcode=ts
+龙广生活台, https://live.ximalaya.com/radio-first-page-app/live/377/64.m3u8?transcode=ts
+龙广音乐台, https://live.ximalaya.com/radio-first-page-app/live/379/64.m3u8?transcode=ts
+龙广都市女性台, https://live.ximalaya.com/radio-first-page-app/live/378/64.m3u8?transcode=ts
+龙广爱家频道, https://live.ximalaya.com/radio-first-page-app/live/380/64.m3u8?transcode=ts
+龙广青苹果之声, https://live.ximalaya.com/radio-first-page-app/live/384/64.m3u8?transcode=ts
+哈尔滨综合广播, https://live.ximalaya.com/radio-first-page-app/live/389/64.m3u8?transcode=ts
+哈尔滨文艺广播, https://live.ximalaya.com/radio-first-page-app/live/390/64.m3u8?transcode=ts
+哈尔滨交通广播, https://live.ximalaya.com/radio-first-page-app/live/385/64.m3u8?transcode=ts
+哈尔滨音乐广播, https://live.ximalaya.com/radio-first-page-app/live/386/64.m3u8?transcode=ts
+哈尔滨经济广播, https://live.ximalaya.com/radio-first-page-app/live/387/64.m3u8?transcode=ts
+哈尔滨古典音乐广播, https://live.ximalaya.com/radio-first-page-app/live/1664/64.m3u8?transcode=ts
+江苏广播金陵之声, https://live.ximalaya.com/radio-first-page-app/live/1394/64.m3u8?transcode=ts
+江苏新闻综合广播, https://live.ximalaya.com/radio-first-page-app/live/533/64.m3u8?transcode=ts
+江苏新闻广播, https://live.ximalaya.com/radio-first-page-app/live/534/64.m3u8?transcode=ts
+江苏交通广播, https://live.ximalaya.com/radio-first-page-app/live/536/64.m3u8?transcode=ts
+江苏音乐广播, https://live.ximalaya.com/radio-first-page-app/live/537/64.m3u8?transcode=ts
+江苏文艺广播, https://live.ximalaya.com/radio-first-page-app/live/541/64.m3u8?transcode=ts
+江苏财经广播, https://live.ximalaya.com/radio-first-page-app/live/539/64.m3u8?transcode=ts
+江苏健康广播, https://live.ximalaya.com/radio-first-page-app/live/542/64.m3u8?transcode=ts
+江苏故事广播, https://live.ximalaya.com/radio-first-page-app/live/540/64.m3u8?transcode=ts
+江苏经典流行音乐, https://live.ximalaya.com/radio-first-page-app/live/538/64.m3u8?transcode=ts
+南京新闻综合广播, https://live.ximalaya.com/radio-first-page-app/live/68/64.m3u8?transcode=ts
+南京交通广播, https://live.ximalaya.com/radio-first-page-app/live/70/64.m3u8?transcode=ts
+南京音乐广播, https://live.ximalaya.com/radio-first-page-app/live/71/64.m3u8?transcode=ts
+南京体育广播, https://live.ximalaya.com/radio-first-page-app/live/88/64.m3u8?transcode=ts
+南京经济广播, https://live.ximalaya.com/radio-first-page-app/live/69/64.m3u8?transcode=ts
+南京活力广播, https://live.ximalaya.com/radio-first-page-app/live/2697/64.m3u8?transcode=ts
+南京城市调频, https://live.ximalaya.com/radio-first-page-app/live/90/64.m3u8?transcode=ts
+苏州新闻广播, https://live.ximalaya.com/radio-first-page-app/live/63/64.m3u8?transcode=ts
+苏州交通广播, https://live.ximalaya.com/radio-first-page-app/live/64/64.m3u8?transcode=ts
+北京交通广播, https://live.ximalaya.com/radio-first-page-app/live/93/64.m3u8?transcode=ts
+北京新闻广播, https://live.ximalaya.com/radio-first-page-app/live/1994/64.m3u8?transcode=ts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 央视, #genre#
 
 CCTV-1,http://[2409:8087:2001:20:2800:0:df6e:eb15]:80/wh7f454c46tw1925441929_1417964840/ott.mobaibox.com/PLTV/3/224/3221227467/index.m3u8?icpid=3&RTS=1674386335&from=40&ocs=2_2409:8087:2004:20:2800:0:df6e:ec0d_80&popid=40&hms_devid=2115&prioritypopid=40&vqe=3
@@ -483,96 +573,6 @@ CCTV-1,  http://l6.weihai.tv:8081/hls/rSwuMs738z.m3u8
 CCTV-1,  https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv1_2/index.m3u8
 CCTV-13, https://live-play.cctvnews.cctv.com/cctv/merge_cctv13_mhd.m3u8
 CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/index.m3u8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-电台, #genre#
-
-央视新闻,http://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8
-凤凰资讯, http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
-凤凰中文, http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
-
-CCTV-1,http://piccpndali.v.myalicdn.com/audio/cctv1_2.m3u8
-CCTV-2,http://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8
-CCTV-3,http://piccpndali.v.myalicdn.com/audio/cctv3_2.m3u8
-CCTV-4,http://piccpndali.v.myalicdn.com/audio/cctv4_2.m3u8
-CCTV-5,http://piccpndali.v.myalicdn.com/audio/cctv5_2.m3u8
-CCTV-5+,http://piccpndali.v.myalicdn.com/audio/cctv5plus_2.m3u8
-CCTV-6,http://piccpndali.v.myalicdn.com/audio/cctv6_2.m3u8
-CCTV-7,http://piccpndali.v.myalicdn.com/audio/cctv7_2.m3u8
-CCTV-8,http://piccpndali.v.myalicdn.com/audio/cctv8_2.m3u8
-CCTV-9,http://piccpndali.v.myalicdn.com/audio/cctv9_2.m3u8
-CCTV-10,http://piccpndali.v.myalicdn.com/audio/cctv10_2.m3u8
-CCTV-11,http://piccpndali.v.myalicdn.com/audio/cctv11_2.m3u8
-CCTV-12,http://piccpndali.v.myalicdn.com/audio/cctv12_2.m3u8
-CCTV-13,http://piccpndali.v.myalicdn.com/audio/cctv13_2.m3u8
-CCTV-14,http://piccpndali.v.myalicdn.com/audio/cctv14_2.m3u8
-CCTV-15,http://piccpndali.v.myalicdn.com/audio/cctv15_2.m3u8
-CCTV-16,http://piccpndali.v.myalicdn.com/audio/cctv16_2.m3u8
-CCTV-17,http://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8
-
-哈尔滨综合广播, https://stream.hrbtv.net/xwpl/playlist.m3u8?_upt=376dbf461700913546
-哈尔滨文艺广播, https://stream.hrbtv.net/wypl/playlist.m3u8?_upt=20991e861700913598
-哈尔滨交通广播, https://stream.hrbtv.net/jtpl/playlist.m3u8?_upt=9bb5f6681700913632
-哈尔滨音乐广播, https://stream.hrbtv.net/yypl/playlist.m3u8?_upt=6defbb9a1700913720
-哈尔滨经济广播, https://stream.hrbtv.net/876pl/playlist.m3u8?_upt=288d0dae1700913648
-哈尔滨古典音乐广播, https://stream.hrbtv.net/gdpl/playlist.m3u8?_upt=86e94fc81700913738
-
-龙广新闻台, https://live.ximalaya.com/radio-first-page-app/live/375/64.m3u8?transcode=ts
-龙广生活台, https://live.ximalaya.com/radio-first-page-app/live/377/64.m3u8?transcode=ts
-龙广音乐台, https://live.ximalaya.com/radio-first-page-app/live/379/64.m3u8?transcode=ts
-龙广都市女性台, https://live.ximalaya.com/radio-first-page-app/live/378/64.m3u8?transcode=ts
-龙广爱家频道, https://live.ximalaya.com/radio-first-page-app/live/380/64.m3u8?transcode=ts
-龙广青苹果之声, https://live.ximalaya.com/radio-first-page-app/live/384/64.m3u8?transcode=ts
-哈尔滨综合广播, https://live.ximalaya.com/radio-first-page-app/live/389/64.m3u8?transcode=ts
-哈尔滨文艺广播, https://live.ximalaya.com/radio-first-page-app/live/390/64.m3u8?transcode=ts
-哈尔滨交通广播, https://live.ximalaya.com/radio-first-page-app/live/385/64.m3u8?transcode=ts
-哈尔滨音乐广播, https://live.ximalaya.com/radio-first-page-app/live/386/64.m3u8?transcode=ts
-哈尔滨经济广播, https://live.ximalaya.com/radio-first-page-app/live/387/64.m3u8?transcode=ts
-哈尔滨古典音乐广播, https://live.ximalaya.com/radio-first-page-app/live/1664/64.m3u8?transcode=ts
-江苏广播金陵之声, https://live.ximalaya.com/radio-first-page-app/live/1394/64.m3u8?transcode=ts
-江苏新闻综合广播, https://live.ximalaya.com/radio-first-page-app/live/533/64.m3u8?transcode=ts
-江苏新闻广播, https://live.ximalaya.com/radio-first-page-app/live/534/64.m3u8?transcode=ts
-江苏交通广播, https://live.ximalaya.com/radio-first-page-app/live/536/64.m3u8?transcode=ts
-江苏音乐广播, https://live.ximalaya.com/radio-first-page-app/live/537/64.m3u8?transcode=ts
-江苏文艺广播, https://live.ximalaya.com/radio-first-page-app/live/541/64.m3u8?transcode=ts
-江苏财经广播, https://live.ximalaya.com/radio-first-page-app/live/539/64.m3u8?transcode=ts
-江苏健康广播, https://live.ximalaya.com/radio-first-page-app/live/542/64.m3u8?transcode=ts
-江苏故事广播, https://live.ximalaya.com/radio-first-page-app/live/540/64.m3u8?transcode=ts
-江苏经典流行音乐, https://live.ximalaya.com/radio-first-page-app/live/538/64.m3u8?transcode=ts
-南京新闻综合广播, https://live.ximalaya.com/radio-first-page-app/live/68/64.m3u8?transcode=ts
-南京交通广播, https://live.ximalaya.com/radio-first-page-app/live/70/64.m3u8?transcode=ts
-南京音乐广播, https://live.ximalaya.com/radio-first-page-app/live/71/64.m3u8?transcode=ts
-南京体育广播, https://live.ximalaya.com/radio-first-page-app/live/88/64.m3u8?transcode=ts
-南京经济广播, https://live.ximalaya.com/radio-first-page-app/live/69/64.m3u8?transcode=ts
-南京活力广播, https://live.ximalaya.com/radio-first-page-app/live/2697/64.m3u8?transcode=ts
-南京城市调频, https://live.ximalaya.com/radio-first-page-app/live/90/64.m3u8?transcode=ts
-苏州新闻广播, https://live.ximalaya.com/radio-first-page-app/live/63/64.m3u8?transcode=ts
-苏州交通广播, https://live.ximalaya.com/radio-first-page-app/live/64/64.m3u8?transcode=ts
-北京交通广播, https://live.ximalaya.com/radio-first-page-app/live/93/64.m3u8?transcode=ts
-北京新闻广播, https://live.ximalaya.com/radio-first-page-app/live/1994/64.m3u8?transcode=ts
-
-
-
 
 
 
