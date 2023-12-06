@@ -59,7 +59,7 @@ var rule={
             input
         }
 	`,
-//    推荐:'.bt_img;ul&&li;*;*;*;*',
+    推荐:'.bt_img;ul&&li;*;*;*;*',
     double:true,
     一级:'.bt_img&&ul&&li;h3.dytit&&Text;img.lazy&&data-original;.jidi&&Text;a&&href',
     二级:{
