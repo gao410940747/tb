@@ -17,7 +17,6 @@
 		{"key":"哔哩直播","name":"哔哩直播","type":3,"api":"./lib/drpy2.min.js","playerType":1,"ext":"./diy/哔哩直播.js"},
 		{"key":"斗鱼直播","name":"斗鱼直播","type":3,"api":"./lib/drpy2.min.js","playerType":2,"ext":"./diy/斗鱼直播.js"},
 		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./lib/drpy2.min.js","playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播1080.js"},
-	//	{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./js/drpy.min.js","ext":"./diy/虎牙直播720.js"},
 		{"key":"直播转点播","name":"电视直播","type":3,"api":"./diy/live2vod.js","searchable":1,"quickSearch":0,"filterable":0,"ext":"./live2vod.json"},
 
 		{"key":"量子","name":"量子","type":1,"api":"https://cj.lziapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"categories":["大陆综艺","篮球","足球","网球","斯诺克","体育","国产剧","韩国剧","日本剧","电影片","连续剧","综艺片","动漫片","台湾剧","香港剧","欧美剧","海外剧","泰国剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","记录片","港台综艺","日韩综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","港台动漫","海外动漫","电影解说","新闻资讯","电影资讯","娱乐新闻","预告片","短剧"]},
@@ -26,9 +25,7 @@
 		{"key":"iKun","name":"iKun","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","国产剧","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","惊悚片","家庭片","古装片","历史片","悬疑片","犯罪片","灾难片","记录片","短片","动画片","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日本动漫"]},
 
 		{"key":"央视片库","name":"央视网","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/央视片库.py"},
-	//	{"key":"央视大全","name":"央视网","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"},
-		{"key":"好趣网","name":"好趣网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./diy/好趣网.js"},
-		{"key":"新视觉","name":"新视觉","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/新视觉影视.js"}
+		{"key":"好趣网","name":"好趣网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./diy/好趣网.js"}
 	],
 	"parses": [{
 		"name": "聚合",

@@ -17,7 +17,7 @@ var rule = {
         // "znl":[{"key":"cateId","name":"分类","value":[{"n":"正能量","v":"znl"}]}]
     },
     filter_def:{
-        Overwatch:{cateId:'Overwatch'},
+//        Overwatch:{cateId:'Overwatch'},
         yl:{cateId:'yqk'},
         // 默认守望先锋"Overwatch"
         PCgame:{cateId:'Overwatch'},
@@ -29,8 +29,8 @@ var rule = {
         voice:{cateId:'yyzs'},
         znl:{cateId:'znl'}
     },
-    class_name:'守望先锋&娱乐天地&网游竞技&单机热游&手游休闲&颜值&科技文化&语音互动&语音直播&正能量',// /api/cate/list
-    class_url:'Overwatch&yl&PCgame&djry&syxx&yz&kjwh&yp&voice&znl',
+    class_name:'网游竞技&娱乐天地&单机热游&手游休闲&颜值&科技文化&语音互动&语音直播&正能量',// /api/cate/list
+    class_url:'PCgame&yl&djry&syxx&yz&kjwh&yp&voice&znl',
     detailUrl: 'http://live.yj1211.work/api/live/getRoomInfo?uid=&platform=douyu&roomId=fyid',// JustLive
     searchUrl:'/api/search/liveRoom?#did=10000000000000000000000000001501&limit=20&offset=0&sk=**;post',
     searchable:2,
