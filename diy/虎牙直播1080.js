@@ -20,6 +20,7 @@ var rule = {
     filter_url: '{{fl.area}}',
     filter_def:{
         8:{area:'2135'},
+        // 默认守望先锋"2174"
         1:{area:'2174'},
         2:{area:'7601'},
         3:{area:'2336'}
