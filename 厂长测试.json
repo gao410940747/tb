@@ -10,10 +10,9 @@
 	}],
 	"sites": [
 		{"key":"drpy_js_影探","name":"影探","type":3,"api":"./lib/drpy2.min.js","ext":"./js/影探[V2].js"},
-
-		{"key":"py_huya","name":"虎牙","type":3,"api":"py_huya","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_huya.py"},
-		{"key":"py_douyu","name":"斗鱼","type":3,"api":"py_douyu","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_douyu.py"},
-		{"key":"虎牙直播","name":"🐯虎牙直播","type":3,"api":"./lib/drpy2.min.js","searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播2.js"}
+		{"key":"哔哩哔哩","name":"哔哩大全","type":3,"api":"csp_Bili","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/Bili.json"},
+		{"key":"哔哩直播","name":"哔哩直播2","type":3,"api":"./lib/drpy2.min.js","playerType":1,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/哔哩直播2.js"},
+		{"key":"斗鱼直播","name":"斗鱼直播2","type":3,"api":"./lib/drpy2.min.js","playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/斗鱼直播2.js"}
 	],
 	"parses": [{
 		"name": "聚合",
