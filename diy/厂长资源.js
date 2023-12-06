@@ -1,7 +1,10 @@
 var rule={
     title:'厂长资源', 
-//    host:'http://www.czzy.site',
     host:'http://www.cz01.tv',
+    // 发布页：www.czzy.site
+    // 主节点：www.cz01.tv
+    // 联通节点：www.czz9.com/  www.czzy33.com/  www.czzy88.com/
+    // 移动节点：www.czz9.com/  www.czzy33.com/
     hostJs:'print(HOST);let html=request(HOST,{headers:{"User-Agent":PC_UA}});HOST = jsp.pdfh(html,"h3&&a&&href")',
     url:'/fyclassfyfilter',
     filterable:1,//是否启用分类筛选,

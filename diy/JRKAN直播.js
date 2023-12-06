@@ -14,7 +14,7 @@ var rule = {
     host:'http://www.jrsyyds.com/?lan=1',
     // 发布页：www.qiumi1314.com
     // 主节点：http://www.jrkan.com/
-    // 联通节点：www.jrkankan.com / www.jrkan365.com / jrsyyds.com / www.jryyds.com / jrskan.com / jrsbxj.com
+    // 联通节点：www.jrsyyds.com/  www.jryyds.com/  www.jrskan.com/  www.jrsbxj.com/  www.jrkankan.com / www.jrkan365.com /
     // 移动节点：www.jrsyyds.com/  www.jryyds.com/  www.jrskan.com/  www.jrsbxj.com/
     url:'/fyclass',
     searchUrl:'',
