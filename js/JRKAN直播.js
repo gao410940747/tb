@@ -11,9 +11,11 @@
 
 var rule = {
     title:'JRKAN直播',
-    host:'http://www.jrkankan.com/?lan=1',
-    // JRKAN备用域名:www.jrkankan.com / www.jrkan365.com / jrsyyds.com / www.jryyds.com / jrskan.com / jrsbxj.com
-    // JRKAN网址发布:qiumi1314.com
+    host:'http://www.jrsyyds.com/?lan=1',
+    // 发布页：www.qiumi1314.com
+    // 主节点：http://www.jrkan.com/
+    // 联通节点：www.jrkankan.com / www.jrkan365.com / jrsyyds.com / www.jryyds.com / jrskan.com / jrsbxj.com
+    // 移动节点：www.jrsyyds.com/  www.jryyds.com/  www.jrskan.com/  www.jrsbxj.com/
     url:'/fyclass',
     searchUrl:'',
     searchable:0,
