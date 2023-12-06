@@ -15,8 +15,13 @@
 		{"key":"厂长","name":"厂长","type":3,"api":"csp_Czsapp","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.czzy88.com"},
 		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:lz线路,ff线路,bfzy线路,tp线路]"},
 		{"key":"新视觉","name":"新视觉","type":3,"api":"./lib/drpy2.min.js","ext":"./js/新视觉影视.js"},
-		{"key":"央视大全","name":"央视网","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"},
+		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"},
 		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./js/drpy.min.js","ext":"./diy/虎牙直播720.js"},
+		{"key":"六月听书","name":"六月听书","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/六月听书.js"},
+		{"key":"听书网","name":"听书网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/听书网.js"},
+		{"key":"drpy_js_蜻蜓FM","name":"广播 | 蜻蜓FM[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./js/蜻蜓FM.js"},
+		{"key":"drpy_js_i275听书","name":"听书 | i275听书[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/i275听书.js"},
+		{"key":"好趣网","name":"好趣网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./diy/好趣网.js"},
 		{"key":"荐片弹幕","name":"荐片(弹幕版)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true}}
 	],
 	"parses": [{

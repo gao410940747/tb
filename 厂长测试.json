@@ -1,28 +1,36 @@
 {
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
-	"lives": [{
-		"name": "厂长直播",
-		"type": 0,
-		"url": "./厂长直播.txt",
-		"playerType": 1,
-		"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-		"logo": "https://epg.112114.xyz/logo/{name}.png"
-	}],
+	"lives": [
+		{
+			"name": "厂长直播",
+			"type": 0,
+			"url": "./厂长直播.txt",
+			"playerType": 1,
+			"epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+			"logo": "https://epg.112114.xyz/logo/{name}.png"
+		},
+		{"name":"初秋语•综合","type":0,"url":"./list.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"YanG•综合","type":0,"url":"https://fongmi.cachefly.net/YanG-1989/m3u/main/Gather.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"范明明•综合","type":0,"url":"https://fongmi.cachefly.net/fanmingming/live/main/tv/m3u/global.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"YueChan•综合","type":0,"url":"https://fongmi.cachefly.net/YueChan/Live/main/IPTV.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"Yoursmile•综合","type":0,"url":"https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"饭太硬•综合","type":0,"url":"https://agit.ai/fantaiying/0/raw/branch/main/tvlive.txt","playerType":1,"ua": "okhttp/3.15","epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"Ray•综合","type":0,"url":"https://xhdwc.tk/tvlive.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"俊于•综合","type":0,"url":"http://home.jundie.top:81/Cat/tv/live.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo": "https://epg.112114.xyz/logo/{name}.png"},
+		{"name":"初秋语•电台","type":0,"url":"./radio.txt","playerType":1},
+		{"name":"范明明•电台","type":0,"url":"https://fongmi.cachefly.net/fanmingming/live/main/radio/m3u/index.m3u","playerType":1},
+		{"name":"肥羊•斗鱼","type":0,"url":"https://fongmi.cachefly.net/Ftindy/IPTV-URL/main/douyuyqk.m3u","playerType":1},
+		{"name":"肥羊•虎牙","type":0,"url":"https://fongmi.cachefly.net/Ftindy/IPTV-URL/main/huyayqk.m3u","playerType":1},
+		{"name":"肥羊•YY","type":0,"url":"https://fongmi.cachefly.net/Ftindy/IPTV-URL/main/yylunbo.m3u","playerType":1},
+		{"name":"初秋语•哔哩","type":0,"url":"./bili.m3u","playerType":1},
+		{"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"}
+	],
 	"sites": [
-		{"key":"drpy_js_DJ音乐","name":"音频 | DJ音乐[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/DJ音乐.js"},
-		{"key":"drpy_js_啦啦DJ","name":"音频 | 啦啦DJ[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/啦啦DJ.js"},
-		{"key":"drpy_js_清风DJ","name":"音频 | 清风DJ[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/清风DJ.js"},
-		{"key":"drpy_js_种子音乐","name":"音频 | 种子音乐[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/种子音乐.js"},
-		{"key":"drpy_js_广播迷FM","name":"广播 | 广播迷FM[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./js/广播迷FM.js"},
-		{"key":"drpy_js_蜻蜓FM","name":"广播 | 蜻蜓FM[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./js/蜻蜓FM.js"},
-		{"key":"drpy_js_i275听书","name":"听书 | i275听书[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/i275听书.js"},
-		{"key":"drpy_js_爱上你听书网","name":"听书 | 爱上你听书[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/爱上你听书网.js"},
-		{"key":"drpy_js_博看听书","name":"听书 | 博看听书[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/博看听书.js"},
-		{"key":"drpy_js_海洋听书","name":"听书 | 海洋听书[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/海洋听书.js"},
-		{"key":"drpy_js_六月听书","name":"听书 | 六月听书[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/六月听书.js"},
-		{"key":"drpy_js_听书网","name":"听书 | 听书网[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/听书网.js"},
-		{"key":"drpy_js_喜马拉雅","name":"听书 | 喜马拉雅[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/喜马拉雅.js"},
-		{"key":"drpy_js_有声小说","name":"听书 | 有声小说[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/有声小说吧.js"}
+		{"key":"MV_vod","name":"卡拉OK┃采集","type":1,"api":"https://tvbox-mv--leosam2048.repl.co/mv/vod","searchable":1,"style":{ "type":"oval", "ratio":1.1 },"changeable":1,"filterable":1,"changeable":0},
+		{"key":"暴風","name":"暴風┃采集","type":1,"api":"https://bfzyapi.com/api.php/provide/vod","searchable":1,"changeable":1},
+		{"key":"索尼","name":"索尼┃采集","type":1,"api":"https://suoniapi.com/api.php/provide/vod","searchable":1,"changeable":1},
+		{"key":"快帆","name":"快帆┃采集","type":1,"api":"https://api.kuaifan.tv/api.php/provide/vod","searchable":1,"changeable":1},
+		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"changeable":0,"ext":"./js/JustLive.js"}
 	],
 	"parses": [{
 		"name": "聚合",
