@@ -47,11 +47,9 @@ try {
 
 var rule = {
 	title: '影探[V2]', // csp_AppYsV2
-	host: 'http://lfytv.cn/',
-    // hostJs:'print(HOST);let html=JSON.parse(request(HOST,{headers:{"User-Agent":PC_UA}}));let src = html.sites[0].ext.replace("/api.php/app/","");print(src);HOST=src',//网页域名根动态抓取js代码。通过HOST=赋值
-	homeUrl:'/api.php/app/index_video',
-	url: '/api.php/app/video?tid=fyclassfyfilter&limit=18&pg=fypage',
-	filter_url:'&class={{fl.class}}&area={{fl.area}}&lang={{fl.lang}}&year={{fl.year}}',
+	host: 'http://vipcms.lyyytv.cn/api.php/app/',
+	url: 'video?tid=fyclassfyfilter&limit=20&pg=fypage',
+	filter_url:'&class={{fl.class}}&area={{fl.area}}&lang={{fl.lang}}&letter={{fl.letter}}&year={{fl.year}}&by={{fl.by}}',
 	filter: {
 		"32":[{"key":"class","name":"剧情","value":[{"n":"全部","v":""},{"n":"篮球","v":"篮球"},{"n":"足球","v":"足球"},{"n":"网球","v":"网球"},{"n":"斯洛克","v":"斯洛克"}]}],
 		"20":[{"key":"year","name":"年份","value":[{"n":"全部","v":""},{"n":"2023","v":"2023"},{"n":"2022","v":"2022"},{"n":"2021","v":"2021"},{"n":"2020","v":"2020"},{"n":"2019","v":"2019"},{"n":"2018","v":"2018"},{"n":"2017","v":"2017"},{"n":"2016","v":"2016"},{"n":"2015","v":"2015"},{"n":"2014","v":"2014"},{"n":"2013","v":"2013"},{"n":"2012","v":"2012"},{"n":"2011","v":"2011"},{"n":"2010","v":"2010"}]}],
