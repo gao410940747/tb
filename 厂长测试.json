@@ -9,24 +9,15 @@
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
 	}],
 	"sites": [
-		{"key":"py_bilivd","name":"B站(带搜索)","type":3,"api":"py_bilivd","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/py_bilivd.py"},
-		{"key":"py_bilimd","name":"B站影视","type":3,"api":"py_bilimd","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/py_bilimd.py"},
+		{"key":"py_央视片库","name":"🇨🇳CCTV","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/央视片库.py"},
+		{"key":"py_cctv_full","name":"央视大全","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"},
+		{"key":"drpy_js_影探","name":"影探","type":3,"api":"./lib/drpy2.min.js","ext":"./js/影探[V2].js"},
+		{"key":"drpy_js_好趣网3","name":"好趣网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./js/好趣网.js"},
+
+
 		{"key":"py_huya","name":"虎牙","type":3,"api":"py_huya","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_huya.py"},
 		{"key":"py_douyu","name":"斗鱼","type":3,"api":"py_douyu","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_douyu.py"},
-		{"key":"虎牙直播","name":"🐯虎牙直播","type":3,"api":"./lib/drpy2.min.js","searchable":0,"quickSearch":0,"filterable":1,"ext":"./lib/huyazhibo.js"},
-		{"key":"drpy_js_影探[V2]","name":"影视 | 影探[V2]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/影探[V2].js"},
-		{
-			"key": "爱看机器人",
-			"name": "码上👓车-🚛爱看机器",
-			"type": 3,
-			"api": "./lib/drpy2.min.js",
-			"ext": "./diy/ikanbot.js"
-		},
-		{"key":"py_央视片库","name":"🇨🇳CCTV","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/央视片库.py"},
-		{"key":"py_cctv","name":"🇨🇳央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/py_cctv.py"},
-		{"key":"drpy_js_好趣网1","name":"🤹🏻‍好趣网直播","type":3,"api":"https://cdn.jsdelivr.net/gh/yxcqr/DZDRPY@main/libs/drpy.min.js","ext":"https://cdn.jsdelivr.net/gh/yxcqr/DZDRPY@main/js/好趣网.js"},
-		{"key":"drpy_js_好趣网2","name":"电视┃好趣网[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{ "type":"oval", "ratio":1.1 },"ext":"./js/好趣网.js"},
-		{"key":"drpy_js_好趣网3","name":"电视 | 好趣网[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.333},"changeable":0,"ext":"./js/好趣网.js"}
+		{"key":"虎牙直播","name":"🐯虎牙直播","type":3,"api":"./lib/drpy2.min.js","searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播2.js"}
 	],
 	"parses": [{
 		"name": "聚合",

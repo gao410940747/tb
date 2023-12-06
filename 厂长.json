@@ -24,8 +24,7 @@
 		{"key":"天空","name":"天空","type":1,"api":"https://tiankongzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","体育赛事","国产剧","香港剧","台湾剧","美国剧","韩国剧","日本剧","泰剧","海外剧","日韩综艺","港台综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","悬疑片","动画片","犯罪片","奇幻片"]},
 		{"key":"iKun","name":"iKun","type":1,"api":"https://ikunzyapi.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","国产剧","香港剧","韩国剧","欧美剧","台湾剧","日本剧","海外剧","泰国剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","惊悚片","家庭片","古装片","历史片","悬疑片","犯罪片","灾难片","记录片","短片","动画片","港台综艺","日韩综艺","欧美综艺","国产动漫","欧美动漫","日本动漫"]},
 
-		{"key":"新视觉","name":"新视觉","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/新视觉影视.js"},
-		{"key":"py_cctv_full","name":"央视大全","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"}
+		{"key":"新视觉","name":"新视觉","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/新视觉影视.js"}
 	],
 	"parses": [{
 		"name": "聚合",
