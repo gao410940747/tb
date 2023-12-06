@@ -9,6 +9,17 @@
 		"logo": "https://epg.112114.xyz/logo/{name}.png"
 	}],
 	"sites": [
+		{"key":"drpy_js_cokemv","name":"影视 | cokemv[js]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/cokemv.js"},
+		{"key":"drpy_js_cokemv[V2]","name":"影视 | cokemv[V2]","type":3,"api":"./lib/drpy2.min.js","ext":"./js/cokemv[V2].js"},
+		{"key":"drpy_js_爱车MV","name":"MV | 爱车MV[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/爱车MV.js"},
+		{"key":"drpy_js_酷狗MV","name":"MV | 酷狗[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/酷狗MV.js"},
+		{"key":"drpy_js_酷奇MV","name":"MV | 酷奇[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/酷奇MV.js"},
+		{"key":"drpy_js_苹果DJ","name":"MV | 苹果DJ[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/苹果DJ.js"},
+		{"key":"MV_vod","name":"🎶明星┃MV","type":1,"api":"https://mv.wogg.link/mv/vod","style":{"type":"oval"},"searchable":1,"quickSearch":0,"changeable":0},
+
+		{"key":"csp_聚短视频","name":"📽️聚短┃视频","type":3,"api":"https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext":"https://fanty.run.goorm.site/ext/短视频.js","searchable": 0,"quickSearch": 0,"changeable":0},
+		{"key":"酷奇js","name":"🎤酷奇┃MV","type": 3,"api":"https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext":"https://fanty.run.goorm.site/ext/酷奇MV.js","style":{"type":"rect","ratio":1.597},"searchable": 0,"quickSearch": 0,"changeable":0},
+		{"key":"有声小说js","name":"🎧有声┃小说","type":3,"api":"https://fanty.run.goorm.site/ext/js/drpy2.min.js","ext":"https://fanty.run.goorm.site/ext/有声小说吧.js","style":{"type":"rect","ratio":1},"searchable": 0,"quickSearch": 0,"changeable":0}
 	],
 	"parses": [{
 		"name": "聚合",
