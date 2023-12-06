@@ -26,11 +26,6 @@
 		{"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"}
 	],
 	"sites": [
-		{"key":"MV_vod","name":"卡拉OK┃采集","type":1,"api":"https://tvbox-mv--leosam2048.repl.co/mv/vod","searchable":1,"style":{ "type":"oval", "ratio":1.1 },"changeable":1,"filterable":1,"changeable":0},
-		{"key":"暴風","name":"暴風┃采集","type":1,"api":"https://bfzyapi.com/api.php/provide/vod","searchable":1,"changeable":1},
-		{"key":"索尼","name":"索尼┃采集","type":1,"api":"https://suoniapi.com/api.php/provide/vod","searchable":1,"changeable":1},
-		{"key":"快帆","name":"快帆┃采集","type":1,"api":"https://api.kuaifan.tv/api.php/provide/vod","searchable":1,"changeable":1},
-		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"changeable":0,"ext":"./js/JustLive.js"}
 	],
 	"parses": [{
 		"name": "聚合",
