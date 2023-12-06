@@ -1,7 +1,7 @@
 var rule={
     title:'厂长资源',
 //    host:'http://www.czzy.site',
-    host:'https://www.czzy33.com/',
+    host:'https://www.cz01.tv',
     url:'/fyclass/page/fypage',
     searchUrl:'/xssearch?q=**&f=_all&p=fypage',
     searchable:2,
