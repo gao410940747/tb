@@ -17,9 +17,8 @@ class Spider(Spider):
 	def homeContent(self,filter):
 		result = {}
 		cateManual = {
-			"热门游戏": "热门游戏",
-			"主机游戏": "主机游戏",
-			"原创IP": "原创IP"
+			"守望先锋": "守望先锋",
+			"一起看": "一起看"
 		}
 		classes = []
 		for k in cateManual:
