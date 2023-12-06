@@ -26,7 +26,7 @@
 
 		{"key":"央视片库","name":"央视网","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/央视片库.py"},
 		{"key":"好趣网","name":"好趣网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./diy/好趣网.js"},
-		{"key":"家庭KTV","name":"家庭KTV","type":3,"api":"./diy/live2vod.js","searchable":1,"quickSearch":0,"filterable":0,"ext":"./mv2vod.json"}
+		{"key":"家庭KTV","name":"家庭KTV","type":1,"api":"https://mv.wogg.link/mv/vod","style":{"type":"oval"},"searchable":1,"quickSearch":0,"changeable":0}
 	],
 	"parses": [{
 		"name": "聚合",
