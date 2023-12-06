@@ -26,6 +26,7 @@
 		{"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"}
 	],
 	"sites": [
+		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"}
 	],
 	"parses": [{
 		"name": "聚合",
