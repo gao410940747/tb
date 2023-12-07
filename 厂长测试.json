@@ -26,6 +26,7 @@
 		{"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"}
 	],
 	"sites": [
+		{"key":"斗鱼直播","name":"斗鱼直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/斗鱼直播2.js"},
 		{"key":"抖音直播","name":"抖音直播","type":3,"api":"py_douyin","ext":"./py/抖音直播.py"},
 		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"playerType":2,"changeable":0,"ext":"./js/JustLive.js"}
 	],
