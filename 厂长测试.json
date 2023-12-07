@@ -27,9 +27,7 @@
 	],
 	"sites": [
 		{"key":"抖音直播","name":"抖音直播","type":3,"api":"py_douyin","ext":"./py/抖音直播.py"},
-		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"playerType":2,"changeable":0,"ext":"./js/JustLive.js"},
-		{"key":"py_cctv","name":"🇨🇳CCTV┃PY","type":3,"api":"py_cctv","searchable":0,"quickSearch":0,"filterable":1,"ext":"./json/py_cctv.json"},
-		{"key":"py_cctvdc","name":"🇨🇳央视片库┃PY","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/py_cctvdc.json"}
+		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"playerType":2,"changeable":0,"ext":"./js/JustLive.js"}
 	],
 	"parses": [{
 		"name": "聚合",
