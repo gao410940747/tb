@@ -89,7 +89,7 @@ var rule = {
         if (MY_CATE === 'huya') {
             let area = MY_FL.area || '守望先锋归来';
             if (area === '守望先锋归来') {
-                input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya&area=守望先锋归来&page='+MY_PAGE+'&size=10';
+                input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya&area=守望先锋归来&page='+MY_PAGE+'&size=1';
             }
         }
         var html = JSON.parse(request(input)).data;
