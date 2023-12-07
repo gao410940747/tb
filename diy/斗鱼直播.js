@@ -101,10 +101,16 @@ var rule = {
         // };
         Object.keys(playurl).forEach(function(key) {
             // if (!/ayyuid|to/.test(key)) {
+            if (/HD/.test(key)) {
+                d.push({
+                    title: 'JustLive高清',
+                    url: playurl[key]
+                })
+            }
             if (/OD/.test(key)) {
                 d.push({
                     // title: name[key],
-                    title: 'JustLive',
+                    title: 'JustLive标清',
                     url: playurl[key]
                 })
             }

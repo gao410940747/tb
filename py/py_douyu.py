@@ -1,7 +1,7 @@
 #coding=utf-8
 #!/usr/bin/python
 import sys
-sys.path.append('..') 
+sys.path.append('..')
 from base.spider import Spider
 import json
 
@@ -17,8 +17,9 @@ class Spider(Spider):
 	def homeContent(self,filter):
 		result = {}
 		cateManual = {
-			"守望先锋": "守望先锋",
-			"一起看": "一起看"
+			"热门游戏": "热门游戏",
+			"主机游戏": "主机游戏",
+			"原创IP": "原创IP"
 		}
 		classes = []
 		for k in cateManual:
