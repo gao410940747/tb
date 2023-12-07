@@ -26,7 +26,26 @@
 		{"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"}
 	],
 	"sites": [
-		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py","jar":"https://download.kstore.space/download/2863/fxz.jar;md5;479D18F16BCF706ACE1F60537F89F88B"}
+		{
+			"key": "py_cctv",
+			"name": "🇨🇳CCTV┃PY",
+			"type": 3,
+			"api": "py_cctv",
+			"searchable": 0,
+			"quickSearch": 0,
+			"filterable": 1,
+			"ext": "./lib/py_cctv.json"
+		},
+		{
+			"key": "py_cctvdc",
+			"name": "🇨🇳央视片库┃PY",
+			"type": 3,
+			"api": "py_cctv",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1,
+			"ext": "./lib/py_cctvdc.json"
+		}
 	],
 	"parses": [{
 		"name": "聚合",
