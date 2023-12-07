@@ -111,10 +111,10 @@ var rule = {
         });
         d.push({
             title: "斗鱼解析1",
-            url: "https://www.aois.eu.org/live/douyu/" + jo.roomId
+            url: "http://epg.112114.xyz/douyu/" + jo.roomId
         }, {
             title: "斗鱼解析2",
-            url: "http://epg.112114.xyz/douyu/" + jo.roomId
+            url: "https://www.aois.eu.org/live/douyu/" + jo.roomId
         }, {
             title: "斗鱼解析3",
             url: "https://www.goodiptv.club/douyu/" + jo.roomId
