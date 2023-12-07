@@ -38,7 +38,7 @@
 			"searchable": 0,
 			"quickSearch": 0,
 			"filterable": 1,
-			"ext": "./lib/py_cctv.json"
+			"ext": "./diy/py_cctv.json"
 		},
 		{
 			"key": "py_cctvdc",
@@ -48,7 +48,7 @@
 			"searchable": 1,
 			"quickSearch": 1,
 			"filterable": 1,
-			"ext": "./lib/py_cctvdc.json"
+			"ext": "./diy/py_cctvdc.json"
 		}
 	],
 	"parses": [{
