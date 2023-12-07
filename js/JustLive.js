@@ -86,6 +86,12 @@ var rule = {
                 input = HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=10';
             }
         }
+        if (MY_CATE === 'huya') {
+            let area = MY_FL.area || '守望先锋归来';
+            if (area === '守望先锋归来') {
+                input = HOST + '/api/live/getRecommendByPlatform?platform=huya&page='+MY_PAGE+'&size=1';
+            }
+        }
         var html = JSON.parse(request(input)).data;
         html.forEach(it => {
             d.push({
