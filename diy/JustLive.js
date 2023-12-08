@@ -135,11 +135,16 @@ var rule = {
             "HQ": "高音质"
         };
         Object.keys(playurl).forEach(function(key) {
-            if (!/ayyuid|to/.test(key)) {
-                d.push({
-                    title: name[key],
-                    url: playurl[key]
-                })
+//            if (!/ayyuid|to/.test(key)) {
+//                d.push({
+//                    title: name[key],
+//                    url: playurl[key]
+//                })
+//            }
+            var a1: playurl[key];
+            Object.keys(a1).forEach(function(key1) {
+                title: a1['qualityName'],
+                url: a1['playUrl']
             }
         });
         VOD.vod_play_from = "选择画质";
