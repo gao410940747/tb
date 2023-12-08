@@ -142,14 +142,24 @@ var rule = {
 //                })
 //            }
 //        });
-        playurl.forEach(it1 => {
-            it1.forEach(it => {
+        Object.keys(playurl).forEach(function(key) {
+            playurl[key].forEach(it => {
                 d.push({
                     title: it.qualityName,
                     url: it.playUrl
                 })
-            });
-        })
+            })
+        });
+
+
+//        playurl.forEach(it1 => {
+//            it1.forEach(it => {
+//                d.push({
+//                    title: it.qualityName,
+//                    url: it.playUrl
+//                })
+//            });
+//        })
         VOD.vod_play_from = "选择画质";
         VOD.vod_play_url = d.map(function(it) {
             // return it.title + "$" + it.url
