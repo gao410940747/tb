@@ -84,14 +84,14 @@ var rule = {
                 input = HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=10';
             }
         }
-        if (MY_CATE === 'douyin') {
-            let area = MY_FL.area || '关注';
-            if (area === '关注') {
-                if (MY_PAGE === 1) {
-                    input = HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2';
-                }
-            }
-        }
+//        if (MY_CATE === 'douyin') {
+//            let area = MY_FL.area || '关注';
+//            if (area === '关注') {
+//                if (MY_PAGE === 1) {
+//                    input = HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2';
+//                }
+//            }
+//        }
         if (MY_CATE === 'huya') {
             let area = MY_FL.area || '守望先锋归来';
             if (area === '守望先锋归来') {
