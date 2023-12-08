@@ -1,5 +1,8 @@
 {
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
+	"sites": [
+		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"changeable":0,"ext":"./diy/JustLive.js"}
+	],
 	"lives": [
 		{
 			"name": "厂长直播",
@@ -24,9 +27,6 @@
 		{"name":"肥羊•YY","type":0,"url":"https://fongmi.cachefly.net/Ftindy/IPTV-URL/main/yylunbo.m3u","playerType":1},
 		{"name":"初秋语•哔哩","type":0,"url":"./bili.m3u","playerType":1},
 		{"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"}
-	],
-	"sites": [
-		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"playerType":2,"changeable":0,"ext":"./diy/JustLive.js"}
 	],
 	"parses": [{
 		"name": "聚合",
