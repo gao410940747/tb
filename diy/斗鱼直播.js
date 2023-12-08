@@ -85,7 +85,7 @@ var rule = {
             vod_content: '🏷roomId：' + jo.roomId + "｜" +  ' 🏷状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
             // vod_content: "🏷分区：" + jo.platForm.replace("douyu", "斗鱼") + "·" + jo.categoryName + " 🏷UP主：" + jo.ownerName + " 🏷人气：" + jo.online + (jo.isLive === 1 ? " 🏷状态：正在直播" : "状态：未开播"),
         };
-        var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrl?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
+        var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
         // var name = {
         //     OD: "JustLive",
         //     FD: "流畅",
