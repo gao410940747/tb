@@ -134,16 +134,22 @@ var rule = {
             "SQ": "普通音质",
             "HQ": "高音质"
         };
-        Object.keys(playurl).forEach(function(key) {
+//        Object.keys(playurl).forEach(function(key) {
 //            if (!/ayyuid|to/.test(key)) {
 //                d.push({
 //                    title: name[key],
 //                    url: playurl[key]
 //                })
 //            }
-            title: playurl[0]['qualityName'],
-            url: playurl[0]['playUrl']
-        });
+//        });
+        playurl.forEach(it1 => {
+            it1.forEach(it => {
+                d.push({
+                    title: it.qualityName,
+                    url: it.playUrl
+                }
+            });
+        })
         VOD.vod_play_from = "选择画质";
         VOD.vod_play_url = d.map(function(it) {
             // return it.title + "$" + it.url
