@@ -159,7 +159,7 @@ var rule = {
                 d.push({
                     title: it.qualityName,
                     url: it.playUrl
-                });
+                })
             })
         })
 //        playurl.forEach(it1 => {
