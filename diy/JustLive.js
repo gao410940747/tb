@@ -165,7 +165,7 @@ var rule = {
         playurl.forEach(it1 => {
             it1.forEach(it => {
                 d.push({
-                    title: it.sourceName + "-" + it.qualityName,
+                    title: it.qualityName,
                     url: it.playUrl
                 })
             });
