@@ -147,24 +147,22 @@ var rule = {
 //                })
 //            }
 //        });
-        Object.keys(playurl).forEach(function(key1) {
-            Object.keys(key1).forEach(function(key) {
-                d.push({
-                    title: name[key],
-                    url: playurl[key]
-                })
-            });
-        });
-
-
-//        playurl.forEach(it1 => {
-//            it1.forEach(it => {
+//        Object.keys(playurl).forEach(function(key1) {
+//            Object.keys(key1).forEach(function(key) {
 //                d.push({
-//                    title: it.qualityName,
-//                    url: it.playUrl
+//                    title: name[key],
+//                    url: playurl[key]
 //                })
 //            });
-//        })
+//        });
+        playurl.forEach(it1 => {
+            it1.forEach(it => {
+                d.push({
+                    title: it.sourceName + "-" + it.qualityName,
+                    url: it.playUrl
+                })
+            });
+        })
         VOD.vod_play_from = "选择画质";
         VOD.vod_play_url = d.map(function(it) {
             // return it.title + "$" + it.url
