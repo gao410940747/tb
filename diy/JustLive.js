@@ -82,7 +82,9 @@ var rule = {
             let area = MY_FL.area || '全部';
             if (area === '全部') {
 //                input = HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=10';
-                input = HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2';
+                if (MY_PAGE === '1') {
+                    input = HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2';
+                }
             }
         }
         if (MY_CATE === 'huya') {
