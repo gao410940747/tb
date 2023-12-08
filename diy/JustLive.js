@@ -141,11 +141,8 @@ var rule = {
 //                    url: playurl[key]
 //                })
 //            }
-            var a1: playurl[key];
-            Object.keys(a1).forEach(function(key1) {
-                title: a1['qualityName'],
-                url: a1['playUrl']
-            }
+            title: playurl[0]['qualityName'],
+            url: playurl[0]['playUrl']
         });
         VOD.vod_play_from = "选择画质";
         VOD.vod_play_url = d.map(function(it) {
