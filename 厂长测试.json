@@ -26,7 +26,7 @@
 		{"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"}
 	],
 	"sites": [
-		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"playerType":2,"changeable":0,"ext":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/JustLive.js"}
+		{"key":"drpy_js_JustLive","name":"直播┃JustLive[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"playerType":2,"changeable":0,"ext":"https://raw.gitmirror.com/gao410940747/tb/master/diy/JustLive.js"}
 	],
 	"parses": [{
 		"name": "聚合",
