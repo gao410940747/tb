@@ -148,7 +148,7 @@ var rule = {
 //            }
 //        });
         Object.keys(playurl).forEach(function(key1) {
-            Object.keys(playurl[key1]).forEach(function(key) {
+            Object.keys(key1).forEach(function(key) {
                 d.push({
                     title: name[key],
                     url: playurl[key]
