@@ -86,34 +86,13 @@ var rule = {
             // vod_content: "🏷分区：" + jo.platForm.replace("douyu", "斗鱼") + "·" + jo.categoryName + " 🏷UP主：" + jo.ownerName + " 🏷人气：" + jo.online + (jo.isLive === 1 ? " 🏷状态：正在直播" : "状态：未开播"),
         };
         var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
-        // var name = {
-        //     OD: "JustLive",
-        //     FD: "流畅",
-        //     LD: "标清",
-        //     SD: "高清",
-        //     HD: "JustLive(预览)",
-        //     "2K": "2K",
-        //     "4K": "4K",
-        //     FHD: "全高清",
-        //     XLD: "极速",
-        //     SQ: "普通音质",
-        //     HQ: "高音质",
-        // };
         Object.keys(playurl).forEach(function(key) {
-            // if (!/ayyuid|to/.test(key)) {
-            if (/HD/.test(key)) {
+            playurl[key].forEach(it => {
                 d.push({
-                    title: 'JustLive高清',
-                    url: playurl[key]
-                })
-            }
-            if (/OD/.test(key)) {
-                d.push({
-                    // title: name[key],
-                    title: 'JustLive标清',
-                    url: playurl[key]
-                })
-            }
+                    title: it.sourceName + "-" + it.qualityName,
+                    url: it.playUrl
+                });
+            })
         });
         d.push({
             title: "斗鱼解析1",
