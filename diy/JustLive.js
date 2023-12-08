@@ -19,7 +19,7 @@ var rule = {
         douyu:{area:'守望先锋'},
         huya:{area:'守望先锋归来'},
         bilibili:{area:'守望先锋'},
-        douyin:{area:'关注'}
+        douyin:{area:'全部'}
     },
     // detailUrl: '/index/liveRoom?platform=fyclass&roomId=fyid',
     // detailUrl: '/api/live/getRoomInfo?uid=&platform=fyclass&roomId=fyid',
