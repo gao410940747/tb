@@ -85,7 +85,6 @@ var rule = {
             }
         }
         if (MY_CATE === 'douyin') {
-            let area = MY_FL.area || '关注';
             if (area === '关注') {
                 if (MY_PAGE === 1) {
                     input = HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2';
