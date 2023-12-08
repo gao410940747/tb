@@ -164,7 +164,7 @@ var rule = {
         Object.keys(playurl).forEach(function(key) {
             playurl[key].forEach(it => {
                 d.push({
-                    title: it.sourceName + "-" + it.qualityName,
+                    title: it.sourceName + " - " + it.qualityName,
                     url: it.playUrl
                 });
             })
