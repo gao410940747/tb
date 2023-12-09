@@ -209,6 +209,7 @@ var rule = {
         let link = HOST + '/api/live/getRoomInfo?uid=&platform=' + platform + '&roomId=' + roomId;
         var jo = JSON.parse(request(link)).data;
         VOD = {
+            playerType: jo.platForm == 'huya' ? 2 : 1,
             vod_id: jo.roomId,
             vod_name: jo.roomName,
             // 改为展示头像
