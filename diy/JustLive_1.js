@@ -214,7 +214,7 @@ var rule = {
             // 改为展示头像
             // vod_pic: jo.ownerHeadPic,
             vod_pic: jo.roomPic,
-            type_name:(jo.platForm == '抖音' ? '抖音' : jo.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩哔哩").replace("douyin", "抖音") + "•" + jo.categoryName) ,
+            type_name:(jo.platForm == 'douyin' ? '抖音' : jo.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩哔哩").replace("douyin", "抖音") + "•" + jo.categoryName) ,
             vod_remarks: '🚪 房间号 ' + jo.roomId,
             vod_director: '🚪 房间号：' + jo.roomId +  '｜ 📝 状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
             vod_actor: '🆙 ' + jo.ownerName + '｜ 👥 人气：' + jo.online,
