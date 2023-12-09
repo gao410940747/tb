@@ -72,8 +72,8 @@ var rule = {
         html.forEach(it => {
             d.push({
                 title: it.roomName,
-                desc: it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音") + '•🆙' + it.ownerName,
-                pic_url: it.roomPic,
+                desc: '🆙' + it.ownerName,
+                pic_url: it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音") + '•' + it.roomPic,
                 url: it.platForm + '|' + it.roomId
             });
         })
