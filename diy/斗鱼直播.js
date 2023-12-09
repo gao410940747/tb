@@ -52,7 +52,7 @@ var rule = {
                     url: it.rid,
                     title: it.roomName,
                     img: it.roomSrc,
-                    desc: '👁' + it.hn + '　' + '🆙' + it.nickname,
+                    desc: '👁' + it.hn +'　🆙' + it.nickname,
                 })
             });
         });
@@ -66,7 +66,7 @@ var rule = {
                 url: it.rid,
                 title: it.roomName,
                 img: it.roomSrc,
-                desc: '👁' + it.hn + '　' + '🆙' + it.nickname,
+                desc: '👁' + it.hn +'　🆙' + it.nickname,
             })
         });
         setResult(d);
@@ -78,39 +78,44 @@ var rule = {
             vod_id: jo.roomId,
             vod_name: jo.roomName,
             vod_pic: jo.roomPic,
-            type_name: jo.platForm.replace("douyu", "斗鱼") + "." + jo.categoryName,
-            vod_remarks: '🏷roomId ' + jo.roomId,
-            vod_director: '👥在线人数 ' + jo.online,
-            vod_actor: '🆙 ' + jo.ownerName,
-            vod_content: '🏷roomId：' + jo.roomId + "｜" +  ' 🏷状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
-            // vod_content: "🏷分区：" + jo.platForm.replace("douyu", "斗鱼") + "·" + jo.categoryName + " 🏷UP主：" + jo.ownerName + " 🏷人气：" + jo.online + (jo.isLive === 1 ? " 🏷状态：正在直播" : "状态：未开播"),
+            type_name: jo.categoryName,
+            vod_remarks: '🏷 roomId ' + jo.roomId,
+            vod_director: '🏷 roomId：' + jo.roomId + '｜ 🏷 状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
+            vod_actor: '🆙 ' + jo.ownerName + '｜ 👥 人气：' + jo.online,
+            vod_content: jo.roomName,
+            // vod_content: '🏷roomId：' + jo.roomId + "｜" +  ' 🏷状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
+            // vod_content: "🏷UP主：" + jo.ownerName + " 🏷人气：" + jo.online + (jo.isLive === 1 ? " 🏷状态：正在直播" : "状态：未开播") + " 🏷roomId：" + jo.roomId,
         };
         var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
+        let playFrom = [];
+        let playList = [];
         Object.keys(playurl).forEach(function(key) {
-            playurl[key].forEach(it => {
-                d.push({
-                    title: it.sourceName + " - " + it.qualityName,
-                    url: it.playUrl
-                });
-            })
+            playFrom.append(key);
+            playList.append(playurl[key].map(function(it) {
+                return it.qualityName + "$" + it.playUrl
+            }).join("#"))
         });
         d.push({
-            title: "斗鱼解析1",
+            title: "解析1",
             url: "http://epg.112114.xyz/douyu/" + jo.roomId
         }, {
-            title: "斗鱼解析2",
+            title: "解析2",
             url: "https://www.aois.eu.org/live/douyu/" + jo.roomId
         }, {
-            title: "斗鱼解析3",
+            title: "解析3",
             url: "https://www.goodiptv.club/douyu/" + jo.roomId
         }, {
-            title: "斗鱼解析4",
-            url: "http://maomao.kandiantv.cn/douyu1.php?id=" + jo.roomId
+            title: "解析4",
+            url: "https://aptv.hz.cz/vod/douyu/" + jo.roomId
         });
-        VOD.vod_play_from = "播放源";
-        VOD.vod_play_url = d.map(function(it) {
+        playFrom.append('解析线路');
+        playList.append(d.map(function(it) {
             return it.title + "$" + it.url
-        }).join("#");
+        }).join("#"));
+        let vod_play_from = playFrom.join('$$$');
+        let vod_play_url = playList.join('$$$');
+        VOD['vod_play_from'] = vod_play_from;
+        VOD['vod_play_url'] = vod_play_url;
         setResult(d);
     `,
     搜索:'json:data.list;roomName;roomSrc;nickname;roomId',
