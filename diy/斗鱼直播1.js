@@ -1,4 +1,4 @@
-555552var rule = {
+var rule = {
     title:'斗鱼直播',
     host:'https://m.douyu.com',
     homeUrl:'/api/home/mix',//网站的首页链接,用于分类获取和推荐获取
