@@ -72,7 +72,7 @@ var rule = {
         html.forEach(it => {
             d.push({
                 title: it.roomName,
-                desc: it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音") + '•' + it.ownerName,
+                desc: it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音") + '•🆙' + it.ownerName,
                 pic_url: it.roomPic,
                 url: it.platForm + '|' + it.roomId
             });
@@ -215,8 +215,8 @@ var rule = {
             // vod_pic: jo.ownerHeadPic,
             vod_pic: jo.roomPic,
             type_name: jo.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩哔哩").replace("douyin", "抖音") + "•" + jo.categoryName,
-            vod_remarks: '🏷 roomId ' + jo.roomId,
-            vod_director: '🏷 roomId：' + jo.roomId +  '｜ 🏷 状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
+            vod_remarks: '🚪 房间id ' + jo.roomId,
+            vod_director: '🚪 房间id：' + jo.roomId +  '｜ 📝 状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
             vod_actor: '🆙 ' + jo.ownerName + '｜ 👥 人气：' + jo.online,
             vod_content: jo.roomName,
             // vod_content: '🏷roomId：' + jo.roomId + "｜" +  ' 🏷状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
