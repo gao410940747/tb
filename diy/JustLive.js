@@ -122,7 +122,7 @@ var rule = {
         }
         var html = JSON.parse(request(input)).data;
         html.forEach(it =>
-if (it.isLive === 1) {
+if (/1/.test(it.isLive)) {
             d.push({
                 title: it.roomName,
                 desc: it.ownerName,
