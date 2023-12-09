@@ -121,13 +121,15 @@ var rule = {
             }
         }
         var html = JSON.parse(request(input)).data;
-        html.forEach(it => {
+        html.forEach(it =>
+if (it.isLive === 1) {
             d.push({
                 title: it.roomName,
                 desc: it.ownerName,
                 pic_url: it.roomPic,
                 url: it.platForm + '|' + it.roomId
             });
+}
         })
         setResult(d);
     `,
