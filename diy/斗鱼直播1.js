@@ -52,7 +52,7 @@ var rule = {
                     url: it.rid,
                     title: it.roomName,
                     img: it.roomSrc,
-                    desc: '👁' + it.hn +'　🆙' + it.nickname,
+                    desc: '👥' + it.hn +'　🆙' + it.nickname,
                 })
             });
         });
@@ -66,7 +66,7 @@ var rule = {
                 url: it.rid,
                 title: it.roomName,
                 img: it.roomSrc,
-                desc: '👁' + it.hn +'　🆙' + it.nickname,
+                desc: '👥' + it.hn +'　🆙' + it.nickname,
             })
         });
         setResult(d);
