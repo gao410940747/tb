@@ -1705,13 +1705,18 @@ CCTV-17,http://piccpndali.v.myalicdn.com/audio/cctv17_2.m3u8
 
 爱情公寓,https://aptv.hz.cz/vod/douyu/6863367
 爱情公寓,http://epg.112114.xyz/douyu/6863367
+
 爱情公寓,https://aptv.hz.cz/vod/huya/11336726
 爱情公寓,https://epg.112114.xyz/huya/11336726
-爱情公寓,http://159.75.85.63:35455/huya/11336726
-爱情公寓,https://yang-1989.eu.org/live/huya/11336726
+
+爱情公寓,https://aptv.hz.cz/vod/douyu/4105989
 爱情公寓,http://epg.112114.xyz/douyu/4105989
-爱情公寓,http://epg.112114.xyz/douyu/920389
+
+爱情公寓,https://aptv.hz.cz/vod/douyu/6566658
+爱情公寓,http://epg.112114.xyz/douyu/6566658
+
 爱情公寓,https://aptv.hz.cz/vod/douyu/920389
+爱情公寓,http://epg.112114.xyz/douyu/920389
 
 花花与三猫CatLive, https://www.goodiptv.club/douyu/7348194
 
