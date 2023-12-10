@@ -81,52 +81,62 @@ var rule = {
     `,
     一级: `js:
         var d = [];
+        var html;
         if (MY_CATE === 'douyu') {
-            if (MY_FL.area === '全部') {
-                input = HOST + '/api/live/getRecommendByPlatform?platform=douyu&page='+MY_PAGE+'&size=10';
+            let area = MY_FL.area || '守望先锋';
+            if (area === '守望先锋') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+area+'&page='+MY_PAGE+'&size=10')).data;
+            } else if (MY_FL.area === '全部') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyu&page='+MY_PAGE+'&size=10')).data;
+            } else if (MY_FL.area === '一起看') {
+                html = JSON.parse(request('https://m.douyu.com/api/room/list?type=yqk&page='+MY_PAGE)).data.list;
+            } else {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
             }
-        }
-        if (MY_CATE === 'huya') {
-            if (MY_FL.area === '全部') {
-                input = HOST + '/api/live/getRecommendByPlatform?platform=huya&page='+MY_PAGE+'&size=10';
-            }
+            input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyu';
         }
         if (MY_CATE === 'bilibili') {
-            if (MY_FL.area === '全部') {
-                input = HOST + '/api/live/getRecommendByPlatform?platform=bilibili&page='+MY_PAGE+'&size=10';
+            let area = MY_FL.area || '守望先锋';
+            if (area === '守望先锋') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+area+'&page='+MY_PAGE+'&size=10')).data;
+            } else if (MY_FL.area === '全部') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=bilibili&page='+MY_PAGE+'&size=10')).data;
+            } else {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
             }
+                input = HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili';
         }
-        if (MY_CATE === 'cc') {
-            if (MY_FL.area === '全部') {
-                input = HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=10';
-            }
-        }
-        if (MY_CATE === 'douyin') {
-            if (MY_FL.area === '全部') {
-                input = HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=10';
-            }
-        }
-        if (MY_CATE === 'douyin') {
-            let area = MY_FL.area || '已关注';
-            if (area === '已关注') {
-                if (MY_PAGE === 1) {
-                    input = HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2';
-                }
-            }
-        }
-        var html = JSON.parse(request(input)).data;
         if (MY_CATE === 'huya') {
             let area = MY_FL.area || '守望先锋归来';
             if (area === '守望先锋归来') {
                 html = JSON.parse(request('https://live.cdn.huya.com/liveHttpUI/getLiveList?iGid=2174&iPageNo='+MY_PAGE+'&iPageSize=10')).vList;
-                input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya';
+            } else if (MY_FL.area === '全部') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=huya&page='+MY_PAGE+'&size=10')).data;
+            } else {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=huya&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
             }
+            input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya';
         }
-        if (MY_CATE === 'douyu') {
-            if (MY_FL.area === '一起看') {
-                html = JSON.parse(request('https://m.douyu.com/api/room/list?type=yqk&page='+MY_PAGE)).data.list;
-                input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyu';
+        if (MY_CATE === 'douyin') {
+            let area = MY_FL.area || '已关注';
+            if (area === '已关注') {
+                html = JSON.parse(request(HOST + '/api/live/getRoomsOn?flag=1&uid=77111538fff549039d91dc52038581d2')).data;
+//                html ＝ '';
+            } else if (area === '全部') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=10')).data;
+            } else {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyin&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
             }
+            input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyin';
+        }
+        if (MY_CATE === 'cc') {
+            let area = MY_FL.area || '全部';
+            if (area === '全部') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=10')).data;
+            } else {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=cc&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
+            }
+            input = HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=10';
         }
         html.forEach(it => {
             if (/douyin/.test(it.platForm)) {
