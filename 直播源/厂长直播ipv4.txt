@@ -493,7 +493,6 @@ SITV乐游, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226580/1.m3u8
 江苏｜南京十八,http://live.nbs.cn/channels/njtv/sbpd/m3u8:500k/live.m3u8
 江苏｜南京娱乐,http://live.nbs.cn/channels/njtv/ylpd/m3u8:500k/live.m3u8
 江苏｜南京少儿,http://live.nbs.cn/channels/njtv/sepd/m3u8:500k/live.m3u8
-江苏｜苏州4K超清,http://liveshowbak2.kan0512.com/ksz-norecord/csztv4k_4k.m3u8
 江苏｜苏州文化生活,http://tylive.kan0512.com/norecord/norecord_csztv3.m3u8
 江苏｜苏州新闻综合,http://tylive.kan0512.com/norecord/norecord_csztv1.m3u8
 江苏｜苏州生活资讯,http://tylive.kan0512.com/norecord/norecord_csztv5.m3u8
@@ -604,13 +603,22 @@ CCTV-13, https://ldncctvwbndtxy.liveplay.myqcloud.com/ldncctvwbnd/ldcctv13_2/ind
 名侦探柯南,http://epg.112114.xyz/douyu/6484910
 名侦探柯南,http://epg.112114.xyz/douyu/7620081
 
-猫和老鼠,https://epg.112114.xyz/huya/11352879
-
+爱情公寓,https://aptv.hz.cz/vod/douyu/6863367
 爱情公寓,http://epg.112114.xyz/douyu/6863367
+
+爱情公寓,https://aptv.hz.cz/vod/huya/11336726
 爱情公寓,https://epg.112114.xyz/huya/11336726
-爱情公寓,http://159.75.85.63:35455/huya/11336726
-爱情公寓,https://yang-1989.eu.org/live/huya/11336726
+
+爱情公寓,https://aptv.hz.cz/vod/douyu/4105989
 爱情公寓,http://epg.112114.xyz/douyu/4105989
+
+爱情公寓,https://aptv.hz.cz/vod/douyu/6566658
+爱情公寓,http://epg.112114.xyz/douyu/6566658
+
+爱情公寓,https://aptv.hz.cz/vod/douyu/920389
+爱情公寓,http://epg.112114.xyz/douyu/920389
+
+猫和老鼠,https://epg.112114.xyz/huya/11352879
 
 花花与三猫CatLive, https://www.goodiptv.club/douyu/7348194
 
