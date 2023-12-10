@@ -156,7 +156,8 @@ var rule = {
                     title: it.roomName,
                     desc: '🆙' + it.ownerName,
                     // 改为展示头像
-                    pic_url: it.ownerHeadPic,
+                    //pic_url: it.ownerHeadPic,
+                    pic_url: it.roomPic,
                     url: it.platForm + '|' + it.roomId
                 });
             }
