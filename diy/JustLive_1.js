@@ -34,7 +34,7 @@ var rule = {
     headers: {
         'User-Agent': 'MOBILE_UA'
     },
-    timeout: 5000,
+    timeout: 15000,
     play_parse: true,
     lazy:`js:
         let purl = input.split("|")[0];
@@ -120,8 +120,9 @@ var rule = {
         if (MY_CATE === 'douyin') {
             let area = MY_FL.area || '已关注';
             if (area === '已关注') {
-                html = JSON.parse(request(HOST + '/api/live/getRoomsOn?flag=1&uid=77111538fff549039d91dc52038581d2')).data;
-//                html ＝ '';
+                if (MY_PAGE === 1) {
+                    html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+                }
             } else if (area === '全部') {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=10')).data;
             } else {
