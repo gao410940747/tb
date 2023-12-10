@@ -16,7 +16,7 @@ var rule={
         ]
     },
     searchUrl:'/page/fypage?s=**',
-    searchable:2,
+    searchable:1,
     filterable:0,
     headers:{
         'User-Agent': 'MOBILE_UA',
