@@ -37,32 +37,32 @@ var rule = {
     timeout: 15000,
     play_parse: true,
     lazy:`js:
-        let purl = input.split("|")[0];
-        let pfrom = input.split("|")[1];
-        let cid = input.split("|")[2];
-        print("purl:" + purl);
-        print("pfrom:" + pfrom);
-        print("cid:" + cid);
-        let dan = 'https://api.bilibili.com/x/v1/dm/list.so?oid=' + cid;
-        if (/bilibili/.test(pfrom)){
-            let result = {};
-            result['parse'] = 0;
-            result['playUrl'] = '';
-            result['url'] = unescape(purl);
-            result['header'] = {
-                Referer: 'https://live.bilibili.com',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
-            };
-            result['danmaku'] = dan;
-            if (/h5/.test(purl)) {
-                result['contentType'] = '';
-                input = result
-            } else {
-                result['contentType'] = 'video/x-flv';
-                input = result
-            }
+        let ids = input.split('_');
+        let dan = 'https://api.bilibili.com/x/v1/dm/list.so?oid=' + ids[1];
+        let result = {};
+        let iurl = 'https://api.live.bilibili.com/room/v1/Room/playUrl?cid=' + ids[1] + '&' + ids[0];
+        let html = request(iurl);
+        let jRoot = JSON.parse(html);
+        let jo = jRoot['data'];
+        let ja = jo['durl'];
+        let purl = '';
+        if (ja.length > 0) {
+            purl = ja[0]['url']
+        }
+        result['parse'] = 0;
+        result['playUrl'] = '';
+        result['url'] = unescape(purl);
+        result['header'] = {
+            Referer: 'https://live.bilibili.com',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+        };
+        result['danmaku'] = dan;
+        if (/h5/.test(ids[0])) {
+            result['contentType'] = '';
+            input = result
         } else {
-            input = purl
+            result['contentType'] = 'video/x-flv';
+            input = result
         }
     `,
     limit: 6,
@@ -277,12 +277,38 @@ var rule = {
         var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
         let playFrom = [];
         let playList = [];
+
+        // 增加bilibili官方源
+        if (jo.platForm == 'bilibili') {
+            var bilis = [];
+            bilis.push({
+                title: "flv线路原画",
+                input: 'platform=web&quality=4_'+jo.roomId
+            }, {
+                title: "flv线路高清",
+                input: 'platform=web&quality=3_'+jo.roomId
+            }, {
+                title: "h5线路原画",
+                input: 'platform=h5&quality=4_'+jo.roomId
+            }, {
+                title: "h5线路高清",
+                input: 'platform=h5&quality=3_'+jo.roomId
+            });
+            playFrom.append('哔哩源');
+            playList.append(bilis.map(function(it) {
+                return it.title + "$" + it.input
+            }).join("#"));
+        }
+
+        // JustLive获取源
         Object.keys(playurl).forEach(function(key) {
             playFrom.append(key);
             playList.append(playurl[key].map(function(it) {
                 return it.qualityName + "$" + it.playUrl
             }).join("#"))
         });
+
+        // 网站解析源
         var d = [];
         d.push({
             title: "解析1",
@@ -302,6 +328,7 @@ var rule = {
             return it.title + "$" + it.url
         }).join("#"));
 
+        // 关注/取关
         var follow = [];
         follow.push({
             title: "关注",

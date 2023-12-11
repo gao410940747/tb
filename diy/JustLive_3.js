@@ -222,29 +222,57 @@ var rule = {
         var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
         let playFrom = [];
         let playList = [];
+
+        // 增加bilibili官方源
+        if (jo.platForm == 'bilibili') {
+            var bilis = [];
+            bilis.push({
+                title: "flv线路原画",
+                input: 'platform=web&quality=4_'+jo.roomId
+            }, {
+                title: "flv线路高清",
+                input: 'platform=web&quality=3_'+jo.roomId
+            }, {
+                title: "h5线路原画",
+                input: 'platform=h5&quality=4_'+jo.roomId
+            }, {
+                title: "h5线路高清",
+                input: 'platform=h5&quality=3_'+jo.roomId
+            });
+            playFrom.append('哔哩源');
+            playList.append(bilis.map(function(it) {
+                return it.title + "$" + it.input
+            }).join("#"));
+        }
+
+        // JustLive获取源
         Object.keys(playurl).forEach(function(key) {
             playFrom.append(key);
             playList.append(playurl[key].map(function(it) {
                 return it.qualityName + "$" + it.playUrl
             }).join("#"))
         });
+
+        // 网站解析源
         d.push({
             title: "解析1",
             url: "http://epg.112114.xyz/" + jo.platForm + "/" + jo.roomId
         }, {
             title: "解析2",
-            url: "https://www.aois.eu.org/live/" + jo.platForm + "/" + jo.roomId
+            url: "https://aptv.hz.cz/vod/" + jo.platForm + "/" + jo.roomId
         }, {
             title: "解析3",
-            url: "https://www.goodiptv.club/" + jo.platForm + "/" + jo.roomId
+            url: "https://www.aois.eu.org/live/" + jo.platForm + "/" + jo.roomId
         }, {
             title: "解析4",
-            url: "https://aptv.hz.cz/vod/" + jo.platForm + "/" + jo.roomId
+            url: "https://www.goodiptv.club/" + jo.platForm + "/" + jo.roomId
         });
         playFrom.append('解析线路');
         playList.append(d.map(function(it) {
             return it.title + "$" + it.url
         }).join("#"));
+
+        // 最后封装所有线路
         let vod_play_from = playFrom.join('$$$');
         let vod_play_url = playList.join('$$$');
         VOD['vod_play_from'] = vod_play_from;
