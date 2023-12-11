@@ -26,7 +26,7 @@ var rule = {
     // detailUrl: '/index/liveRoom?platform=fyclass&roomId=fyid',
     // detailUrl: '/api/live/getRoomInfo?uid=&platform=fyclass&roomId=fyid',
     detailUrl: 'fyid',
-    searchUrl: '/api/live/search?platform=all&keyWords=**&isLive=0',
+    searchUrl: '/api/live/search?uid=77111538fff549039d91dc52038581d2&platform=all&keyWords=**',
     // searchable: 2,
     searchable: 0,
     quickSearch: 0,
