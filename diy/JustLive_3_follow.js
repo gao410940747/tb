@@ -338,7 +338,7 @@ var rule = {
             title: "取消关注",
             url: HOST + "/api/live/unFollow?uid=77111538fff549039d91dc52038581d2&platform=" + jo.platForm + "&roomId=" + jo.roomId
         });
-        playFrom.append('关注UP主');
+        playFrom.append('关注直播间');
         playList.append(follow.map(function(it) {
             return it.title + "$" + it.url
         }).join("#"));
