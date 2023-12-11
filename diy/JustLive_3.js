@@ -2,9 +2,9 @@
 var rule = {
     title: 'JustLive',
     host: 'http://live.yj1211.work',
-    homeUrl: '/api/live/getRecommend?page=1&size=10',//网站的首页链接,用于分类获取和推荐获取
+    homeUrl: '/api/live/getRecommend?page=1&size=20',//网站的首页链接,用于分类获取和推荐获取
 //    homeUrl: '/api/live/getRecommendByPlatformArea?platform=bilibili&area=舞见&page=1&size=1',//网站的首页链接,用于分类获取和推荐获取
-    url: '/api/live/getRecommendByPlatformArea?platform=fyclass&area=fyfilter&page=fypage&size=10', //网站的分类页面链接
+    url: '/api/live/getRecommendByPlatformArea?platform=fyclass&area=fyfilter&page=fypage&size=20', //网站的分类页面链接
     class_name: '斗鱼&虎牙&哔哩哔哩&抖音&网易CC',
     class_url: 'douyu&huya&bilibili&douyin&cc',
     filterable: 1,
@@ -85,53 +85,53 @@ var rule = {
         if (MY_CATE === 'douyu') {
             let area = MY_FL.area || '守望先锋';
             if (area === '守望先锋') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+area+'&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+area+'&page='+MY_PAGE+'&size=20')).data;
             } else if (MY_FL.area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyu&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyu&page='+MY_PAGE+'&size=20')).data;
             } else if (MY_FL.area === '一起看') {
                 html = JSON.parse(request('https://m.douyu.com/api/room/list?type=yqk&page='+MY_PAGE)).data.list;
             } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
             }
             input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyu';
         }
         if (MY_CATE === 'bilibili') {
             let area = MY_FL.area || '守望先锋';
             if (area === '守望先锋') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+area+'&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+area+'&page='+MY_PAGE+'&size=20')).data;
             } else if (MY_FL.area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=bilibili&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=bilibili&page='+MY_PAGE+'&size=20')).data;
             } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
             }
                 input = HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili';
         }
         if (MY_CATE === 'huya') {
             let area = MY_FL.area || '守望先锋归来';
             if (area === '守望先锋归来') {
-                html = JSON.parse(request('https://live.cdn.huya.com/liveHttpUI/getLiveList?iGid=2174&iPageNo='+MY_PAGE+'&iPageSize=10')).vList;
+                html = JSON.parse(request('https://live.cdn.huya.com/liveHttpUI/getLiveList?iGid=2174&iPageNo='+MY_PAGE+'&iPagesize=20')).vList;
             } else if (MY_FL.area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=huya&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=huya&page='+MY_PAGE+'&size=20')).data;
             } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=huya&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=huya&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
             }
             input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya';
         }
         if (MY_CATE === 'douyin') {
             let area = MY_FL.area || '全部';
             if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=20')).data;
             } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyin&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyin&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
             }
             input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyin';
         }
         if (MY_CATE === 'cc') {
             let area = MY_FL.area || '全部';
             if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=20')).data;
             } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=cc&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=cc&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
             }
             input = HOST + '/api/live/getRecommendByPlatform?platform=cc';
         }
