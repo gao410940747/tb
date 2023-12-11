@@ -103,6 +103,7 @@ var rule = {
             let area = MY_FL.area || '守望先锋';
             if (area === '守望先锋') {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+area+'&page='+MY_PAGE+'&size=10')).data;
+//                html = JSON.parse(request('https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=2&area_id=87&sort_type=online&page=1')).data.list;
             } else if (area === '已关注') {
                 if (MY_PAGE === 1) {
                     html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
@@ -112,7 +113,7 @@ var rule = {
             } else {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+MY_FL.area+'&page='+MY_PAGE+'&size=10')).data;
             }
-                input = HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili';
+            input = HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili';
         }
         if (MY_CATE === 'huya') {
             let area = MY_FL.area || '守望先锋归来';
