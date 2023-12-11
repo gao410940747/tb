@@ -20,7 +20,7 @@
 		{"key":"JustLive","name":"直播平台","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"changeable":0,"ext":"./diy/JustLive_2.js"},
 
 		{"key":"直播转点播","name":"电视直播","type":3,"api":"./diy/live2vod.js","searchable":1,"quickSearch":0,"filterable":0,"ext":"./live2vod.json"},
-		{"key":"py_cctvdc","name":"央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1},"ext":"./diy/py_cctvdc.json"},
+		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1},"ext":"./diy/央视大全.json"},
 		{"key":"博看听书","name":"博看听书","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./diy/博看听书.js"},
 		{"key":"家庭KTV","name":"家庭KTV","type":1,"api":"https://mv.wogg.link/mv/vod","style":{"type":"oval"},"searchable":1,"quickSearch":0,"changeable":0},
 
