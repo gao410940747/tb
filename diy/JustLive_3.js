@@ -71,7 +71,7 @@ var rule = {
         var html = JSON.parse(request(input)).data;
         html.forEach(it => {
             d.push({
-                title: it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音") + '•' + it.roomName,
+                title: it.roomName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
                 desc: '🆙' + it.ownerName,
                 pic_url: it.roomPic,
                 url: it.platForm + '|' + it.roomId
