@@ -294,7 +294,7 @@ var rule = {
                 title: "h5线路高清",
                 input: 'platform=h5&quality=3_'+jo.roomId
             });
-            playFrom.append('哔哩源');
+            playFrom.append('官方源');
             playList.append(bilis.map(function(it) {
                 return it.title + "$" + it.input
             }).join("#"));
