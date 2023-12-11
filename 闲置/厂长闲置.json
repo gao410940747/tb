@@ -21,6 +21,7 @@
 		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"ext":"./py/py_cctv_full.py"},
 		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./js/drpy.min.js","ext":"./diy/虎牙直播720.js"},
 		{"key":"六月听书","name":"六月听书","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/六月听书.js"},
+		{"key":"有声小说","name":"有声小说","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./diy/有声小说吧.js"},
 		{"key":"听书网","name":"听书网","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/听书网.js"},
 		{"key":"drpy_js_蜻蜓FM","name":"广播 | 蜻蜓FM[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"ext":"./js/蜻蜓FM.js"},
 		{"key":"drpy_js_i275听书","name":"听书|i275听书[js]","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":1},"ext":"./js/i275听书.js"},
