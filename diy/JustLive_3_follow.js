@@ -283,17 +283,17 @@ var rule = {
         if (jo.platForm == 'bilibili') {
             var bilis = [];
             bilis.push({
-                title: "flv线路原画",
-                input: 'platform=web&quality=4_'+jo.roomId
-            }, {
-                title: "flv线路高清",
-                input: 'platform=web&quality=3_'+jo.roomId
-            }, {
                 title: "h5线路原画",
                 input: 'platform=h5&quality=4_'+jo.roomId
             }, {
                 title: "h5线路高清",
                 input: 'platform=h5&quality=3_'+jo.roomId
+            }, {
+                title: "flv线路原画",
+                input: 'platform=web&quality=4_'+jo.roomId
+            }, {
+                title: "flv线路高清",
+                input: 'platform=web&quality=3_'+jo.roomId
             });
             playFrom.append('官方线路');
             playList.append(bilis.map(function(it) {
