@@ -16,7 +16,7 @@ var rule = {
     },
     filter_def:{
 		movie:{tag:'热门'},
-		tv:{tag:'国产剧'},
+		tv:{tag:'综艺'},
 	},
     filter获取方法:`
     let value = [];
@@ -31,7 +31,7 @@ var rule = {
     let data = {'movie': [{'key': 'tag', 'name': '标签', 'value': value}]};
     console.log(JSON.stringify(data));
     
-    //剧集执行:
+    // 剧集执行:
     let data = {'tv': [{'key': 'tag', 'name': '标签', 'value': value}]};
     console.log(JSON.stringify(data));
     `,
