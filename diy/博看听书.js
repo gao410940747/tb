@@ -1,7 +1,9 @@
 var rule = {
     title: '博看听书',
     host: 'https://api.bookan.com.cn',
-    homeUrl:'/voice/book/list?instance_id=25304&page=1&category_id=1314&num=24',
+    homeUrl:'/v2/org/resource-group/resources?instanceId=16935&groupId=178', //首页展示好书推荐
+//    homeUrl:'/v2/org/resource-group/resources?instanceId=16935&groupId=179', //首页展示新书上架
+//    homeUrl:'/voice/book/latest?instanceId=16935&page=fypage', //首页展示新书上架
     url: '/voice/book/list?instance_id=25304&page=fypage&category_id=fyclass&num=24',
     detailUrl:'/voice/album/units?album_id=fyid&page=1&num=200&order=1',
     searchUrl: 'https://es.bookan.com.cn/api/v3/voice/book?instanceId=25304&keyword=**&pageNum=fypage&limitNum=20',
