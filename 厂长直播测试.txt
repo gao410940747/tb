@@ -1,3 +1,18 @@
+
+斗鱼测试,#genre#
+parse=1
+
+ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
+referer=https://www.douyu.com
+
+斗鱼测试,https://www.douyu.com/793400
+斗鱼测试,https://www.douyu.com/7348194
+斗鱼测试,https://www.douyu.com/6863367
+
+
+
+
+
 测试,#genre#
 parse=1
 
@@ -37,13 +52,3 @@ ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
 referer=https://live.bilibili.com/h5
 哔哩测试,https://live.bilibili.com/h5/7777?visit_id=bbxx8d1bhd40
 
-
-斗鱼测试,#genre#
-parse=1
-
-ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
-referer=https://www.douyu.com
-
-斗鱼测试,https://www.douyu.com/793400
-斗鱼测试,https://www.douyu.com/7348194
-斗鱼测试,https://www.douyu.com/6863367
