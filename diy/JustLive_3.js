@@ -255,16 +255,19 @@ var rule = {
 
         // 网站解析源
         d.push({
-            title: "解析1",
+            title: "MetShop线路",
+            url: "https://live.metshop.top/" + jo.platForm + "/" + jo.roomId
+        }, {
+            title: "EPG线路",
             url: "http://epg.112114.xyz/" + jo.platForm + "/" + jo.roomId
         }, {
-            title: "解析2",
+            title: "HZ线路",
             url: "https://aptv.hz.cz/vod/" + jo.platForm + "/" + jo.roomId
         }, {
-            title: "解析3",
+            title: "AOIS线路",
             url: "https://www.aois.eu.org/live/" + jo.platForm + "/" + jo.roomId
         }, {
-            title: "解析4",
+            title: "GoodIPTV线路",
             url: "https://www.goodiptv.club/" + jo.platForm + "/" + jo.roomId
         });
         playFrom.append('解析线路');

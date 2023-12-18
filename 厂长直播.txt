@@ -1271,7 +1271,16 @@ BesTV 4K,http://[2409:8087:5e01:34::30]:6610/ZTE_CMS/000000010000000600000000000
 其他, #genre#
 
 沈腾, https://live.metshop.top/huya/11601968
-周星驰, https://live.metshop.top/huya/11342412
+沈腾, https://aptv.hz.cz/vod/huya/11601968
+沈腾, http://epg.112114.xyz/huya/11601968
+
+星爷, https://live.metshop.top/huya/11342412
+星爷, https://aptv.hz.cz/vod/huya/11342412
+星爷, http://epg.112114.xyz/huya/11342412
+
+周杰伦, https://live.metshop.top/douyu/7537296
+周杰伦, https://aptv.hz.cz/vod/douyu/7537296
+周杰伦, http://epg.112114.xyz/douyu/7537296
 周杰伦, https://www.goodiptv.club/douyu/7537296
 
 名侦探柯南,https://aptv.hz.cz/vod/douyu/7050342
@@ -1294,8 +1303,12 @@ BesTV 4K,http://[2409:8087:5e01:34::30]:6610/ZTE_CMS/000000010000000600000000000
 爱情公寓,https://aptv.hz.cz/vod/douyu/920389
 爱情公寓,http://epg.112114.xyz/douyu/920389
 
-猫和老鼠,https://epg.112114.xyz/huya/11352879
+猫和老鼠, https://aptv.hz.cz/vod/douyu/11352879
+猫和老鼠, http://epg.112114.xyz/douyu/11352879
+猫和老鼠, https://epg.112114.xyz/huya/11352879
 
+花花与三猫CatLive, https://aptv.hz.cz/vod/douyu/7348194
+花花与三猫CatLive, http://epg.112114.xyz/douyu/7348194
 花花与三猫CatLive, https://www.goodiptv.club/douyu/7348194
 
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=177331

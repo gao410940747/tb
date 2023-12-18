@@ -9,7 +9,6 @@ referer=https://m.gdtv.cn
 
 周星星,https://ygbh--xingkongbujian.repl.co/huya/11336587
 
-
 广东卫视,https://m.gdtv.cn/tvChannelDetail/43
 广东珠江,https://m.gdtv.cn/tvChannelDetail/44
 广东新闻,https://m.gdtv.cn/tvChannelDetail/45
@@ -40,12 +39,9 @@ referer=https://live.bilibili.com/h5
 
 
 斗鱼测试,#genre#
+parse=1
+
 ua=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36
 referer=https://m.douyu.com
 
 斗鱼测试,https://m.douyu.com/793400
-
-
-
-周星星,https://ygbh--xingkongbujian.repl.co/huya/11336587
-鲸鱼直播,https://bp-livenba.bestv.cn/live/bestvnbaxjyjs_enhance265.m3u8?auth_key=1702227621-685b98cff8c049628074b306dda6a749-0-50b074f2ebeb90b140ceb32390766854
