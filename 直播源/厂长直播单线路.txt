@@ -130,6 +130,9 @@ CCTV-央视台球,http://[2409:8087:7004:20:1000::22]:6610/yinhe/2/ch00000090990
 CCTV-高尔夫网球,http://[2409:8087:7004:20:1000::22]:6610/yinhe/2/ch00000090990000002497/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
 CCTV-央视文化精品,http://[2409:8087:7004:20:1000::22]:6610/yinhe/2/ch00000090990000002535/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
 CCTV-卫生健康,http://cfss.cc/api/ysp/wsjk.m3u8
+CCTV-中学生,http://49.235.110.121:9090/daili/小果.php?id=zxs_4000&Cf.m3u8
+CCTV-老故事,http://49.235.110.121:9090/daili/小果.php?id=lgs_2000&Cf.m3u8
+CCTV-发现之旅,http://49.235.110.121:9090/daili/小果.php?id=fxzl_2000&Cf.m3u8
 
 CHC动作电影,http://[2409:8087:7000:20:1000::22]:6060/yinhe/2/ch00000090990000002055/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
 CHC高清电影,http://[2409:8087:7000:20:1000::22]:6060/yinhe/2/ch00000090990000002065/index.m3u8?virtualDomain=yinhe.live_hls.zte.com
@@ -272,10 +275,10 @@ ELEVEN體育,http://50.7.238.114:8278/golfchannel_twn/playlist.m3u8?tid=MFBF2798
 
 
 地方, #genre#
-黑龙江｜新闻,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/index.m3u8
 黑龙江｜影视,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226298/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 黑龙江｜文体,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226239/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 黑龙江｜都市,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
+黑龙江｜法治新闻,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/index.m3u8
 黑龙江｜科教,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226242/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 黑龙江｜少儿,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 黑龙江｜哈尔滨新闻综合,https://stream.hrbtv.net/xwzh/playlist.m3u8
@@ -310,14 +313,17 @@ ELEVEN體育,http://50.7.238.114:8278/golfchannel_twn/playlist.m3u8?tid=MFBF2798
 上海｜哈哈炫动,http://[2409:8087:1e04:21::102]:6060/cms001/ch00000090990000001232/1.m3u8
 上海｜东方影视,http://[2409:8087:1e04:21::102]:6060/cms001/ch00000090990000001016/1.m3u8
 上海｜五星体育,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001018/index.m3u8
-上海｜外语,http://[2409:8087:1e03:21::42]:6610/cms001/ch00000090990000001128/index.m3u8?
+上海｜新闻综合,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001014/index.m3u8
+上海｜ICS外语,http://[2409:8087:1e03:21::42]:6610/cms001/ch00000090990000001128/index.m3u8?
 上海｜教育,http://[2409:8087:1e04:21::102]:6060/cms001/ch00000090990000001268/1.m3u8
-上海｜新闻,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001014/index.m3u8
 上海｜都市,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001015/index.m3u8
 上海｜崇明电视台,https://pili-live-hls.wdit.com.cn/wditlive/c038f4fafbdf4f97ba74c74ad67259b931ee.m3u8?zshangd
 上海｜嘉定电视台,https://pili-live-hls.wdit.com.cn/wditlive/15472c98517744b994e85c9c60cc93cf6a3b.m3u8?zshangd
 
-
+金鹰｜茶频道,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001234/index.m3u8
+金鹰｜快乐垂钓,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001235/index.m3u8
+金鹰｜金鹰纪实,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001230/index.m3u8
+金鹰｜金鹰卡通,http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888888/224/3221225721/2/index.m3u8
 
 
 
@@ -473,21 +479,6 @@ BesTV全球大片,https://live.goodiptv.club/api/bestv.php?id=qqdp8m/8000000
 BesTV热门剧场,https://live.goodiptv.club/api/bestv.php?id=rmjc8m/8000000
 BesTV陶瓷高清,https://live.goodiptv.club/api/bestv.php?id=taocihd/8000000
 
-黑莓频道,#genre#
-黑莓电竞, http://[2409:8087:2001:20:2800:0:df6e:eb04]/ott.mobaibox.com/PLTV/3/224/3221225539/index.m3u8
-黑莓电影, http://[2409:8087:2001:20:2800:0:df6e:eb04]/ott.mobaibox.com/PLTV/3/224/3221225567/index.m3u8
-黑莓动画, http://[2409:8087:2001:20:2800:0:df6e:eb06]/ott.mobaibox.com/PLTV/3/224/3221227523/index.m3u8
-
-哒啵频道,#genre#
-哒啵电竞, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226951/1.m3u8
-哒啵赛事, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226954/1.m3u8
-
-金鹰频道,#genre#
-全纪实,  https://iptv.luas.edu.cn/liverespath/56840359360f071dfdd9568e7ab86d1b3232a9ee/09414e7f4f-0-0-64acbb149e9215819519043fd0cbb620/index.m3u8
-金鹰纪实, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226351/1.m3u8
-快乐垂钓, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226805/1.m3u8
-茶频道, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226808/1.m3u8
-
 IHOT频道,#genre#
 IHOT爱电竞,http://[2409:8087:7000:20:1000::22]:6060/000000001000/2000000004000000054/index.m3u8?channel-id=hnbblive&Contentid=2000000004000000054&livemode=1&stbId=3
 IHOT爱谍战,http://[2409:8087:7000:20:1000::22]:6060/000000001000/2000000004000000038/index.m3u8?channel-id=hnbblive&Contentid=2000000004000000038&livemode=1&stbId=3
@@ -546,16 +537,29 @@ SITV欢笑剧场,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226
 SITV生活时尚,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226358/1.m3u8
 SITV东方财经,http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226602/1.m3u8
 SITV乐游,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001200/index.m3u8
+SITV全纪实,http://[2409:8087:3428:20:500::1009]:6610/PLTV/88888888/224/3221227083/index.m3u8?servicetype=1&IASHttpSessionId=RR423820220409134714119178
 
+黑莓频道,#genre#
+黑莓电竞, http://[2409:8087:2001:20:2800:0:df6e:eb04]/ott.mobaibox.com/PLTV/3/224/3221225539/index.m3u8
+黑莓电影, http://[2409:8087:2001:20:2800:0:df6e:eb04]/ott.mobaibox.com/PLTV/3/224/3221225567/index.m3u8
+黑莓动画, http://[2409:8087:2001:20:2800:0:df6e:eb06]/ott.mobaibox.com/PLTV/3/224/3221227523/index.m3u8
+
+哒啵频道,#genre#
+哒啵电竞, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226951/1.m3u8
+哒啵赛事, http://dbiptv.sn.chinamobile.com/PLTV/88888888/224/3221226954/1.m3u8
 
 华数频道,#genre#
-求索动物, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000010046/index.m3u8?channel-id=wasusyt&Contentid=6000000002000010046&livemode=1&stbId=3
-求索记录, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000032052/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032052&livemode=1&stbId=3
-求索科学, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000032344/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032344&livemode=1&stbId=3
-求索生活, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000003382/index.m3u8?channel-id=wasusyt&Contentid=6000000002000003382&livemode=1&stbId=3
+求索动物,http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000010046/index.m3u8?channel-id=wasusyt&Contentid=6000000002000010046&livemode=1&stbId=3
+求索记录,http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000032052/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032052&livemode=1&stbId=3
+求索科学,http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000032344/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032344&livemode=1&stbId=3
+求索生活,http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000003382/index.m3u8?channel-id=wasusyt&Contentid=6000000002000003382&livemode=1&stbId=3
+中国天气,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001102/index.m3u8
+中国经济,http://[2409:8087:3428:20:500::1009]:6610/PLTV/88888888/224/3221226987/index.m3u8?servicetype=1&IASHttpSessionId=RR423820220409134714119178
+中华特产,http://[2409:8087:4400:20:1:a0f:11:9]/iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226585/index.m3u8
+中华美食,http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888888/224/3221225924/2/index.m3u8
 家庭理财,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001278/index.m3u8
 财富天下,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001219/index.m3u8
-中国天气,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001102/index.m3u8
+梨园频道,http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888888/224/3221225581/2/index.m3u8
 
 
 
