@@ -913,7 +913,7 @@ BesTV陶瓷高清,https://live.goodiptv.club/api/bestv.php?id=taocihd/8000000
 
     #华数频道#
 求索动物, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000010046/index.m3u8?channel-id=wasusyt&Contentid=6000000002000010046&livemode=1&stbId=3
-求索记录, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000032052/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032052&livemode=1&stbId=3
+求索纪录, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000032052/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032052&livemode=1&stbId=3
 求索科学, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000032344/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032344&livemode=1&stbId=3
 求索生活, http://[2409:8087:7001:20:1000::95]:6610/000000001000/6000000002000003382/index.m3u8?channel-id=wasusyt&Contentid=6000000002000003382&livemode=1&stbId=3
 求索纪录,http://zteres.sn.chinamobile.com:6060/000000001000/6000000002000032052/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032052&livemode=1&stbId=3
@@ -921,14 +921,6 @@ BesTV陶瓷高清,https://live.goodiptv.club/api/bestv.php?id=taocihd/8000000
 求索科学,http://zteres.sn.chinamobile.com:6060/000000001000/6000000002000032344/index.m3u8?channel-id=wasusyt&Contentid=6000000002000032344&livemode=1&stbId=3
 求索生活,http://zteres.sn.chinamobile.com:6060/000000001000/6000000002000003382/index.m3u8?channel-id=wasusyt&Contentid=6000000002000003382&livemode=1&stbId=3
 新奇世界,http://zteres.sn.chinamobile.com:6060/000000001000/6000000003000028434/index.m3u8?channel-id=wasusyt&Contentid=6000000003000028434&livemode=1&stbId=3
-求索科学,http://111.40.196.38/0000000000001000/1.m3u8?Contentid=6000000002000032344&livemode=1&stbId=3&channel-id=wasusyt
-求索纪录,http://111.40.196.38/0000000000001000/1.m3u8?Contentid=6000000002000032052&livemode=1&stbId=3&channel-id=wasusyt
-求索生活,http://111.40.196.38/0000000000001000/1.m3u8?Contentid=6000000002000003382&livemode=1&stbId=3&channel-id=wasusyt
-求索动物,http://111.40.196.38/0000000000001000/1.m3u8?Contentid=6000000002000010046&livemode=1&stbId=3&channel-id=wasusyt
-求索科学,http://39.134.66.66/PLTV/88888888/224/3221225728/index.m3u8
-求索纪录,http://39.134.66.66/PLTV/88888888/224/3221225713/index.m3u8
-求索生活,http://39.134.66.66/PLTV/88888888/224/3221225715/index.m3u8
-求索动物,http://39.134.66.66/PLTV/88888888/224/3221225730/index.m3u8
 熊猫频道,https://gcwbndks.v.kcdnvip.com/gcwbnd/xiongmao01_2/index.m3u8
 熊猫频道,https://gcwbndks.v.kcdnvip.com/gcwbnd/xiongmao02_2/index.m3u8
 熊猫频道,https://gcwbndks.v.kcdnvip.com/gcwbnd/xiongmao03_2/index.m3u8
@@ -941,17 +933,13 @@ BesTV陶瓷高清,https://live.goodiptv.club/api/bestv.php?id=taocihd/8000000
 熊猫频道,https://gcwbndks.v.kcdnvip.com/gcwbnd/xiongmao10_2/index.m3u8
 
 中国天气,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001102/index.m3u8
-中国天气,http://[2409:8c02:21c:60::2b]/live.rxip.sc96655.com/live/zgqx.m3u8
-中国天气,http://[2409:8087:3428:20:500::1009]:6610/PLTV/88888888/224/3221227210/index.m3u8?servicetype=1&IASHttpSessionId=RR423820220409134714119178
-中国天气,http://[2409:8087:3428:20:500::1009]:6610/PLTV/88888888/224/3221227210/index.m3u8?servicetype=1&IASHttpSessionId=RR423820220409134714119178
-中国天气,https://cntv.sbs/tv?auth=231013&id=zgtq
 中国天气,https://live.goodiptv.club/api/cqyx.php?id=tianqiSD
 中国经济,http://[2409:8087:3428:20:500::1009]:6610/PLTV/88888888/224/3221226987/index.m3u8?servicetype=1&IASHttpSessionId=RR423820220409134714119178
 中华特产,http://[2409:8087:4400:20:1:a0f:11:9]/iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226585/index.m3u8
 中华美食,http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888888/224/3221225924/2/index.m3u8
 家庭理财,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001278/index.m3u8
 财富天下,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001219/index.m3u8
-梨园频道,http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888888/224/3221225581/2/index.m3u8
+
 梨园频道,http://[2409:8087:4c0a:22:1::11]:6410/170000001115/UmaiCHAN6380788ba7bed/index.m3u8?AuthInfo=toEYVdLfxymUP2l9NZpQI5%2BK6T7j%2FlRm%2BvbM9VO7bA0q1S1k1f36SqqriM0FZoFSAJRfCt8SS7X6sTRmXb81a8O4H%2FdroDKjLoDeaMQdyJQ
 
 
