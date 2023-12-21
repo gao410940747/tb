@@ -2,7 +2,10 @@
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
 	"sites": [
 		{"key":"豆瓣","name":"豆瓣","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
-		{"key":"爱看机器人2","name":"爱看机器人2","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:lz线路,ff线路,bfzy线路,tp线路]","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
+		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,
+			"ext":"[排序:lz线路,ff线路,bfzy线路,tp线路][替换:lz线路>>量子#ff线路>>非凡#bfzy线路>>暴风#tp线路>>淘片]",
+			"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
+		{"key":"爱看机器人2","name":"爱看机器人2","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:lz线路,ff线路,bfzy线路,tp线路]","jar":"./diy/spider.jar"},
 		{"key":"荐片弹幕","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 		{"key":"BT天堂","name":"BT天堂","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/BT天堂.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
 		{"key":"New6v","name":"New6V","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/jar/cc.jar"},
