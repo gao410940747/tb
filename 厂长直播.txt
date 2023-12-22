@@ -1132,6 +1132,10 @@ BesTV直播17, http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/322122613
 黑龙江｜少儿,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 黑龙江｜少儿,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/index.m3u8
 黑龙江｜哈尔滨新闻综合,https://stream.hrbtv.net/xwzh/playlist.m3u8
+黑龙江｜哈尔滨都市资讯,https://stream.hrbtv.net/zxpd/playlist.m3u8
+黑龙江｜哈尔滨生活频道,https://stream.hrbtv.net/shpd/playlist.m3u8
+黑龙江｜哈尔滨娱乐频道,https://stream.hrbtv.net/ylpd/playlist.m3u8
+黑龙江｜哈尔滨影视频道,https://stream.hrbtv.net/yspd/playlist.m3u8
 黑龙江｜齐齐哈尔新闻综合,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226437/index.m3u8
 黑龙江｜齐齐哈尔经济法制,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226555/index.m3u8
 黑龙江｜鹤岗新闻综合,http://[2409:8087:1a01:df::4060]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226534/index.m3u8
