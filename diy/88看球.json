@@ -17,7 +17,7 @@
      "cat_arr_suf": "/li>", 
      "cat_pic": "src=\"&&\"", 
      "cat_title": "text-center\">&&</a>", 
-     "cat_subtitle": "center-block\">&&<", 
+     "cat_subtitle": "center-block\">&&<div class=\"col-xs-4", 
      "cat_url": "/live/&&/play", 
      "cat_prefix": "http://www.88kanqiu.one/live/", 
      "cat_suffix": "/play-url", 
