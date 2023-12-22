@@ -2,6 +2,7 @@
      "title": "88看球", 
      "author": "香雅情", 
      "UserAgent": "MOBILE_UA", 
+     "homeContent":"1",
      "firstpage": "1", 
      "class_url": "http://www.88kanqiu.one", 
      // 发布页：www.88kq.net 
