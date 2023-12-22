@@ -31,7 +31,7 @@
 		{"key":"天空","name":"天空资源","type":1,"api":"https://tiankongzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","体育赛事","国产剧","香港剧","台湾剧","美国剧","韩国剧","日本剧","泰剧","海外剧","日韩综艺","港台综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","悬疑片","动画片","犯罪片","奇幻片"]},
 //		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/机器人.js"},
 
-		{"key":"豆瓣推荐","name":"豆瓣","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
+		{"key":"豆瓣","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
 		{"key":"BT天堂","name":"BT天堂","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/BT天堂.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
 		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/cili.jar"},	{"key":"New6v","name":"New6V","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/jar/cc.jar"}
 	],
