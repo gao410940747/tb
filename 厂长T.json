@@ -31,7 +31,7 @@
 //		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/机器人.js"},
 
 		{"key":"豆瓣","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
-		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.597},"ext":"./diy/央视大全.json"},
+		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.597},"ext":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/央视大全.json"},
 		{"key":"BT天堂","name":"BT天堂","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/BT天堂.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
 		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/cili.jar"},	{"key":"New6v","name":"New6V","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/jar/cc.jar"}
 	],
