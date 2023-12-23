@@ -12,7 +12,7 @@ var rule = {
     headers:{
         'User-Agent':'PC_UA'
     },
-    timeout:10000,
+    timeout:15000,
     play_parse:true,
     lazy:'',
     limit:6,
