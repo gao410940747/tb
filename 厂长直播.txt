@@ -685,18 +685,86 @@ CCTV-4美洲,http://hms344nc1972679590.live.aikan.miguvideo.com/wh7f454c46tw2087
 香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
 香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=3c732f93c14e1bc0c07641df-156388849014752&wsIPSercert=8de23d0849e78e3b16ec92a809235421&wsMonitor=0
 
-中天新聞, http://198.16.100.90:8278/ctinews/playlist.m3u8?tid=MC3C3915550439155504&ct=19193&tsum=a8168b7967dda9bfebdd5b1403dc19b0
-中天綜合, http://198.16.100.90:8278/ctizhonghe/playlist.m3u8?tid=m85005aeec85b14021104&ct=17874&tsum=69f19f4b12ab79d2ee683b28cdb1c8ca
-中天綜合, http://50.7.238.114:8278/ctizhonghe/playlist.m3u8?ct=19193&tid=MBBB1520797915207979&tsum=3a6f7f0c591c2ec6678d51b741f290b2
-中天綜合, http://50.7.238.114:8278/ctizhonghe/playlist.m3u8?tid=MBBB1520797915207979&ct=19193&tsum=3a6f7f0c591c2ec6678d51b741f290b2
-人間衛視, https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
-人間衛視, https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
-人間衛視, http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u
-人間衛視, http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8
-緯來體育, https://cloud.yumixiu768.com/tmp/123.m3u8
-緯來體育, http://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4b390289143a8e1b2a898&t=1840341130
-ELEVEN體育,http://50.7.238.114:8278/golfchannel_twn/playlist.m3u8?tid=MFBF2798068027980680&ct=18393&tsum=d8204023f67120512c75a8882f121120
+人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
+人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
+人間衛視,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u
+人間衛視,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8
+
+TVBS,http://198.16.100.90:8278/tvbs/playlist.m3u8?tid=MEFE3093330530933305&ct=19249&tsum=ce6b5e9293b3618104ad53084745a223
+
+TVBS新聞台,http://38.64.72.148/hls/modn/list/4006/chunklist0.m3u8
+TVBS新聞台,http://38.64.72.148/hls/modn/list/4006/chunklist1.m3u8
+TVBS新聞台,http://38.64.72.148:80/hls/modn/list/4006/chunklist0.m3u8
+TVBS新聞台,http://38.64.72.148:80/hls/modn/list/4006/chunklist1.m3u8
+TVBS新聞台,http://38.64.72.148/hls/modn/list/4006/playlist.m3u8
+
+TVBS亞洲台,http://38.64.72.148:80/hls/modn/list/4005/chunklist0.m3u8
+TVBS亞洲台,http://38.64.72.148:80/hls/modn/list/4005/chunklist1.m3u8
+TVBS亞洲台,http://38.64.72.148/hls/modn/list/4005/chunklist0.m3u8
+TVBS亞洲台,http://38.64.72.148/hls/modn/list/4005/chunklist1.m3u8
+TVBS亞洲台,http://38.64.72.148:80/hls/modn/list/4005/playlist.m3u8
+TVBS亞洲台,http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
+
+TVBS歡樂台,http://198.16.100.90:8278/tvbshuanle_twn/playlist.m3u8?tid=MA5A9262292692622926&ct=19254&tsum=cd369d68a5d2c1a2fa04df748cda142c
+TVBS歡樂台,http://198.16.100.90:8278/tvbshuanle_twn/playlist.m3u8?ct=19193&tid=MC8C2318787923187879&tsum=394d2b9af3df7846e2cdc60d69dd4219
+
+中天新聞台,http://198.16.100.90:8278/ctinews/playlist.m3u8?tid=MC3C3915550439155504&ct=19193&tsum=a8168b7967dda9bfebdd5b1403dc19b0
+中天綜合台,http://198.16.100.90:8278/ctizhonghe/playlist.m3u8?tid=m85005aeec85b14021104&ct=17874&tsum=69f19f4b12ab79d2ee683b28cdb1c8ca
+中天綜合台,http://50.7.238.114:8278/ctizhonghe/playlist.m3u8?ct=19193&tid=MBBB1520797915207979&tsum=3a6f7f0c591c2ec6678d51b741f290b2
+中天綜合台,http://50.7.238.114:8278/ctizhonghe/playlist.m3u8?tid=MBBB1520797915207979&ct=19193&tsum=3a6f7f0c591c2ec6678d51b741f290b2
+
+台视新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist1.m3u8
+台视新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8
+台視新聞台,http://38.64.72.148/hls/modn/list/4013/chunklist0.m3u8
+台視新聞台,http://38.64.72.148/hls/modn/list/4013/chunklist1.m3u8
+台视新聞台,http://38.64.72.148/hls/modn/list/4013/playlist.m3u8
+台视新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8?blog.ntnas.top
+
+民視新聞台,http://38.64.72.148/hls/modn/list/4012/chunklist0.m3u8
+民視新聞台,http://38.64.72.148/hls/modn/list/4012/chunklist1.m3u8
+民视新聞台,http://38.64.72.148:80/hls/modn/list/4012/chunklist0.m3u8
+民视新聞台,http://38.64.72.148:80/hls/modn/list/4012/chunklist1.m3u8
+民视新聞台,http://38.64.72.148/hls/modn/list/4012/playlist.m3u8
+
+八大综合台,http://198.16.100.90:8278/badazhonghe/playlist.m3u8?tid=MC7C4692263546922635&ct=19225&tsum=ffdc7a6397b511103e0df0b92e678790
+八大综合台,http://198.16.100.90:8278/badazhonghe/playlist.m3u8?tid=mfb8d64b6276514171054&ct=17874&tsum=a87466c997089ea7dce98cd17301667d
+八大戏剧台,http://198.16.100.90:8278/badadrama/playlist.m3u8?tid=m4970c4e1b988&ct=18335&tsum=20cb1d15d4e116ab9e44edb542cf51a5
+八大戏剧台,http://198.16.100.90:8278/badadrama/playlist.m3u8?tid=MBCB2433143824331438&ct=19254&tsum=51660c351b3991d81434e43bd1ab720e
+八大戏剧台,http://198.16.100.90:8278/badadrama/playlist.m3u8?tid=m4a65d3abd9ee13871929&ct=17924&tsum=8e5ef501e42d00cdc6a761ca3dc693d8
+
+東森美洲台,http://38.64.72.148:80/hls/modn/list/2015/chunklist0.m3u8
+東森美洲台,http://38.64.72.148:80/hls/modn/list/2015/chunklist1.m3u8
+東森美洲台,http://38.64.72.148/hls/modn/list/2015/chunklist0.m3u8
+
+緯來體育台, https://cloud.yumixiu768.com/tmp/123.m3u8
+緯來體育台, http://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4b390289143a8e1b2a898&t=1840341130
+ELEVEN體育台,http://50.7.238.114:8278/golfchannel_twn/playlist.m3u8?tid=MFBF2798068027980680&ct=18393&tsum=d8204023f67120512c75a8882f121120
+
+金砖中文, http://brics.bonus-tv.ru/cdn/brics/chinese/tracks-v1a1/index.m3u8
+金砖英文, http://brics.bonus-tv.ru/cdn/brics/english/tracks-v1a1/index.m3u8
 半岛英语, https://live-hls-web-aje.getaj.net/AJE/01.m3u8
+
+长城精品,http://38.64.72.148:80/hls/modn/list/4008/chunklist1.m3u8
+长城精品,http://38.64.72.148:80/hls/modn/list/4008/chunklist0.m3u8
+
+香港32台,https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream5/streamPlaylist.m3u8
+香港32台,https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream2/streamPlaylist.m3u8
+创世电视台,https://cdn.deepcore.online/hlsme/ctv_hk.m3u8?zgangd
+环球电视台,http://zb.xzxwhcb.com:9999/hls/world.m3u8
+新加坡中文台,https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8?zshijd
+好消息综合台,https://dqhxk7sbp7xog.cloudfront.net/hls-live/goodtv/_definst_/liveevent/live-ch1-2.m3u8
+FashionTV,http://lb.streaming.sk/fashiontv/stream/chunklist_w1702070444.m3u8
+FashionTV,http://lb.streaming.sk/fashiontv/stream/chunklist_w1402273512.m3u8
+
+CN卡通频道,http://198.16.100.90:8278/momo1_twn/playlist.m3u8?tid=MFFF9797479997974799&ct=19249&tsum=0bd9dac79cd373cc918357d3199c8b22
+TLC频道,http://198.16.100.90:8278/Tlc/playlist.m3u8?tid=MF3F1922397419223974&ct=19249&tsum=463e97d27a96d75f2d46fe7f081af271
+
+
+
+
+
+
+
 
 
 
