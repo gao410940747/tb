@@ -18,15 +18,15 @@ var rule = {
     limit:6,
     double:false,
     推荐:'*',
-    一级:'.list-group .group-game-item;.d-none&&Text;img&&src;.btn&&Text;a&&href',
+    一级:'.list-group .group-game-item;.d-none&&Text;.team-logo&&src;.btn&&Text;.btn&&href',
     二级:{
 	    "title":".game-info-container&&Text;.customer-navbar-nav li&&Text",
-	    "img":"img&&src",
+	    "img":".team-logo&&src",
 	    "desc":";;;div.team-name:eq(0)&&Text;div.team-name:eq(1)&&Text",
 	    "content":"div.game-time&&Text",
 	    "tabs":"js:TABS=['88看球']",
 	    // "lists":"js:LISTS=[];input=input+'-url';let html=request(input);let data=JSON.parse(html);TABS.forEach(function(tab){let m3u=data;let d=m3u.map(function(it){return it.name+'$'+play_url+it.url});LISTS.push(d)});"
-	    "lists":"js:LISTS=[];input=input+'-url';let html=request(input);let data=JSON.parse(html);TABS.forEach(function(tab){let m3u=data;let d=m3u.map(function(it){return it.name+'$'+it.url});LISTS.push(d)});"
+	    "lists":"js:LISTS=[];input=input+'-url';let html=request(input);let data=JSON.parse(html);TABS.forEach(function(tab){let m3u=data.links;let d=m3u.map(function(it){return it.name+'$'+it.url});LISTS.push(d)});"
 	},
     搜索:'',
 }
