@@ -239,8 +239,9 @@ CGTN-法语,http://cfss.cc/api/ysp/cgtnf.m3u8
 CGTN-西语,http://cfss.cc/api/ysp/cgtne.m3u8
 CGTN-阿语,http://cfss.cc/api/ysp/cgtna.m3u8
 
-CCTV-4欧洲,http://hms304nc1972679586.live.aikan.miguvideo.com/wh7f454c46tw1798072077_1881739463/migu/kailu/20200324/cctv4ouhd/57/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=125.65.42.193&timestamp=20230426160611&ContentId=265667313&timezone=UTC&mtv_session=a1f0d3ea23dedcfb57026533e0f9fba7&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=205e99763af1a2e155df364630a7b05a
-CCTV-4美洲,http://hms344nc1972679590.live.aikan.miguvideo.com/wh7f454c46tw2087320283_-876815993/migu/kailu/20200324/cctv4meihd/57/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=125.65.42.193&timestamp=20230426161100&ContentId=265667335&timezone=UTC&mtv_session=9de016f966bff8e72afcd5fccab460fe&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=79b8d51a3105d0beb31ae1f6db95827e
+CCTV-4欧洲,http://mgws.live.miguvideo.com:8088/migu/kailu/20200324/cctv4ouhd/51/01.m3u8?msisdn=20231223165347eb90aa343fda4139952b83c6cdffd607&mdspid=&spid=699004&netType=4&sid=2200179315&pid=2028597139&timestamp=20231223165347&Channel_ID=0116_25000000-99000-100300010010001&ProgramID=608807419&ParentNodeID=-99&assertID=2200179315&client_ip=2408:823d:e17:351d:ce2:8441:83c2:a422&SecurityKey=20231223165347&promotionId=&mvid=2200179315&mcid=500020&playurlVersion=WX-A1-6.12.1.1-RELEASE&userid=&jmhm=&videocodec=h264&mgdbId=&mtv_session=a00e3a39ebaa6efbad9426acb9be167d&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=38e1301737775348ea76eed82e76514b
+CCTV-4美洲,http://mgsp-ali.live.miguvideo.com:8088/migu/kailu/20200324/cctv4meihd/51/01.m3u8?msisdn=2023122316523740b7b47179e04ddcaf95891a110e5c22&mdspid=&spid=699004&netType=4&sid=2200179344&pid=2028597139&timestamp=20231223165237&Channel_ID=0116_25000000-99000-100300010010001&ProgramID=608807416&ParentNodeID=-99&assertID=2200179344&client_ip=2408:823d:e17:351d:ce2:8441:83c2:a422&SecurityKey=20231223165237&promotionId=&mvid=2200179344&mcid=500020&playurlVersion=WX-A1-6.12.1.1-RELEASE&userid=&jmhm=&videocodec=h264&mgdbId=&encrypt=749ebb98302d36e624e921e93029e993&HlsSubType=1&nphaid=0&HlsProfileId=1&mtv_session=08cc53e1fd82a396479351d13a4c0e6a
+
 
 
 
