@@ -123,15 +123,6 @@ var rule = {
             let area = MY_FL.area || '全部';
             if (area === '全部') {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=20')).data;
-            } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyin&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
-            }
-            input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyin';
-        }
-        if (MY_CATE === 'cc') {
-            let area = MY_FL.area || '全部';
-            if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=20')).data;
             } else if (area === '守望先锋') {
                 douyinow = true;
                 if (MY_PAGE === 1) {
@@ -146,6 +137,15 @@ var rule = {
                         });
                     })
                 }
+            } else {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyin&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
+            }
+            input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyin';
+        }
+        if (MY_CATE === 'cc') {
+            let area = MY_FL.area || '全部';
+            if (area === '全部') {
+                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=20')).data;
             } else {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=cc&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
             }
