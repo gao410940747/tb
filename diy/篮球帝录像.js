@@ -16,7 +16,7 @@ var rule = {
     timeout:15000,
     play_parse:true,
     lazy:`js:
-        let pid = input.replace("https://weibo.com/5861424034/","");
+        let pid = input.replace("https://weibo.com/5861424034/","").replace("https://weibo.com/1883881851/","");
         let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
         input = JSON.parse(request(html)).page_info.media_info.mp4_hd_url;
     `,
