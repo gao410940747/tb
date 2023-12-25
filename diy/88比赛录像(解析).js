@@ -1,5 +1,5 @@
 var rule = {
-    title:'88比赛录像',
+    title:'88比赛录像(解析)',
     host:'http://www.88kanqiu.one/replay',
     // 发布页：www.88kq.net
     // 主节点：www.88kanqiu.one
@@ -14,6 +14,11 @@ var rule = {
     },
     timeout:15000,
     play_parse:true,
+    // lazy代码:源于海阔香雅情大佬 / 小程序：香情影视 https://pastebin.com/L4tHdvFn
+    lazy:`js:
+        html = request('https://t1.qlplayer.cyou/player/?url=' + input);
+        input = pdfh(html, '.yzmplayer-video-current&&src');
+	`,
     limit:6,
     double:false,
     推荐:'.list-group .list-group-item;.media-heading a&&Text;.img-responsive&&src;.media-body span&&Text;.media-heading a&&href',

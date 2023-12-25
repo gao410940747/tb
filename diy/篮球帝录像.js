@@ -1,49 +1,39 @@
 var rule = {
     title:'篮球帝录像',
-    host:'https://m.lanqiudi.com',
+    host:'https://www.lanqiudi.com',
     编码:'gbk',
     搜索编码:'gbk',
     homeUrl: '/a/nbalx/list_175_1.html',//网站的首页链接,用于分类获取和推荐获取
-    url:'/a/fyclass/list_175_fypage.html',
+    url:'/a/fyclass_fypage.html',
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'NBA录像&NBA集锦&NBA新闻&NBA十佳球',
-    class_url:'nbalx&nbajijin&news&top',
+    class_name:'NBA录像&NBA集锦&NBA新闻&NBA十佳球&CBA录像&CBA集锦',
+    class_url:'nbalx/list_175&nbajijin/list_18&news/list_177&top/list_23&cbalx/list_180&cbajijin/list_215',
     headers:{
         'User-Agent':'PC_UA'
     },
     timeout:15000,
     play_parse:true,
+    lazy:`js:
+        let pid = input.replace("https://weibo.com/5861424034/","");
+        let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
+        input = JSON.parse(request(html)).page_info.media_info.mp4_hd_url;
+    `,
     limit:6,
     double:false,
-    推荐:'.list .lite;a&&Text;;span&&Text;a&&href',
-    一级:'.list .lite;a&&Text;;span&&Text;a&&href',
+    推荐:'.list_body li;a&&Text;*;span&&Text;a&&href',
+    一级:'.list_body li;a&&Text;*;span&&Text;a&&href',
     二级:{
-        title:'a&&Text',
-        img:'',
+        title:'.Content-top h2&&Text',
+        img:'*',
         desc:'',
-        content:'h1&&Text',
+        content:'',
         tabs:'',
         tab_text:'',
-        lists:'.signals p:gt(1)',
+        lists:'.Content-body p:gt(1)',
         list_text:'a&&Text',
         list_url:'a&&href'
     },
-    二级访问前:'log(MY_URL);MY_URL=MY_URL.replace("5861424034","status")',
-//    二级:`js:
-//		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
-//        var d = [];
-//        let list = pdfa(html, '.signals');
-//        list.forEach(it => {
-//            d.push({
-//                title: pdfh(it, "a&&Text"),
-////                pic_url: pd(it, ".Xw5Zorxg&&src"),
-//                desc: pdfh(it, 'h1&&Text'),
-//                url: pd(it, 'a&&href').replace('5861424034','status');
-//            });
-//        })
-//        setResult(d);
-//    `
     搜索:'',
 }
