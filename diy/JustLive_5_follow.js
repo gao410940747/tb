@@ -21,7 +21,7 @@ var rule = {
         huya:{area:'守望先锋归来'},
         bilibili:{area:'守望先锋'},
         cc:{area:'全部'},
-        douyin:{area:'全部'}
+        douyin:{area:'守望先锋'}
     },
     // detailUrl: '/index/liveRoom?platform=fyclass&roomId=fyid',
     // detailUrl: '/api/live/getRoomInfo?uid=&platform=fyclass&roomId=fyid',
@@ -133,7 +133,7 @@ var rule = {
             input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya';
         }
         if (MY_CATE === 'douyin') {
-            let area = MY_FL.area || '全部';
+            let area = MY_FL.area || '守望先锋';
             if (area === '全部') {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=20')).data;
             } else if (area === '守望先锋') {
