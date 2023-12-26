@@ -35,10 +35,7 @@
 		{"key":"豆瓣推荐","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
 		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/cili.jar"},
 		{"key":"BT天堂","name":"BT天堂","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/BT天堂.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
-		{"key":"篮球帝录像","name":"篮球帝录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1.755},"ext":"./diy/篮球帝录像.js"},
-
-		{"key":"88比赛录像","name":"88比赛录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1.755},"ext":"./diy/88比赛录像.js"},
-		{"key":"88比赛录像(解析)","name":"88比赛录像(解析)","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1.755},"ext":"./diy/88比赛录像(解析).js"}
+		{"key":"篮球帝录像","name":"篮球帝录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球帝录像_1.js"}
 	],
         "parses": [
                 {"name":"777","type":0,"url":"https://jx.777jiexi.com/player/?url="},
