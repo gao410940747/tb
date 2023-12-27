@@ -14,11 +14,6 @@ var rule = {
     },
     timeout:15000,
     play_parse:true,
-    // lazy代码:源于海阔香雅情大佬 / 小程序：香情影视 https://pastebin.com/L4tHdvFn
-    lazy:`js:
-        html = request('https://t1.qlplayer.cyou/player/?url=' + input);
-        input = pdfh(html, '.yzmplayer-video-current&&src');
-	`,
     limit:6,
     double:false,
     推荐:'.list-group .list-group-item;.media-heading a&&Text;.img-responsive&&src;.media-body span&&Text;.media-heading a&&href',
@@ -35,4 +30,8 @@ var rule = {
         list_url:'a&&href'
     },
     搜索:'',
+    // 是否启用辅助嗅探: 1,0
+    sniffer:1,
+    // 辅助嗅探规则
+    isVideo:"http((?!http).){26,}\\.(m3u8|mp4|flv|avi|mkv|wmv|mpg|mpeg|mov|ts|3gp|rm|rmvb|asf|m4a|mp3|wma)",
 }
