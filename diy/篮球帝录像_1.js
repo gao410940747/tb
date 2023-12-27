@@ -32,7 +32,7 @@ var rule = {
 		var html = request(input);
 		var list = pdfa(html, '.list_body&&li');
 		list.forEach(it => {
-            // 二级图片URL
+            // 二级标题
             let title1;
             // 二级描述
             let desc1 = '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日','');
