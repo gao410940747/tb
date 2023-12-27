@@ -22,7 +22,7 @@ var rule = {
     `,
     limit:6,
     double:false,
-    推荐:'*',
+//    推荐:'*',
 //    一级:'.list_body li;a&&Text;*;span&&Text;a&&href',
 	一级: `js:
 		pdfh = jsp.pdfh;
@@ -32,249 +32,96 @@ var rule = {
 		var html = request(input);
 		var list = pdfa(html, '.list_body&&li');
 		list.forEach(it => {
+            // 二级图片URL
+            let title1;
+            // 二级描述
+            let desc1 = '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日','');
+            // 二级图片URL
+            let picUrl1;
+            // 二级URL
+            let url1 = pd(it, 'a&&href');
+
+            // 通过" "进行截取
             let split = pdfh(it, 'a&&Text').split(" ");
-            let date1 = pdfh(it, 'span&&Text').replace('月','').replace('日','').replace('24年','').replace('25年','').replace('26年','').replace('23年','').replace('22年','').replace('21年','').replace('20年','').replace('19年','').replace('18年','').replace('17年','').replace('16年','').replace('15年','');
-            let Team1vsTeam2split = split[split.length-2];
-            let Team1 = Team1vsTeam2split.split("vs")[0];
-            let Team2 = Team1vsTeam2split.split("vs")[1];
-            let Team1vsTeam2 = Team1vsTeam2split;
-            // let Team1vsTeam2 = split[split.length-2] + '(' + date1 + ')';
-            if (/十佳球/.test(pdfh(it, 'a&&Text'))) {
-                d.push({
-                    title: split[split.length-1],
-                    desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-    				pic_url: 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E',
-                    url: pd(it, 'a&&href')
-                });
-            } else if (/NBA/.test(pdfh(it, 'a&&Text'))) {
+
+            // NBA十佳球、五佳球
+            if (/十佳球/.test(pdfh(it, 'a&&Text')) || /五佳球/.test(pdfh(it, 'a&&Text'))) {
+                title1 = split[split.length-1];
+                picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
+            }
+            // NBA录像、NBA集锦
+            else if (/NBA/.test(pdfh(it, 'a&&Text'))) {
+                // 若包含客队vs主队信息
                 if (/vs/.test(pdfh(it, 'a&&Text'))) {
-                    if (/凯尔特人/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/BOS_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/雄鹿/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/MIL_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/76人/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/PHI_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/魔术/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/ORL_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/热火/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/MIA_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/尼克/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/NYK_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/骑士/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/CLE_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/步行者/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/IND_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/网/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/BKN_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/公牛/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/CHI_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/鹰/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/ATL_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/龙/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/TOR_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/黄蜂/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/CHA_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/奇才/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/WAS_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/活塞/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/DET_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/狼/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/MIN_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/金/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/DEN_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/雷霆/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/OKC_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/国王/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/SAC_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/独行侠/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/DAL_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/快船/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/LAC_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/鹈鹕/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/NOP_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/火箭/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/HOU_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/湖人/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/LAL_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/勇士/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/GSW_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/太阳/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/PHX_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/爵士/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/UTA_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/熊/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/MEM_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/开拓者/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/POR_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
-                    } else if (/马刺/.test(Team2)) {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://res.nba.cn/media/img/teams/logos/SAS_logo.png',
-                            url: pd(it, 'a&&href')
-                        });
+                    // 客队vs主队
+                    let Team1vsTeam2 = split[split.length-2];
+                    // 客队名称
+                    let Team1 = Team1vsTeam2.split("vs")[0];
+                    // 主队名称
+                    let Team2 = Team1vsTeam2.split("vs")[1];
+                    // 封装球队LOGO麦普
+                    var TeamLogoMap = {
+                        "凯尔特人": "https://res.nba.cn/media/img/teams/logos/BOS_logo.png",
+                        "雄鹿": "https://res.nba.cn/media/img/teams/logos/MIL_logo.png",
+                        "76人": "https://res.nba.cn/media/img/teams/logos/PHI_logo.png",
+                        "魔术": "https://res.nba.cn/media/img/teams/logos/ORL_logo.png",
+                        "热火": "https://res.nba.cn/media/img/teams/logos/MIA_logo.png",
+                        "尼克斯": "https://res.nba.cn/media/img/teams/logos/NYK_logo.png",
+                        "骑士": "https://res.nba.cn/media/img/teams/logos/CLE_logo.png",
+                        "步行者": "https://res.nba.cn/media/img/teams/logos/IND_logo.png",
+                        "篮网": "https://res.nba.cn/media/img/teams/logos/BKN_logo.png",
+                        "公牛": "https://res.nba.cn/media/img/teams/logos/CHI_logo.png",
+                        "老鹰": "https://res.nba.cn/media/img/teams/logos/ATL_logo.png",
+                        "猛龙": "https://res.nba.cn/media/img/teams/logos/TOR_logo.png",
+                        "黄蜂": "https://res.nba.cn/media/img/teams/logos/CHA_logo.png",
+                        "奇才": "https://res.nba.cn/media/img/teams/logos/WAS_logo.png",
+                        "活塞": "https://res.nba.cn/media/img/teams/logos/DET_logo.png",
+                        "森林狼": "https://res.nba.cn/media/img/teams/logos/MIN_logo.png",
+                        "掘金": "https://res.nba.cn/media/img/teams/logos/DEN_logo.png",
+                        "雷霆": "https://res.nba.cn/media/img/teams/logos/OKC_logo.png",
+                        "国王": "https://res.nba.cn/media/img/teams/logos/SAC_logo.png",
+                        "独行侠": "https://res.nba.cn/media/img/teams/logos/DAL_logo.png",
+                        "快船": "https://res.nba.cn/media/img/teams/logos/LAC_logo.png",
+                        "鹈鹕": "https://res.nba.cn/media/img/teams/logos/NOP_logo.png",
+                        "火箭": "https://res.nba.cn/media/img/teams/logos/HOU_logo.png",
+                        "湖人": "https://res.nba.cn/media/img/teams/logos/LAL_logo.png",
+                        "勇士": "https://res.nba.cn/media/img/teams/logos/GSW_logo.png",
+                        "太阳": "https://res.nba.cn/media/img/teams/logos/PHX_logo.png",
+                        "爵士": "https://res.nba.cn/media/img/teams/logos/UTA_logo.png",
+                        "灰熊": "https://res.nba.cn/media/img/teams/logos/MEM_logo.png",
+                        "开拓者": "https://res.nba.cn/media/img/teams/logos/POR_logo.png",
+                        "马刺": "https://res.nba.cn/media/img/teams/logos/SAS_logo.png"
+                    };
+                    title1 = Team1vsTeam2;
+                    if (TeamLogoMap[Team2] != null) {
+                        // 通过主队名称获取球队LOGO
+                        picUrl1 = TeamLogoMap[Team2];
+                    } else if (TeamLogoMap[Team1] != null) {
+                        // 通过客队名称获取球队LOGO
+                        picUrl1 = TeamLogoMap[Team1];
                     } else {
-                        d.push({
-                            title: Team1vsTeam2,
-                            desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                            pic_url: 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E',
-                            url: pd(it, 'a&&href')
-                        });
+                        // 若主队客队LOGO都不存在，则使用默认LOGO
+                        picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
                     }
                 }
-            } else if (/CBA/.test(pdfh(it, 'a&&Text'))) {
-                d.push({
-                    title: Team1vsTeam2,
-                    desc: '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日',''),
-                    pic_url: 'https://cdn.leisu.com/basketball/eventlogo/2020/11/11/Fit9bwsfH7ZD-dOf7cPFO5gtWG9W?imageMogr2/auto-orient/thumbnail/200x200%3E',
-                    url: pd(it, 'a&&href')
-                });
             }
+            // CBA录像、CBA集锦
+            else if (/CBA/.test(pdfh(it, 'a&&Text'))) {
+                // 若包含球队vs信息
+                if (/vs/.test(pdfh(it, 'a&&Text'))) {
+                    // 客队vs主队
+                    let Team1vsTeam2 = split[split.length-2];
+                    title1 = Team1vsTeam2;
+                    picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2020/11/11/Fit9bwsfH7ZD-dOf7cPFO5gtWG9W?imageMogr2/auto-orient/thumbnail/200x200%3E';
+                }
+            }
+            // 封装对象
+            d.push({
+                title: title1,
+                desc: desc1,
+                pic_url: picUrl1,
+                url: url1
+            });
 		})
 		setResult(d);
 	`,
@@ -289,6 +136,49 @@ var rule = {
         list_text:'a&&Text',
         list_url:'a&&href'
     },
+//    二级:{
+//        title:'.Content-top h2&&Text',
+//        img:'*',
+//        desc:'',
+//        content:'',
+//        tabs:`js:
+//            TABS = [];
+//            TABS.push("微博线路");
+//            TABS.push("其他线路");
+//        `,
+//        lists:`js:
+//            log(TABS);
+//            pdfh = jsp.pdfh;
+//            pdfa = jsp.pdfa;
+//            pd = jsp.pd;
+//            LISTS = [];
+//            let list = pdfa(html, '.Content-body');
+//            TABS.forEach(function(tab) {
+//                if (/微博线路/.test(tab)) {
+//                    if (/微博/.test(pdfh(it, 'a&&Text'))) {
+//                        list.forEach(it => {
+//                            d.push({
+//                                title: pdfh(it, 'a&&Text'),
+//                                url: pd(it, 'a&&href')
+//                            });
+//                        })
+//                        LISTS.push(d)
+//                    }
+//                } else if (/其他线路/.test(tab)) {
+//                    if (/微博/.test(pdfh(it, 'a&&Text'))) {
+//                    } else {
+//                        list.forEach(it => {
+//                            d.push({
+//                                title: pdfh(it, 'a&&Text'),
+//                                url: pd(it, 'a&&href')
+//                            });
+//                        })
+//                        LISTS.push(d)
+//                    }
+//                }
+//            });
+//        `,
+//    },
     // 二级: `js:
 	// 	pdfh = jsp.pdfh;
 	// 	pdfa = jsp.pdfa;
