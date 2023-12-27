@@ -12,14 +12,6 @@ var rule = {
     },
     timeout:15000,
     play_parse:true,
-
-    // lazy代码:源于海阔香雅情大佬 / 小程序：香情影视 https://pastebin.com/L4tHdvFn
-    lazy:`js:
-        input = request('https://t1.qlplayer.cyou/player/?url=' + input);
-	`,
-    // lazy:'js:let purl=jsp.pdfh(request(input),"iframe&&src");input={jx:0,url:purl,parse:1}',
-    // lazy:"js:let html=request(input);input=jsp.pd(html,'.embed-responsive&&iframe&&src')",
-    // lazy:'js:input=input.replace("www.qingting.fm/radios/","lhttp.qingting.fm/live/")+"/64k.mp3"',
     limit:6,
     double:false,
     一级:'.jzjianshu-box .post_list_li;h2&&Text;img&&src;.f_l span&&Text;i a&&href',
