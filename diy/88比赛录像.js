@@ -4,7 +4,7 @@ var rule = {
     // 发布页：www.88kq.net
     // 主节点：www.88kanqiu.one
     // 备用节点：www.88kanqiu.dog/  www.88kanqiu.lol/  www.88kanqiu.love/  www.88kanqiu.org/  www.88kanqiu.win/  www.popozhibo.cc/  www.popozhibo.net/
-    url: '/match/fyclass/replay',
+    url:'/match/fyclass/replay',
     searchUrl:'',
     searchable:0,
     quickSearch:0,
