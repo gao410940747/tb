@@ -1,6 +1,8 @@
 var rule = {
     title:'Jav8',
     host:'https://jav8.vip',
+//发布页：https://jav8.link/
+//备用节点：https://jav8.pro/  https://jav8.lol/  https://jav8.one/  https://jav8.me/
     url:'/fyclass/fyfilter',
     searchable:0,
     quickSearch:0,
