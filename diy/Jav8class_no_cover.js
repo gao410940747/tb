@@ -10,7 +10,6 @@ var rule = {
         'User-Agent':'PC_UA'
     },
     图片来源:'@Referer=https://jav8.vip',
-    playerType:2,
     timeout:15000,
     play_parse:true,
     limit:10,
