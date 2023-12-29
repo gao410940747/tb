@@ -69,7 +69,7 @@ var rule = {
         tabs:'',
         tab_text:'',
         lists:'.magnets .magnet',
-        list_text:'.magnet-size&&Text',
+        list_text:'.magnet-title&&Text',
         list_url:'.magnet-title a&&href'
     },
     // 二级: `js:
