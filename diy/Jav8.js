@@ -2,11 +2,10 @@ var rule = {
     title:'Jav8',
     host:'https://jav8.vip',
     url:'/fyclass/fyfilter',
-    searchUrl:'/search?type=id&q=**',
-    searchable:1,
+    searchable:0,
     quickSearch:0,
-    class_name: '热门影片&最新影片&磁力更新&排行榜&即将发布',
-    class_url: 'top-videos?page=fypage&latest?page=fypage&updated?page=fypage&rank&soon?page=fypage',
+    class_name: '热门影片&最新影片&磁力更新&排行榜&即将发布&S1 NO.1 STYLE&Prestige&SOD&FALENO&MOODYZ&Idea Pocket',
+    class_url: 'top-videos?page=fypage&latest?page=fypage&updated?page=fypage&rank&soon?page=fypage&studio/763?page=fypage&studio/671?page=fypage&studio/1334?page=fypage&studio/4411?page=fypage&studio/294?page=fypage&studio/109?page=fypage&',
     filterable: 1,
     filter_url: '{{fl.area}}',
     filter: {
@@ -15,56 +14,55 @@ var rule = {
     filter_def:{
         'rank':{area:'7-days'}
     },
-    // headers:{
-    //     'User-Agent':'PC_UA'
-    // },
     headers:{
-        "referer": "192.169.120.162:443",
-        "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36",
-        "Accept":" */*",
-        "Accept-Language":"zh-CN,zh;q=0.9",
-        "Accept-Encoding":"gzip, deflate, br"
+        'User-Agent':'PC_UA'
     },
+    图片来源:'@Referer=https://jav8.vip',
     playerType:2,
     timeout:15000,
     play_parse:true,
     limit:10,
     double:false,
-    推荐:'.works .work;.work-title&&title;.work-cover img&&src;.work-actress&&Text;a&&href',
-    一级:'.works .work;.work-title&&title;.work-cover img&&src;.work-actress&&Text;a&&href',
-    // 一级: `js:
-	// 	pdfh = jsp.pdfh;
-	// 	pdfa = jsp.pdfa;
-	// 	pd = jsp.pd;
-	// 	var d = [];
-	// 	var html = request(input);
-	// 	var list = pdfa(html, '.work-intro');
-	// 	list.forEach(it => {
-	// 	    if (/_blank/.test(pdfh(it, '.work&&target'))) {
-	// 	    } else {
-    //             // 二级标题
-    //             let title1 = pdfh(it, '.work-id&&Text') + ' ' + pdfh(it, '.work-title&&title');
-    //             // 二级描述
-    //             let desc1 = pdfh(it, '.work-date&&Text') + ' ' + pdfh(it, '.work-actress&&Text').replace(' ', '');
-    //             // 二级图片URL
-    //             let picUrl1 = pd(it, '.work-cover&&src');
-    //             // 二级URL
-    //             let url1 = pdfh(it, 'a&&href');
-    //
-    //             // 封装对象
-    //             d.push({
-    //                 title: title1,
-    //                 desc: desc1,
-    //                 pic_url: picUrl1,
-    //                 url: url1
-    //             });
-	// 	    }
-	// 	})
-	// 	setResult(d);
-	// `,
+    推荐:'.works .work;.work-intro&&Text;.work-cover img&&src;.work-actress&&Text;a&&href',
+    // 一级:'.works .work;.work-intro&&Text;.work-cover img&&src;.work-actress&&Text;a&&href',
+    一级: `js:
+		pdfh = jsp.pdfh;
+		pdfa = jsp.pdfa;
+		pd = jsp.pd;
+		var d = [];
+		var html = request(input);
+		var list = pdfa(html, '.works&&.work');
+		list.forEach(it => {
+		    if (/_blank/.test(pdfh(it, 'a&&target'))) {
+		    } else {
+                // 一级标题
+                let title1 = pdfh(it, '.work-id&&Text') + ' ' + pdfh(it, '.work-title&&title');
+                // 一级描述
+                let desc1;
+                if(pdfh(it, '.work-actress&&Text') === '') {
+                    desc1 = pdfh(it, '.work-date&&Text')
+                } else {
+                    desc1 = pdfh(it, '.work-actress&&Text').replace(' ', '');
+                }
+                // 一级图片URL
+                let picUrl1 = pd(it, '.work-cover img&&src');
+                // 一级URL
+                let url1 = pdfh(it, 'a&&href');
+
+                // 封装对象
+                d.push({
+                    title: title1,
+                    desc: desc1,
+                    pic_url: picUrl1,
+                    url: url1
+                });
+		    }
+		})
+		setResult(d);
+	`,
     二级:{
         title:'.title&&Text',
-        img:'.embla__slide__inner&&src',
+        img:'#cover-img img&&src',
         desc:'.actress&&Text',
         content:'',
         tabs:'',
