@@ -17,9 +17,8 @@
 {"key":"mtsp_open","name":"蜜桃貓","type":3,"api":"./cat/js/mtsp_open.js","style":{"type":"rect","ratio":1.485}},
 {"key":"18av_open","name":"18av貓","type":3,"api":"./cat/js/18av_open.js","style":{"type":"rect","ratio":1.485}},
 {"key":"sgp","name":"水果派","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"./json/sgp.json","jar":"./jar/xo.txt"},
-{"key":"csp_hsck","name":"JavBus","api":"csp_Hsck","type":3,"filterable":1,"quickSearch":1,"searchable":1,"ext":"https://www.javsee.art/","jar": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xxx.jar"},
-{"key":"csp_Hsck2","name":"JavBus2","api":"csp_Hsck","type":3,"filterable":0,"quickSearch":1,"searchable":1,"ext":"https://www.busdmm.shop/","playerType":2,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xxx.jar"},
-{"key":"csp_Hsck3","name":"JavBus3","api":"csp_Hsck","type":3,"filterable":0,"quickSearch":1,"searchable":1,"ext":"https://www.busfan.shop/","playerType":2,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xxx.jar"},
+{"key":"JavScop","name":"JavScop","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"ext":"./diy/JavScop.js"},
+{"key":"Jav8","name":"Jav8","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"ext":"./diy/Jav8.js"},
 
 {"key":"泥巴","name":"泥巴","type":3,"api":"csp_NiNi","searchable":1,"ext":"1"},
 {"key":"量子","name":"量子","type":0,"api":"https://cj.lziapi.com/api.php/provide/vod/","searchable":1,"changeable":1,"categories":["伦理片"]},
