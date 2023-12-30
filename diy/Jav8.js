@@ -1,13 +1,16 @@
 var rule = {
     title:'Jav8',
     host:'https://jav8.vip',
-//发布页：https://jav8.link/
-//备用节点：https://jav8.pro/  https://jav8.lol/  https://jav8.one/  https://jav8.me/
+    // 发布页：https://jav8.link/
+    // 备用节点：https://jav8.pro/  https://jav8.lol/  https://jav8.one/  https://jav8.me/
     url:'/fyclass/fyfilter',
+    searchUrl:'/actress/**?page=fypage',
     searchable:0,
     quickSearch:0,
-    class_name: '热门影片&最新影片&磁力更新&排行榜&即将发布&S1 NO.1 STYLE&Prestige&SOD&FALENO&MOODYZ&Idea Pocket',
-    class_url: 'top-videos?page=fypage&latest?page=fypage&updated?page=fypage&rank&soon?page=fypage&studio/763?page=fypage&studio/671?page=fypage&studio/1334?page=fypage&studio/4411?page=fypage&studio/294?page=fypage&studio/109?page=fypage&',
+    // class_name: '热门影片&最新影片&磁力更新&排行榜&即将发布&S1 NO.1 STYLE&Prestige&SOD&FALENO&MOODYZ&Idea Pocket',
+    // class_url: 'top-videos?page=fypage&latest?page=fypage&updated?page=fypage&rank&soon?page=fypage&studio/763?page=fypage&studio/671?page=fypage&studio/1334?page=fypage&studio/4411?page=fypage&studio/294?page=fypage&studio/109?page=fypage',
+    class_name: '热门影片&最新影片&磁力更新&排行榜&即将发布',
+    class_url: 'top-videos?page=fypage&latest?page=fypage&updated?page=fypage&rank&soon?page=fypage',
     filterable: 1,
     filter_url: '{{fl.area}}',
     filter: {
@@ -24,8 +27,7 @@ var rule = {
     play_parse:true,
     limit:10,
     double:false,
-    推荐:'.works .work;.work-intro&&Text;.work-cover img&&src;.work-actress&&Text;a&&href',
-    // 一级:'.works .work;.work-intro&&Text;.work-cover img&&src;.work-actress&&Text;a&&href',
+    推荐:'.works .work;.work-id&&Text;.work-cover img&&src;.work-actress&&Text;a&&href',
     一级: `js:
 		pdfh = jsp.pdfh;
 		pdfa = jsp.pdfa;
@@ -37,7 +39,8 @@ var rule = {
 		    if (/_blank/.test(pdfh(it, 'a&&target'))) {
 		    } else {
                 // 一级标题
-                let title1 = pdfh(it, '.work-id&&Text') + ' ' + pdfh(it, '.work-title&&title');
+                // let title1 = pdfh(it, '.work-id&&Text') + ' ' + pdfh(it, '.work-title&&title');
+                let title1 = pdfh(it, '.work-id&&Text');
                 // 一级描述
                 let desc1;
                 if(pdfh(it, '.work-actress&&Text') === '') {
@@ -61,47 +64,53 @@ var rule = {
 		})
 		setResult(d);
 	`,
-    二级:{
-        title:'.title&&Text',
-        img:'#cover-img img&&src',
-        desc:'.actress&&Text',
-        content:'',
-        tabs:'',
-        tab_text:'',
-        lists:'.magnets .magnet',
-        list_text:'.magnet-title&&Text',
-        list_url:'.magnet-title a&&href'
-    },
-    // 二级: `js:
-	// 	pdfh = jsp.pdfh;
-	// 	pdfa = jsp.pdfa;
-	// 	pd = jsp.pd;
-	// 	var d = [];
-	// 	var html = request(input);
-	// 	var list = pdfa(html, '.magnets&&.magnet');
-	// 	list.forEach(it => {
-    //         // 二级标题
-    //         let title1 = 'a';
-    //         // let title1 = pdfh(it, '.magnet-size&&Text');
-    //         // 二级描述
-    //         let desc1 = 'a';
-    //         // let desc1 = pdfh(it, '.actress&&Text');
-    //         // 二级图片URL
-    //         let picUrl1 = 'a';
-    //         // let picUrl1 = pd(it, '.is-selected&&src');
-    //         // 二级URL
-    //         let url1 = 'a';
-    //         // let url1 = pdfh(it, '.magnet-title&&href').split(';')[0];
-    //
-    //         // 封装对象
-    //         d.push({
-    //             title: title1,
-    //             desc: desc1,
-    //             pic_url: picUrl1,
-    //             url: url1
-    //         });
-	// 	})
-	// 	setResult(d);
-	// `,
-    搜索:'',
+    二级: `js:
+		pdfh = jsp.pdfh;
+		pdfa = jsp.pdfa;
+		pd = jsp.pd;
+        var html = request(input);
+        VOD = {
+            vod_id: pdfh(html, '.highlight&&Text'),
+            vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html, '.title&&Text'),
+            vod_pic: pdfh(html, '#cover-img&&data-src'),
+            type_name: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
+            vod_year: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
+            // vod_area: pdfh(html, '.attributes&&dt:eq(5)&&Text'),
+            vod_remarks: pdfh(html, '.highlight&&Text'),
+            vod_director: pdfh(html, '.attributes&&dt:eq(4)&&Text'),
+            vod_actor: pdfh(html, '.actress&&Text'),
+            vod_content: pdfh(html, '.tags&&Text'),
+        };
+		var list = pdfa(html, '.magnets&&.magnet');
+        let playFrom = [];
+        let playList = [];
+        
+		list.forEach(it => {
+            playFrom.append(pdfh(it, '.magnet-size&&Text'));
+            playList.append(pdfh(it, '.magnet-title&&Text') + "$" + pd(it, '.magnet-title a&&href'))
+		})
+
+        // 最后封装所有线路
+        let vod_play_from = playFrom.join('$$$');
+        let vod_play_url = playList.join('$$$');
+        VOD['vod_play_from'] = vod_play_from;
+        VOD['vod_play_url'] = vod_play_url;
+    `,
+    // 一级:'.works .work;.work-intro&&Text;.work-cover img&&src;.work-actress&&Text;a&&href',
+    // 二级:{
+    //     // 标题;类型
+    //     title:'.highlight&&Text;.attributes&&dt:eq(2)&&Text',
+    //     // 封面
+    //     img:'#cover-img img&&src',
+    //     // 无;无;地区;演员;导演
+    //     desc:';;.attributes&&dt:eq(5)&&Text;.actress&&Text;.attributes&&dt:eq(4)&&Text',
+    //     // 简介
+    //     content:'.title&&Text',
+    //     tabs:'',
+    //     tab_text:'',
+    //     lists:'.magnets .magnet',
+    //     list_text:'.magnet-title&&Text',
+    //     list_url:'.magnet-title a&&href',
+    // },
+    搜索:'.works .work;.work-intro&&Text;.work-cover img&&src;.work-date&&Text;a&&href',
 }
