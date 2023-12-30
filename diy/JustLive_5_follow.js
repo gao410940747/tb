@@ -142,14 +142,36 @@ var rule = {
                     let new_html = request('https://live.douyin.com/category/1_1_1_1010339');
                     let list = pdfa(new_html, '.toLyHXZi');
                     list.forEach(it => {
+                        var platForm = 'douyin';
+                        var roomId = pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','');
+                        var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
+                        var roomPic = roomInfo.roomPic;
+                        // var roomPic = pd(it, ".Xw5Zorxg img&&src", 'https://live.douyin.com');
                         d.push({
                             title: pdfh(it, ".RiVZaDKC&&Text"),
-                            pic_url: pd(it, ".Xw5Zorxg&&src"),
+                            pic_url: roomPic,
                             desc: '🆙' + pdfh(it, '.vGMybqZ5&&Text'),
-                            url: 'douyin' + '|' + pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','')
+                            url: platForm + '|' + roomId
                         });
                     })
                 }
+                // if (MY_PAGE === 2) {
+                //     let new_html = request('https://www.douyin.com/search/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B?source=switch_tab&type=live');
+                //     let list = pdfa(new_html, '.fb5dK_Rl');
+                //     list.forEach(it => {
+                //         var platForm = 'douyin';
+                //         var roomId = pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','');
+                //         // var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
+                //         // var roomPic = roomInfo.roomPic;
+                //         var roomPic = pd(it, ".z177oFlW img&&src");
+                //         d.push({
+                //             title: pdfh(it, ".Nu66P_ba&&Text"),
+                //             pic_url: roomPic,
+                //             desc: '🆙' + pdfh(it, '.Nu66P_ba&&Text'),
+                //             url: platForm + '|' + roomId
+                //         });
+                //     })
+                // }
             } else if (area === '已关注') {
                 if (MY_PAGE === 1) {
                     html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;

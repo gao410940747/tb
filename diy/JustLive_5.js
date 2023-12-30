@@ -21,7 +21,7 @@ var rule = {
         huya:{area:'守望先锋归来'},
         bilibili:{area:'守望先锋'},
         cc:{area:'全部'},
-        douyin:{area:'全部'}
+        douyin:{area:'守望先锋'}
     },
     // detailUrl: '/index/liveRoom?platform=fyclass&roomId=fyid',
     // detailUrl: '/api/live/getRoomInfo?uid=&platform=fyclass&roomId=fyid',
@@ -37,32 +37,32 @@ var rule = {
     timeout: 15000,
     play_parse: true,
     lazy:`js:
-        let purl = input.split("|")[0];
-        let pfrom = input.split("|")[1];
-        let cid = input.split("|")[2];
-        print("purl:" + purl);
-        print("pfrom:" + pfrom);
-        print("cid:" + cid);
-        let dan = 'https://api.bilibili.com/x/v1/dm/list.so?oid=' + cid;
-        if (/bilibili/.test(pfrom)){
-            let result = {};
-            result['parse'] = 0;
-            result['playUrl'] = '';
-            result['url'] = unescape(purl);
-            result['header'] = {
-                Referer: 'https://live.bilibili.com',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
-            };
-            result['danmaku'] = dan;
-            if (/h5/.test(purl)) {
-                result['contentType'] = '';
-                input = result
-            } else {
-                result['contentType'] = 'video/x-flv';
-                input = result
-            }
+        let ids = input.split('_');
+        let dan = 'https://api.bilibili.com/x/v1/dm/list.so?oid=' + ids[1];
+        let result = {};
+        let iurl = 'https://api.live.bilibili.com/room/v1/Room/playUrl?cid=' + ids[1] + '&' + ids[0];
+        let html = request(iurl);
+        let jRoot = JSON.parse(html);
+        let jo = jRoot['data'];
+        let ja = jo['durl'];
+        let purl = '';
+        if (ja.length > 0) {
+            purl = ja[0]['url']
+        }
+        result['parse'] = 0;
+        result['playUrl'] = '';
+        result['url'] = unescape(purl);
+        result['header'] = {
+            Referer: 'https://live.bilibili.com',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+        };
+        result['danmaku'] = dan;
+        if (/h5/.test(ids[0])) {
+            result['contentType'] = '';
+            input = result
         } else {
-            input = purl
+            result['contentType'] = 'video/x-flv';
+            input = result
         }
     `,
     limit: 6,
@@ -120,7 +120,7 @@ var rule = {
             input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya';
         }
         if (MY_CATE === 'douyin') {
-            let area = MY_FL.area || '全部';
+            let area = MY_FL.area || '守望先锋';
             if (area === '全部') {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=20')).data;
             } else if (area === '守望先锋') {
@@ -129,11 +129,16 @@ var rule = {
                     let new_html = request('https://live.douyin.com/category/1_1_1_1010339');
                     let list = pdfa(new_html, '.toLyHXZi');
                     list.forEach(it => {
+                        var platForm = 'douyin';
+                        var roomId = pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','');
+                        var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
+                        var roomPic = roomInfo.roomPic;
+                        // var roomPic = pd(it, ".Xw5Zorxg img&&src", 'https://live.douyin.com');
                         d.push({
                             title: pdfh(it, ".RiVZaDKC&&Text"),
-                            pic_url: pd(it, ".Xw5Zorxg&&src"),
+                            pic_url: roomPic,
                             desc: '🆙' + pdfh(it, '.vGMybqZ5&&Text'),
-                            url: 'douyin' + '|' + pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','')
+                            url: platForm + '|' + roomId
                         });
                     })
                 }
