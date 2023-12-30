@@ -4,7 +4,8 @@ var rule = {
     url:'/studio/fyclass?page=fypage',
     searchable:0,
     quickSearch:0,
-    class_parse:'.studios .studio;.studio-brand&&Text;.studio-brand&&href;/studio/(\\d+)',
+    class_name: 'S1 NO.1 STYLE&PRESTIGE PREMIUM&Prestige&SOD&FALENO&MOODYZ&IDEA POCKET&E-BODY&OPPAI&KAWAII&WANZ FACTORY&素人CLOVER&素人ホイホイ&ARA&MOON FORCE&暗黒&ヤミヤミ&DAHLIA&Fitch&SOD Create',
+    class_url: '2315&4661&2546&1661&232&4862&4831&4652&4744&4968&5007&4598&2265&1334',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -13,7 +14,7 @@ var rule = {
     play_parse:true,
     limit:10,
     double:false,
-    一级:'.works .work;.work-id&&Text;.work-cover img&&src;.work-date&&Text;a&&href',
+    // 一级:'.works .work;.work-id&&Text;.work-cover img&&src;.work-date&&Text;a&&href',
     一级: `js:
 		pdfh = jsp.pdfh;
 		pdfa = jsp.pdfa;
@@ -27,7 +28,7 @@ var rule = {
                 // 一级标题
                 let title1 = pdfh(it, '.work-id&&Text');
                 // 一级描述
-                let desc1 = pdfh(it, '.work-date&&Text').replace('-', '').replace('202', '2').replace('201', '1').replace('200', '0') + ' ' + pdfh(it, '.work-actress&&Text');
+                let desc1 = pdfh(it, '.work-actress&&Text') + ' ' + pdfh(it, '.work-date&&Text');
                 // 一级图片URL
                 let picUrl1 = pd(it, '.work-cover img&&src');
                 // 一级URL

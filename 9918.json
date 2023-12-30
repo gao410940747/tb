@@ -15,13 +15,13 @@
 {"key": "AList",  "name": "AList",  "type": 3,  "api": "csp_AList",  "searchable": 1,  "changeable": 0,  "ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "网盘1","server": "https://alist-caimoui.cloud.okteto.net/私房菜/"}]}},
 
   {"key":"Jav8","name":"Jav8(主站)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8.js"},
+  {"key":"Jav8_studio","name":"Jav8(厂商)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_studio.js"},
   {"key":"Jav8_actor","name":"Jav8(演员)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_actor.js"},
   {"key":"Jav8_actor_search","name":"Jav8(演员搜索)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_actor_search.js","style":{"type":"rect","ratio":1}},
-  {"key":"Jav8_studio","name":"Jav8(厂商)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_studio.js"},
-  {"key":"sgp","name":"水果派","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"ext":"./json/sgp.json","jar":"./jar/xo.txt"},
   {"key":"0cili","name":"无极磁力","type":3,"api":"./lib/drpy2.min.js","changeable":0,"playerType":1,"ext":"./diy/无极磁力.js"},
   {"key":"JavBus","name":"JavBus","type":3,"api":"./lib/drpy2.min.js","changeable":0,"playerType":1,"ext":"./diy/JavBus.js"},
   {"key":"JavScop","name":"JavScop","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"playerType":2,"ext":"./diy/JavScop.js"},
+  {"key":"Jav8_series","name":"Jav8(系列)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_series.js"},
 
 {"key":"csp_JavBus","name":"JavBus","type":3,"api":"csp_JavBus","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"style":{"type":"rect","ratio":1.77},"timeout":60},
 {"key":"csp_JavDb","name":"JavDb","type":3,"api":"csp_JavDb","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"style":{"type":"rect","ratio":1.77},"timeout":60},
