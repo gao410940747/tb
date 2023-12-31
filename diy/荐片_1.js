@@ -6,12 +6,8 @@
 var rule = {
     title:'荐片',
     host:'http://api2.rinhome.com',
-    // host:'http://api2.shifen.me',
-    // host:'http://api2.a.jhuunrf.cn',
     homeUrl:'/api/tag/hand?code=unknown601193cf375db73d&channel=wandoujia',//网站的首页链接,用于分类获取和推荐获取
-     url:'/api/crumb/list?area=0&page=fypage&type=0&limit=24&fyfilter',
-    //url:'/api/crumb/list?page=fypage&type=0&limit=24&fyfilter',
-    //url:'/api/crumb/list?area=0&category_id=fyclass&page=fypage&type=0&limit=24&fyfilter',
+    url:'/api/crumb/list?area=0&page=fypage&type=0&limit=24&fyfilter',
     class_name:'综艺&电影&电视剧&动漫&全部',     // 筛选 /api/term/ad_fenlei?limit=10&page=1
     class_url:'4&1&2&3&0',
     detailUrl:'/api/node/detail?channel=wandoujia&token=&id=fyid',//二级详情拼接链接(json格式用)
@@ -35,8 +31,6 @@ var rule = {
 		4:{cateId:'4'}
 	},
     headers:{
-        // 'User-Agent':'jianpian-android/350',
-        // 'JPAUTH':'y261ow7kF2dtzlxh1GS9EB8nbTxNmaK/QQIAjctlKiEv'
         'User-Agent':'jianpian-android/364',
         'JPAUTH':'dptq18koK6hm6mX52h1KPbUPXQ3LTZPF54qQ5n7Ff7Ta'
     },
