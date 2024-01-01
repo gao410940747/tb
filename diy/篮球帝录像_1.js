@@ -16,9 +16,25 @@ var rule = {
     timeout:15000,
     play_parse:true,
     lazy:`js:
-        let pid = input.replace("https://weibo.com/5861424034/","").replace("https://weibo.com/1883881851/","");
-        let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
-        input = JSON.parse(request(html)).page_info.media_info.mp4_hd_url;
+        if (/weibo/.test(input)) {
+            let split = input.replace('https://weibo.com/','').split('/');
+            let userid = split[0];
+            let pid = split[1];
+            let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
+            let media_info = JSON.parse(request(html)).page_info.media_info;
+            if (/1883881851/.test(userid)) {
+                input = media_info.playback_list[0].play_info.url;
+            } else {
+                input = media_info.mp4_hd_url;
+            }
+            // let html = 'https://m.weibo.cn/statuses/show?id=' + pid;
+            // let media_info = JSON.parse(request(html)).page_info.media_info;
+            // if (/1883881851/.test(userid)) {
+            //     input = media_info.urls.mp4_720p_mp4;
+            // } else {
+            //     input = media_info.stream_url_hd;
+            // }
+        }
     `,
     limit:6,
     double:false,
