@@ -48,13 +48,13 @@ var rule = {
 		var html = request(input);
 		var list = pdfa(html, '.list_body&&li');
 		list.forEach(it => {
-            // 二级标题
+            // 一级标题
             let title1;
-            // 二级描述
+            // 一级描述
             let desc1 = '20' + pdfh(it, 'span&&Text').replace('年','-').replace('月','-').replace('日','');
-            // 二级图片URL
+            // 一级图片URL
             let picUrl1;
-            // 二级URL
+            // 一级URL
             let url1 = pd(it, 'a&&href');
 
             // 通过" "进行截取

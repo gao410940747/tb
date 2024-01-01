@@ -17,8 +17,66 @@ var rule = {
     lazy:'',
     limit:6,
     double:false,
-    推荐:'*',
-    一级:'.list-group .group-game-item;.d-none&&Text;.team-logo&&src;.btn&&Text;.btn&&href',
+    // 推荐:'*',
+    推荐:`js:
+        var items=[];
+        pdfh=jsp.pdfh;
+        pdfa=jsp.pdfa;
+        pd=jsp.pd;
+        var html=request(input);
+        var tabs=pdfa(html,'.list-group&&.group-game-item');
+        tabs.forEach(function(it){
+            // 通过" "进行截取
+            let split = pdfh(it, '.d-none&&Text').split(" ");
+            
+            // 一级标题
+            let title1 = split[1] + ' ' + split[2] + '🆚' + split[4];
+            // 一级描述
+            let desc1 = split[0] + ' ' + pdfh(it, '.btn&&Text');
+            // 一级图片URL
+            let picUrl1 = pd(it,'.team-logo&&src');
+            // 一级URL
+            let url1 = pd(it, '.btn&&href');
+            
+            items.push({
+                desc:desc1,
+                title:title1,
+                pic_url:picUrl1,
+                url:url1
+            }
+        )});
+        setResult(items);
+    `,
+    // 一级:'.list-group .group-game-item;.d-none&&Text;.team-logo&&src;.btn&&Text;.btn&&href',
+    一级:`js:
+        var items=[];
+        pdfh=jsp.pdfh;
+        pdfa=jsp.pdfa;
+        pd=jsp.pd;
+        var html=request(input);
+        var tabs=pdfa(html,'.list-group&&.group-game-item');
+        tabs.forEach(function(it){
+            // 通过" "进行截取
+            let split = pdfh(it, '.d-none&&Text').split(" ");
+            
+            // 一级标题
+            let title1 = split[2] + '🆚' + split[4];
+            // 一级描述
+            let desc1 = split[0] + ' ' + pdfh(it, '.btn&&Text');
+            // 一级图片URL
+            let picUrl1 = pd(it,'.team-logo&&src');
+            // 一级URL
+            let url1 = pd(it, '.btn&&href');
+            
+            items.push({
+                desc:desc1,
+                title:title1,
+                pic_url:picUrl1,
+                url:url1
+            }
+        )});
+        setResult(items);
+    `,
     二级:{
 	    "title":".game-info-container&&Text;.customer-navbar-nav li&&Text",
 	    "img":".team-logo&&src",
