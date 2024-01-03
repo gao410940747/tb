@@ -1,11 +1,12 @@
 var rule={
     title:'厂长资源', 
-    host:'http://www.czzy33.com',
+    host:'https://www.czzy88.com',
     // 发布页：www.czzy.site
     // 主节点：www.cz01.tv
-    // 联通节点：www.czz9.com/  www.czzy33.com/  www.czzy88.com/
+    // 联通节点：www.czz9.com/  www.czzy33.com/  www.czzy88.com/  www.czzy22.com/
     // 移动节点：www.czz9.com/  www.czzy33.com/
     hostJs:'print(HOST);let html=request(HOST,{headers:{"User-Agent":PC_UA}});HOST = jsp.pdfh(html,"h3&&a&&href")',
+    homeUrl: '/reyingzhong',
     url:'/fyclassfyfilter',
     filterable:1,//是否启用分类筛选,
     filter_url:'{{fl.cateId}}{{fl.class}}{{fl.area}}/page/fypage',
@@ -17,13 +18,12 @@ var rule={
     },
     searchUrl:'/page/fypage?s=**',
     searchable:1,
-    filterable:0,
     headers:{
         'User-Agent': 'MOBILE_UA',
         'Cookie': 'esc_search_captcha=1'
     },
-    class_name:'全部&豆瓣电影Top250&高分影视&最新电影&热映中&站长推荐&电影&电视剧&动画&番剧&动漫&国产剧&日剧&韩剧&美剧&海外剧&华语电影&日本电影&欧美电影&法国电影&英国电影&韩国电影&俄罗斯电影&加拿大电影&印度电影&纪录片',
-    class_url:'movie_bt&dbtop250&gaofenyingshi&zuixindianying&reyingzhong&/movie_bt_series/zhanchangtuijian&/movie_bt_series/dyy&/movie_bt_series/dianshiju&/movie_bt_series/dohua&fanju&dm&/movie_bt_series/guochanju&/movie_bt_series/rj&/movie_bt_series/hj&/movie_bt_series/mj&/movie_bt_series/hwj&/movie_bt_series/huayudianying&/movie_bt_series/ribendianying&/movie_bt_series/meiguodianying&/movie_bt_series/faguodianying&/movie_bt_series/yingguodianying&/movie_bt_series/hanguodianying&/movie_bt_series/eluosidianying&/movie_bt_series/jianadadianying&/movie_bt_series/yindudianying&movie_bt//movie_bt_tags/jlpp',
+    class_name:'全部&豆瓣电影Top250&高分影视&最新电影&追番计划&番剧&动漫&动画&纪录片&电视剧&国产剧&日剧&韩剧&美剧&海外剧&电影&华语电影&日本电影&欧美电影&法国电影&英国电影&韩国电影&俄罗斯电影&加拿大电影&印度电影&PV预告',
+    class_url:'movie_bt&dbtop250&gaofenyingshi&zuixindianying&/movie_bt_view_cat/fjj&fanju&dm&/movie_bt_series/dohua&/movie_bt/movie_bt_tags/jlpp&/movie_bt_series/dianshiju&/movie_bt_series/guochanju&/movie_bt_series/rj&/movie_bt_series/hj&/movie_bt_series/mj&/movie_bt_series/hwj&/movie_bt_series/dyy&/movie_bt_series/huayudianying&/movie_bt_series/ribendianying&/movie_bt_series/meiguodianying&/movie_bt_series/faguodianying&/movie_bt_series/yingguodianying&/movie_bt_series/hanguodianying&/movie_bt_series/eluosidianying&/movie_bt_series/jianadadianying&/movie_bt_series/yindudianying&/movie_bt_view_cat/pvyugao',
 	play_parse:true,
 
 	// lazy代码:源于海阔香雅情大佬 / 小程序：香情影视 https://pastebin.com/L4tHdvFn
