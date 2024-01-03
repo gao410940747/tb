@@ -38,7 +38,7 @@ var rule = {
     `,
     limit:6,
     double:false,
-//    推荐:'*',
+    推荐:'*',
 //    一级:'.list_body li;a&&Text;*;span&&Text;a&&href',
 	一级: `js:
 		pdfh = jsp.pdfh;
