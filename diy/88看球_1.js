@@ -30,9 +30,9 @@ var rule = {
             let split = pdfh(it, '.d-none&&Text').split(" ");
             
             // 一级标题
-            let title1 = split[1] + ' ' + split[2] + '🆚' + split[4];
+            let title1 = split[2] + '🆚' + split[4];
             // 一级描述
-            let desc1 = split[0] + ' ' + pdfh(it, '.btn&&Text');
+            let desc1 = split[0] + ' ' +  split[1] + ' ' + pdfh(it, '.btn&&Text');
             // 一级图片URL
             let picUrl1 = pd(it,'.team-logo&&src');
             // 一级URL
