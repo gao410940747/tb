@@ -33,7 +33,7 @@
 
 		{"key":"豆瓣推荐","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
 		{"key":"荐片(弹幕)","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"篮球屋录像","name":"篮球屋录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球屋录像.js"},
+		{"key":"篮球屋录像","name":"篮球屋录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球屋录像_1.js"},
 //		{"key":"篮球帝录像","name":"篮球帝录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球帝录像_1.js"},
 		{"key":"88比赛录像","name":"88比赛录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1.755},"ext":"./diy/88比赛录像_1.js"}
 	],
