@@ -5,8 +5,8 @@ var rule = {
     homeUrl: '/api/live/getRecommend?page=1&size=20',//网站的首页链接,用于分类获取和推荐获取
 //    homeUrl: '/api/live/getRecommendByPlatformArea?platform=bilibili&area=舞见&page=1&size=1',//网站的首页链接,用于分类获取和推荐获取
     url: '/api/live/getRecommendByPlatformArea?platform=fyclass&area=fyfilter&page=fypage&size=20', //网站的分类页面链接
-    class_name: '斗鱼&虎牙&哔哩哔哩&抖音&快手&网易CC',
-    class_url: 'douyu&huya&bilibili&douyin&kuaishou&cc',
+    class_name: '斗鱼&虎牙&哔哩哔哩&快手&抖音&网易CC',
+    class_url: 'douyu&huya&bilibili&kuaishou&douyin&cc',
     filterable: 1,
     filter_url: '{{fl.area}}',
     filter: {
