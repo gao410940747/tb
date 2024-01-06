@@ -20,10 +20,10 @@ var rule = {
             let pid = split[1];
             let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
             let media_info = JSON.parse(request(html)).page_info.media_info;
-            if (/1883881851/.test(userid)) {
-                input = media_info.playback_list[0].play_info.url;
-            } else {
+            if (/5861424034/.test(userid)) {
                 input = media_info.mp4_hd_url;
+            } else {
+                input = media_info.playback_list[0].play_info.url;
             }
         }
     `,
