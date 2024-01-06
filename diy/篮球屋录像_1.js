@@ -132,6 +132,10 @@ else{
                         // "马刺": "https://cdn.leisu.com/basketball/teamflag_s/5305d1a7b721b5bef418041eff53ba82.png?imageMogr2/auto-orient/thumbnail/200x200"
                     };
                     title1 = Team1vsTeam2;
+
+if(/qiudui/.test(MY_CATE)){
+            title1 = Team1vsTeam2 + ' ' + vs2[1];
+}
                     if (TeamLogoMap[Team2] != null) {
                         // 通过主队名称获取球队LOGO
                         picUrl1 = TeamLogoMap[Team2];
