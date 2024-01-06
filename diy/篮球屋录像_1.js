@@ -30,20 +30,20 @@ var rule = {
     limit:6,
     double:true,
     推荐:'*',
-	一级: `js:
-		pdfh = jsp.pdfh;
-		pdfa = jsp.pdfa;
-		pd = jsp.pd;
-		var d = [];
+        一级: `js:
+                pdfh = jsp.pdfh;
+                pdfa = jsp.pdfa;
+                pd = jsp.pd;
+                var d = [];
 var html;
 if(/qiudui/.test(MY_CATE)){
-		html = request(host + '/' + MY_CATE + (MY_PAGE-1));
+                html = request(input.replace('/index_' + MY_PAGE + '.html', MY_PAGE-1));
 } 
 else{
-		html = request(input.replace('/index_1.html', ''));
+                html = request(input.replace('/index_1.html', ''));
 }
-		var list = pdfa(html, '.content&&.excerpt');
-		list.forEach(it => {
+                var list = pdfa(html, '.content&&.excerpt');
+                list.forEach(it => {
             // 通过" "进行截取
             let split = pdfh(it, 'h2&&Text').split(" ");
             // 一级标题
@@ -165,9 +165,9 @@ if(/qiudui/.test(MY_CATE)){
                 pic_url: picUrl1,
                 url: url1
             });
-		})
-		setResult(d);
-	`,
+                })
+                setResult(d);
+        `,
     二级:{
         title:'.article-header h2&&Text',
         img:'*',
