@@ -7,7 +7,7 @@ var rule = {
     searchable:0,
     quickSearch:0,
     class_name:'NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&快船比赛',
-    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&qiudui/kuaichuan',
+    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&qiudui/kuaichuan/',
     headers:{
         'User-Agent':'PC_UA'
     },
