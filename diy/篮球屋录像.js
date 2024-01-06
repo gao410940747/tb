@@ -6,8 +6,8 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像',
-    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx',
+    class_name:'NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&快船比赛',
+    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&qiudui/kuaichuan',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -35,7 +35,13 @@ var rule = {
 		pdfa = jsp.pdfa;
 		pd = jsp.pd;
 		var d = [];
-		var html = request(input.replace('/index_1.html', ''));
+var html;
+if(/qiudui/.test(MY_CATE)){
+html = request(input.replace('index_', '').replace('.html', ''));
+} 
+else{
+		html = request(input.replace('/index_1.html', ''));
+}
 		var list = pdfa(html, '.content&&.excerpt');
 		list.forEach(it => {
             // 通过" "进行截取
