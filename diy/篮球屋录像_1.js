@@ -37,7 +37,7 @@ var rule = {
 		var d = [];
 var html;
 if(/qiudui/.test(MY_CATE)){
-html = request(input.replace('index_', '').replace('.html', ''));
+		html = request(host + '/' + MY_CATE + (MY_PAGE-1));
 } 
 else{
 		html = request(input.replace('/index_1.html', ''));
