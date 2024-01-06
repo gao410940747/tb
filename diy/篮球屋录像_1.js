@@ -1,7 +1,7 @@
 var rule = {
     title:'篮球屋录像',
     host:'https://lanqiuwu.com',
-//    homeUrl: '/',
+    homeUrl: '/',
     url:'/fyclass/index_fypage.html',
     searchUrl:'',
     searchable:0,
@@ -29,7 +29,7 @@ var rule = {
     `,
     limit:6,
     double:true,
-//    推荐:'*',
+    推荐:'*',
         一级: `js:
                 pdfh = jsp.pdfh;
                 pdfa = jsp.pdfa;
