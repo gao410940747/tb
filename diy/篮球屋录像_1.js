@@ -7,7 +7,7 @@ var rule = {
     searchable:0,
     quickSearch:0,
     class_name:'NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&快船比赛',
-    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&qiudui/kuaichuan/',
+    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&qiudui139',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -37,7 +37,7 @@ var rule = {
                 var d = [];
 var html;
 if(/qiudui/.test(MY_CATE)){
-                html = request(input.replace('/index_' + MY_PAGE + '.html', MY_PAGE-1));
+                html = request(input.replace(MY_CATE + '/index_' + MY_PAGE + '.html', '/e/search/result/index.php?page='+(MY_PAGE-1)+'&searchid='+MY_CATE.replace('qiudui','')));
 } 
 else{
                 html = request(input.replace('/index_1.html', ''));
