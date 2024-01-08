@@ -142,7 +142,8 @@ var rule = {
             } else if (area === '守望先锋') {
                 douyinow = true;
                 if (MY_PAGE === 1) {
-                    let new_html = request('https://live.douyin.com/category/1_1_1_1010339');
+                    // let new_html = request('https://live.douyin.com/category/1_1_1_1010339');
+                    let new_html = fetch('https://live.douyin.com/category/1_4603_1_4700');
                     let list = pdfa(new_html, '.toLyHXZi');
                     list.forEach(it => {
                         var platForm = 'douyin';
@@ -159,21 +160,69 @@ var rule = {
                     })
                 }
                 // if (MY_PAGE === 2) {
-                //     let new_html = request('https://www.douyin.com/search/%E5%AE%88%E6%9C%9B%E5%85%88%E9%94%8B?source=switch_tab&type=live');
-                //     let list = pdfa(new_html, '.fb5dK_Rl');
-                //     list.forEach(it => {
+                //     let apiurl = 'https://live.douyin.com/webcast/web/partition/detail/room/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-CN&enter_from=page_refresh&cookie_enabled=true&screen_width=360&screen_height=780&browser_language=zh-CN&browser_platform=Linux+armv8l&browser_name=Chrome&browser_version=113.0.0.0&count=15&offset=30&partition=4700&partition_type=1&req_from=2';
+                //     var new_html = request(apiurl, {
+                //         headers: {
+                //             'Referer': 'https://live.douyin.com/',
+                //         },
+                //         method: 'GET',
+                //         withHeaders: true
+                //     });
+                //     var list1 = JSON.parse(new_html).data.data;
+                //     list1.forEach(it => {
                 //         var platForm = 'douyin';
-                //         var roomId = pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','');
-                //         // var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
-                //         // var roomPic = roomInfo.roomPic;
-                //         var roomPic = pd(it, ".z177oFlW img&&src");
+                //         var roomId = it.room.id_str;
+                //         var roomPic = it.cover.url_list[0];
                 //         d.push({
-                //             title: pdfh(it, ".Nu66P_ba&&Text"),
+                //             title: it.title,
                 //             pic_url: roomPic,
-                //             desc: '🆙' + pdfh(it, '.Nu66P_ba&&Text'),
+                //             desc: '🆙' + it.room.owner.nickname,
                 //             url: platForm + '|' + roomId
                 //         });
                 //     })
+                // }
+                // if (MY_PAGE === 2) {
+                //
+                //     let count = 15;
+                //     let offset = MY_PAGE * count;
+                //
+                //     // let not_sign_url = "https://live.douyin.com/webcast/web/partition/detail/room/?aid=6383&live_id=1&device_platform=web&language=zh-CN&count="+count+"&offset="+offset+"&partition="+partition+"&partition_type=1";
+                //     let not_sign_url = "https://live.douyin.com/webcast/web/partition/detail/room/?aid=6383&app_name=douyin_web&live_id=1&device_platform=web&language=zh-CN&enter_from=page_refresh&cookie_enabled=true&screen_width=1920&screen_height=1080&browser_language=zh-CN&browser_platform=Win32&browser_name=Chrome&browser_version=119.0.6045.106&count="+count+"&offset="+offset+"&partition=1010339&partition_type=1&req_from=2";
+                //     let sign = fetch("http://douyin_signature.dev.tyrantg.com/old_index.php?url="+encodeURIComponent(not_sign_url));
+                //     let true_url = not_sign_url;
+                //     let data_json = fetch(true_url, {
+                //         headers: {
+                //             "referer" : "https://live.douyin.com",
+                //             // "cookie": 'ttwid=1%7COvO5Fm3W4c8_aV1-B_pQrAVPeUO_rQZo49iR1RvwC2E%7C1704697980%7C1c14ba35dab93c100c3a21ed1cedeadb1106a6423590b282af3d9220045ddea9; home_can_add_dy_2_desktop=%220%22; stream_recommend_feed_params=%22%7B%5C%22cookie_enabled%5C%22%3Atrue%2C%5C%22screen_width%5C%22%3A1920%2C%5C%22screen_height%5C%22%3A1080%2C%5C%22browser_online%5C%22%3Atrue%2C%5C%22cpu_core_num%5C%22%3A4%2C%5C%22device_memory%5C%22%3A8%2C%5C%22downlink%5C%22%3A10%2C%5C%22effective_type%5C%22%3A%5C%224g%5C%22%2C%5C%22round_trip_time%5C%22%3A50%7D%22; strategyABtestKey=%221704697980.153%22; __live_version__=%221.1.1.6928%22; has_avx2=null; device_web_cpu_core=4; device_web_memory_size=8; webcast_local_quality=null; live_can_add_dy_2_desktop=%220%22; live_use_vvc=%22false%22; xgplayer_user_id=754896816687; csrf_session_id=071583585597d123270532822374c847; FORCE_LOGIN=%7B%22videoConsumedRemainSeconds%22%3A180%2C%22isForcePopClose%22%3A1%7D; s_v_web_id=verify_lr4l5yd4_W6mq66v4_JnOb_4lu1_BnfD_FgE1jcVL9tbE; passport_csrf_token=f9e3ee94d029bfb7f5203cddbb259ee8; passport_csrf_token_default=f9e3ee94d029bfb7f5203cddbb259ee8; bd_ticket_guard_client_web_domain=2; ttcid=1c8005f3137444f8a1a779f0ae0985bc24; n_mh=f1RSEyPEmaWhjdjrs6keyuopfAOZGzFHPxvwhOQM1VQ; sso_uid_tt=9cdeca50a7f273ea4ac599a289e2cd6f; sso_uid_tt_ss=9cdeca50a7f273ea4ac599a289e2cd6f; toutiao_sso_user=32c277827dc12d73da18535d6cdf2c79; toutiao_sso_user_ss=32c277827dc12d73da18535d6cdf2c79; passport_auth_status=2d8a3a2bccf8e746454ba18c71b10c02%2C; passport_auth_status_ss=2d8a3a2bccf8e746454ba18c71b10c02%2C; uid_tt=ab29a727374f469255345879ed347e4c; uid_tt_ss=ab29a727374f469255345879ed347e4c; sid_tt=5cef62f0af8f4d15af945e87e5a8c5a6; sessionid=5cef62f0af8f4d15af945e87e5a8c5a6; sessionid_ss=5cef62f0af8f4d15af945e87e5a8c5a6; passport_assist_user=CjxzH4OWDEFMvqtYlIAupxoJg4QlRIurCJCQ7bWIJifqZLqciZJyO8wboH_4ljmgEtjQ5nFzKZCS2rGtTVkaSgo8KSy0okO5Dduod22XpT0BdlvfuioreyOxSOtvqC6uFq3txOAXVYgK1XmWwY3KYpZ5SKrnvQ2KnElQgkBbEL2Lxg0Yia_WVCABIgEDhyjBog%3D%3D; sid_ucp_sso_v1=1.0.0-KDY4MDFhYzI0MTg1YTc5Njg2MDE4NTdmNDY4MmI3Y2MxOTRmYjAyZDcKHQihuuPA8AIQwsHurAYY7zEgDDCfgorYBTgGQPQHGgJobCIgMzJjMjc3ODI3ZGMxMmQ3M2RhMTg1MzVkNmNkZjJjNzk; ssid_ucp_sso_v1=1.0.0-KDY4MDFhYzI0MTg1YTc5Njg2MDE4NTdmNDY4MmI3Y2MxOTRmYjAyZDcKHQihuuPA8AIQwsHurAYY7zEgDDCfgorYBTgGQPQHGgJobCIgMzJjMjc3ODI3ZGMxMmQ3M2RhMTg1MzVkNmNkZjJjNzk; xg_device_score=7.005264458209286; publish_badge_show_info=%220%2C0%2C0%2C1704698051351%22; _bd_ticket_crypt_doamin=2; _bd_ticket_crypt_cookie=a35b25053c7ee5fd233e168afa831ed6; __security_server_data_status=1; sid_guard=5cef62f0af8f4d15af945e87e5a8c5a6%7C1704698054%7C5183997%7CFri%2C+08-Mar-2024+07%3A14%3A11+GMT; sid_ucp_v1=1.0.0-KDdjOWIwY2ViYmVmMjdiZDRjZmJkMmVjNGE1NWRmNGJjYWJjYzMxNTEKGQihuuPA8AIQxsHurAYY7zEgDDgGQPQHSAQaAmxxIiA1Y2VmNjJmMGFmOGY0ZDE1YWY5NDVlODdlNWE4YzVhNg; ssid_ucp_v1=1.0.0-KDdjOWIwY2ViYmVmMjdiZDRjZmJkMmVjNGE1NWRmNGJjYWJjYzMxNTEKGQihuuPA8AIQxsHurAYY7zEgDDgGQPQHSAQaAmxxIiA1Y2VmNjJmMGFmOGY0ZDE1YWY5NDVlODdlNWE4YzVhNg; download_guide=%223%2F20240108%2F0%22; FOLLOW_NUMBER_YELLOW_POINT_INFO=%22MS4wLjABAAAAcCA0uGYaOS3Bh1hSvV4mFHNYThiRfVcsJo7d38JnGMc%2F1704729600000%2F0%2F0%2F1704700443981%22; IsDouyinActive=true; FOLLOW_LIVE_POINT_INFO=%22MS4wLjABAAAAcCA0uGYaOS3Bh1hSvV4mFHNYThiRfVcsJo7d38JnGMc%2F1704729600000%2F0%2F1704707436459%2F0%22; bd_ticket_guard_client_data=eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCQnRidUNnR1BjdkQ3eitwY2lHMFRsNllPUHNSNlpXZlJOSGh4bk1MWXczcW5makFjcXZDaEJyWEZSQzRNRlhyVWRidThYOVNpTXZoR0VWcGUyblhHTkU9IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoxfQ%3D%3D; passport_fe_beating_status=true; msToken=-Iv4iSa-ojP0uUFMuvYn5QxbFUFKNCdgrSrCld1G5lBil_teODD4lWMVr1bwQ5G0cy3RWTyxYWz7ut4rOB9xfZ1mU-ULmAX93KJB3JyVaHIp1qMot_Oq3fTxVF4=; tt_scid=UEA1DY7OKu8rOa2Hpsl9RwV5n21Pe8IbQdloRdpHmJDiJ4FuSboYLIEhZWu9LsF348e1; msToken=om5mDLbx6BvNDpHU_nJ4XSQbxpjLs68u4v4bIlTK-rkxo3mFLk1W6XyE5joK9V4stFl9qOXoho7h1RucNYTJX5_V5yS8EJYNB6Z4TMsXTG91YjP-T0IqFSKsEeo=; odin_tt=672285047fa941ccee4cb8df665da69e54e249f7ad2dd5d8c705c1f325c8dba1e7720f5a7f7afbcab618aba11256695c2fb6e5974dd6462e51712ac1d0131aa9',
+                //             "Accept": 'application/json, text/plain, */*',
+                //             "User-Agent": PC_UA,
+                //             "Accept-Language": 'zh-CN,zh;q=0.9',
+                //         }
+                //     });
+                //
+                //     if (data_json === '') {
+                //         d.push({
+                //             title: 'signature 获取失败，待修复',
+                //             col_type: "long_text",
+                //         });
+                //     } else {
+                //         let list = JSON.parse(data_json).data.data;
+                //
+                //         if (list && list.length > 0) {
+                //
+                //             list.forEach(item => {
+                //                 let room = item.room;
+                //                 let m3u8 = room.stream_url.hls_pull_url_map || room.stream_url.flv_pull_url;
+                //                 d.push({
+                //                     title: room.title,
+                //                     pic_url: room.cover.url_list[0],
+                //                     desc: room.owner.nickname,
+                //                     url: m3u8[Object.keys(m3u8)[0]],
+                //                     col_type: 'movie_2',
+                //                 });
+                //             });
+                //         }
+                //     }
                 // }
             } else if (area === '已关注') {
                 if (MY_PAGE === 1) {
@@ -341,7 +390,7 @@ var rule = {
             let playList = [];
 
             var playUrls = info[6].split("；")
-            playFrom.append('官方线路');
+            playFrom.append('官方线路(需使用EXO播放器)');
             playList.append(playUrls.map(function(it) {
                 return it.split("，")[0].replace("快手", "") + "$" + it.split("，")[1]
             }).join("#"));
@@ -433,13 +482,19 @@ var rule = {
 
             // 关注/取关
             var follow = [];
-            follow.push({
-                title: "关注",
-                url: HOST + "/api/live/follow?uid=77111538fff549039d91dc52038581d2&platform=" + jo.platForm + "&roomId=" + jo.roomId
-            }, {
-                title: "取消关注",
-                url: HOST + "/api/live/unFollow?uid=77111538fff549039d91dc52038581d2&platform=" + jo.platForm + "&roomId=" + jo.roomId
-            });
+            follow.push(
+                {
+                    title: "当前状态：" + (jo.isFollowed == 1 ? '已关注' : '未关注') + (jo.isLive == 0 ? '，未开播' : '')
+                },
+                {
+                    title: "点击关注",
+                    url: HOST + "/api/live/follow?uid=77111538fff549039d91dc52038581d2&platform=" + jo.platForm + "&roomId=" + jo.roomId
+                },
+                {
+                    title: "点击取消关注",
+                    url: HOST + "/api/live/unFollow?uid=77111538fff549039d91dc52038581d2&platform=" + jo.platForm + "&roomId=" + jo.roomId
+                }
+            );
             playFrom.append('关注直播间');
             playList.append(follow.map(function(it) {
                 return it.title + "$" + it.url

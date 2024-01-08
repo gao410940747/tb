@@ -268,7 +268,7 @@ var rule = {
             let playList = [];
 
             var playUrls = info[6].split("；")
-            playFrom.append('官方线路');
+            playFrom.append('官方线路(需使用EXO播放器)');
             playList.append(playUrls.map(function(it) {
                 return it.split("，")[0].replace("快手", "") + "$" + it.split("，")[1]
             }).join("#"));
