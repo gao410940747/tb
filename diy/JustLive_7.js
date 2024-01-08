@@ -140,7 +140,7 @@ var rule = {
                         d.push({
                             title: pdfh(it, ".RiVZaDKC&&Text"),
                             pic_url: roomPic,
-                            desc: '🆙' + pdfh(it, '.vGMybqZ5&&Text'),
+                            desc: '🆙' + pdfh(it, '.vGMybqZ5&&Text') + (pdfh(it, '.dix8p0es&&Text') == '' ? '' : '👥' + pdfh(it, '.dix8p0es&&Text')),
                             url: platForm + '|' + roomId
                         });
                     })
@@ -164,7 +164,7 @@ var rule = {
             }
             list.forEach(it => {
                 var title1 = it.caption;
-                var desc1 = '🆙' + it.author.name;   
+                var desc1 = '🆙' + it.author.name + (it.watchingCount == '' ? '' : '👥' + it.watchingCount);
                 var picUrl1 = it.poster;
                 // var picUrl1 = it.author.avatar;
                 var urls = it.playUrls[0].adaptationSet.representation.map(function(it1) {
@@ -193,7 +193,7 @@ var rule = {
                 if (/douyin/.test(it.platForm)) {
                     d.push({
                         title: it.roomName,
-                        desc: '🆙' + it.ownerName,
+                        desc: '🆙' + it.ownerName + (it.online == '' ? '' : '👥' + it.online),
                         // 改为展示头像
                         pic_url: it.ownerHeadPic,
                         url: it.platForm + '|' + it.roomId
@@ -202,7 +202,7 @@ var rule = {
                 if (/bilibili|douyu|huya|cc/.test(it.platForm)) {
                     d.push({
                         title: it.roomName,
-                        desc: '🆙' + it.ownerName,
+                        desc: '🆙' + it.ownerName + (it.online == '' ? '' : '👥' + it.online),
                         pic_url: it.roomPic,
                         url: it.platForm + '|' + it.roomId
                     });
@@ -222,7 +222,7 @@ var rule = {
                         isLive: 1,
                         playerType: 2,
                         title: it.sIntroduction,
-                        desc: '🆙' + it.sNick,
+                        desc: '🆙' + it.sNick + (it.lActivityCount == '' ? '' : '👥' + it.lActivityCount),
                         pic_url: it.sScreenshot,
                         url: 'huya' + '|' + it.lProfileRoom
                     });
@@ -241,7 +241,7 @@ var rule = {
                         online: it.lTotalCount,
                         isLive: 1,
                         title: it.roomName,
-                        desc: '🆙' + it.nickname,
+                        desc: '🆙' + it.nickname + (it.hn == '' ? '' : '👥' + it.hn),
                         pic_url: it.roomSrc,
                         url: 'douyu' + '|' + it.rid
                     });
