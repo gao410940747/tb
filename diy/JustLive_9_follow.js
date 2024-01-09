@@ -392,7 +392,7 @@ var rule = {
             var playUrls = info[6].split("；")
             playFrom.append('官方线路');
             playList.append(playUrls.map(function(it) {
-                return it.split("，")[0].replace("快手", "") + '(需使用EXO播放器)' + "$" + it.split("，")[1]
+                return it.split("，")[0].replace("快手", "") + '（需使用EXO播放器）' + "$" + it.split("，")[1]
             }).join("#"));
 
             // 最后封装所有线路
@@ -451,14 +451,13 @@ var rule = {
 
             // JustLive获取源
             Object.keys(playurl).forEach(function(key) {
-playFrom.append('官方' + key);
-playList.append(playurl[key].map(function(it) {
-
-            if (jo.platForm == 'huya') {
-return it.qualityName + '(需使用EXO播放器)' + "$" + it.playUrl
-} else {
-return it.qualityName + "$" + it.playUrl
-}
+                playFrom.append('官方' + key);
+                playList.append(playurl[key].map(function(it) {
+                    if (jo.platForm == 'huya') {
+                        return it.qualityName + '（需使用EXO播放器）' + "$" + it.playUrl
+                    } else {
+                        return it.qualityName + "$" + it.playUrl
+                    }
                 }).join("#"))
             });
 
