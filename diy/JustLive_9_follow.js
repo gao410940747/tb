@@ -450,16 +450,42 @@ var rule = {
             }
 
             // JustLive获取源
-            Object.keys(playurl).forEach(function(key) {
-                playFrom.append('官方' + key);
-                playList.append(playurl[key].map(function(it) {
-                    if (jo.platForm == 'huya') {
-                        return it.qualityName + '（需使用EXO播放器）' + "$" + it.playUrl
-                    } else {
-                        return it.qualityName + "$" + it.playUrl
+            if (jo.platForm == 'douyin') {
+                // 调换hls线路位置到最前
+                var hlsUrl;
+                var flvUrl;
+                Object.keys(playurl).forEach(function(key) {
+                    if(key === 'hls') {
+                        hlsUrl = playurl[key].map(function(it) {
+                            return it.qualityName + "$" + it.playUrl
+                        }).join("#")
                     }
-                }).join("#"))
-            });
+                    if(key === 'flv') {
+                        flvUrl = playurl[key].map(function(it) {
+                            return it.qualityName + "$" + it.playUrl
+                        }).join("#")
+                    }
+                });
+                if(hlsUrl !== ''){
+                    playFrom.append('官方hls');
+                    playList.append(hlsUrl);
+                }
+                if(flvUrl !== ''){
+                    playFrom.append('官方flv');
+                    playList.append(flvUrl);
+                }
+            } else {
+                Object.keys(playurl).forEach(function(key) {
+                    playFrom.append('官方' + key);
+                    playList.append(playurl[key].map(function(it) {
+                        if (jo.platForm == 'huya') {
+                            return it.qualityName + '（需使用EXO播放器）' + "$" + it.playUrl
+                        } else {
+                            return it.qualityName + "$" + it.playUrl
+                        }
+                    }).join("#"))
+                });
+            }
 
             // 网站解析源
             var d = [];
