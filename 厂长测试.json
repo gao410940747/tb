@@ -1,6 +1,47 @@
 {
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
 	"sites": [
+
+		{"key": "py_cctv","name": " 🐦央视自选","type": 3,"api": "py_cctv","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./diy/py_cctv.py"},
+		{"key": "py_cctv_full4","name": " 🐦央视大全","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./diy/py_cctv_full.py"},
+		{"ext":"https://pcrock88.github.io/zb/dat/py/py_cctv_full.py","api":"py_cctv_full","key":"py_cctv_full","name":"央视(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
+		{
+			"key": "py_cctv_full3",
+			"name": "央视大全",
+			"type": 3,
+			"api": "py_cctv_full",
+			"searchable": 0,
+			"quickSearch": 0,
+			"filterable": 1,
+			"ext": "https://download.kstore.space/download/2883/PY/py_cctv_full.py"
+		},
+		{
+			"key" : "py_cctvxw",
+			"name" : "央视新闻",
+			"type" : 3,
+			"api" : "py_cctv_full",
+			"searchable" : 0,
+			"quickSearch" : 0,
+			"filterable" : 1,
+			"ext" : "https://notabug.org/yzzsjc/TVBox-Pro/raw/master/py/json/py_cctvxw.py"
+		},
+		{"ext":"https://pcrock88.github.io/dr_py/txt/py/py_huya.py","api":"py_huya","key":"py_huya","name":"虎牙(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
+		{"ext":"https://pcrock88.github.io/dr_py/txt/py/py_douyu.py","api":"py_douyu","key":"py_douyu","name":"斗鱼(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
+		{"ext":"https://pcrock88.github.io/zb/dat/py/py_cctv_full.py","api":"py_cctv_full","key":"py_cctv_full","name":"央视(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
+		{
+			"key": "py_cctv_full2",
+			"name": "🐦央视大全(PY）",
+			"type": 3,
+			"api": "py_cctv_full",
+			"searchable": 0,
+			"quickSearch": 0,
+			"filterable": 1,
+			"ext": "https://notabug.org/zqk219/yingshicang/raw/master/TVBox_Py/py/py_cctv_full.py"
+		},
+
+		{"key": "py_cctv_full1","name": " 🐦央视大全","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "https://ghproxy.com/https://raw.githubusercontent.com/zqk219/baip/main/TVBox_Py/py/py_cctv_full.py","jar":"https://gh-proxy.com/https://raw.githubusercontent.com/zxfhuy/test/main/%E5%A4%96%E9%93%BEcookie%E8%83%BD%E7%BF%BB%E9%A1%B5.jar"},
+		{"key": "py_cctv_full5","name": " 🐦央视大全5","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./py/py_cctv_full.py"},
+
 		{"key":"csp_QuPanSou","name":"趣盘搜","type":3,"api":"csp_QuPanSou","searchable":1,"filterable":1,"changeable":0,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt", "danmu": true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/ok.png", "timeout":30},
 		{"key":"csp_Qkpanso","name":"夸克盘搜","type":3,"api":"csp_Qkpanso","searchable":1,"filterable":1,"changeable":0,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt", "danmu": true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/ok.png", "timeout":30},
 		{"key":"NBA录像屋","name":"NBA录像屋","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/NBA录像屋.js"},
