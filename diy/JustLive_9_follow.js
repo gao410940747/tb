@@ -386,14 +386,51 @@ var rule = {
                 vod_actor: '🆙 ' + info[1] + '｜ 👥 人气：' + info[3],
                 vod_content: info[4],
             };
+
+            // 清晰度从高到低排序
+            var languang_8m = '';
+            var languang_4m = '';
+            var languang = '';
+            var yuanhua = '';
+            var chaoqing = '';
+            var gaoqing = '';
+            var biaoqing = '';
+            var diqing = '';
+            var liuchang = '';
+            info[6].split("；").map(function(it) {
+                var play_info = it.split("，")[0].replace("快手", "") + '（需使用EXO播放器）' + "$" + it.split("，")[1] + "#";
+                if(it.split("，")[0].replace("快手", "") === '蓝光 8M' || it.split("，")[0].replace("快手", "") === '蓝光8M') {
+                    languang_8m = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '蓝光 4M' || it.split("，")[0].replace("快手", "") === '蓝光4M') {
+                    languang_4m = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '原画') {
+                    yuanhua = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '蓝光') {
+                    languang = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '超清') {
+                    chaoqing = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '高清') {
+                    gaoqing = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '标清') {
+                    biaoqing = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '低清') {
+                    diqing = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '流畅') {
+                    liuchang = play_info;
+                }
+            })
             let playFrom = [];
             let playList = [];
-
-            var playUrls = info[6].split("；")
             playFrom.append('官方线路');
-            playList.append(playUrls.map(function(it) {
-                return it.split("，")[0].replace("快手", "") + '（需使用EXO播放器）' + "$" + it.split("，")[1]
-            }).join("#"));
+            playList.append(yuanhua + languang_8m + languang_4m + languang + chaoqing + gaoqing + biaoqing + diqing + liuchang);
 
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
@@ -467,11 +504,11 @@ var rule = {
                     }
                 });
                 if(hlsUrl !== ''){
-                    playFrom.append('官方hls');
+                    playFrom.append('官方hls线路');
                     playList.append(hlsUrl);
                 }
                 if(flvUrl !== ''){
-                    playFrom.append('官方flv');
+                    playFrom.append('官方flv线路');
                     playList.append(flvUrl);
                 }
             } else {
