@@ -40,31 +40,67 @@ var rule = {
     play_parse: true,
     lazy:`js:
         let ids = input.split('_');
-        let dan = 'https://api.bilibili.com/x/v1/dm/list.so?oid=' + ids[1];
-        let result = {};
-        let iurl = 'https://api.live.bilibili.com/room/v1/Room/playUrl?cid=' + ids[1] + '&' + ids[0];
-        let html = request(iurl);
-        let jRoot = JSON.parse(html);
-        let jo = jRoot['data'];
-        let ja = jo['durl'];
-        let purl = '';
-        if (ja.length > 0) {
-            purl = ja[0]['url']
+        if(ids[0] === 'bilibili') {
+            let dan = 'https://api.bilibili.com/x/v1/dm/list.so?oid=' + ids[2];
+            let result = {};
+            let iurl = 'https://api.live.bilibili.com/room/v1/Room/playUrl?cid=' + ids[2] + '&' + ids[1];
+            let html = request(iurl);
+            let jRoot = JSON.parse(html);
+            let jo = jRoot['data'];
+            let ja = jo['durl'];
+            let purl = '';
+            if (ja.length > 0) {
+                purl = ja[0]['url']
+            }
+            result['parse'] = 0;
+            result['playUrl'] = '';
+            result['url'] = unescape(purl);
+            result['header'] = {
+                Referer: 'https://live.bilibili.com',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+            };
+            result['danmaku'] = dan;
+            if (/h5/.test(ids[1])) {
+                result['contentType'] = '';
+                input = result
+            } else {
+                result['contentType'] = 'video/x-flv';
+                input = result
+            }
         }
-        result['parse'] = 0;
-        result['playUrl'] = '';
-        result['url'] = unescape(purl);
-        result['header'] = {
-            Referer: 'https://live.bilibili.com',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
-        };
-        result['danmaku'] = dan;
-        if (/h5/.test(ids[0])) {
-            result['contentType'] = '';
-            input = result
-        } else {
-            result['contentType'] = 'video/x-flv';
-            input = result
+        if(ids[0] === 'huya') {
+            let rid=ids[1];
+            function getRealUrl(live_url){
+                let[i,b]=live_url.split('?');
+                let r=i.split('/').pop();
+                let s=r.replace(/\.(flv|m3u8)/,'');
+                let c_tmp=b.split('&').filter(n=>n);
+                let n={};let c_tmp2=[];
+                c_tmp.forEach(function(tmp,index){
+                    if(index<3){
+                        n[tmp.split('=')[0]]=tmp.split('=')[1]
+                    }else{
+                        c_tmp2.push(tmp)
+                    }
+                });
+                let tmp2=c_tmp2.join('&');
+                n[tmp2.split('=')[0]]=tmp2.split('=')[1];
+                let fm=decodeURIComponent(n.fm).split('&')[0];
+                let u=base64Decode(fm);
+                let p=u.split('_')[0];
+                let f=new Date().getTime()+'0000';
+                let ll=n.wsTime;let t='0';
+                let h=[p,t,s,f,ll].join('_');
+                let m=md5(h);
+                return(i+'?wsSecret='+m+'&wsTime='+ll+'&u='+t+'&seqid='+f+'&'+c_tmp2.pop()).replace('hls','flv').replace('m3u8','flv')
+            }
+            let purl=JSON.parse(request('https://mp.huya.com/cache.php?m=Live&do=profileRoom&roomid='+rid)).data.stream.flv.multiLine[0].url;
+            input={
+                jx:0,
+                url:getRealUrl(purl),
+                parse:0,
+                header:JSON.stringify({'user-agent':'Mozilla/5.0'})
+            }
         }
     `,
     limit: 6,
@@ -277,38 +313,40 @@ var rule = {
             var diqing = '';
             var liuchang = '';
             info[6].split("；").map(function(it) {
-                var play_info = it.split("，")[0].replace("快手", "") + '（需使用EXO播放器）' + "$" + it.split("，")[1] + "#";
-                if(it.split("，")[0].replace("快手", "") === '蓝光 8M' || it.split("，")[0].replace("快手", "") === '蓝光8M') {
+                // 清晰度
+                var qingxidu = it.split("，")[0].replace("快手", "");
+                var play_info = qingxidu + '（需使用EXO播放器）' + "$" + it.split("，")[1] + "#";
+                if(qingxidu === '蓝光 8M' || qingxidu === '蓝光8M') {
                     languang_8m = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '蓝光 6M' || it.split("，")[0].replace("快手", "") === '蓝光6M') {
+                if(qingxidu === '蓝光 6M' || qingxidu === '蓝光6M') {
                     languang_6m = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '蓝光 4M' || it.split("，")[0].replace("快手", "") === '蓝光4M') {
+                if(qingxidu === '蓝光 4M' || qingxidu === '蓝光4M') {
                     languang_4m = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '蓝光 2M' || it.split("，")[0].replace("快手", "") === '蓝光2M') {
+                if(qingxidu === '蓝光 2M' || qingxidu === '蓝光2M') {
                     languang_2m = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '原画') {
+                if(qingxidu === '原画') {
                     yuanhua = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '蓝光') {
+                if(qingxidu === '蓝光') {
                     languang = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '超清') {
+                if(qingxidu === '超清') {
                     chaoqing = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '高清') {
+                if(qingxidu === '高清') {
                     gaoqing = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '标清') {
+                if(qingxidu === '标清') {
                     biaoqing = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '低清') {
+                if(qingxidu === '低清') {
                     diqing = play_info;
                 }
-                if(it.split("，")[0].replace("快手", "") === '流畅') {
+                if(qingxidu === '流畅') {
                     liuchang = play_info;
                 }
             })
@@ -355,19 +393,32 @@ var rule = {
                 var bilis = [];
                 bilis.push({
                     title: "h5线路原画",
-                    input: 'platform=h5&quality=4_'+jo.roomId
+                    input: 'bilibili_platform=h5&quality=4_'+jo.roomId
                 }, {
                     title: "h5线路高清",
-                    input: 'platform=h5&quality=3_'+jo.roomId
+                    input: 'bilibili_platform=h5&quality=3_'+jo.roomId
                 }, {
                     title: "flv线路原画",
-                    input: 'platform=web&quality=4_'+jo.roomId
+                    input: 'bilibili_platform=web&quality=4_'+jo.roomId
                 }, {
                     title: "flv线路高清",
-                    input: 'platform=web&quality=3_'+jo.roomId
+                    input: 'bilibili_platform=web&quality=3_'+jo.roomId
                 });
                 playFrom.append('官方线路');
                 playList.append(bilis.map(function(it) {
+                    return it.title + "$" + it.input
+                }).join("#"));
+            }
+
+            // 增加huya官方源
+            if (jo.platForm == 'huya') {
+                var huyas = [];
+                huyas.push({
+                    title: "原画（需使用EXO播放器）",
+                    input: 'huya_'+jo.roomId
+                });
+                playFrom.append('官方线路');
+                playList.append(huyas.map(function(it) {
                     return it.title + "$" + it.input
                 }).join("#"));
             }
