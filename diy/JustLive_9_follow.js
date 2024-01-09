@@ -75,7 +75,8 @@ var rule = {
                 let r=i.split('/').pop();
                 let s=r.replace(/\.(flv|m3u8)/,'');
                 let c_tmp=b.split('&').filter(n=>n);
-                let n={};let c_tmp2=[];
+                let n={};
+                let c_tmp2=[];
                 c_tmp.forEach(function(tmp,index){
                     if(index<3){
                         n[tmp.split('=')[0]]=tmp.split('=')[1]
@@ -89,7 +90,8 @@ var rule = {
                 let u=base64Decode(fm);
                 let p=u.split('_')[0];
                 let f=new Date().getTime()+'0000';
-                let ll=n.wsTime;let t='0';
+                let ll=n.wsTime;
+                let t='0';
                 let h=[p,t,s,f,ll].join('_');
                 let m=md5(h);
                 return(i+'?wsSecret='+m+'&wsTime='+ll+'&u='+t+'&seqid='+f+'&'+c_tmp2.pop()).replace('hls','flv').replace('m3u8','flv')
@@ -99,7 +101,9 @@ var rule = {
                 jx:0,
                 url:getRealUrl(purl),
                 parse:0,
-                header:JSON.stringify({'user-agent':'Mozilla/5.0'})
+                header:JSON.stringify({
+                    'user-agent':'Mozilla/5.0'
+                })
             }
         }
     `,
