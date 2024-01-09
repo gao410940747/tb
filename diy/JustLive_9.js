@@ -264,7 +264,6 @@ var rule = {
                 vod_actor: '🆙 ' + info[1] + '｜ 👥 人气：' + info[3],
                 vod_content: info[4],
             };
-
             // 清晰度从高到低排序
             var languang_8m = '';
             var languang_4m = '';
