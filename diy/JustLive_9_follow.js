@@ -388,7 +388,9 @@ var rule = {
             };
             // 清晰度从高到低排序
             var languang_8m = '';
+            var languang_6m = '';
             var languang_4m = '';
+            var languang_2m = '';
             var languang = '';
             var yuanhua = '';
             var chaoqing = '';
@@ -401,8 +403,14 @@ var rule = {
                 if(it.split("，")[0].replace("快手", "") === '蓝光 8M' || it.split("，")[0].replace("快手", "") === '蓝光8M') {
                     languang_8m = play_info;
                 }
+                if(it.split("，")[0].replace("快手", "") === '蓝光 6M' || it.split("，")[0].replace("快手", "") === '蓝光6M') {
+                    languang_6m = play_info;
+                }
                 if(it.split("，")[0].replace("快手", "") === '蓝光 4M' || it.split("，")[0].replace("快手", "") === '蓝光4M') {
                     languang_4m = play_info;
+                }
+                if(it.split("，")[0].replace("快手", "") === '蓝光 2M' || it.split("，")[0].replace("快手", "") === '蓝光2M') {
+                    languang_2m = play_info;
                 }
                 if(it.split("，")[0].replace("快手", "") === '原画') {
                     yuanhua = play_info;
@@ -429,7 +437,7 @@ var rule = {
             let playFrom = [];
             let playList = [];
             playFrom.append('官方线路');
-            playList.append(yuanhua + languang_8m + languang_4m + languang + chaoqing + gaoqing + biaoqing + diqing + liuchang);
+            playList.append(yuanhua + languang_8m + languang_6m + languang_4m + languang_2m + languang + chaoqing + gaoqing + biaoqing + diqing + liuchang);
 
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
