@@ -25,8 +25,6 @@
 			"filterable" : 1,
 			"ext" : "https://notabug.org/yzzsjc/TVBox-Pro/raw/master/py/json/py_cctvxw.py"
 		},
-		{"ext":"https://pcrock88.github.io/dr_py/txt/py/py_huya.py","api":"py_huya","key":"py_huya","name":"虎牙(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
-		{"ext":"https://pcrock88.github.io/dr_py/txt/py/py_douyu.py","api":"py_douyu","key":"py_douyu","name":"斗鱼(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
 		{"ext":"https://pcrock88.github.io/zb/dat/py/py_cctv_full.py","api":"py_cctv_full","key":"py_cctv_full","name":"央视(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
 		{
 			"key": "py_cctv_full2",
@@ -42,10 +40,12 @@
 		{"key": "py_cctv_full1","name": " 🐦央视大全","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "https://ghproxy.com/https://raw.githubusercontent.com/zqk219/baip/main/TVBox_Py/py/py_cctv_full.py","jar":"https://gh-proxy.com/https://raw.githubusercontent.com/zxfhuy/test/main/%E5%A4%96%E9%93%BEcookie%E8%83%BD%E7%BF%BB%E9%A1%B5.jar"},
 		{"key": "py_cctv_full5","name": " 🐦央视大全5","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./py/py_cctv_full.py"},
 
+		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/cili.jar"},
+		{"key":"BT天堂","name":"BT天堂","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/BT天堂.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
+		{"key":"盘九九弹幕","name":"夸克盘九九","type":3,"api":"csp_Pan99","searchable":1,"filterable":1,"changeable":1,"playerType":2,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 		{"key":"csp_QuPanSou","name":"趣盘搜","type":3,"api":"csp_QuPanSou","searchable":1,"filterable":1,"changeable":0,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt", "danmu": true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/ok.png", "timeout":30},
 		{"key":"csp_Qkpanso","name":"夸克盘搜","type":3,"api":"csp_Qkpanso","searchable":1,"filterable":1,"changeable":0,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt", "danmu": true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/ok.png", "timeout":30},
 		{"key":"NBA录像屋","name":"NBA录像屋","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/NBA录像屋.js"},
-		{"key":"篮球屋录像","name":"篮球屋录像","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球屋录像.js"},
 		{"key":"310直播","name":"310直播","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/310直播.js"},
 
 		{"key":"抖音直播","name":"抖音直播","type":3,"api":"py_douyin","ext":"./py/抖音直播.py"},

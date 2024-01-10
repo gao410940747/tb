@@ -600,7 +600,7 @@ var rule = {
                     url: HOST + "/api/live/follow?uid=77111538fff549039d91dc52038581d2&platform=" + jo.platForm + "&roomId=" + jo.roomId
                 },
                 {
-                    title: "点击取消关注",
+                    title: "点击取关",
                     url: HOST + "/api/live/unFollow?uid=77111538fff549039d91dc52038581d2&platform=" + jo.platForm + "&roomId=" + jo.roomId
                 }
             );

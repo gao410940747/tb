@@ -17,6 +17,6 @@
     {"name":"YanG","type":0,"url":"https://fongmi.cachefly.net/YanG-1989/m3u/main/Gather.m3u","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
     {"name":"YanG斗鱼","type":0,"url":"https://fongmi.cachefly.net/YanG-1989/m3u/main/yu.m3u"},
     {"name":"YanG虎牙","type":0,"url":"https://fongmi.cachefly.net/YanG-1989/m3u/main/ya.m3u","playerType":2},
-    {"name":"YuanHsing","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"},
+    {"name":"YuanHsing•油管","type":0,"url":"https://fongmi.cachefly.net/YuanHsing/YouTube_to_m3u/main/youtube.m3u"},
     {"name":"16万•MV","type":0,"url":"https://fongmi.cachefly.net/lystv/short/main/影视/tvb/MTV.txt"}
 ]
