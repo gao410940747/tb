@@ -301,59 +301,43 @@ var rule = {
                 vod_content: info[4],
             };
             // 清晰度从高到低排序
-            var languang_8m = '';
-            var languang_6m = '';
-            var languang_4m = '';
-            var languang_2m = '';
-            var languang = '';
             var yuanhua = '';
+            var languang = '';
             var chaoqing = '';
             var gaoqing = '';
             var biaoqing = '';
-            var diqing = '';
             var liuchang = '';
+            var qita = '';
             info[6].split("；").map(function(it) {
                 // 清晰度
                 var qingxidu = it.split("，")[0].replace("快手", "");
-                var play_info = qingxidu + '（需使用EXO播放器）' + "$" + it.split("，")[1] + "#";
-                if(qingxidu === '蓝光 8M' || qingxidu === '蓝光8M') {
-                    languang_8m = play_info;
-                }
-                if(qingxidu === '蓝光 6M' || qingxidu === '蓝光6M') {
-                    languang_6m = play_info;
-                }
-                if(qingxidu === '蓝光 4M' || qingxidu === '蓝光4M') {
-                    languang_4m = play_info;
-                }
-                if(qingxidu === '蓝光 2M' || qingxidu === '蓝光2M') {
-                    languang_2m = play_info;
-                }
+                var play_info = qingxidu + "$" + it.split("，")[1] + "#";
                 if(qingxidu === '原画') {
                     yuanhua = play_info;
                 }
-                if(qingxidu === '蓝光') {
-                    languang = play_info;
+                else if(/蓝光/.test(qingxidu)) {
+                    languang = play_info + languang;
                 }
-                if(qingxidu === '超清') {
+                else if(qingxidu === '超清') {
                     chaoqing = play_info;
                 }
-                if(qingxidu === '高清') {
+                else if(qingxidu === '高清') {
                     gaoqing = play_info;
                 }
-                if(qingxidu === '标清') {
+                else if(qingxidu === '标清') {
                     biaoqing = play_info;
                 }
-                if(qingxidu === '低清') {
-                    diqing = play_info;
-                }
-                if(qingxidu === '流畅') {
+                else if(qingxidu === '流畅') {
                     liuchang = play_info;
+                }
+                else {
+                    qita = qita + play_info;
                 }
             })
             let playFrom = [];
             let playList = [];
-            playFrom.append('官方线路');
-            playList.append(yuanhua + languang_8m + languang_6m + languang_4m + languang_2m + languang + chaoqing + gaoqing + biaoqing + diqing + liuchang);
+            playFrom.append('官方线路（若播放失败需切换EXO播放器）');
+            playList.append(yuanhua + languang + chaoqing + gaoqing + biaoqing + liuchang + qita);
 
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
@@ -414,7 +398,7 @@ var rule = {
             if (jo.platForm == 'huya') {
                 var huyas = [];
                 huyas.push({
-                    title: "原画（需使用EXO播放器）",
+                    title: "原画（若播放失败需切换EXO播放器）",
                     input: 'huya_'+jo.roomId
                 });
                 playFrom.append('官方线路');
@@ -427,19 +411,12 @@ var rule = {
             Object.keys(playurl).forEach(function(key) {
                 playFrom.append('官方' + key);
                 playList.append(playurl[key].map(function(it) {
-                    if (jo.platForm == 'huya') {
-                        return it.qualityName + '（需使用EXO播放器）' + "$" + it.playUrl
-                    } else {
-                        return it.qualityName + "$" + it.playUrl
-                    }
+                    return it.qualityName + "$" + it.playUrl
                 }).join("#"))
             });
     
             // 网站解析源
             d.push({
-                title: "MetShop线路",
-                url: "https://live.metshop.top/" + jo.platForm + "/" + jo.roomId
-            }, {
                 title: "EPG线路",
                 url: "http://epg.112114.xyz/" + jo.platForm + "/" + jo.roomId
             }, {
@@ -448,6 +425,9 @@ var rule = {
             }, {
                 title: "AOIS线路",
                 url: "https://www.aois.eu.org/live/" + jo.platForm + "/" + jo.roomId
+            }, {
+                title: "MetShop线路",
+                url: "https://live.metshop.top/" + jo.platForm + "/" + jo.roomId
             }, {
                 title: "GoodIPTV线路",
                 url: "https://www.goodiptv.club/" + jo.platForm + "/" + jo.roomId
