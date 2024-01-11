@@ -2,6 +2,7 @@
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
 	"sites": [
 
+		{"key":"央视片库","name":"央视片库","type":3,"api":"py_cctv","style":{"type":"rect","ratio":1},"searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/央视片库.py"},
 		{"key": "py_cctv","name": " 🐦央视自选","type": 3,"api": "py_cctv","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./diy/py_cctv.py"},
 		{"key": "py_cctv_full4","name": " 🐦央视大全","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./diy/py_cctv_full.py"},
 		{"ext":"https://pcrock88.github.io/zb/dat/py/py_cctv_full.py","api":"py_cctv_full","key":"py_cctv_full","name":"央视(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
