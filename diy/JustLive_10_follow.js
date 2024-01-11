@@ -286,19 +286,23 @@ var rule = {
                 }
             }
             list.forEach(it => {
-                var title1 = it.caption;
-                var desc1 = '🆙' + it.author.name + (it.watchingCount == '' ? '' : '｜👥' + it.watchingCount);
-                var picUrl1 = it.poster;
-                var urls = it.playUrls[0].adaptationSet.representation.map(function(it1) {
-                    return '快手' + it1.name + "，" + it1.url
-                }).join("；");
-                var url1 = it.author.id + "|" + it.author.name + "|" + it.poster + "|" + it.watchingCount + "|" + it.author.description + "|" + it.caption + "|" + urls + "|" + it.gameInfo.name;
-                d.push({
-                    title: title1,
-                    desc: desc1,
-                    pic_url: picUrl1,
-                    url: url1
-                });
+                if(it.author.id==='3xfxiep6i3t6tzw'){
+                    //过滤掉东北王张作霖
+                } else {
+                    var title1 = it.caption;
+                    var desc1 = '🆙' + it.author.name + (it.watchingCount == '' ? '' : '｜👥' + it.watchingCount);
+                    var picUrl1 = it.poster;
+                    var urls = it.playUrls[0].adaptationSet.representation.map(function(it1) {
+                        return '快手' + it1.name + "，" + it1.url
+                    }).join("；");
+                    var url1 = it.author.id + "|" + it.author.name + "|" + it.poster + "|" + it.watchingCount + "|" + it.author.description + "|" + it.caption + "|" + urls + "|" + it.gameInfo.name;
+                    d.push({
+                        title: title1,
+                        desc: desc1,
+                        pic_url: picUrl1,
+                        url: url1
+                    });
+                }
             })
         }
         if (MY_CATE === 'cc') {
