@@ -22,7 +22,6 @@ var rule = {
     quickSearch:0,
     class_name:'全部比赛',
     class_url:'/',
-    //class_url:'?live',
     headers:{
         'User-Agent':'MOBILE_UA'
     },
@@ -56,32 +55,37 @@ var rule = {
         )});
         setResult(items);
     `,
-    二级:{
-        "title":".sub_list li:lt(2)&&Text;.sub_list li:eq(0)&&Text",
-        "img":".lab_team_home&&src",
-        "desc":";;;.lab_team_home&&Text;.lab_team_away&&Text",
-        "content":".sub_list ul&&Text",
-        "tabs":"js:TABS=['JRKAN直播']",
-        "lists":`js:
-        LISTS=[];
-pdfh=jsp.pdfh;
-pdfa=jsp.pdfa;
-pd=jsp.pd;
-let html=request(input);
-let data=pdfa(html,'.sub_playlist&&a');
-TABS.forEach(function(tab){
-let d=data.map(function(it){
-let name=pdfh(it,'strong&&Text');
-let url=pd(it,'a&&data-play');
-if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")){
-return name.replace('中文高清','咪咕专线')+'$'+url
-}
-else {
-return name+'$'+url
-}
-});
-LISTS.push(d)
-});`,
-    },
+    二级:`js:
+        pdfh=jsp.pdfh;
+        pdfa=jsp.pdfa;
+        pd=jsp.pd;
+        var new_html = request(input);
+        VOD = {
+            vod_name: pdfh(new_html,'.lab_team_home&&Text') + '(主)🆚(客)' + pdfh(new_html,'.lab_team_away&&Text'),
+            vod_pic: pd(new_html,'.lab_team_home img&&src'),
+            type_name: pdfh(new_html,'.lab_events&&Text'),
+            vod_content: pdfh(new_html,'.sub_list ul&&Text'),
+        };
+
+        var playUrls = pdfa(new_html, '.sub_playlist&&a');
+        let playFrom = [];
+        let playList = [];
+
+        playFrom.append('JRKAN直播');
+        playList.append(playUrls.map(function(it) {
+            let name = pdfh(it,'strong&&Text');
+            let url = pd(it,'a&&data-play');
+            if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")){
+                name = name.replace('中文高清','咪咕专线')+'$'+url;
+            }
+            return name+'$'+url
+        }).join("#"))
+
+        // 最后封装所有线路
+        let vod_play_from = playFrom.join('$$$');
+        let vod_play_url = playList.join('$$$');
+        VOD['vod_play_from'] = vod_play_from;
+        VOD['vod_play_url'] = vod_play_url;
+    `,
     搜索:'',
 }
