@@ -91,7 +91,8 @@ var rule = {
 	        TABS.forEach(function(tab){
 	            let m3u=data.links;
 	            let d=m3u.map(function(it){
-			        if (it.url.startsWith("http://play.sportsteam1234.com/play/mglx.php")){
+			        if (it.url.startsWith("http://play.sportsteam1234.com/play/mglx.php")
+			            || it.url.startsWith("http://play.sportsteam1234.com/play/gm.php")){
 	                    return '咪咕专线'+'$'+it.url
 	                }
 	                else {

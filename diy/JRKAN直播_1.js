@@ -75,7 +75,8 @@ var rule = {
         playList.append(playUrls.map(function(it) {
             let name = pdfh(it,'strong&&Text');
             let url = pd(it,'a&&data-play');
-            if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")){
+            if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")
+                || url.startsWith("http://play.sportsteam356.com/play/gm.php"){
                 name = name.replace('中文高清','咪咕专线')+'$'+url;
             }
             return name+'$'+url
