@@ -1,46 +1,7 @@
 {
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
 	"sites": [
-
-		{"key":"央视片库","name":"央视片库","type":3,"api":"py_cctv","style":{"type":"rect","ratio":1},"searchable":1,"quickSearch":1,"filterable":1,"ext":"./py/央视片库.py"},
-		{"key": "py_cctv","name": " 🐦央视自选","type": 3,"api": "py_cctv","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./diy/py_cctv.py"},
-		{"key": "py_cctv_full4","name": " 🐦央视大全","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./diy/py_cctv_full.py"},
-		{"ext":"https://pcrock88.github.io/zb/dat/py/py_cctv_full.py","api":"py_cctv_full","key":"py_cctv_full","name":"央视(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
-		{
-			"key": "py_cctv_full3",
-			"name": "央视大全",
-			"type": 3,
-			"api": "py_cctv_full",
-			"searchable": 0,
-			"quickSearch": 0,
-			"filterable": 1,
-			"ext": "https://download.kstore.space/download/2883/PY/py_cctv_full.py"
-		},
-		{
-			"key" : "py_cctvxw",
-			"name" : "央视新闻",
-			"type" : 3,
-			"api" : "py_cctv_full",
-			"searchable" : 0,
-			"quickSearch" : 0,
-			"filterable" : 1,
-			"ext" : "https://notabug.org/yzzsjc/TVBox-Pro/raw/master/py/json/py_cctvxw.py"
-		},
-		{"ext":"https://pcrock88.github.io/zb/dat/py/py_cctv_full.py","api":"py_cctv_full","key":"py_cctv_full","name":"央视(py)","type":3,"searchable":1,"quickSearch":1,"filterable":1},
-		{
-			"key": "py_cctv_full2",
-			"name": "🐦央视大全(PY）",
-			"type": 3,
-			"api": "py_cctv_full",
-			"searchable": 0,
-			"quickSearch": 0,
-			"filterable": 1,
-			"ext": "https://notabug.org/zqk219/yingshicang/raw/master/TVBox_Py/py/py_cctv_full.py"
-		},
-
-		{"key": "py_cctv_full1","name": " 🐦央视大全","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "https://ghproxy.com/https://raw.githubusercontent.com/zqk219/baip/main/TVBox_Py/py/py_cctv_full.py","jar":"https://gh-proxy.com/https://raw.githubusercontent.com/zxfhuy/test/main/%E5%A4%96%E9%93%BEcookie%E8%83%BD%E7%BF%BB%E9%A1%B5.jar"},
-		{"key": "py_cctv_full5","name": " 🐦央视大全5","type": 3,"api": "py_cctv_full","searchable": 0,"quickSearch": 0,"filterable": 1,"ext": "./py/py_cctv_full.py"},
-
+		{"key":"央视频","name":"央视频","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"ext":"./diy/央视频.js"},
 		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/cili.jar"},
 		{"key":"BT天堂","name":"BT天堂","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/BT天堂.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
 		{"key":"盘九九弹幕","name":"夸克盘九九","type":3,"api":"csp_Pan99","searchable":1,"filterable":1,"changeable":1,"playerType":2,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
@@ -52,8 +13,6 @@
 		{"key":"抖音直播","name":"抖音直播","type":3,"api":"py_douyin","ext":"./py/抖音直播.py"},
 		{"key":"快手直播","name":"快手直播","type":3,"api":"csp_KsLive","playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"rect","ratio":1.755},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/ok.png"},
 		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.597},"ext":"./diy/央视大全.json"},
-		{"key":"央视大全py","name":"央视大全py","type":3,"api":"py_cctv_full","searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"rect","ratio":1.597},"ext":"./py/py_cctv_full.py"},
-		{"key":"py_cctv_full","name":"央视大全1","type":3,"api":"./py/py_cctv_full.py","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.597},"ext":"./py/py_cctv_full.py"},
 		{"key":"New6v","name":"New6V","type":3,"api":"csp_SixV","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.xb6v.com","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/jar/cc.jar"},
 
 		{"key": "csp_XYQHiker_电影港","name":"🧲电影港(XYQH)","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/电影港磁力.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
