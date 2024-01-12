@@ -58,11 +58,30 @@ var rule = {
     `,
     二级:{
         "title":".sub_list li:lt(2)&&Text;.sub_list li:eq(0)&&Text",
-        "img":"img&&src",
+        "img":".lab_team_home&&src",
         "desc":";;;.lab_team_home&&Text;.lab_team_away&&Text",
         "content":".sub_list ul&&Text",
         "tabs":"js:TABS=['JRKAN直播']",
-        "lists":"js:LISTS=[];pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;let html=request(input);let data=pdfa(html,'.sub_playlist&&a');TABS.forEach(function(tab){let d=data.map(function(it){let name=pdfh(it,'strong&&Text');let url=pd(it,'a&&data-play');return name+'$'+url});LISTS.push(d)});",
+        "lists":`js:
+        LISTS=[];
+pdfh=jsp.pdfh;
+pdfa=jsp.pdfa;
+pd=jsp.pd;
+let html=request(input);
+let data=pdfa(html,'.sub_playlist&&a');
+TABS.forEach(function(tab){
+let d=data.map(function(it){
+let name=pdfh(it,'strong&&Text');
+let url=pd(it,'a&&data-play');
+if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")){
+return name.replace('中文高清','咪咕专线')+'$'+url
+}
+else {
+return name+'$'+url
+}
+});
+LISTS.push(d)
+});`,
     },
     搜索:'',
 }
