@@ -51,8 +51,8 @@ var rule = {
                 title:pz+'🆚'+pk,
                 pic_url:img,
                 url:url
-            }
-        )});
+            });
+        });
         setResult(items);
     `,
     二级:`js:
@@ -76,11 +76,27 @@ var rule = {
             let name = pdfh(it,'strong&&Text');
             let url = pd(it,'a&&data-play');
             if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")
-                || url.startsWith("http://play.sportsteam356.com/play/gm.php"){
-                name = name.replace('中文高清','咪咕专线')+'$'+url;
+                || url.startsWith("http://play.sportsteam356.com/play/gm.php")){
+                name = name.replace('','咪咕专线');
+            }
+            else if (url.startsWith("http://play.sportsteam356.com/play/iqi.php")){
+                name = name.replace('中文高清','爱奇艺专线');
+            }
+            else if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=262")){
+                name = name.replace('主播解说','主播瑶妹');
+            }
+            else if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=224")
+                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=224")
+                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=224")){
+                name = name.replace('主播解说','视频主播');
+            }
+            else if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")
+                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")
+                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")){
+                name = name.replace('主播解说','声音主播');
             }
             return name+'$'+url
-        }).join("#"))
+        }).join("#"));
 
         // 最后封装所有线路
         let vod_play_from = playFrom.join('$$$');
