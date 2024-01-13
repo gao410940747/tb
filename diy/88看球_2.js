@@ -95,6 +95,9 @@ var rule = {
 			            || it.url.startsWith("http://play.sportsteam1234.com/play/gm.php")){
 	                    return '咪咕专线'+'$'+it.url
 	                }
+			        else if (it.url.startsWith("http://play.sportsteam1234.com/play/iqi.php")){
+	                    return '爱奇艺专线'+'$'+it.url
+	                }
 	                else {
 	                    return it.name+'$'+it.url
 	                }
