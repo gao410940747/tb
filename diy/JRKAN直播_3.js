@@ -91,7 +91,7 @@ var rule = {
                 name = name.replace('主播解说','视频主播');
             }
             else if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")
-                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")
+                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=244")
                 || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")){
                 name = name.replace('主播解说','声音主播');
             }
