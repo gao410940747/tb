@@ -28,13 +28,13 @@ var rule = {
             let desc1 = it.channel_name;
             // 一级图片URL
             let picUrl1 = it.column_logo;
-            // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片）
-//            let url1 = it.id + '|' + it.area + '|' + it.sc + '|' + it.title + '|' + it.actors + '|' + it.year + '|' + it.channel + '|' + it.brief + '|' + it.image;
+            // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 更新至）
+            let url1 = it.lastVIDE.videoSharedCode + '|' + '' + '|' + it.column_firstclass + '|' + it.column_name + '|' + '' + '|' + it.column_playdate + '|' + it.channel_name + '|' + it.column_brief + '|' + it.column_logo + '|' + '' + '|' + it.lastVIDE.videoTitle;
             d.push({
                 desc : desc1,
                 title : title1,
                 pic_url : picUrl1,
-//                url : url1
+                url : url1
             })
         })
         setResult(d);
@@ -52,11 +52,11 @@ var rule = {
             // 一级标题
             let title1 = it.title;
             // 一级描述
-            let desc1 = it.sc + '•共' + it.count + '集' + (typeof it.year==='undefined'?'':'•'+it.year);
+            let desc1 = '共' + it.count + '集•' + it.sc + (typeof it.year==='undefined'?'':'•'+it.year);
             // 一级图片URL
             let picUrl1 = it.image;
             // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 集数）
-            let url1 = it.id + '|' + it.area + '|' + it.sc + '|' + it.title + '|' + it.actors + '|' + it.year + '|' + it.channel + '|' + it.brief + '|' + it.image + '|' + it.count;
+            let url1 = it.id + '|' + it.area + '|' + it.sc + '|' + it.title + '|' + it.actors + '|' + it.year + '|' + it.channel + '|' + it.brief + '|' + it.image + '|' + it.count + '|' + '' + '|' + MY_CATE;
             d.push({
                 desc : desc1,
                 title : title1,
@@ -68,23 +68,80 @@ var rule = {
     `,
     二级: `js:
         let info = input.split("|");
+        
         VOD = {
             vod_id: info[0],
             vod_name: info[3],
             vod_pic: info[8],
-            type_name: info[2],
+            type_name: info[2]==='undefined'?'':info[2],
             vod_year: info[5]==='undefined'?'':info[5],
             vod_area: info[1]==='undefined'?'':info[1],
-            vod_remarks: '共'+info[9]+'集',
-            vod_director: info[6],
+            vod_remarks: info[9]===''?('更新至'+info[10]):('共'+info[9]+'集'),
+            vod_director: info[6]==='undefined'?'':info[6],
             vod_actor: info[4]==='undefined'?'':info[4],
-            vod_content: info[7],
+            vod_content: info[7]==='undefined'?'':info[7],
         };
-        var link = 'https://api.cntv.cn/NewVideo/getVideoListByAlbumIdNew?id='+info[0]+'&serviceId=tvcctv&p=1&n=100&mode=0&pub=1';
-        var playUrls = JSON.parse(request(link)).data.list;
+        var modeMap = {
+            "特别节目": "0",
+            "纪录片": "0",
+            "电视剧": "0",
+            "动画片": "1",
+        };
+        var ctid = info[0];
+        var link = 'https://api.cntv.cn/NewVideo/getVideoListByAlbumIdNew?id='+ctid+'&serviceId=tvcctv&p=1&n=100&mode='+modeMap[info[11]]+'&pub=1';
+        var html = JSON.parse(request(link));
+        var playUrls;
+        if(html.errcode==='1001'){
+            var link1 = 'https://api.cntv.cn/video/videoinfoByGuid?guid='+info[0]+'&serviceId=tvcctv';
+            ctid = JSON.parse(request(link1)).ctid;
+            var link2 = 'https://api.cntv.cn/NewVideo/getVideoListByColumn?id='+ctid+'&d=&p=1&n=100&sort=desc&mode=0&serviceId=tvcctv&t=json';
+            playUrls = JSON.parse(request(link2)).data.list;
+            // 获取更多数据，暂不需要
+            // var flag = '';
+            // if(playUrls===''){
+            //     flag = 'true';
+            // }
+            // var page = 1;
+            // while(flag===''){
+            //     page = page+1;
+            //     var burl = 'https://api.cntv.cn/NewVideo/getVideoListByColumn?id='+ctid+'&d=&p='+page+'&n=100&sort=desc&mode=0&serviceId=tvcctv&t=json';
+            //     var list = JSON.parse(request(burl)).data.list;
+            //     if (list.length!==0){
+            //         list.forEach(it => {
+            //             playUrls.push(it);
+            //         })
+            //         continue;
+            //     }else{
+            //         flag='true';
+            //         break;
+            //     }
+            // }
+        } else {
+            playUrls = html.data.list;
+            // 获取更多数据，暂不需要
+            var flag = '';
+            if(playUrls===''){
+                flag = 'true';
+            }
+            var page = 1;
+            while(flag===''){
+                page = page+1;
+                var burl = 'https://api.cntv.cn/NewVideo/getVideoListByAlbumIdNew?id='+ctid+'&serviceId=tvcctv&p='+page+'&n=100&mode='+modeMap[info[11]]+'&pub=1';
+                var list = JSON.parse(request(burl)).data.list;
+                if (list.length!==0){
+                    list.forEach(it => {
+                        playUrls.push(it);
+                    })
+                    continue;
+                }else{
+                    flag='true';
+                    break;
+                }
+            }
+        }
+        
         let playFrom = [];
         let playList = [];
-
         playFrom.append('央视频');
         playUrls.forEach(it => {
             playList.append(playUrls.map(function(it) {
