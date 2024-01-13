@@ -87,13 +87,14 @@ var rule = {
             "电视剧": "0",
             "动画片": "1",
         };
-        var ctid = info[0];
+        var ctid = info[0].replace('https://api.cntv.cn/lanmu/','');
         var link = 'https://api.cntv.cn/NewVideo/getVideoListByAlbumIdNew?id='+ctid+'&serviceId=tvcctv&p=1&n=100&mode='+modeMap[info[11]]+'&pub=1';
         var html = JSON.parse(request(link));
         var playUrls;
         if(html.errcode==='1001'){
-            var link1 = 'https://api.cntv.cn/video/videoinfoByGuid?guid='+info[0]+'&serviceId=tvcctv';
-            ctid = JSON.parse(request(link1)).ctid;
+            var guid = info[0].replace('https://api.cntv.cn/lanmu/','');
+            var link1 = 'https://api.cntv.cn/video/videoinfoByGuid?guid='+guid+'&serviceId=tvcctv';
+            ctid = JSON.parse(request(link1)).ctid.replace('https://api.cntv.cn/lanmu/','');
             var link2 = 'https://api.cntv.cn/NewVideo/getVideoListByColumn?id='+ctid+'&d=&p=1&n=100&sort=desc&mode=0&serviceId=tvcctv&t=json';
             playUrls = JSON.parse(request(link2)).data.list;
             // 获取更多数据，暂不需要
