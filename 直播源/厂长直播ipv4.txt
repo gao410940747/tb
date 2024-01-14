@@ -178,11 +178,12 @@ CCTV-4,  http://zteres.sn.chinamobile.com:6060/000000001000/5000000011000031102/
 CCTV-5+, http://zteres.sn.chinamobile.com:6060/000000001000/1000000001000018504/1.m3u8?channel-id=ystenlive&Contentid=1000000001000018504&livemode=1&stbId=3
 CCTV-16, http://zteres.sn.chinamobile.com:6060/000000001000/1000000006000233002/1.m3u8?channel-id=ystenlive&Contentid=1000000006000233002&livemode=1&stbId=3
 
-CCTV-13, https://live-play.cctvnews.cctv.com/cctv/merge_cctv13.m3u8
-CCTV-13, https://live-play.cctvnews.cctv.com/cctv/merge_cctv13_mud.m3u8
-CCTV-1,  http://stream10.fjtv.net/cctv1/playlist.m3u8?_upt=f28ac5ee1700907395
-CCTV-13, http://stream10.fjtv.net/cctv13/playlist.m3u8?_upt=a7a3bead1700907543
-CCTV-1,  http://tvpull.dxhmt.cn/tv/11481-4.m3u8
+CCTV-13,https://live-play.cctvnews.cctv.com/cctv/merge_cctv13.m3u8
+CCTV-13,https://live-play.cctvnews.cctv.com/cctv/merge_cctv13_mud.m3u8
+CCTV-1, http://stream10.fjtv.net/cctv1/playlist.m3u8?_upt=f28ac5ee1700907395
+CCTV-13,http://stream10.fjtv.net/cctv13/playlist.m3u8?_upt=a7a3bead1700907543
+CCTV-1, http://tvpull.dxhmt.cn/tv/11481-4.m3u8
+CCTV-13,http://hls.hsrtv.cn/live/hsyouxian.m3u8
 
     #央视其他频道#
 CHC高清电影,http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226463/index.m3u8
