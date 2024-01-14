@@ -8,6 +8,8 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
+    class_name: '快船赛程',
+    class_url: 'clippers',
     class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/live',
     headers:{
         'User-Agent':'PC_UA'
@@ -53,28 +55,36 @@ var rule = {
         pdfh=jsp.pdfh;
         pdfa=jsp.pdfa;
         pd=jsp.pd;
-        var html=request(input);
-        var tabs=pdfa(html,'.list-group&&.group-game-item');
-        tabs.forEach(function(it){
-            // 通过" "进行截取
-            let split = pdfh(it, '.d-none&&Text').split(" ");
-            
-            // 一级标题
-            let title1 = split[2] + '🆚' + split[4];
-            // 一级描述
-            let desc1 = split[0] + ' ' + pdfh(it, '.btn&&Text');
-            // 一级图片URL
-            let picUrl1 = pd(it,'.team-logo&&src');
-            // 一级URL
-            let url1 = pd(it, '.btn&&href');
-            
-            items.push({
-                desc:desc1,
-                title:title1,
-                pic_url:picUrl1,
-                url:url1
+        var html;
+        if(MY_PAGE===1){
+            if(MY_CATE==='clippers'){
+                html=request('http://www.88kanqiu.one/team/2390/live');
             }
-        )});
+            else{
+                html=request(input);
+            }
+            var tabs=pdfa(html,'.list-group&&.group-game-item');
+            tabs.forEach(function(it){
+                // 通过" "进行截取
+                let split = pdfh(it, '.d-none&&Text').split(" ");
+                
+                // 一级标题
+                let title1 = split[2] + '🆚' + split[4];
+                // 一级描述
+                let desc1 = split[0] + ' ' + pdfh(it, '.btn&&Text');
+                // 一级图片URL
+                let picUrl1 = pd(it,'.team-logo&&src');
+                // 一级URL
+                let url1 = pd(it, '.btn&&href');
+                
+                items.push({
+                    desc:desc1,
+                    title:title1,
+                    pic_url:picUrl1,
+                    url:url1
+                }
+            )});
+        }
         setResult(items);
     `,
     二级:{
