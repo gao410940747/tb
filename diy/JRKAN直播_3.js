@@ -47,7 +47,7 @@ var rule = {
             var timer=pdfh(it,'.lab_time&&Text');
             var url=pd(it,'a.me&&href');
             items.push({
-                desc:timer+'🏆'+ps,
+                desc:timer+' '+ps,
                 title:pz+'🆚'+pk,
                 pic_url:img,
                 url:url
@@ -61,7 +61,7 @@ var rule = {
         pd=jsp.pd;
         var new_html = request(input);
         VOD = {
-            vod_name: pdfh(new_html,'.lab_team_home&&Text') + '(主)🆚(客)' + pdfh(new_html,'.lab_team_away&&Text'),
+            vod_name: pdfh(new_html,'.lab_team_home&&Text') + '🆚' + pdfh(new_html,'.lab_team_away&&Text'),
             vod_pic: pd(new_html,'.lab_team_home img&&src'),
             type_name: pdfh(new_html,'.lab_events&&Text'),
             vod_content: pdfh(new_html,'.sub_list ul&&Text'),
