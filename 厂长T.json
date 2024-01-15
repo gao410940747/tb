@@ -12,7 +12,7 @@
 		{"key":"厂长","name":"厂长影视","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/厂长资源_1.js"},
 //		{"key":"荐片","name":"荐片","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/荐片_1.js","playerType":1},
 		{"key":"荐片","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"央视片库","name":"央视片库","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"ext":"./diy/央视片库_1.js"},
+		{"key":"央视大全","name":"央视大全","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"ext":"./diy/央视大全.js"},
 		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:bfzy线路,sd线路,tp线路,lz线路,ff线路][不包含:yh线路]","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
 //		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/机器人.js"},
 
