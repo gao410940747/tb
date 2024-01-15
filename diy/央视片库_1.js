@@ -52,7 +52,7 @@ var rule = {
             // 一级标题
             let title1 = it.title;
             // 一级描述
-            let desc1 = '共' + it.count + '集•' + it.sc + (typeof it.year==='undefined'?'':'•'+it.year);
+            let desc1 = it.sc + ((typeof it.year==='undefined' || it.year==='')?'':('•'+it.year)) + ((typeof it.count==='undefined' || it.count==='')?'':('•共' + it.count + '集'));
             // 一级图片URL
             let picUrl1 = it.image;
             // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 集数）
