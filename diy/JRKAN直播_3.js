@@ -68,35 +68,44 @@ var rule = {
         };
 
         var playUrls = pdfa(new_html, '.sub_playlist&&a');
-        let playFrom = [];
-        let playList = [];
 
-        playFrom.append('JRKAN直播');
-        playList.append(playUrls.map(function(it) {
-            let name = pdfh(it,'strong&&Text');
+        // 咪咕专线
+        var migu = '';
+        // 腾讯专线
+        var tencent = '';
+        // 爱奇艺专线
+        var iqiyi = '';
+
+        playUrls.map(function(it) {
             let url = pd(it,'a&&data-play');
             if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")
                 || url.startsWith("http://play.sportsteam356.com/play/gm.php")){
-                name = name.replace('中文高清','咪咕专线');
+                migu = '咪咕专线'+'$'+url+'#';
+            }
+            else if (/txycdn.video.qq.com/.test(url)){
+                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                tencent = '腾讯专线'+'$'+url+'#';
             }
             else if (url.startsWith("http://play.sportsteam356.com/play/iqi.php")){
-                name = name.replace('中文高清','爱奇艺专线');
+                iqiyi = '爱奇艺专线'+'$'+url+'#';
             }
-            else if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=262")){
+        });
+        // 播放列表拼接
+        var playListStr = migu + tencent + iqiyi;
+
+        playUrls.map(function(it) {
+            let name = pdfh(it,'strong&&Text');
+            let url = pd(it,'a&&data-play');
+            if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=262")){
                 name = name.replace('主播解说','主播瑶妹');
             }
-            else if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=224")
-                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=224")
-                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=224")){
-                name = name.replace('主播解说','视频主播');
-            }
-            else if (url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")
-                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=244")
-                || url.startsWith("http://play.sportsteam356.com/play/sm.html?id=138")){
-                name = name.replace('主播解说','声音主播');
-            }
-            return name+'$'+url
-        }).join("#"));
+            playListStr = playListStr + name+ '$' + url + '#';
+        });
+
+        let playFrom = [];
+        let playList = [];
+        playFrom.append('JRKAN直播');
+        playList.append(playListStr);
 
         // 最后封装所有线路
         let vod_play_from = playFrom.join('$$$');

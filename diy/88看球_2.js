@@ -103,33 +103,64 @@ var rule = {
         }
         setResult(items);
     `,
-    二级:{
-	    "title":".game-info-container&&Text;.customer-navbar-nav li&&Text",
-	    "img":".team-logo&&src",
-	    "desc":";;;div.team-name:eq(0)&&Text;div.team-name:eq(1)&&Text",
-	    "content":"div.game-time&&Text",
-	    "tabs":"js:TABS=['88看球']",
-	    "lists":`js:
-	        LISTS=[];
-	        input=input+'-url';
-	        let html=request(input);
-	        let data=JSON.parse(html);
-	        TABS.forEach(function(tab){
-	            let m3u=data.links;
-	            let d=m3u.map(function(it){
-			        if (it.url.startsWith("http://play.sportsteam1234.com/play/mglx.php")
-			            || it.url.startsWith("http://play.sportsteam1234.com/play/gm.php")){
-	                    return '咪咕专线'+'$'+it.url
-	                }
-			        else if (it.url.startsWith("http://play.sportsteam1234.com/play/iqi.php")){
-	                    return '爱奇艺专线'+'$'+it.url
-	                }
-	                else {
-	                    return it.name+'$'+it.url
-	                }
-                });
-            LISTS.push(d)});
-        `
-	},
+    二级:`js:
+        pdfh=jsp.pdfh;
+        pdfa=jsp.pdfa;
+        pd=jsp.pd;
+        var new_html = request(input);
+        VOD = {
+            vod_name: pdfh(new_html,'.team-name:eq(0)&&Text') + '🆚' + pdfh(new_html,'.team-name:eq(1)&&Text'),
+            vod_pic: pd(new_html,'.team-logo&&src'),
+            type_name: pdfh(new_html,'.customer-navbar-nav&&li&&Text'),
+            vod_content: pdfh(new_html,'.col-md-4:eq(1)&&Text'),
+        };
+
+        var playUrls = JSON.parse(request(input+'-url')).links;
+
+        // 咪咕专线
+        var migu = '';
+        // 腾讯专线
+        var tencent = '';
+        // 爱奇艺专线
+        var iqiyi = '';
+
+        playUrls.map(function(it) {
+            var name = it.name;
+            var url = it.url;
+            if (url.startsWith("http://play.sportsteam1234.com/play/mglx.php")
+                || url.startsWith("http://play.sportsteam1234.com/play/gm.php")){
+                migu = '咪咕专线'+'$'+url+'#';
+            }
+            else if (/txycdn.video.qq.com/.test(url)){
+                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                tencent = '腾讯专线'+'$'+url+'#';
+            }
+            else if (url.startsWith("http://play.sportsteam1234.com/play/iqi.php")){
+                iqiyi = '爱奇艺专线'+'$'+url+'#';
+            }
+        });
+        // 播放列表拼接
+        var playListStr = migu + tencent + iqiyi;
+
+        playUrls.map(function(it) {
+            var name = it.name;
+            var url = it.url;
+            if (url.startsWith("http://play.sportsteam1234.com/play/sm.html?id=262")){
+                name = name.replace('主播解说','主播瑶妹');
+            }
+            playListStr = playListStr + name+ '$' + url + '#';
+        });
+
+        let playFrom = [];
+        let playList = [];
+        playFrom.append('88看球');
+        playList.append(playListStr);
+
+        // 最后封装所有线路
+        let vod_play_from = playFrom.join('$$$');
+        let vod_play_url = playList.join('$$$');
+        VOD['vod_play_from'] = vod_play_from;
+        VOD['vod_play_url'] = vod_play_url;
+    `,
     搜索:'',
 }
