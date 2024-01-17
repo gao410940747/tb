@@ -197,8 +197,8 @@ var rule = {
                     });
                 })
             } else if (area === '守望先锋hls线路') {
+                douyinow = true;
                 if (MY_PAGE === 1) {
-                    douyinow = true;
                     // let new_html = request('https://live.douyin.com/category/1_1_1_1010339');
                     let new_html = fetch('https://live.douyin.com/category/1_4603_1_4700');
                     let list = pdfa(new_html, '.toLyHXZi');
