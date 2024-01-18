@@ -115,40 +115,33 @@ var rule = {
             vod_content: pdfh(new_html,'.col-md-4:eq(1)&&Text'),
         };
 
+        // 播放列表拼接
+        var playListStr = '';
+
         var playUrls = JSON.parse(request(input+'-url')).links;
-
-        // 咪咕专线
-        var migu = '';
-        // 腾讯专线
-        var tencent = '';
-        // 爱奇艺专线
-        var iqiyi = '';
-
         playUrls.map(function(it) {
             var name = it.name;
             var url = it.url;
             if (url.startsWith("http://play.sportsteam1234.com/play/mglx.php")
                 || url.startsWith("http://play.sportsteam1234.com/play/gm.php")){
-                migu = '咪咕专线'+'$'+url+'#';
-            }
-            else if (/txycdn.video.qq.com/.test(url)){
-                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
-                tencent = '腾讯专线'+'$'+url+'#';
-            }
-            else if (url.startsWith("http://play.sportsteam1234.com/play/iqi.php")){
-                iqiyi = '爱奇艺专线'+'$'+url+'#';
+                playListStr = playListStr + '咪咕专线'+'$'+url+'#';
             }
         });
-        // 播放列表拼接
-        var playListStr = migu + tencent + iqiyi;
 
         playUrls.map(function(it) {
             var name = it.name;
             var url = it.url;
-            if (url.startsWith("http://play.sportsteam1234.com/play/sm.html?id=262")){
-                name = name.replace('主播解说','主播瑶妹');
+            if (/txycdn.video.qq.com/.test(url)){
+                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                playListStr = playListStr + '腾讯专线'+'$'+url+'#';
             }
-            playListStr = playListStr + name+ '$' + url + '#';
+            else if (url.startsWith("http://play.sportsteam1234.com/play/iqi.php")){
+                playListStr = playListStr + '爱奇艺专线'+'$'+url+'#';
+            }
+        });
+
+        playUrls.map(function(it) {
+            playListStr = playListStr + it.name+ '$' + it.url + '#';
         });
 
         let playFrom = [];

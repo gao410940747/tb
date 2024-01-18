@@ -67,31 +67,28 @@ var rule = {
             vod_content: pdfh(new_html,'.sub_list ul&&Text'),
         };
 
+        // 播放列表拼接
+        var playListStr = '';
+
         var playUrls = pdfa(new_html, '.sub_playlist&&a');
-
-        // 咪咕专线
-        var migu = '';
-        // 腾讯专线
-        var tencent = '';
-        // 爱奇艺专线
-        var iqiyi = '';
-
         playUrls.map(function(it) {
             let url = pd(it,'a&&data-play');
             if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")
                 || url.startsWith("http://play.sportsteam356.com/play/gm.php")){
-                migu = '咪咕专线'+'$'+url+'#';
-            }
-            else if (/txycdn.video.qq.com/.test(url)){
-                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
-                tencent = '腾讯专线'+'$'+url+'#';
-            }
-            else if (url.startsWith("http://play.sportsteam356.com/play/iqi.php")){
-                iqiyi = '爱奇艺专线'+'$'+url+'#';
+                playListStr = playListStr + '咪咕专线'+'$'+url+'#';
             }
         });
-        // 播放列表拼接
-        var playListStr = migu + tencent + iqiyi;
+
+        playUrls.map(function(it) {
+            let url = pd(it,'a&&data-play');
+            if (/txycdn.video.qq.com/.test(url)){
+                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                playListStr = playListStr + '腾讯专线'+'$'+url+'#';
+            }
+            else if (url.startsWith("http://play.sportsteam356.com/play/iqi.php")){
+                playListStr = playListStr + '爱奇艺专线'+'$'+url+'#';
+            }
+        });
 
         playUrls.map(function(it) {
             let name = pdfh(it,'strong&&Text');
