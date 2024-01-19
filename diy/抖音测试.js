@@ -59,7 +59,7 @@ var rule = {
         // 从数组中获取id，供二级页面api接口使用
         var id = info[0];
         // 调用二级页面api接口，并转成json获取data
-        var data = JSON.parse(request('http://cfmqy.cn/tv/api.php?type=parent_id&video_id='+id)).data;
+        var data = JSON.parse(request('http://cfmqy.cn/tv/api.php?type=parent_id&video_id='+id.replace('http://cfmqy.cn/tv/', ''))).data;
         // 封装二级页面的信息值，若无可不填
         VOD = {
             // id
