@@ -1,6 +1,7 @@
 {
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
 	"sites": [
+		{"key":"咪咕视频","name":"咪咕视频","type":3,"playerType":1,"api":"./lib/drpy2.min.js","ext":"./diy/migu.js"},
 		{"key":"抖音测试","name":"抖音测试","type":3,"playerType":1,"api":"./lib/drpy2.min.js","ext":"./diy/抖音测试.js"},
 		{"key":"Mp4电影","name":"Mp4电影","type":3,"api":"csp_Mp4Mov","searchable":1,"quickSearch":1,"filterable":1,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/cili.jar"},
 		{"key":"BT天堂","name":"BT天堂","type":3,"api":"csp_XYQHiker","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/BT天堂.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},

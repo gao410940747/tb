@@ -41,7 +41,7 @@ var rule = {
             // 定义一级封面URL，可自定义自己想要展示的值
             var picUrl1=it.cover_url;
             // 定义一级URL，点击该剧集时次值将传到二级页面使用，此处传“id|封面URL|集数|类型|简介”，可自定义，若二级页面调用的api接口中可以提供这些字段，则可以仅传id
-            var url1=it.id+'|'+it.cover_url+'|'+it.total+'|'+it.classes+'|'+it.introduction;
+            var url1=it.id+'|'+it.cover_url+'|'+it.total+'|'+it.classes+'|'+it.introduction+'|'+it.title;
             // 封装到列表中
             items.push({
                 desc:desc1,
@@ -63,9 +63,9 @@ var rule = {
         // 封装二级页面的信息值，若无可不填
         VOD = {
             // id
-            vod_id: data.id,
+            vod_id: id,
             // 名称
-            vod_name: data.son_title,
+            vod_name: info[5],
             // 封面  使用影视app或者521影视app时可以展示此封面
             vod_pic: info[1],
             // 类型
