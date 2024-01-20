@@ -2,7 +2,7 @@ var rule = {
     title:'无极磁力',
     host:'https://0cili.eu',
     // 发布页：https://cili404.com/
-    // 备用节点：https://0cili.com/  https://cili.uk/  https://wuji.me/
+    // 备用节点：https://0cili.com/  https://cili.uk/  https://wuji.me/  https://cili.lat/
     searchUrl:'/search?q=**',
     searchable:1,
     quickSearch:1,

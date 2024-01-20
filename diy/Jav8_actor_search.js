@@ -1,16 +1,16 @@
 var rule = {
     title:'Jav8_actor_search',
-    host:'https://jav8.vip',
+    host:'https://jav8.pro',
     url:'/top-actresses',
-    searchUrl:'/actress/**?page=fypage',
-    searchable:1,
-    quickSearch:1,
-    class_name: '演员',
+    searchUrl:'',
+    searchable:0,
+    quickSearch:0,
+    class_name: '最受欢迎女优',
     class_url: '/',
     headers:{
         'User-Agent':'PC_UA'
     },
-    图片来源:'@Referer=https://jav8.vip',
+    图片来源:'@Referer=https://jav8.pro',
     timeout:15000,
     play_parse:true,
     limit:10,
@@ -53,17 +53,20 @@ var rule = {
 		pdfa = jsp.pdfa;
 		pd = jsp.pd;
         var html = request(input);
+        var html_txt = request(input.replace(HOST, 'https://javtxt.one'));
         VOD = {
             vod_id: pdfh(html, '.highlight&&Text'),
-            vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html, '.title&&Text'),
-            vod_pic: pd(html, '#cover-img&&data-src'),
+            // vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html, '.title&&Text'),
+            vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html_txt, 'h2&&Text'),
+            vod_pic: pdfh(html, '#cover-img&&data-src'),
             type_name: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
-            vod_year: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
+            // vod_year: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
             // vod_area: pdfh(html, '.attributes&&dt:eq(5)&&Text'),
             vod_remarks: pdfh(html, '.highlight&&Text'),
             vod_director: pdfh(html, '.attributes&&dt:eq(4)&&Text'),
             vod_actor: pdfh(html, '.actress&&Text'),
-            vod_content: pdfh(html, '.tags&&Text'),
+            // vod_content: pdfh(html, '.tags&&Text'),
+            vod_content: pdfh(html_txt, '.intro&&.text-zh&&p&&Text'),
         };
 		var list = pdfa(html, '.magnets&&.magnet');
         let playFrom = [];

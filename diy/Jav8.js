@@ -4,11 +4,9 @@ var rule = {
     // 发布页：https://jav8.link/
     // 备用节点：https://jav8.vip/  https://jav8.lol/  https://jav8.one/  https://jav8.me/
     url:'/fyclass/fyfilter',
-    searchUrl:'/actress/**?page=fypage',
-    searchable:0,
-    quickSearch:0,
-    // class_name: '热门影片&最新影片&磁力更新&排行榜&即将发布&S1 NO.1 STYLE&Prestige&SOD&FALENO&MOODYZ&Idea Pocket',
-    // class_url: 'top-videos?page=fypage&latest?page=fypage&updated?page=fypage&rank&soon?page=fypage&studio/763?page=fypage&studio/671?page=fypage&studio/1334?page=fypage&studio/4411?page=fypage&studio/294?page=fypage&studio/109?page=fypage',
+    searchUrl:'/search?type=id&q=**',
+    searchable:1,
+    quickSearch:1,
     class_name: '热门影片&最新影片&磁力更新&排行榜&即将发布',
     class_url: 'top-videos?page=fypage&latest?page=fypage&updated?page=fypage&rank&soon?page=fypage',
     filterable: 1,
@@ -69,17 +67,20 @@ var rule = {
 		pdfa = jsp.pdfa;
 		pd = jsp.pd;
         var html = request(input);
+        var html_txt = request(input.replace(HOST, 'https://javtxt.one'));
         VOD = {
             vod_id: pdfh(html, '.highlight&&Text'),
-            vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html, '.title&&Text'),
+            // vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html, '.title&&Text'),
+            vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html_txt, 'h2&&Text'),
             vod_pic: pdfh(html, '#cover-img&&data-src'),
             type_name: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
-            vod_year: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
+            // vod_year: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
             // vod_area: pdfh(html, '.attributes&&dt:eq(5)&&Text'),
             vod_remarks: pdfh(html, '.highlight&&Text'),
             vod_director: pdfh(html, '.attributes&&dt:eq(4)&&Text'),
             vod_actor: pdfh(html, '.actress&&Text'),
-            vod_content: pdfh(html, '.tags&&Text'),
+            // vod_content: pdfh(html, '.tags&&Text'),
+            vod_content: pdfh(html_txt, '.intro&&.text-zh&&p&&Text'),
         };
 		var list = pdfa(html, '.magnets&&.magnet');
         let playFrom = [];
