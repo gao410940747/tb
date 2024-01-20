@@ -20,7 +20,7 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'全部比赛',
+    class_name:'JRS赛事直播',
     class_url:'/',
     headers:{
         'User-Agent':'MOBILE_UA'
