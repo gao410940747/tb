@@ -65,11 +65,11 @@ var rule = {
     `,
     一级:`js:
         var items=[];
-        pdfh=jsp.pdfh;
-        pdfa=jsp.pdfa;
-        pd=jsp.pd;
         
         if(MY_PAGE===1) {
+            pdfh=jsp.pdfh;
+            pdfa=jsp.pdfa;
+            pd=jsp.pd;
             var html = request(input);
             var list = pdfa(html,'.dataList&&li');
             list.forEach(function(it){
@@ -94,50 +94,49 @@ var rule = {
                     });
                 }
             });
-        } else {
-            // 创建一个新的 Date 对象表示当前时间
-            var currentDate = new Date();
-            // 计算上一天日期
-            var lastDate = currentDate.getDate() - 1;
+        }
+        else {
+            for(var i=0;i<10;i++){
+                let myDate = new Date();
+                let lw = new Date(myDate - 1000 * 60 * 60 * 24 * (9 + MY_PAGE + i));
+                let lastY = lw.getFullYear();
+                let lastM = lw.getMonth() + 1;
+                let lastD = lw.getDate();
+                let lastDate = lastY + "-" + (lastM < 10 ? "0" + lastM : lastM) + "-" + (lastD < 10 ? "0" + lastD : lastD);
+                
+                var html = 'https://www.zhibo8.com/nba/json/'+lastDate+'.htm';
+                var json = JSON.parse(request(html));
+                var date = json.date;
+                list = json.video_arr;
+                var flag = 'false';
             
-            var year = lastDate.getFullYear(); 
-            var month =(lastDate.getMonth() + 1).toString(); 
-            var day = (lastDate.getDate()).toString();  
-            if (month.length == 1) { 
-                month = "0" + month; 
-            } 
-            if (day.length == 1) { 
-                day = "0" + day; 
-            }
-            var lastDateStr = year + "-" + month + "-" + day;
-            
-            var html = 'https://www.zhibo8.com/nba/json/'+lastDateStr+'.htm';
-            var json = JSON.parse(request(html));
-            var date = json.date;
-            var list = json.video_arr;
-    
-            list.forEach(function(it){
-            
-                if(/集锦/.test(it.lable) || /佳球/.test(it.lable)) {
-                }
-                else if(/快船/.test(it.lable)) {
-                    // 一级标题
-                    let title1 = it.title;
-                    // 一级描述
-                    let desc1 = date;
-                    // 一级图片URL
-                    let picUrl1 = it.thumbnail;
-                    // 一级URL
-                    let url1 = HOST + it.url;
+                list.forEach(function(it){
                     
-                    items.push({
-                        desc:desc1,
-                        title:title1,
-                        pic_url:picUrl1,
-                        url:url1
-                    });
+                    if(/集锦/.test(it.label) || /佳球/.test(it.label)) {
+                    }
+                    else if(/快船/.test(it.label)) {
+                        flag = 'true';
+                        // 一级标题
+                        let title1 = it.title;
+                        // 一级描述
+                        let desc1 = date + ' ' + it.label.replaceAll(',', ' ');
+                        // 一级图片URL
+                        let picUrl1 = 'https://cdn.leisu.com/basketball/teamflag_s/848b21021b2a1db7bde95ea52a1e021b.png?imageMogr2/auto-orient/thumbnail/200x200';
+                        // 一级URL
+                        let url1 = HOST + it.url;
+                        
+                        items.push({
+                            desc:desc1,
+                            title:title1,
+                            pic_url:picUrl1,
+                            url:url1
+                        });
+                    }
+                });
+                if(flag==='true') {
+                    break;
                 }
-            });
+			}
         }
         setResult(items);
     `,
