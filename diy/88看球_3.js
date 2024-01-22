@@ -8,8 +8,10 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name: 'JRS赛事直播&快船赛程',
-    class_url: 'jrkan&clippers',
+    class_name: 'JRS赛事直播',
+    class_url: 'jrkan',
+//    class_name: 'JRS赛事直播&快船赛程',
+//    class_url: 'jrkan&clippers',
     class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/live',
     headers:{
         'User-Agent':'PC_UA'

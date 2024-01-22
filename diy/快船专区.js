@@ -1,14 +1,12 @@
 var rule = {
-    title:'篮球屋录像',
+    title:'快船专区',
     host:'https://lanqiuwu.com',
     url:'/fyclass/index_fypage.html',
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像',
-    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx',
-//    class_name:'快船视频&快船集锦&快船录像&快船录像(量子)&NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像',
-//    class_url:'zhibo8_clippers&qiudui139_jijin&qiudui139&qiudui139_migu&nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx',
+    class_name:'快船视频&快船赛程&快船集锦&快船录像&快船录像(咪咕)',
+    class_url:'zhibo8_clippers&88kanqiu_clippers&qiudui139_jijin&qiudui139&qiudui139_migu',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -30,39 +28,6 @@ var rule = {
     `,
     limit:6,
     double:true,
-    推荐:`js:
-        var items=[];
-        pdfh=jsp.pdfh;
-        pdfa=jsp.pdfa;
-        pd=jsp.pd;
-        var html=request('https://www.zhibo8.com/nba/more.htm');
-
-        var list=pdfa(html,'.dataList&&li');
-
-        list.forEach(function(it){
-
-            if(/集锦/.test(pdfh(it,'li&&data-label')) || /佳球/.test(pdfh(it,'li&&data-label'))) {
-            }
-            else {
-                // 一级标题
-                let title1 = pdfh(it,'a&&Text');
-                // 一级描述
-                let desc1 = pdfh(it,'.postTime&&Text');
-                // 一级图片URL
-                let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
-                // 一级URL
-                let url1 = pd(it, 'a&&href').replace(HOST, 'https://www.zhibo8.com');
-
-                items.push({
-                    desc:desc1,
-                    title:title1,
-                    pic_url:picUrl1,
-                    url:url1
-                });
-            }
-        });
-        setResult(items);
-    `,
     一级: `js:
         // 封装球队LOGO麦普
         var TeamLogoMap = {
@@ -129,13 +94,13 @@ var rule = {
             // "开拓者": "https://cdn.leisu.com/basketball/teamflag_s/4512175b1415f69816e816160093bcc0.png?imageMogr2/auto-orient/thumbnail/200x200",
             // "马刺": "https://cdn.leisu.com/basketball/teamflag_s/5305d1a7b721b5bef418041eff53ba82.png?imageMogr2/auto-orient/thumbnail/200x200"
         };
-        
+
         pdfh = jsp.pdfh;
         pdfa = jsp.pdfa;
         pd = jsp.pd;
         var d = [];
         var html;
-        
+
         if(MY_CATE==='qiudui139_migu'){
             html = request('http://lzizy.com/index.php/vod/search/page/'+MY_PAGE+'/wd/%E5%BF%AB%E8%88%B9.html');
             var list = pdfa(html, '.videoContent&&li');
@@ -148,7 +113,7 @@ var rule = {
                 let Team1 = Team1vsTeam2.split("vs")[0];
                 // 主队名称
                 let Team2 = Team1vsTeam2.split("vs")[1];
-                
+
                 // 一级标题
                 let title1 = Team1vsTeam2.replace('vs', '🆚');
                 // 一级描述
@@ -157,7 +122,7 @@ var rule = {
                 let picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
                 // 一级URL
                 let url1 = pd(it, 'a&&href').replace(HOST, 'http://lzizy.com/');
-        
+
                 // 封装对象
                 d.push({
                     title: title1,
@@ -221,7 +186,7 @@ var rule = {
                             // 一级图片URL
                             let picUrl1 = 'https://cdn.leisu.com/basketball/teamflag_s/848b21021b2a1db7bde95ea52a1e021b.png?imageMogr2/auto-orient/thumbnail/200x200';
                             // 一级URL
-                            let url1 = HOST + it.url;
+                            let url1 = ('https://www.zhibo8.com' + it.url).replace(HOST, '');
 
                             d.push({
                                 desc:desc1,
@@ -235,6 +200,40 @@ var rule = {
                         break;
                     }
                 }
+            }
+        }
+        if(MY_CATE==='88kanqiu_clippers'){
+            if(MY_PAGE===1) {
+                html=request('http://www.88kanqiu.one/team/2390/live');
+                var tabs=pdfa(html,'.list-group&&.list-group-item');
+
+                // 定义日期
+                var date = '';
+
+                tabs.forEach(function(it){
+                    // 通过" "进行截取
+                    let split = pdfh(it, '.d-none&&Text').split(" ");
+
+                    if(/undefined/.test(split[2])){
+                        date = pdfh(it, 'li&&Text').split('-')[1] + '-' + pdfh(it, 'li&&Text').split('-')[2] + ' ';
+                    } else {
+                        // 一级标题
+                        let title1 = split[2] + '🆚' + split[4];
+                        // 一级描述
+                        let desc1 = date + split[0] + ' ' + pdfh(it, '.btn&&Text');
+                        // 一级图片URL
+                        let picUrl1 = (MY_CATE==='clippers' && split[2]==='快船')?pd(it,'.team-logo&&src'):pd(it,'.col-xs-1 img&&src');
+                        // 一级URL
+                        let url1 = pd(it, '.btn&&href');
+
+                        d.push({
+                            desc:desc1,
+                            title:title1,
+                            pic_url:picUrl1,
+                            url:url1
+                        })
+                    }
+                });
             }
         }
         else{
@@ -256,7 +255,7 @@ var rule = {
                 let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
                 // 一级URL
                 let url1 = pd(it, 'h2 a&&href');
-        
+
                 if (/vs/.test(pdfh(it, 'h2&&Text'))) {
                     let vsSplit = pdfh(it, 'h2&&Text').split("vs");
                     let vs1 = vsSplit[0].split(' ');
@@ -345,7 +344,7 @@ var rule = {
                 vod_pic: pd(new_html,'.left img&&src'),
             };
             var playUrls = pdfa(new_html, 'body&&.playlist');
-            
+
             let playFrom = [];
             let playList = [];
             playFrom.append('量子资源');
@@ -356,7 +355,7 @@ var rule = {
                     return name + "$" + url
                 }).join("#"))
             });
-    
+
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
             let vod_play_url = playList.join('$$$');
@@ -381,12 +380,60 @@ var rule = {
             VOD['vod_play_from'] = vod_play_from;
             VOD['vod_play_url'] = vod_play_url;
         }
+        else if(/88kanqiu/.test(input)) {
+            VOD = {
+                vod_name: pdfh(new_html,'.team-name:eq(0)&&Text') + '🆚' + pdfh(new_html,'.team-name:eq(1)&&Text'),
+                vod_pic: pd(new_html,'.team-logo&&src'),
+                type_name: pdfh(new_html,'.customer-navbar-nav&&li&&Text'),
+                vod_content: pdfh(new_html,'.col-md-4:eq(1)&&Text').replaceAll(' ', '_'),
+            };
+
+            // 播放列表拼接
+            var playListStr = '';
+
+            var playUrls = JSON.parse(request(url.replace(HOST+'88kanqiu%7C', '')+'-url')).links;
+            playUrls.map(function(it) {
+                var name = it.name;
+                var url = it.url;
+                if (url.startsWith("http://play.sportsteam1234.com/play/mglx.php")
+                    || url.startsWith("http://play.sportsteam1234.com/play/gm.php")){
+                    playListStr = playListStr + '咪咕专线'+'$'+url+'#';
+                }
+            });
+
+            playUrls.map(function(it) {
+                var name = it.name;
+                var url = it.url;
+                if (/txycdn.video.qq.com/.test(url)){
+                    url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                    playListStr = playListStr + '腾讯专线'+'$'+url+'#';
+                }
+                else if (url.startsWith("http://play.sportsteam1234.com/play/iqi.php")){
+                    playListStr = playListStr + '爱奇艺专线'+'$'+url+'#';
+                }
+            });
+
+            playUrls.map(function(it) {
+                playListStr = playListStr + it.name+ '$' + it.url + '#';
+            });
+
+            let playFrom = [];
+            let playList = [];
+            playFrom.append('88看球');
+            playList.append(playListStr);
+
+            // 最后封装所有线路
+            let vod_play_from = playFrom.join('$$$');
+            let vod_play_url = playList.join('$$$');
+            VOD['vod_play_from'] = vod_play_from;
+            VOD['vod_play_url'] = vod_play_url;
+        }
         else{
             VOD = {
                 vod_name: pdfh(new_html,'.article-header h2&&Text'),
             };
             var playUrls = pdfa(new_html, '.article-content&&p:gt(1)');
-            
+
             let playFrom = [];
             let playList = [];
             playFrom.append('篮球屋');
@@ -397,7 +444,7 @@ var rule = {
                     return name + "$" + url
                 }).join("#"))
             });
-    
+
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
             let vod_play_url = playList.join('$$$');
