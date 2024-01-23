@@ -5,8 +5,8 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'快船视频&快船赛程&快船集锦&快船录像&快船录像(咪咕)',
-    class_url:'zhibo8_clippers&88kanqiu_clippers&qiudui139_jijin&qiudui139&qiudui139_migu',
+    class_name:'快船视频&快船赛程&快船集锦&快船录像&快船录像(量子源)&快船录像(天空源)&快船录像(飞速源)',
+    class_url:'zhibo8_clippers&88kanqiu_clippers&qiudui139_jijin&qiudui139&qiudui139_liangzi&qiudui139_tiankong&qiudui139_feisu',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -100,38 +100,6 @@ var rule = {
         pd = jsp.pd;
         var d = [];
         var html;
-
-        if(MY_CATE==='qiudui139_migu'){
-            html = request('http://lzizy.com/index.php/vod/search/page/'+MY_PAGE+'/wd/%E5%BF%AB%E8%88%B9.html');
-            var list = pdfa(html, '.videoContent&&li');
-            list.forEach(it => {
-                // 完整标题
-                var videoName = pdfh(it, '.videoName&&Text')
-                // 客队vs主队
-                let Team1vsTeam2 = videoName.split(' ')[1].substring(0, videoName.split(' ')[1].length-11);
-                // 客队名称
-                let Team1 = Team1vsTeam2.split("vs")[0];
-                // 主队名称
-                let Team2 = Team1vsTeam2.split("vs")[1];
-
-                // 一级标题
-                let title1 = Team1vsTeam2.replace('vs', '🆚');
-                // 一级描述
-                let desc1 = videoName.substring(videoName.length-11, videoName.length-3);
-                // 一级图片URL
-                let picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
-                // 一级URL
-                let url1 = pd(it, 'a&&href').replace(HOST, 'http://lzizy.com/');
-
-                // 封装对象
-                d.push({
-                    title: title1,
-                    desc: desc1,
-                    pic_url: picUrl1,
-                    url: url1
-                });
-            })
-        }
         if(MY_CATE==='zhibo8_clippers'){
             if(MY_PAGE===1) {
                 html = request('https://www.zhibo8.com/nba/more.htm?label=快船');
@@ -202,7 +170,138 @@ var rule = {
                 }
             }
         }
-        if(MY_CATE==='88kanqiu_clippers'){
+        else if(MY_CATE==='qiudui139_liangzi'){
+            var list1 = JSON.parse(request('https://cj.lzcaiji.com/api.php/provide/vod/?pg='+MY_PAGE+'&wd=%E5%BF%AB%E8%88%B9')).list;
+
+            var ids = '';
+            list1.forEach(it => {
+                if(ids==='') {
+                    ids = it.vod_id;
+                }
+                else {
+                    ids = ids + '%2C' + it.vod_id;
+                }
+            })
+            if(ids!=='') {
+                var list2 = JSON.parse(request('https://cj.lzcaiji.com/api.php/provide/vod/?ac=detail&ids='+ids)).list;
+                list2.forEach(it => {
+                    // 客队vs主队
+                    let Team1vsTeam2 = it.vod_name.split(' ')[1].substring(0, it.vod_name.split(' ')[1].length-8);;
+                    // 客队名称
+                    let Team1 = Team1vsTeam2.split("vs")[0];
+                    // 主队名称
+                    let Team2 = Team1vsTeam2.split("vs")[1];
+
+                    // 一级标题
+                    let title1 = Team1vsTeam2.replace('VS', '🆚').replace('vs', '🆚');
+                    // 一级描述
+                    let desc1 = it.vod_name.substring(it.vod_name.length-8, it.vod_name.length);;
+                    // 一级图片URL
+                    let picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
+                    // 一级URL
+                    let url1 = 'https://cj.lzcaiji.com/api.php/provide/vod/?ac=detail&ids=' + it.vod_id;
+
+                    // 封装对象
+                    d.push({
+                        title: title1,
+                        desc: desc1,
+                        pic_url: picUrl1,
+                        url: url1
+                    });
+                })
+            }
+        }
+        else if(MY_CATE==='qiudui139_tiankong'){
+            var list1 = JSON.parse(request('https://tiankongzy.com/api.php/provide/vod/?pg='+MY_PAGE+'&wd=%E5%BF%AB%E8%88%B9')).list;
+
+            var ids = '';
+            list1.forEach(it => {
+                if(ids==='') {
+                    ids = it.vod_id;
+                }
+                else {
+                    ids = ids + '%2C' + it.vod_id;
+                }
+            })
+            if(ids!=='') {
+                var list2 = JSON.parse(request('https://tiankongzy.com/api.php/provide/vod/?ac=detail&ids='+ids)).list;
+                list2.forEach(it => {
+                    let title2 = it.vod_name.split(' ')[2];
+                    // 客队vs主队
+                    let Team1vsTeam2 = title2;
+                    if(/：/.test(title2)) {
+                        Team1vsTeam2 = title2.split('：')[1];
+                    }
+                    // 客队名称
+                    let Team1 = Team1vsTeam2.split("VS")[0];
+                    // 主队名称
+                    let Team2 = Team1vsTeam2.split("VS")[1];
+
+                    // 一级标题
+                    let title1 = title2.replace('VS', '🆚').replace('vs', '🆚');
+                    // 一级描述
+                    let desc1 = it.vod_name.split(' ')[0] + ' ' + it.vod_name.split(' ')[1];
+                    // 一级图片URL
+                    let picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
+                    // 一级URL
+                    let url1 = 'https://tiankongzy.com/api.php/provide/vod/?ac=detail&ids=' + it.vod_id;
+
+                    // 封装对象
+                    d.push({
+                        title: title1,
+                        desc: desc1,
+                        pic_url: picUrl1,
+                        url: url1
+                    });
+                })
+            }
+        }
+        else if(MY_CATE==='qiudui139_feisu'){
+            var list1 = JSON.parse(request('https://www.feisuzy.com/api.php/provide/vod/?pg='+MY_PAGE+'&wd=%E5%BF%AB%E8%88%B9')).list;
+
+            var ids = '';
+            list1.forEach(it => {
+                if(ids==='') {
+                    ids = it.vod_id;
+                }
+                else {
+                    ids = ids + '%2C' + it.vod_id;
+                }
+            })
+            if(ids!=='') {
+                var list2 = JSON.parse(request('https://www.feisuzy.com/api.php/provide/vod/?ac=detail&ids='+ids)).list;
+                list2.forEach(it => {
+                    let title2 = it.vod_name.split(' ')[2];
+                    // 客队vs主队
+                    let Team1vsTeam2 = title2;
+                    if(/：/.test(title2)) {
+                        Team1vsTeam2 = title2.split('：')[1];
+                    }
+                    // 客队名称
+                    let Team1 = Team1vsTeam2.split("VS")[0];
+                    // 主队名称
+                    let Team2 = Team1vsTeam2.split("VS")[1];
+
+                    // 一级标题
+                    let title1 = title2.replace('VS', '🆚').replace('vs', '🆚');
+                    // 一级描述
+                    let desc1 = it.vod_name.split(' ')[0] + ' ' + it.vod_name.split(' ')[1];
+                    // 一级图片URL
+                    let picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
+                    // 一级URL
+                    let url1 = 'https://www.feisuzy.com/api.php/provide/vod/?ac=detail&ids=' + it.vod_id;
+
+                    // 封装对象
+                    d.push({
+                        title: title1,
+                        desc: desc1,
+                        pic_url: picUrl1,
+                        url: url1
+                    });
+                })
+            }
+        }
+        else if(MY_CATE==='88kanqiu_clippers'){
             if(MY_PAGE===1) {
                 html=request('http://www.88kanqiu.one/team/2390/live');
                 var tabs=pdfa(html,'.list-group&&.list-group-item');
@@ -222,9 +321,9 @@ var rule = {
                         // 一级描述
                         let desc1 = date + split[0] + ' ' + pdfh(it, '.btn&&Text');
                         // 一级图片URL
-                        let picUrl1 = (MY_CATE==='clippers' && split[2]==='快船')?pd(it,'.team-logo&&src'):pd(it,'.col-xs-1 img&&src');
+                        let picUrl1 = split[2]==='快船'?pd(it,'.team-logo&&src'):pd(it,'.col-xs-1 img&&src');
                         // 一级URL
-                        let url1 = pd(it, '.btn&&href');
+                        let url1 = pd(it, '.btn&&href').replace(HOST, 'http://www.88kanqiu.one');
 
                         d.push({
                             desc:desc1,
@@ -338,47 +437,59 @@ var rule = {
         pdfa=jsp.pdfa;
         pd=jsp.pd;
         var new_html = request(input);
-        if(/index.php/.test(input)) {
+        if(/zhibo8/.test(input)) {
+                    VOD = {
+                        vod_name: pdfh(new_html,'.title h1&&Text'),
+                        vod_pic: pd(new_html,'.thumb_img img&&src'),
+                        vod_content: pdfh(new_html,'.title h1&&Text'),
+                    };
+
+                    let playFrom = [];
+                    let playList = [];
+                    playFrom.append('直播吧');
+                    playList.append(pdfh(new_html,'.video_time&&Text')+'$'+pd(new_html,'.vcp-player video&&src'));
+
+                    // 最后封装所有线路
+                    let vod_play_from = playFrom.join('$$$');
+                    let vod_play_url = playList.join('$$$');
+                    VOD['vod_play_from'] = vod_play_from;
+                    VOD['vod_play_url'] = vod_play_url;
+                }
+        else if(/lzcaiji/.test(input)) {
+            var info = JSON.parse(new_html).list[0];
             VOD = {
-                vod_name: pdfh(new_html,'.right&&p:eq(0)&&Text').split('片名：')[1],
-                vod_pic: pd(new_html,'.left img&&src'),
+                vod_id: info.vod_id,
+                vod_name: info.vod_name,
+                vod_pic: info.vod_pic,
+                vod_content: info.vod_name,
+                type_name: info.vod_time,
             };
-            var playUrls = pdfa(new_html, 'body&&.playlist');
-
-            let playFrom = [];
-            let playList = [];
-            playFrom.append('量子资源');
-            playUrls.forEach(it => {
-                playList.append(playUrls.map(function(it) {
-                    let name = pdfh(it,'li a&&title');
-                    let url = pd(it,'li a&&href');
-                    return name + "$" + url
-                }).join("#"))
-            });
-
-            // 最后封装所有线路
-            let vod_play_from = playFrom.join('$$$');
-            let vod_play_url = playList.join('$$$');
-            VOD['vod_play_from'] = vod_play_from;
-            VOD['vod_play_url'] = vod_play_url;
+            VOD['vod_play_from'] = info.vod_play_from;
+            VOD['vod_play_url'] = info.vod_play_url;
         }
-        else if(/zhibo8/.test(input)) {
+        else if(/tiankongzy/.test(input)) {
+            var info = JSON.parse(new_html).list[0];
             VOD = {
-                vod_name: pdfh(new_html,'.title h1&&Text'),
-                vod_pic: pd(new_html,'.thumb_img img&&src'),
-                vod_content: pdfh(new_html,'.title h1&&Text'),
+                vod_id: info.vod_id,
+                vod_name: info.vod_name,
+                vod_pic: info.vod_pic,
+                vod_content: info.vod_name,
+                type_name: info.vod_pubdate,
             };
-
-            let playFrom = [];
-            let playList = [];
-            playFrom.append('直播吧');
-            playList.append(pdfh(new_html,'.video_time&&Text')+'$'+pd(new_html,'.vcp-player video&&src'));
-
-            // 最后封装所有线路
-            let vod_play_from = playFrom.join('$$$');
-            let vod_play_url = playList.join('$$$');
-            VOD['vod_play_from'] = vod_play_from;
-            VOD['vod_play_url'] = vod_play_url;
+            VOD['vod_play_from'] = info.vod_play_from;
+            VOD['vod_play_url'] = info.vod_play_url;
+        }
+        else if(/feisu/.test(input)) {
+            var info = JSON.parse(new_html).list[0];
+            VOD = {
+                vod_id: info.vod_id,
+                vod_name: info.vod_name,
+                vod_pic: info.vod_pic,
+                vod_content: info.vod_name,
+                type_name: info.vod_pubdate,
+            };
+            VOD['vod_play_from'] = info.vod_play_from;
+            VOD['vod_play_url'] = info.vod_play_url;
         }
         else if(/88kanqiu/.test(input)) {
             VOD = {
