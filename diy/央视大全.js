@@ -2,12 +2,26 @@ var rule = {
     title:'央视频',
     host:'https://api.cntv.cn',
     homeUrl: '/lanmu/columnSearch?&fl=&fc=&cid=&p=1&n=500&serviceId=tvcctv&t=json',
-    url:'/list/getVideoAlbumList?area=&year=&letter=&n=24&serviceId=tvcctv&t=json',
+    url:'/list/getVideoAlbumList?channel=fyfilter&area=&year=&letter=&n=24&serviceId=tvcctv&t=json',
     searchUrl:'',
     searchable:0,
     quickSearch:0,
     class_name: '特别节目&纪录片&电视剧&动画片',
     class_url: '特别节目&纪录片&电视剧&动画片',
+    filterable: 1,
+    filter_url: '{{fl.channel}}',
+    filter: {
+		"纪录片":[
+            {"key":"channel","name":"频道","value":[{"n":"全部","v":""},{"n":"CCTV-1综合","v":"CCTV-1综合"},{"n":"CCTV-2财经","v":"CCTV-2财经"},{"n":"CCTV-3综艺","v":"CCTV-3综艺"},{"n":"CCTV-4中文国际","v":"CCTV-4中文国际"},{"n":"CCTV-5体育","v":"CCTV-5体育"},{"n":"CCTV-6电影","v":"CCTV-6电影"},{"n":"CCTV-7国防军事","v":"CCTV-7国防军事"},{"n":"CCTV-8电视剧","v":"CCTV-8电视剧"},{"n":"CCTV-9纪录","v":"CCTV-9纪录"},{"n":"CCTV-10科教","v":"CCTV-10科教"},{"n":"CCTV-11戏曲","v":"CCTV-11戏曲"},{"n":"CCTV-12社会与法","v":"CCTV-12社会与法"},{"n":"CCTV-13新闻","v":"CCTV-13新闻"},{"n":"CCTV-14少儿","v":"CCTV-14少儿"},{"n":"CCTV-15音乐","v":"CCTV-15音乐"},{"n":"CCTV-17农业农村","v":"CCTV-17农业农村"}]},
+		],
+		"特别节目":[
+            {"key":"channel","name":"频道","value":[{"n":"全部","v":""},{"n":"CCTV-1综合","v":"CCTV-1综合"},{"n":"CCTV-2财经","v":"CCTV-2财经"},{"n":"CCTV-3综艺","v":"CCTV-3综艺"},{"n":"CCTV-4中文国际","v":"CCTV-4中文国际"},{"n":"CCTV-5体育","v":"CCTV-5体育"},{"n":"CCTV-6电影","v":"CCTV-6电影"},{"n":"CCTV-7国防军事","v":"CCTV-7国防军事"},{"n":"CCTV-8电视剧","v":"CCTV-8电视剧"},{"n":"CCTV-9纪录","v":"CCTV-9纪录"},{"n":"CCTV-10科教","v":"CCTV-10科教"},{"n":"CCTV-11戏曲","v":"CCTV-11戏曲"},{"n":"CCTV-12社会与法","v":"CCTV-12社会与法"},{"n":"CCTV-13新闻","v":"CCTV-13新闻"},{"n":"CCTV-14少儿","v":"CCTV-14少儿"},{"n":"CCTV-15音乐","v":"CCTV-15音乐"},{"n":"CCTV-17农业农村","v":"CCTV-17农业农村"}]},
+		],
+    },
+    filter_def:{
+        '特别节目':{area:'全部'},
+        '纪录片':{area:'全部'}
+    },
     headers:{
         'User-Agent':'PC_UA'
     },
