@@ -8,6 +8,8 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
+    class_name: 'JRS赛事直播&88看球',
+    class_url: 'jrkan&88kanqiu',
     class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/live',
     headers:{
         'User-Agent':'PC_UA'
@@ -18,43 +20,43 @@ var rule = {
     limit:8,
     double:false,
     // 推荐:'*',
-    推荐:`js:
-        var items=[];
-        pdfh=jsp.pdfh;
-        pdfa=jsp.pdfa;
-        pd=jsp.pd;
-        var html=request(input);
-        var tabs=pdfa(html,'.list-group&&.list-group-item');
-
-        // 定义日期
-        var date = '';
-
-        tabs.forEach(function(it){
-            // 通过" "进行截取
-            let split = pdfh(it, '.d-none&&Text').split(" ");
-
-            if(/undefined/.test(split[2])){
-                date = pdfh(it, 'li&&Text').split('-')[1] + '-' + pdfh(it, 'li&&Text').split('-')[2] + ' ';
-            } else {
-                // 一级标题
-                let title1 = split[2] + '🆚' + split[4];
-                // 一级描述
-                let desc1 = date + split[0] + ' ' +  split[1] + ' ' + pdfh(it, '.btn&&Text');
-                // 一级图片URL
-                let picUrl1 = pd(it,'.col-xs-1 img&&src');
-                // 一级URL
-                let url1 = pd(it, '.btn&&href') + '|' + '88kanqiu';
-
-                items.push({
-                    desc:desc1,
-                    title:title1,
-                    pic_url:picUrl1,
-                    url:url1
-                })
-            }
-        });
-        setResult(items);
-    `,
+//    推荐:`js:
+//        var items=[];
+//        pdfh=jsp.pdfh;
+//        pdfa=jsp.pdfa;
+//        pd=jsp.pd;
+//        var html=request(input);
+//        var tabs=pdfa(html,'.list-group&&.list-group-item');
+//
+//        // 定义日期
+//        var date = '';
+//
+//        tabs.forEach(function(it){
+//            // 通过" "进行截取
+//            let split = pdfh(it, '.d-none&&Text').split(" ");
+//
+//            if(/undefined/.test(split[2])){
+//                date = pdfh(it, 'li&&Text').split('-')[1] + '-' + pdfh(it, 'li&&Text').split('-')[2] + ' ';
+//            } else {
+//                // 一级标题
+//                let title1 = split[2] + '🆚' + split[4];
+//                // 一级描述
+//                let desc1 = date + split[0] + ' ' +  split[1] + ' ' + pdfh(it, '.btn&&Text');
+//                // 一级图片URL
+//                let picUrl1 = pd(it,'.col-xs-1 img&&src');
+//                // 一级URL
+//                let url1 = pd(it, '.btn&&href') + '|' + '88kanqiu';
+//
+//                items.push({
+//                    desc:desc1,
+//                    title:title1,
+//                    pic_url:picUrl1,
+//                    url:url1
+//                })
+//            }
+//        });
+//        setResult(items);
+//    `,
     // 一级:'.list-group .group-game-item;.d-none&&Text;.team-logo&&src;.btn&&Text;.btn&&href',
     一级:`js:
         var items = [];
