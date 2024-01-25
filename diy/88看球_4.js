@@ -10,7 +10,7 @@ var rule = {
     quickSearch:0,
     class_name: 'JRS赛事直播&88看球',
     class_url: 'jrkan&88kanqiu',
-//    class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/live',
+    class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/live',
     headers:{
         'User-Agent':'PC_UA'
     },
