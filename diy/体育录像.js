@@ -177,7 +177,7 @@ var rule = {
                 // 一级图片URL
                 let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
                 // 一级URL
-                let url1 = pd(it, 'h2 a&&href');
+                let url1 = pd(it, 'h2 a&&href').replace('http://www.88kanqiu.one', 'https://lanqiuwu.com');
 
                 if (/vs/.test(pdfh(it, 'h2&&Text'))) {
                     let vsSplit = pdfh(it, 'h2&&Text').split("vs");
