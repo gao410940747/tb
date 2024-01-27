@@ -146,7 +146,7 @@ var rule = {
                         // 一级图片URL
                         let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
                         // 一级URL
-                        let url1 = pd(it, 'a&&href').replace(HOST, 'https://www.zhibo8.com');
+                        let url1 = pd(it, 'a&&href').replace('http://www.88kanqiu.one', 'https://www.zhibo8.com');
 
                         items.push({
                             desc:desc1,
@@ -159,7 +159,13 @@ var rule = {
             }
         }
         else if(MY_CATE==='nbalx' || MY_CATE==='nbajijin' || MY_CATE==='nbatop10' || MY_CATE==='cbalx' || MY_CATE==='cbajijin' || MY_CATE==='lanqiulx'){
-            var html = request('https://lanqiuwu.com/'+MY_CATE+'/'+MY_PAGE+'.html');
+            var html;
+            if(MY_PAGE===1) {
+                html = request('https://lanqiuwu.com/'+MY_CATE);
+            }
+            else {
+                html = request('https://lanqiuwu.com/'+MY_CATE+'/index_'+MY_PAGE+'.html');
+            }
             var list = pdfa(html, '.content&&.excerpt');
             list.forEach(it => {
                 // 通过" "进行截取
