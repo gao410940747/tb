@@ -223,8 +223,13 @@ var rule = {
             });
         }
         else {
-            // TODO 分页处理
-            var html = request(input);
+            var html;
+            if(MY_PAGE===1) {
+                html = request(input);
+            }
+            else {
+                html = request(input+'?page='+MY_PAGE);
+            }
             var tabs = pdfa(html,'.list-group&&.list-group-item');
             tabs.forEach(function(it){
                 // 通过" "进行截取
