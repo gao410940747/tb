@@ -5,7 +5,7 @@ var rule = {
     homeUrl: '/api/live/getRecommend?page=1&size=20',//网站的首页链接,用于分类获取和推荐获取
 //    homeUrl: '/api/live/getRecommendByPlatformArea?platform=bilibili&area=舞见&page=1&size=1',//网站的首页链接,用于分类获取和推荐获取
     url: '/api/live/getRecommendByPlatformArea?platform=fyclass&area=fyfilter&page=fypage&size=20', //网站的分类页面链接
-    class_name: '斗鱼&虎牙&哔哩&抖音&快手&网易CC',
+    class_name: '斗鱼&虎牙&哔哩哔哩&抖音&快手&网易CC',
     class_url: 'douyu&huya&bilibili&douyin&kuaishou&cc',
     filterable: 1,
     filter_url: '{{fl.area}}',
@@ -261,7 +261,7 @@ var rule = {
                         title: it.roomName,
                         desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
                         pic_url: it.roomPic,
-                        url: it.platForm + '|' + it.roomId
+                        url: it.platForm + '|' + it.roomId + '|' + it.ownerName
                     });
                 }
                 // 修复虎牙：守望先锋归来
@@ -421,91 +421,141 @@ var rule = {
             }
             let platform = input.split("|")[0].replace(HOST+'/','');
             let roomId = input.split("|")[1];
-            let link = HOST + '/api/live/getRoomInfo?uid=&platform=' + platform + '&roomId=' + roomId;
-            var jo = JSON.parse(request(link)).data;
-            VOD = {
-                playerType: jo.platForm == 'huya' ? 2 : 1,
-                vod_id: jo.roomId,
-                vod_name: jo.roomName,
-                // 改为展示头像
-                // vod_pic: jo.ownerHeadPic,
-                vod_pic: jo.roomPic,
-                type_name:jo.platForm == 'douyin' ? '抖音' : (jo.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩哔哩") + "•" + jo.categoryName) ,
-                vod_remarks: '🚪 房间号 ' + jo.roomId,
-                vod_director: '🚪 房间号：' + jo.roomId +  '｜ 📝 状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
-                vod_actor: '🆙 ' + jo.ownerName + '｜ 👥 人气：' + jo.online,
-                vod_content: jo.roomName,
-                // vod_content: '🏷roomId：' + jo.roomId + "｜" +  ' 🏷状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
-                // vod_content: "🏷分区：" + jo.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩哔哩").replace("douyin", "抖音") + "·" + jo.categoryName + " 🏷UP主：" + jo.ownerName + " 🏷人气：" + jo.online + (jo.isLive === 1 ? " 🏷状态：正在直播" : "状态：未开播") + " 🏷roomId：" + jo.roomId
-            };
-            var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
+            
             let playFrom = [];
             let playList = [];
-    
-            // 增加bilibili官方源
-            if (jo.platForm == 'bilibili') {
+                
+            // 单独处理哔哩哔哩
+            if (/bilibili/.test(platform)) {
+                let html_bili = request('https://api.live.bilibili.com/room/v1/Room/get_info?room_id='+roomId);
+                let data = JSON.parse(html_bili).data;
+                VOD = {
+                    vod_id: roomId,
+                    vod_name: data.title,
+                    vod_pic: data.keyframe,
+                    // vod_pic: data.user_cover,
+                    type_name: '哔哩哔哩•' + data.area_name,
+                    vod_actor: '🆙 ' + input.split("|")[2] + '｜ 👥 人气：' + data['online'],
+                    vod_director: '🚪 房间号：' + roomId + (data.live_status == 0 ? '，未开播' : ''),
+                    vod_content: data.description
+                };
+                
+                // 增加bilibili官方源
                 var bilis = [];
                 bilis.push({
                     title: "h5线路原画",
-                    input: 'bilibili_platform=h5&quality=4_'+jo.roomId
+                    input: 'bilibili_platform=h5&quality=4_'+roomId
                 }, {
                     title: "h5线路高清",
-                    input: 'bilibili_platform=h5&quality=3_'+jo.roomId
+                    input: 'bilibili_platform=h5&quality=3_'+roomId
                 }, {
                     title: "flv线路原画",
-                    input: 'bilibili_platform=web&quality=4_'+jo.roomId
+                    input: 'bilibili_platform=web&quality=4_'+roomId
                 }, {
                     title: "flv线路高清",
-                    input: 'bilibili_platform=web&quality=3_'+jo.roomId
+                    input: 'bilibili_platform=web&quality=3_'+roomId
                 });
                 playFrom.append('官方线路');
                 playList.append(bilis.map(function(it) {
                     return it.title + "$" + it.input
                 }).join("#"));
-            }
-
-            // 增加huya官方源
-            if (jo.platForm == 'huya') {
-                var huyas = [];
-                huyas.push({
-                    title: "原画（若播放失败需切换EXO播放器）",
-                    input: 'huya_'+jo.roomId
+                
+                // JustLive获取源
+                var playurl_bili = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + platform + "&roomId=" + roomId)).data;
+                Object.keys(playurl_bili).forEach(function(key) {
+                    playFrom.append('官方' + key);
+                    playList.append(playurl_bili[key].map(function(it) {
+                        return it.qualityName + "$" + it.playUrl
+                    }).join("#"))
                 });
-                playFrom.append('官方线路');
-                playList.append(huyas.map(function(it) {
-                    return it.title + "$" + it.input
+    
+                // 网站解析源
+                var d = [];
+                d.push({
+                    title: "EPG线路",
+                    url: "http://epg.112114.xyz/" + platform + "/" + roomId
+                }, {
+                    title: "HZ线路",
+                    url: "https://aptv.hz.cz/vod/" + platform + "/" + roomId
+                }, {
+                    title: "AOIS线路",
+                    url: "https://www.aois.eu.org/live/" + platform + "/" + roomId
+                }, {
+                    title: "MetShop线路",
+                    url: "https://live.metshop.top/" + platform + "/" + roomId
+                }, {
+                    title: "GoodIPTV线路",
+                    url: "https://www.goodiptv.club/" + platform + "/" + roomId
+                });
+                playFrom.append('解析线路');
+                playList.append(d.map(function(it) {
+                    return it.title + "$" + it.url
+                }).join("#"));
+                
+            } else {
+            
+                let link = HOST + '/api/live/getRoomInfo?uid=&platform=' + platform + '&roomId=' + roomId;
+                var jo = JSON.parse(request(link)).data;
+                VOD = {
+                    vod_id: jo.roomId,
+                    vod_name: jo.roomName,
+                    // 改为展示头像
+                    // vod_pic: jo.ownerHeadPic,
+                    vod_pic: jo.roomPic,
+                    type_name:jo.platForm == 'douyin' ? '抖音' : (jo.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩哔哩") + "•" + jo.categoryName) ,
+                    vod_remarks: '🚪 房间号 ' + jo.roomId,
+                    vod_director: '🚪 房间号：' + jo.roomId +  '｜ 📝 状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
+                    vod_actor: '🆙 ' + jo.ownerName + '｜ 👥 人气：' + jo.online,
+                    vod_content: jo.roomName,
+                    // vod_content: '🏷roomId：' + jo.roomId + "｜" +  ' 🏷状态：' + (jo.isLive == 1 ? '正在直播' : '未开播'),
+                    // vod_content: "🏷分区：" + jo.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩哔哩").replace("douyin", "抖音") + "·" + jo.categoryName + " 🏷UP主：" + jo.ownerName + " 🏷人气：" + jo.online + (jo.isLive === 1 ? " 🏷状态：正在直播" : "状态：未开播") + " 🏷roomId：" + jo.roomId
+                };
+                
+                var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
+        
+                // 增加huya官方源
+                if (jo.platForm == 'huya') {
+                    var huyas = [];
+                    huyas.push({
+                        title: "原画（若播放失败需切换EXO播放器）",
+                        input: 'huya_'+jo.roomId
+                    });
+                    playFrom.append('官方线路');
+                    playList.append(huyas.map(function(it) {
+                        return it.title + "$" + it.input
+                    }).join("#"));
+                }
+    
+                // JustLive获取源
+                Object.keys(playurl).forEach(function(key) {
+                    playFrom.append('官方' + key);
+                    playList.append(playurl[key].map(function(it) {
+                        return it.qualityName + "$" + it.playUrl
+                    }).join("#"))
+                });
+        
+                // 网站解析源
+                d.push({
+                    title: "EPG线路",
+                    url: "http://epg.112114.xyz/" + jo.platForm + "/" + jo.roomId
+                }, {
+                    title: "HZ线路",
+                    url: "https://aptv.hz.cz/vod/" + jo.platForm + "/" + jo.roomId
+                }, {
+                    title: "AOIS线路",
+                    url: "https://www.aois.eu.org/live/" + jo.platForm + "/" + jo.roomId
+                }, {
+                    title: "MetShop线路",
+                    url: "https://live.metshop.top/" + jo.platForm + "/" + jo.roomId
+                }, {
+                    title: "GoodIPTV线路",
+                    url: "https://www.goodiptv.club/" + jo.platForm + "/" + jo.roomId
+                });
+                playFrom.append('解析线路');
+                playList.append(d.map(function(it) {
+                    return it.title + "$" + it.url
                 }).join("#"));
             }
-
-            // JustLive获取源
-            Object.keys(playurl).forEach(function(key) {
-                playFrom.append('官方' + key);
-                playList.append(playurl[key].map(function(it) {
-                    return it.qualityName + "$" + it.playUrl
-                }).join("#"))
-            });
-    
-            // 网站解析源
-            d.push({
-                title: "EPG线路",
-                url: "http://epg.112114.xyz/" + jo.platForm + "/" + jo.roomId
-            }, {
-                title: "HZ线路",
-                url: "https://aptv.hz.cz/vod/" + jo.platForm + "/" + jo.roomId
-            }, {
-                title: "AOIS线路",
-                url: "https://www.aois.eu.org/live/" + jo.platForm + "/" + jo.roomId
-            }, {
-                title: "MetShop线路",
-                url: "https://live.metshop.top/" + jo.platForm + "/" + jo.roomId
-            }, {
-                title: "GoodIPTV线路",
-                url: "https://www.goodiptv.club/" + jo.platForm + "/" + jo.roomId
-            });
-            playFrom.append('解析线路');
-            playList.append(d.map(function(it) {
-                return it.title + "$" + it.url
-            }).join("#"));
     
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
