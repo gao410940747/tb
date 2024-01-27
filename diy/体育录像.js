@@ -125,7 +125,7 @@ var rule = {
             // "湖人": "https://cdn.leisu.com/basketball/teamflag_s/fa6f985041ec3f9729172380ae9cebf8.png?imageMogr2/auto-orient/thumbnail/200x200",
             // "勇士": "https://cdn.leisu.com/basketball/teamflag_s/df3f6f8bb17fd1c618f60f0b14637140.png?imageMogr2/auto-orient/thumbnail/200x200",
             // "太阳": "https://cdn.leisu.com/basketball/teamflag_s/da3c882a7e0bc592b4c1ba9d8c5fb68d.png?imageMogr2/auto-orient/thumbnail/200x200",
-            "爵士": "https://cdn.leisu.com/basketball/teamflag_s/8c88df221129169246c5b8a82955fa34.png?imageMogr2/auto-orient/thumbnail/200x200",
+            "爵士": "https://cdn.leisu.com/basketball/teamflag_s/8c88df221129169246c5b8a82955fa34.png?imageMogr2/auto-orient/thumbnail/200x200"
             // "灰熊": "https://cdn.leisu.com/basketball/teamflag_s/5150102b33043405b63b2e7c72759fa8.png?imageMogr2/auto-orient/thumbnail/200x200",
             // "开拓者": "https://cdn.leisu.com/basketball/teamflag_s/4512175b1415f69816e816160093bcc0.png?imageMogr2/auto-orient/thumbnail/200x200",
             // "马刺": "https://cdn.leisu.com/basketball/teamflag_s/5305d1a7b721b5bef418041eff53ba82.png?imageMogr2/auto-orient/thumbnail/200x200"
@@ -158,8 +158,7 @@ var rule = {
                 });
             }
         }
-        else if(MY_CATE==='nbalx' || MY_CATE==='nbajijin' || MY_CATE==='nbatop10'
-                || MY_CATE==='cbalx' || MY_CATE==='cbajijin' || MY_CATE==='lanqiulx'){
+        else if(MY_CATE==='nbalx' || MY_CATE==='nbajijin' || MY_CATE==='nbatop10' || MY_CATE==='cbalx' || MY_CATE==='cbajijin' || MY_CATE==='lanqiulx'){
             var html = request('https://lanqiuwu.com/'+MY_CATE+'/'+MY_PAGE+'.html');
             var list = pdfa(html, '.content&&.excerpt');
             list.forEach(it => {
