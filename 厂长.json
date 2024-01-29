@@ -11,19 +11,19 @@
 	"sites": [
 		{"key":"厂长","name":"厂长","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/厂长资源_1.js"},
 		{"key":"荐片","name":"荐片","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/荐片_1.js","playerType":1},
-		{"key":"88看球","name":"88看球","type":3,"api":"csp_Kanqiu","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/custom_spider.jar"},
+		{"key":"88看球","name":"88看球","type":3,"api":"csp_Kanqiu","searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"list"},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/custom_spider.jar"},
 //		{"key":"88看球","name":"88看球","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list","ratio":1},"ext":"./diy/88看球_4.js"},
-//		{"key":"88看球(备用)","name":"88看球","type":3,"api":"csp_XYQBiu","searchable":0,"quickSearch":0,"filterable":0,"ext":"./diy/88看球.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
-		{"key":"JRKAN直播","name":"JRS看比赛","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list","ratio":1},"ext":"./diy/JRKAN直播_4.js"},
+//		{"key":"88看球","name":"88看球","type":3,"api":"csp_XYQBiu","searchable":0,"quickSearch":0,"filterable":0,"ext":"./diy/88看球.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
+		{"key":"JRKAN直播","name":"JRS看比赛","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/JRKAN直播_4.js"},
 
 		{"key":"哔哩直播","name":"哔哩直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/哔哩直播_2.js"},
 		{"key":"斗鱼直播","name":"斗鱼直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/斗鱼直播_2.js"},
 		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播1080.js"},
 		{"key":"JustLive","name":"直播平台","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"ext":"./diy/JustLive_10.js"},
 
-		{"key":"直播转点播","name":"电视直播","type":3,"api":"./diy/live2vod.js","searchable":1,"quickSearch":0,"filterable":0,"style":{"type":"rect","ratio":1},"ext":"./live2vod.json"},
+		{"key":"电视直播","name":"电视直播","type":3,"api":"./diy/live2vod.js","searchable":1,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./live2vod.json"},
 //		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.597},"ext":"./diy/央视大全.json"},
-		{"key":"央视大全","name":"央视大全","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"ext":"./diy/央视大全.js"},
+		{"key":"央视大全","name":"央视大全","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.6},"ext":"./diy/央视大全.js"},
 		{"key":"博看听书","name":"博看听书","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":0.75},"ext":"./diy/博看听书.js"},
 		{"key":"家庭KTV","name":"家庭KTV","type":1,"api":"https://tvbox.cyao.tk/mv/vod","style":{"type":"oval"},"searchable":1,"quickSearch":0,"changeable":0},
 
@@ -35,11 +35,12 @@
 
 		{"key":"豆瓣推荐","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
 		{"key":"荐片(弹幕)","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"篮球屋录像","name":"篮球屋录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球屋录像_3.js"},
-//		{"key":"篮球帝录像","name":"篮球帝录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球帝录像_1.js"},
+		{"key":"篮球屋录像","name":"篮球屋录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/篮球屋录像_3.js"},
 		{"key":"88比赛录像","name":"88比赛录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1.755},"ext":"./diy/88比赛录像_1.js"}
 	],
 	"parses": [
+		{"name":"巧记","type":1,"url":"https://www.qiaoji8.com/tvbox/json1.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"]}},
+		{"name":"巧技","type":1,"url":"http://pandown.pro/app/kkdy.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 		{"name":"777","type":0,"url":"https://jx.777jiexi.com/player/?url="},
 		{"name":"阳途","type":0,"url":"https://jx.yangtu.top?url="},
 		{"name":"JSON","type":0,"url":"https://jx.jsonplayer.com/player/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
@@ -48,7 +49,6 @@
 		{"name":"全民","type":0,"url":"http://api.wpsseo.cn/?v=","ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"Mozilla/5.0"}},"header":{"User-Agent":"Mozilla/5.0"}},
 		{"name":"ZUI","type":0,"url":"https://jx.zui.cm/?url=","ext":{"flag":["ltnb"]}},
 
-		{"name":"米饭🌾","type":1,"url":"https://json.oorl.cn/api/?key=gajpAki7cu8560ro4C&url=","ext":{"flag":["爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 		{"name":"米太硬","type":1,"url":"https://api.huohua.vip/api/?key=8eTRVUKvl0tvEzlvzO&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"],"header":{"User-Agent":"okhttp/4.1.0"}}},
 		{"name":"YuMi-vip🥭","type":0,"url":"https://jx.xmflv.com/?url=","ext":{"flag":["爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"],"header":{"User-Agent":"Mozilla/5.0(Linux;Android6.0;Nexus5Build/MRA58N)AppleWebKit/537.36(KHTML,likeGecko)Chrome/118.0.0.0MobileSafari/537.36"}}},
 		{"name":"世界🥭","type":1,"url":"http://110.42.2.247:880/analysis/json/?uid=2500&my=dmnoxzADHKMOQSXZ01&url=","ext":{"flag":["seven"]}},
@@ -61,8 +61,6 @@
 		{"name":"8090","url":"https://www.8090.la/8090/?url=","type":0,"ext":{"flag":["qiyi","imgo","爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","sohu","xigua","fun","风行"],"header":{"User-Agent":"Mozilla/5.0"}},"header":{"User-Agent":"Mozilla/5.0"}},
 		{"name":"看看","type":0,"url":"https://jx.m3u8.pw/?url="},
 		{"name":"ok","type":1,"url":"http://127.0.0.1:9978/proxy?do=appmaoparse&app=juzi&url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"]}},
-		{"name":"巧记","type":1,"url":"https://www.qiaoji8.com/tvbox/json1.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"]}},
-		{"name":"巧技","type":1,"url":"http://pandown.pro/app/kkdy.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","sohu","搜狐","letv","乐视","mgtv","芒果","rx","ltnb","bilibili","1905","xigua"]}},
 		{"name":"左岸","type":1,"url":"https://api.tyun77.cn/api.php/provide/parseDicturl?url=","ext":{"flag":["爱奇艺","奇艺","qq","腾讯","youku","优酷","pptv","PPTV","letv","乐视","leshi","bilibili","哔哩哔哩","哔哩","mgtv","芒果","芒果"],"header":{"User-Agent":"okhttp/3.12.0"}}},
 		{"name":"世界","type":1,"url":"http://175.178.183.192:84/api/?key=f3913eb3f85a8298b3e6e427b8712b2e&url=","ext":{"flag":["qq","mgtv","YuMi-vip"]}},
 		{"name":"咸鱼","type":0,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://www.xyflv.cc/"}}},
