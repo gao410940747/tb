@@ -22,8 +22,8 @@ var rule={
         'User-Agent': 'MOBILE_UA',
         'Cookie': 'esc_search_captcha=1'
     },
-    class_name:'全部&豆瓣电影Top250&高分影视&最新电影&追番计划&番剧&动漫&动画&纪录片&电视剧&国产剧&日剧&韩剧&美剧&海外剧&电影&华语电影&日本电影&欧美电影&法国电影&英国电影&韩国电影&俄罗斯电影&加拿大电影&印度电影&PV预告',
-    class_url:'movie_bt&dbtop250&gaofenyingshi&zuixindianying&/movie_bt_view_cat/fjj&fanju&dm&/movie_bt_series/dohua&/movie_bt/movie_bt_tags/jlpp&/movie_bt_series/dianshiju&/movie_bt_series/guochanju&/movie_bt_series/rj&/movie_bt_series/hj&/movie_bt_series/mj&/movie_bt_series/hwj&/movie_bt_series/dyy&/movie_bt_series/huayudianying&/movie_bt_series/ribendianying&/movie_bt_series/meiguodianying&/movie_bt_series/faguodianying&/movie_bt_series/yingguodianying&/movie_bt_series/hanguodianying&/movie_bt_series/eluosidianying&/movie_bt_series/jianadadianying&/movie_bt_series/yindudianying&/movie_bt_view_cat/pvyugao',
+    class_name:'全部&豆瓣电影Top250&高分影视&最新电影&国产剧&追番计划&番剧&动漫&动画&纪录片&电视剧&日剧&韩剧&美剧&海外剧&电影&华语电影&日本电影&欧美电影&法国电影&英国电影&韩国电影&俄罗斯电影&加拿大电影&印度电影&PV预告',
+    class_url:'movie_bt&dbtop250&gaofenyingshi&zuixindianying&/movie_bt_series/guochanju&/movie_bt_view_cat/fjj&fanju&dm&/movie_bt_series/dohua&/movie_bt/movie_bt_tags/jlpp&/movie_bt_series/dianshiju&/movie_bt_series/rj&/movie_bt_series/hj&/movie_bt_series/mj&/movie_bt_series/hwj&/movie_bt_series/dyy&/movie_bt_series/huayudianying&/movie_bt_series/ribendianying&/movie_bt_series/meiguodianying&/movie_bt_series/faguodianying&/movie_bt_series/yingguodianying&/movie_bt_series/hanguodianying&/movie_bt_series/eluosidianying&/movie_bt_series/jianadadianying&/movie_bt_series/yindudianying&/movie_bt_view_cat/pvyugao',
 	play_parse:true,
 
 	// lazy代码:源于海阔香雅情大佬 / 小程序：香情影视 https://pastebin.com/L4tHdvFn
