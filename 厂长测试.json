@@ -1,6 +1,9 @@
 {
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
 	"sites": [
+		{"key":"蜻蜓FM","name":"蜻蜓FM","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"list"},"ext":"./diy/蜻蜓FM.js"},
+		{"key":"广播迷FM","name":"广播迷FM","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"list"},"ext":"./js/广播迷FM.js"},
+		{"key":"drpy_js_我的哔哩","name":"弹幕 | 哔哩合集[js]","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.597},"changeable":0,"ext":"./js/我的哔哩.js"},
 		{"key":"AnFuns","name":"AnFuns","type":3,"api":"./js/drpy.min.js","ext":"./js/AnFuns.js"},
 		{"key":"Anime1","name":"Anime1","type":3,"api":"./js/drpy.min.js","ext":"./js/Anime1.js"},
 		{"key":"AGE动漫","name":"AGE动漫","type":3,"api":"./js/drpy.min.js","ext":"./js/AGE动漫.js"},
