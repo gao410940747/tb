@@ -434,29 +434,38 @@ var rule = {
                     vod_name: data.title,
                     vod_pic: data.keyframe,
                     // vod_pic: data.user_cover,
+                    vod_area: "bililivedanmu",
                     type_name: '哔哩哔哩•' + data.area_name,
                     vod_actor: '🆙 ' + input.split("|")[2] + '｜ 👥 人气：' + data['online'],
                     vod_director: '🚪 房间号：' + roomId + (data.live_status == 0 ? '，未开播' : ''),
                     vod_content: data.description
                 };
                 
-                // 增加bilibili官方源
-                var bilis = [];
-                bilis.push({
-                    title: "h5线路原画",
+                // 增加bilibili官方h5源
+                var bili_h5_list = [];
+                bili_h5_list.push({
+                    title: "原画",
                     input: 'bilibili_platform=h5&quality=4_'+roomId
                 }, {
-                    title: "h5线路高清",
+                    title: "高清",
                     input: 'bilibili_platform=h5&quality=3_'+roomId
-                }, {
-                    title: "flv线路原画",
+                });
+                playFrom.append('官方h5线路');
+                playList.append(bili_h5_list.map(function(it) {
+                    return it.title + "$" + it.input
+                }).join("#"));
+
+                // 增加bilibili官方flv源
+                var bili_flv_list = [];
+                bili_flv_list.push({
+                    title: "原画",
                     input: 'bilibili_platform=web&quality=4_'+roomId
                 }, {
-                    title: "flv线路高清",
+                    title: "高清",
                     input: 'bilibili_platform=web&quality=3_'+roomId
                 });
-                playFrom.append('官方线路');
-                playList.append(bilis.map(function(it) {
+                playFrom.append('官方flv线路');
+                playList.append(bili_flv_list.map(function(it) {
                     return it.title + "$" + it.input
                 }).join("#"));
                 
