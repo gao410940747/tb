@@ -1,10 +1,6 @@
 {
 	"wallpaper": "http://3650000.xyz/api/360.php?cid=6",
 	"sites": [
-		{"key":"一起看直播","name":"一起看直播","type":3,"api":"csp_XYQBiu","searchable":0,"quickSearch":0,"filterable":0,"ext":"./XYQBiu/一起看直播.json","jar":"https://mirror.ghproxy.com/raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/spider.jar;md5;cc3dbc1fc53b562f44c47199a94bedc7"},
-		{"key":"HDmoli","name":"HDmoli","type":3,"api":"./js/drpy.min.js","ext":"./js/HDmoli.js"},
-		{"key":"8号影院","name":"8号影院","type":3,"api":"./js/drpy.min.js","ext":"./js/8号影院.js"},
-
 		{"key":"AnFuns","name":"AnFuns","type":3,"api":"./js/drpy.min.js","ext":"./js/AnFuns.js"},
 		{"key":"Anime1","name":"Anime1","type":3,"api":"./js/drpy.min.js","ext":"./js/Anime1.js"},
 		{"key":"AGE动漫","name":"AGE动漫","type":3,"api":"./js/drpy.min.js","ext":"./js/AGE动漫.js"},
