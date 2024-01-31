@@ -182,12 +182,21 @@ CCTV-14, https://iptv.luas.edu.cn/liverespath/0e0973e58d4835f4b87254816446293000
     #央视OLELIVE#
 CCTV-1,  https://node1.olelive.com:6443/live/CCTV1HD/hls.m3u8
 CCTV-2,  https://node1.olelive.com:6443/live/CCTV2HD/hls.m3u8
+CCTV-3,  https://node1.olelive.com:6443/live/CCTV3HD/hls.m3u8
+CCTV-4,  https://node1.olelive.com:6443/live/CCTV4HD/hls.m3u8
 CCTV-5,  https://node1.olelive.com:6443/live/CCTV5HD/hls.m3u8
 CCTV-5+, https://node1.olelive.com:6443/live/CCTV5PHD/hls.m3u8
+CCTV-6,  https://node1.olelive.com:6443/live/CCTV6HD/hls.m3u8
 CCTV-7,  https://node1.olelive.com:6443/live/CCTV7HD/hls.m3u8
 CCTV-8,  https://node1.olelive.com:6443/live/CCTV8HD/hls.m3u8
 CCTV-9,  https://node1.olelive.com:6443/live/CCTV9HD/hls.m3u8
 CCTV-10, https://node1.olelive.com:6443/live/CCTV10HD/hls.m3u8
+CCTV-11, https://node1.olelive.com:6443/live/CCTV11HD/hls.m3u8
+CCTV-12, https://node1.olelive.com:6443/live/CCTV12HD/hls.m3u8
+CCTV-13, https://node1.olelive.com:6443/live/CCTV13HD/hls.m3u8
+CCTV-14, https://node1.olelive.com:6443/live/CCTV14HD/hls.m3u8
+CCTV-15, https://node1.olelive.com:6443/live/CCTV15HD/hls.m3u8
+CCTV-16, https://node1.olelive.com:6443/live/CCTV16HD/hls.m3u8
 CCTV-17, https://node1.olelive.com:6443/live/CCTV17HD/hls.m3u8
 
     #央视其他M3U8#
