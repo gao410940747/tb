@@ -441,7 +441,7 @@ var rule = {
                 };
 
                 // 获取bilibili官方源清晰度列表
-                let bili_play_url = JSON.parse(request('https://api.live.bilibili.com/room/v1/Room/playUrl?cid='+roomId));
+                let bili_play_url = JSON.parse(request('https://api.live.bilibili.com/room/v1/Room/playUrl?platform=h5&quality=4&cid='+roomId));
                 if(bili_play_url.code===0) {
                     // 官方h5源
                     var bili_h5_list = [];

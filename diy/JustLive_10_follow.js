@@ -502,8 +502,8 @@ var rule = {
                 };
 
                 // 获取bilibili官方源清晰度列表
-                let bili_play_url = JSON.parse(request('https://api.live.bilibili.com/room/v1/Room/playUrl?cid='+roomId));
-//                let bili_play_url = JSON.parse(request('https://api.live.bilibili.com/xlive/web-room/v1/index/getRoomPlayInfo?play_url=1&room_id='+roomId));
+                let bili_play_url = JSON.parse(request('https://api.live.bilibili.com/room/v1/Room/playUrl?platform=h5&quality=4&cid='+roomId));
+//                let getRoomPlayInfo = JSON.parse(request('https://api.live.bilibili.com/xlive/web-room/v1/index/getRoomPlayInfo?play_url=1&mask=1&qn=0&platform=h5&room_id='+roomId));
                 if(bili_play_url.code===0) {
                     // 官方h5源
                     var bili_h5_list = [];
