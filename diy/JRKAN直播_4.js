@@ -64,7 +64,7 @@ var rule = {
             vod_name: pdfh(new_html,'.lab_team_home&&Text') + '🆚' + pdfh(new_html,'.lab_team_away&&Text'),
             vod_pic: pd(new_html,'.lab_team_home img&&src'),
             type_name: pdfh(new_html,'.lab_events&&Text'),
-            vod_content: pdfh(new_html,'.sub_list ul&&Text'),
+            vod_content: pdfh(new_html,'.sub_list ul&&Text').replaceAll(' ', '_'),
         };
 
         // 播放列表拼接
