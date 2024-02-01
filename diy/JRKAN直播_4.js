@@ -20,8 +20,8 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'JRS赛事直播',
-    class_url:'/',
+    class_name:'JRS赛事直播&NBA&CBA&亚洲杯',
+    class_url:'/&NBA&CBA&AFC',
     headers:{
         'User-Agent':'MOBILE_UA'
     },
@@ -30,14 +30,13 @@ var rule = {
     lazy:"",
     limit:6,
     double:false,
-    推荐:'*',
-    // 一级:'.loc_match:eq(2) ul;li:gt(1):lt(4)&&Text;img&&src;li:lt(2)&&Text;a:eq(1)&&href',//play.sportsteam333.com
-    一级:`js:
+//    推荐:'*',
+    推荐:`js:
         var items=[];
         pdfh=jsp.pdfh;
         pdfa=jsp.pdfa;
         pd=jsp.pd;
-        var html=request(input);
+        var html=request(HOST);
         var tabs=pdfa(html,'body&&.d-touch');
         tabs.forEach(function(it){
             var pz=pdfh(it,'.name:eq(1)&&Text');
@@ -55,6 +54,64 @@ var rule = {
         });
         setResult(items);
     `,
+    // 一级:'.loc_match:eq(2) ul;li:gt(1):lt(4)&&Text;img&&src;li:lt(2)&&Text;a:eq(1)&&href',//play.sportsteam333.com
+    一级:`js:
+        var items=[];
+        pdfh=jsp.pdfh;
+        pdfa=jsp.pdfa;
+        pd=jsp.pd;
+        if(MY_PAGE===1) {
+            var html=request(HOST);
+            var tabs=pdfa(html,'body&&.d-touch');
+            tabs.forEach(function(it){
+                var pz=pdfh(it,'.name:eq(1)&&Text');
+                var ps=pdfh(it,'.name:eq(0)&&Text');
+                var pk=pdfh(it,'.name:eq(2)&&Text');
+                var img=pd(it,'img&&src');
+                var timer=pdfh(it,'.lab_time&&Text');
+                var url=pd(it,'a.me&&href');
+                if(MY_CATE==='NBA') {
+                    if(/NBA/.test(ps)) {
+                        items.push({
+                            desc:timer+' '+ps,
+                            title:pz+'🆚'+pk,
+                            pic_url:img,
+                            url:url
+                        });
+                    }
+                }
+                else if(MY_CATE==='CBA') {
+                    if(/CBA/.test(ps)) {
+                        items.push({
+                            desc:timer+' '+ps,
+                            title:pz+'🆚'+pk,
+                            pic_url:img,
+                            url:url
+                        });
+                    }
+                }
+                else if(MY_CATE==='AFC') {
+                    if(/亚洲杯/.test(ps)) {
+                        items.push({
+                            desc:timer+' '+ps,
+                            title:pz+'🆚'+pk,
+                            pic_url:img,
+                            url:url
+                        });
+                    }
+                }
+                else {
+                    items.push({
+                        desc:timer+' '+ps,
+                        title:pz+'🆚'+pk,
+                        pic_url:img,
+                        url:url
+                    });
+                }
+            });
+        }
+        setResult(items);
+    `,
     二级:`js:
         pdfh=jsp.pdfh;
         pdfa=jsp.pdfa;
@@ -69,26 +126,13 @@ var rule = {
 
         // 播放列表拼接
         var playListStr = '';
+        var playListStr_mg = '';
+        var playListStr_tx = '';
+        var playListStr_iqi = '';
+        let playFrom = [];
+        let playList = [];
 
         var playUrls = pdfa(new_html, '.sub_playlist&&a');
-        playUrls.map(function(it) {
-            let url = pd(it,'a&&data-play');
-            if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")
-                || url.startsWith("http://play.sportsteam356.com/play/gm.php")){
-                playListStr = playListStr + '咪咕专线'+'$'+url+'#';
-            }
-        });
-
-        playUrls.map(function(it) {
-            let url = pd(it,'a&&data-play');
-            if (/txycdn.video.qq.com/.test(url)){
-                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
-                playListStr = playListStr + '腾讯专线'+'$'+url+'#';
-            }
-            else if (url.startsWith("http://play.sportsteam356.com/play/iqi.php")){
-                playListStr = playListStr + '爱奇艺专线'+'$'+url+'#';
-            }
-        });
 
         playUrls.map(function(it) {
             let name = pdfh(it,'strong&&Text');
@@ -98,11 +142,36 @@ var rule = {
             }
             playListStr = playListStr + name+ '$' + url + '#';
         });
-
-        let playFrom = [];
-        let playList = [];
         playFrom.append('JRKAN直播');
         playList.append(playListStr);
+
+        // 单独封装咪咕、腾讯、爱奇艺专线
+        playUrls.map(function(it) {
+            let url = pd(it,'a&&data-play');
+            if (url.startsWith("http://play.sportsteam356.com/play/mglx.php")
+                || url.startsWith("http://play.sportsteam356.com/play/gm.php")){
+                playListStr_mg = playListStr_mg + '咪咕专线'+'$'+url+'#';
+            }
+            else if (/txycdn.video.qq.com/.test(url)){
+                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                playListStr_tx = playListStr_tx + '腾讯专线'+'$'+url+'#';
+            }
+            else if (url.startsWith("http://play.sportsteam356.com/play/iqi.php")){
+                playListStr_iqi = playListStr_iqi + '爱奇艺专线'+'$'+url+'#';
+            }
+        });
+        if(playListStr_mg!=='') {
+            playFrom.append('咪咕专线');
+            playList.append(playListStr_mg);
+        }
+        if(playListStr_tx!=='') {
+            playFrom.append('腾讯专线');
+            playList.append(playListStr_tx);
+        }
+        if(playListStr_iqi!=='') {
+            playFrom.append('爱奇艺专线');
+            playList.append(playListStr_iqi);
+        }
 
         // 最后封装所有线路
         let vod_play_from = playFrom.join('$$$');
