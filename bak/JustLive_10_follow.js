@@ -600,8 +600,8 @@ var rule = {
                 // JustLive获取源
                 if (jo.platForm == 'douyin') {
                     // 调换hls线路位置到最前
-                    var hlsUrl;
-                    var flvUrl;
+                    var hlsUrl = '';
+                    var flvUrl = '';
                     Object.keys(playurl).forEach(function(key) {
                         if(key === 'hls') {
                             hlsUrl = playurl[key].map(function(it) {

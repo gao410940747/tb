@@ -19,7 +19,7 @@
 		{"key":"哔哩直播","name":"哔哩直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/哔哩直播_2.js"},
 		{"key":"斗鱼直播","name":"斗鱼直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/斗鱼直播_2.js"},
 		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播1080.js"},
-		{"key":"JustLive","name":"直播平台","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"ext":"./diy/JustLive_10.js"},
+		{"key":"JustLive","name":"直播平台","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"ext":"./diy/JustLive_11.js"},
 
 		{"key":"电视直播","name":"电视直播","type":3,"api":"./diy/live2vod.js","searchable":1,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./live2vod.json"},
 //		{"key":"央视大全","name":"央视大全","type":3,"api":"py_cctv","searchable":1,"quickSearch":1,"filterable":1,"style":{"type":"rect","ratio":1.597},"ext":"./diy/央视大全.json"},
