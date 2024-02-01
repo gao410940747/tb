@@ -540,29 +540,6 @@ var rule = {
                     }).join("#"))
                 });
     
-                // 网站解析源
-                var d = [];
-                d.push({
-                    title: "EPG线路",
-                    url: "http://epg.112114.xyz/" + platform + "/" + roomId
-                }, {
-                    title: "HZ线路",
-                    url: "https://aptv.hz.cz/vod/" + platform + "/" + roomId
-                }, {
-                    title: "AOIS线路",
-                    url: "https://www.aois.eu.org/live/" + platform + "/" + roomId
-                }, {
-                    title: "MetShop线路",
-                    url: "https://live.metshop.top/" + platform + "/" + roomId
-                }, {
-                    title: "GoodIPTV线路",
-                    url: "https://www.goodiptv.club/" + platform + "/" + roomId
-                });
-                playFrom.append('解析线路');
-                playList.append(d.map(function(it) {
-                    return it.title + "$" + it.url
-                }).join("#"));
-                
             } else {
             
                 let link = HOST + '/api/live/getRoomInfo?uid=77111538fff549039d91dc52038581d2&platform=' + platform + '&roomId=' + roomId;
