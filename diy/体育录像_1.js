@@ -5,8 +5,8 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'直播吧&NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像',
-    class_url:'zhibo8&nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx',
+    class_name:'NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&直播吧视频',
+    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&zhibo8',
     class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/replay',
     headers:{
         'User-Agent':'PC_UA'
@@ -21,11 +21,13 @@ var rule = {
             let userid = split[0];
             let pid = split[1];
             let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
-            let media_info = JSON.parse(request(html)).page_info.media_info;
+            let json = JSON.parse(request(html));
             if (/5861424034/.test(userid)) {
-                input = media_info.mp4_hd_url;
-            } else {
-                input = media_info.playback_list[0].play_info.url;
+                input = 'push://' + json.page_info.media_info.mp4_hd_url;
+            } else if (/1883881851/.test(userid)) {
+                input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
+            } else if (/7778630492/.test(userid)) {
+                input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
             }
         }
     `,
