@@ -22,7 +22,7 @@ var rule = {
             if (/5861424034/.test(userid)) {
                 input =  json.page_info.media_info.mp4_hd_url;
             } else if (/1883881851/.test(userid)) {
-                input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
+                input =  json.page_info.media_info.playback_list[0].play_info.url;
             } else if (/7778630492/.test(userid)) {
                 input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
             }
