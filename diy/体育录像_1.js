@@ -23,9 +23,9 @@ var rule = {
             let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
             let json = JSON.parse(request(html));
             if (/5861424034/.test(userid)) {
-                input = 'push://' + json.page_info.media_info.mp4_hd_url;
+                input = json.page_info.media_info.mp4_hd_url;
             } else if (/1883881851/.test(userid)) {
-                input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
+                input = json.page_info.media_info.playback_list[0].play_info.url;
             } else if (/7778630492/.test(userid)) {
                 input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
             }
@@ -403,6 +403,7 @@ var rule = {
                 playFrom.append('快手');
                 playList.append(playList_kuaiShou);
             }
+        }
         // 最后封装所有线路
         let vod_play_from = playFrom.join('$$$');
         let vod_play_url = playList.join('$$$');
