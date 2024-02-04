@@ -545,7 +545,7 @@ var rule = {
                 let name = pdfh(it,'a&&Text');
                 let url = pd(it,'a&&href');
                 if (/微博/.test(name)){
-                    if (/全场/.test(name)){
+                    if (/全场录像/.test(name)){
                         playList_weibo = playList_weibo + '全场录像' + '$' + url + '#';
                     }
                     else if (/第一节/.test(name)){
@@ -568,7 +568,7 @@ var rule = {
                     }
                 }
                 else if (/快手/.test(name)){
-                    if (/全场/.test(name)){
+                    if (/全场录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '全场录像' + '$' + url + '#';
                     }
                     else if (/第一节/.test(name)){
@@ -631,7 +631,7 @@ var rule = {
                 let url = pd(it,'a&&href');
                 // 单独封装微博源
                 if (/weibo/.test(url)){
-                    if (/全场/.test(name)){
+                    if (/全场录像/.test(name)){
                         playList_weibo = playList_weibo + '全场录像' + '$' + url + '#';
                     }
                     else if (/第一节/.test(name)){
@@ -664,7 +664,7 @@ var rule = {
                 playList.append(playListStr);
             }
             if(playList_weibo!=='') {
-                playFrom.append('微博(快手)');
+                playFrom.append('微博');
                 playList.append(playList_weibo);
             }
 
