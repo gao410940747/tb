@@ -5,7 +5,7 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'快船赛程&快船视频&快船集锦&快船录像(篮球屋)&快船录像(88看球)&快船录像(量子)&快船录像(天空)&快船录像(飞速)',
+    class_name:'快船赛程&快船视频&快船集锦&快船录像(篮球屋)&快船录像(88看球)&快船录像(量子源)&快船录像(天空源)&快船录像(飞速源)',
     class_url:'88kanqiu_clippers&zhibo8_clippers&qiudui139_jijin&qiudui139&88kanqiu_clippers_replay&qiudui139_liangzi&qiudui139_tiankong&qiudui139_feisu',
     headers:{
         'User-Agent':'PC_UA'
@@ -352,8 +352,14 @@ var rule = {
                     let title1 = split[2].replace('vs', '🆚').replace('VS', '🆚');
                     // 一级描述
                     let desc1 = split[0] + ' ' + split[1];
+                        // 客队vs主队
+                    let Team1vsTeam2 = title1;
+                        // 客队名称
+                    let Team1 = Team1vsTeam2.split("🆚")[0];
+                        // 主队名称
+                    let Team2 = Team1vsTeam2.split("🆚")[1];
                     // 一级图片URL
-                    let picUrl1 = pd(it,'.media-object&&src');
+                    let picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
                     // 一级URL
                     let url1 = pd(it, '.media-heading a&&href').replace(HOST, 'http://www.88kanqiu.one');
                     
@@ -523,68 +529,85 @@ var rule = {
             VOD['vod_play_url'] = info.vod_play_url;
         }
         else if(/88kanqiu/.test(input) && /replay/.test(input)) {
-            let playFrom = [];
-            let playList = [];
             VOD = {
                 vod_name: pdfh(new_html,'.breadcrumb h3&&Text'),
                 vod_pic: pd(new_html,'.col-md-9 div:eq(3)&&src'),
             };
             var playUrls = pdfa(new_html, '.col-md-9&&p:gt(0)');
-            playFrom.append('88录像');
-            playUrls.forEach(it => {
-                playList.append(playUrls.map(function(it) {
-                    let name = pdfh(it,'a&&Text');
-                    let url = pd(it,'a&&href');
-                    return name + "$" + url
-                }).join("#"))
-            });
-            // 最后封装所有线路
-            let vod_play_from = playFrom.join('$$$');
-            let vod_play_url = playList.join('$$$');
-            VOD['vod_play_from'] = vod_play_from;
-            VOD['vod_play_url'] = vod_play_url;
-        }
-        else if(/88kanqiu/.test(input)) {
-            VOD = {
-                vod_name: pdfh(new_html,'.team-name:eq(0)&&Text') + '🆚' + pdfh(new_html,'.team-name:eq(1)&&Text'),
-                vod_pic: pd(new_html,'.team-logo&&src'),
-                type_name: pdfh(new_html,'.customer-navbar-nav&&li&&Text'),
-                vod_content: pdfh(new_html,'.col-md-4:eq(1)&&Text').replaceAll(' ', '_'),
-            };
-
-            // 播放列表拼接
-            var playListStr = '';
-
-            var playUrls = JSON.parse(request(url.replace(HOST+'88kanqiu%7C', '')+'-url')).links;
-            playUrls.map(function(it) {
-                var name = it.name;
-                var url = it.url;
-                if (url.startsWith("http://play.sportsteam1234.com/play/mglx.php")
-                    || url.startsWith("http://play.sportsteam1234.com/play/gm.php")){
-                    playListStr = playListStr + '咪咕专线'+'$'+url+'#';
-                }
-            });
-
-            playUrls.map(function(it) {
-                var name = it.name;
-                var url = it.url;
-                if (/txycdn.video.qq.com/.test(url)){
-                    url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
-                    playListStr = playListStr + '腾讯专线'+'$'+url+'#';
-                }
-                else if (url.startsWith("http://play.sportsteam1234.com/play/iqi.php")){
-                    playListStr = playListStr + '爱奇艺专线'+'$'+url+'#';
-                }
-            });
-
-            playUrls.map(function(it) {
-                playListStr = playListStr + it.name+ '$' + it.url + '#';
-            });
 
             let playFrom = [];
             let playList = [];
-            playFrom.append('88看球');
-            playList.append(playListStr);
+            var playListStr = '';
+            var playList_weibo = '';
+            var playList_kuaiShou = '';
+
+            playUrls.map(function(it) {
+                let name = pdfh(it,'a&&Text');
+                let url = pd(it,'a&&href');
+                if (/微博/.test(name)){
+                    if (/全场/.test(name)){
+                        playList_weibo = playList_weibo + '全场录像' + '$' + url + '#';
+                    }
+                    else if (/第一节/.test(name)){
+                        playList_weibo = playList_weibo + '第一节' + '$' + url + '#';
+                    }
+                    else if (/第二节/.test(name)){
+                        playList_weibo = playList_weibo + '第二节' + '$' + url + '#';
+                    }
+                    else if (/第三节/.test(name)){
+                        playList_weibo = playList_weibo + '第三节' + '$' + url + '#';
+                    }
+                    else if (/第四节/.test(name)){
+                        playList_weibo = playList_weibo + '第四节' + '$' + url + '#';
+                    }
+                    else if (/加时/.test(name)){
+                        playList_weibo = playList_weibo + '加时' + '$' + url + '#';
+                    }
+                    else {
+                        playList_weibo = playList_weibo + name + '$' + url + '#';
+                    }
+                }
+                else if (/快手/.test(name)){
+                    if (/全场/.test(name)){
+                        playList_kuaiShou = playList_kuaiShou + '全场录像' + '$' + url + '#';
+                    }
+                    else if (/第一节/.test(name)){
+                        playList_kuaiShou = playList_kuaiShou + '第一节' + '$' + url + '#';
+                    }
+                    else if (/第二节/.test(name)){
+                        playList_kuaiShou = playList_kuaiShou + '第二节' + '$' + url + '#';
+                    }
+                    else if (/第三节/.test(name)){
+                        playList_kuaiShou = playList_kuaiShou + '第三节' + '$' + url + '#';
+                    }
+                    else if (/第四节/.test(name)){
+                        playList_kuaiShou = playList_kuaiShou + '第四节' + '$' + url + '#';
+                    }
+                    else if (/加时/.test(name)){
+                        playList_kuaiShou = playList_kuaiShou + '加时' + '$' + url + '#';
+                    }
+                    else {
+                        playList_kuaiShou = playList_kuaiShou + name + '$' + url + '#';
+                    }
+                }
+                else if (url==='' || url==='undefined' || /lanqiuwu/.test(url)){
+                }
+                else {
+                    playListStr = playListStr + name + '$' + url + '#';
+                }
+            });
+            if(playListStr!=='') {
+                playFrom.append('88录像');
+                playList.append(playListStr);
+            }
+            if(playList_weibo!=='') {
+                playFrom.append('微博');
+                playList.append(playList_weibo);
+            }
+            if(playList_kuaiShou!=='') {
+                playFrom.append('快手');
+                playList.append(playList_kuaiShou);
+            }
 
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
@@ -600,14 +623,50 @@ var rule = {
 
             let playFrom = [];
             let playList = [];
-            playFrom.append('篮球屋');
-            playUrls.forEach(it => {
-                playList.append(playUrls.map(function(it) {
-                    let name = pdfh(it,'a&&Text');
-                    let url = pd(it,'a&&href');
-                    return name + "$" + url
-                }).join("#"))
+            var playListStr = '';
+            var playList_weibo = '';
+
+            playUrls.map(function(it) {
+                let name = pdfh(it,'a&&Text');
+                let url = pd(it,'a&&href');
+                // 单独封装微博源
+                if (/weibo/.test(url)){
+                    if (/全场/.test(name)){
+                        playList_weibo = playList_weibo + '全场录像' + '$' + url + '#';
+                    }
+                    else if (/第一节/.test(name)){
+                        playList_weibo = playList_weibo + '第一节' + '$' + url + '#';
+                    }
+                    else if (/第二节/.test(name)){
+                        playList_weibo = playList_weibo + '第二节' + '$' + url + '#';
+                    }
+                    else if (/第三节/.test(name)){
+                        playList_weibo = playList_weibo + '第三节' + '$' + url + '#';
+                    }
+                    else if (/第四节/.test(name)){
+                        playList_weibo = playList_weibo + '第四节' + '$' + url + '#';
+                    }
+                    else if (/加时/.test(name)){
+                        playList_weibo = playList_weibo + '加时' + '$' + url + '#';
+                    }
+                    else {
+                        playList_weibo = playList_weibo + name + '$' + url + '#';
+                    }
+                }
+                else if (url==='' || url==='undefined' || /lanqiuwu/.test(url)){
+                }
+                else {
+                    playListStr = playListStr + name + '$' + url + '#';
+                }
             });
+            if(playListStr!=='') {
+                playFrom.append('篮球屋');
+                playList.append(playListStr);
+            }
+            if(playList_weibo!=='') {
+                playFrom.append('微博(快手)');
+                playList.append(playList_weibo);
+            }
 
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
