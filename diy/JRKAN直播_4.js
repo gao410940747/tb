@@ -160,10 +160,6 @@ var rule = {
                 playListStr_iqi = playListStr_iqi + '爱奇艺专线'+'$'+url+'#';
             }
         });
-        if(playListStr_mg!=='') {
-            playFrom.append('咪咕专线');
-            playList.append(playListStr_mg);
-        }
         if(playListStr_tx!=='') {
             playFrom.append('腾讯专线');
             playList.append(playListStr_tx);
@@ -171,6 +167,10 @@ var rule = {
         if(playListStr_iqi!=='') {
             playFrom.append('爱奇艺专线');
             playList.append(playListStr_iqi);
+        }
+        if(playListStr_mg!=='') {
+            playFrom.append('咪咕专线');
+            playList.append(playListStr_mg);
         }
 
         // 最后封装所有线路
