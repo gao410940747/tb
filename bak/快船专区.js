@@ -596,10 +596,6 @@ var rule = {
                     playListStr = playListStr + name + '$' + url + '#';
                 }
             });
-            if(playListStr!=='') {
-                playFrom.append('88录像');
-                playList.append(playListStr);
-            }
             if(playList_weibo!=='') {
                 playFrom.append('微博');
                 playList.append(playList_weibo);
@@ -607,6 +603,10 @@ var rule = {
             if(playList_kuaiShou!=='') {
                 playFrom.append('快手');
                 playList.append(playList_kuaiShou);
+            }
+            if(playListStr!=='') {
+                playFrom.append('88录像');
+                playList.append(playListStr);
             }
 
             // 最后封装所有线路
@@ -659,13 +659,13 @@ var rule = {
                     playListStr = playListStr + name + '$' + url + '#';
                 }
             });
-            if(playListStr!=='') {
-                playFrom.append('篮球屋');
-                playList.append(playListStr);
-            }
             if(playList_weibo!=='') {
                 playFrom.append('微博');
                 playList.append(playList_weibo);
+            }
+            if(playListStr!=='') {
+                playFrom.append('篮球屋');
+                playList.append(playListStr);
             }
 
             // 最后封装所有线路
