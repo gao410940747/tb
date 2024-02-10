@@ -316,13 +316,13 @@ var rule = {
                     playListStr = playListStr + name + '$' + url + '#';
                 }
             });
-            if(playListStr!=='') {
-                playFrom.append('篮球屋');
-                playList.append(playListStr);
-            }
             if(playList_weibo!=='') {
                 playFrom.append('微博');
                 playList.append(playList_weibo);
+            }
+            if(playListStr!=='') {
+                playFrom.append('篮球屋');
+                playList.append(playListStr);
             }
         }
         else{
