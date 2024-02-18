@@ -23,7 +23,8 @@ var rule = {
                 input =  json.page_info.media_info.mp4_hd_url;
             } else if (/1883881851/.test(userid)) {
                 input =  json.page_info.media_info.playback_list[0].play_info.url;
-            } else if (/7778630492/.test(userid)) {
+//            } else if (/7778630492|6364463717/.test(userid)) {
+            } else {
                 input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
             }
         }
@@ -546,22 +547,22 @@ var rule = {
                 let url = pd(it,'a&&href');
                 if (/微博/.test(name)){
                     if (/全场录像/.test(name)){
-                        playList_weibo = playList_weibo + '全场录像' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<全场录像>' + '$' + url + '#';
                     }
                     else if (/第一节/.test(name)){
-                        playList_weibo = playList_weibo + '第一节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第一节>' + '$' + url + '#';
                     }
                     else if (/第二节/.test(name)){
-                        playList_weibo = playList_weibo + '第二节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第二节>' + '$' + url + '#';
                     }
                     else if (/第三节/.test(name)){
-                        playList_weibo = playList_weibo + '第三节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第三节>' + '$' + url + '#';
                     }
                     else if (/第四节/.test(name)){
-                        playList_weibo = playList_weibo + '第四节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第四节>' + '$' + url + '#';
                     }
                     else if (/加时赛/.test(name)){
-                        playList_weibo = playList_weibo + '加时赛' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
                     else {
                         playList_weibo = playList_weibo + name + '$' + url + '#';
@@ -569,22 +570,22 @@ var rule = {
                 }
                 else if (/快手/.test(name)){
                     if (/全场录像/.test(name)){
-                        playList_kuaiShou = playList_kuaiShou + '全场录像' + '$' + url + '#';
+                        playList_kuaiShou = playList_kuaiShou + '<全场录像>' + '$' + url + '#';
                     }
                     else if (/第一节/.test(name)){
-                        playList_kuaiShou = playList_kuaiShou + '第一节' + '$' + url + '#';
+                        playList_kuaiShou = playList_kuaiShou + '<第一节>' + '$' + url + '#';
                     }
                     else if (/第二节/.test(name)){
-                        playList_kuaiShou = playList_kuaiShou + '第二节' + '$' + url + '#';
+                        playList_kuaiShou = playList_kuaiShou + '<第二节>' + '$' + url + '#';
                     }
                     else if (/第三节/.test(name)){
-                        playList_kuaiShou = playList_kuaiShou + '第三节' + '$' + url + '#';
+                        playList_kuaiShou = playList_kuaiShou + '<第三节>' + '$' + url + '#';
                     }
                     else if (/第四节/.test(name)){
-                        playList_kuaiShou = playList_kuaiShou + '第四节' + '$' + url + '#';
+                        playList_kuaiShou = playList_kuaiShou + '<第四节>' + '$' + url + '#';
                     }
                     else if (/加时赛/.test(name)){
-                        playList_kuaiShou = playList_kuaiShou + '加时赛' + '$' + url + '#';
+                        playList_kuaiShou = playList_kuaiShou + '<加时赛>' + '$' + url + '#';
                     }
                     else {
                         playList_kuaiShou = playList_kuaiShou + name + '$' + url + '#';
@@ -632,22 +633,22 @@ var rule = {
                 // 单独封装微博源
                 if (/weibo/.test(url)){
                     if (/全场录像/.test(name)){
-                        playList_weibo = playList_weibo + '全场录像' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<全场录像>' + '$' + url + '#';
                     }
                     else if (/第一节/.test(name)){
-                        playList_weibo = playList_weibo + '第一节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第一节>' + '$' + url + '#';
                     }
                     else if (/第二节/.test(name)){
-                        playList_weibo = playList_weibo + '第二节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第二节>' + '$' + url + '#';
                     }
                     else if (/第三节/.test(name)){
-                        playList_weibo = playList_weibo + '第三节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第三节>' + '$' + url + '#';
                     }
                     else if (/第四节/.test(name)){
-                        playList_weibo = playList_weibo + '第四节' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<第四节>' + '$' + url + '#';
                     }
                     else if (/加时赛/.test(name)){
-                        playList_weibo = playList_weibo + '加时赛' + '$' + url + '#';
+                        playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
                     else {
                         playList_weibo = playList_weibo + name + '$' + url + '#';
