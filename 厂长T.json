@@ -24,7 +24,8 @@
 //		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播1080.js"},
 //		{"key":"哔哩直播","name":"哔哩直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/哔哩直播_2.js"},
 		{"key":"博看听书","name":"博看听书","type":3,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":0.75},"ext":"./diy/博看听书.js"},
-		{"key":"家庭KTV","name":"家庭KTV","type":1,"api":"https://tvbox.cyao.tk/mv/vod","style":{"type":"oval"},"searchable":1,"quickSearch":0,"changeable":0},
+//		{"key":"家庭KTV","name":"家庭KTV","type":1,"api":"https://tvbox.cyao.tk/mv/vod","style":{"type":"oval"},"searchable":1,"quickSearch":0,"changeable":0},
+		{"key":"家庭KTV","name":"家庭KTV","type":3,"api":"./diy/live2vod.js","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./mv2vod.json"},
 
 		{"key":"88看球","name":"88看球","type":3,"api":"csp_Kanqiu","searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"list"},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/custom_spider.jar"},
 		{"key":"JRKAN直播","name":"JRS看比赛","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/JRKAN直播_4.js"},
