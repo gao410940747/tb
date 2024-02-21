@@ -1,9 +1,9 @@
 var rule={
     title:'厂长资源', 
-    host:'https://www.czzy55.com',
-    // 发布页：www.czzy.site
-    // 主节点：www.cz01.tv
-    // 联通节点：www.czz9.com/  www.czzy33.com/  www.czzy88.com/  www.czzy22.com/
+    host:'https://www.cz01.vip',
+    // 发布页：www.czzy.site/  www.cz01.vip/
+    // 主节点：www.cz01.tv/
+    // 联通节点：www.czz9.com/  www.czzy33.com/  www.czzy88.com/  www.czzy22.com/  www.czzy55.com/
     // 移动节点：www.czz9.com/  www.czzy33.com/
     hostJs:'print(HOST);let html=request(HOST,{headers:{"User-Agent":PC_UA}});HOST = jsp.pdfh(html,"h3&&a&&href")',
     homeUrl: '/reyingzhong',

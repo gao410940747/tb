@@ -1197,8 +1197,8 @@ IHOT爱院线,http://[2409:8087:7000:20:1000::22]:6060/000000001000/200000000400
 咪咕直播-30, http://[2409:8087:1a01:df::4041]/PLTV/88888888/224/3221226053/index.m3u8
 咪咕直播-31, http://[2409:8087:1a01:df::4025]/PLTV/88888888/224/3221225760/index.m3u8
 咪咕直播-32, http://[2409:8087:1a01:df::4062]/PLTV/88888888/224/3221226046/index.m3u8
-咪咕直播-33, http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226223/1.m3u8
-咪咕直播-34, http://[2409:8087:74F1:0021::0008]:80/PLTV/88888888/224/3221226225/1.m3u8
+咪咕直播-33, http://[2409:8087:1a01:df::4068]/PLTV/88888888/224/3221226031/index.m3u8
+咪咕直播-34, http://[2409:8087:1a01:df::4055]/PLTV/88888888/224/3221225910/index.m3u8
 咪咕直播-35, http://[2409:8087:1a01:df::4076]/PLTV/88888888/224/3221225912/index.m3u8
 咪咕直播-36, http://[2409:8087:1a01:df::4027]/PLTV/88888888/224/3221225914/index.m3u8
 咪咕直播-37, http://[2409:8087:1a01:df::4002]/PLTV/88888888/224/3221225895/index.m3u8
@@ -1207,8 +1207,6 @@ IHOT爱院线,http://[2409:8087:7000:20:1000::22]:6060/000000001000/200000000400
 咪咕直播-40, http://[2409:8087:1a01:df::4009]/PLTV/88888888/224/3221225901/index.m3u8
 咪咕直播-41, http://[2409:8087:1a01:df::4023]/PLTV/88888888/224/3221225903/index.m3u8
 咪咕直播-42, http://[2409:8087:1a01:df::4046]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226472/index.m3u8
-咪咕直播-43, http://[2409:8087:1a01:df::4068]/PLTV/88888888/224/3221226031/index.m3u8
-咪咕直播-44, http://[2409:8087:1a01:df::4055]/PLTV/88888888/224/3221225910/index.m3u8
 
 
 
@@ -1235,43 +1233,50 @@ IHOT爱院线,http://[2409:8087:7000:20:1000::22]:6060/000000001000/200000000400
 
 
 地方, #genre#
-黑龙江｜影视,http://[2409:8087:1a01:df::4035]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226298/1.m3u8
-黑龙江｜影视,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225973/index.m3u8
 黑龙江｜影视,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226298/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
-黑龙江｜文体,http://[2409:8087:1a01:df::4025]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226239/1.m3u8
-黑龙江｜文体,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225965/index.m3u8
 黑龙江｜文体,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226239/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
-黑龙江｜都市,http://[2409:8087:1a01:df::4025]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/1.m3u8
 黑龙江｜都市,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
-黑龙江｜都市,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/index.m3u8
-黑龙江｜法治新闻,http://[2409:8087:1a01:df::4036]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/1.m3u8
 黑龙江｜法治新闻,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
-黑龙江｜法治新闻,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/index.m3u8
 黑龙江｜农业科教,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226242/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
-黑龙江｜农业科教,http://[2409:8087:1a01:df::4025]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226242/1.m3u8
-黑龙江｜农业科教,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225994/index.m3u8
-黑龙江｜少儿,http://[2409:8087:1a01:df::4035]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/1.m3u8
-黑龙江｜少儿,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225979/index.m3u8
 黑龙江｜少儿,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
+
+黑龙江｜影视,http://[2409:8087:1a01:df::4035]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226298/1.m3u8
+黑龙江｜文体,http://[2409:8087:1a01:df::4025]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226239/1.m3u8
+黑龙江｜都市,http://[2409:8087:1a01:df::4025]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/1.m3u8
+黑龙江｜法治新闻,http://[2409:8087:1a01:df::4036]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/1.m3u8
+黑龙江｜农业科教,http://[2409:8087:1a01:df::4025]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226242/1.m3u8
+黑龙江｜少儿,http://[2409:8087:1a01:df::4035]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226304/1.m3u8
+
+黑龙江｜影视,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225973/index.m3u8
+黑龙江｜文体,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225965/index.m3u8
+黑龙江｜都市,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221226301/index.m3u8
+黑龙江｜法治新闻,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226330/index.m3u8
+黑龙江｜农业科教,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225994/index.m3u8
+黑龙江｜少儿,http://[2409:8087:1a01:df::4077]/PLTV/88888888/224/3221225979/index.m3u8
+
 黑龙江｜哈尔滨新闻综合,https://stream.hrbtv.net/xwzh/playlist.m3u8
 黑龙江｜哈尔滨都市资讯,https://stream.hrbtv.net/zxpd/playlist.m3u8
 黑龙江｜哈尔滨生活频道,https://stream.hrbtv.net/shpd/playlist.m3u8
 黑龙江｜哈尔滨娱乐频道,https://stream.hrbtv.net/ylpd/playlist.m3u8
 黑龙江｜哈尔滨影视频道,https://stream.hrbtv.net/yspd/playlist.m3u8
+
 黑龙江｜哈尔滨新闻综合,http://stream.hrbtv.net/xwzh/sd/live.m3u8?zheild
 黑龙江｜哈尔滨影视频道,http://stream.hrbtv.net/yspd/sd/live.m3u8?zheild
 黑龙江｜哈尔滨生活频道,http://stream.hrbtv.net/shpd/sd/live.m3u8?zheild
 黑龙江｜哈尔滨娱乐频道,http://stream.hrbtv.net/ylpd/sd/live.m3u8?zheild
+
 黑龙江｜哈尔滨影视频道,https://stream.hrbtv.net/yspd/sd/live.m3u8
 黑龙江｜哈尔滨生活频道,https://stream.hrbtv.net/shpd/sd/live.m3u8
 黑龙江｜哈尔滨娱乐频道,https://stream.hrbtv.net/ylpd/sd/live.m3u8
 黑龙江｜哈尔滨都市资讯,https://stream.hrbtv.net/zxpd/sd/live.m3u8
+
+黑龙江｜五常综合,https://masterpull.hljtv.com/live/R9bOklLT.m3u8
+
 黑龙江｜齐齐哈尔新闻综合,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226437/index.m3u8
 黑龙江｜齐齐哈尔经济法制,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226555/index.m3u8
 黑龙江｜鹤岗新闻综合,http://[2409:8087:1a01:df::4060]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226534/index.m3u8
 黑龙江｜佳木斯新闻综合,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226451/index.m3u8
 黑龙江｜双鸭山综合,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226529/index.m3u8
-黑龙江｜五常综合,https://masterpull.hljtv.com/live/R9bOklLT.m3u8
 黑龙江｜富裕综合,https://masterpull.hljtv.com/live/MKFLhcpa.m3u8
 
 江苏｜南京新闻综合,http://[2409:8087:2001:20:2800:0:df6e:eb14]/wh7f454c46tw3127461495_-1929938189/ott.mobaibox.com/PLTV/3/224/3221227213/index.m3u8
