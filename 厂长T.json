@@ -50,7 +50,7 @@
 		{"key":"在线之家","name":"在线之家","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/在线之家.js"},
 		{"key":"AnFuns","name":"AnFuns","type":3,"api":"./js/drpy2.min.js","ext":"./diy/AnFuns.js"},
 		{"key":"爱弹幕","name":"爱弹幕","type":3,"api":"./js/drpy2.min.js","ext":"./diy/爱弹幕.js"},
-		{"key":"荐片","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"}
+		{"key":"荐片弹幕","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"}
 	],
 	"parses": [
 			{"name":"巧记","type":1,"url":"https://www.qiaoji8.com/tvbox/json1.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"]}},
