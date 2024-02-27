@@ -324,19 +324,19 @@ var rule = {
                     if (/全场录像/.test(name)){
                         playList_weibo = playList_weibo + '<全场录像>' + '$' + url + '#';
                     }
-                    else if (/第一节/.test(name)){
+                    else if (/第一节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第一节>' + '$' + url + '#';
                     }
-                    else if (/第二节/.test(name)){
+                    else if (/第二节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第二节>' + '$' + url + '#';
                     }
-                    else if (/第三节/.test(name)){
+                    else if (/第三节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第三节>' + '$' + url + '#';
                     }
-                    else if (/第四节/.test(name)){
+                    else if (/第四节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第四节>' + '$' + url + '#';
                     }
-                    else if (/加时赛/.test(name)){
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
                     else {
@@ -376,19 +376,19 @@ var rule = {
                     if (/全场录像/.test(name)){
                         playList_weibo = playList_weibo + '<全场录像>' + '$' + url + '#';
                     }
-                    else if (/第一节/.test(name)){
+                    else if (/第一节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第一节>' + '$' + url + '#';
                     }
-                    else if (/第二节/.test(name)){
+                    else if (/第二节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第二节>' + '$' + url + '#';
                     }
-                    else if (/第三节/.test(name)){
+                    else if (/第三节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第三节>' + '$' + url + '#';
                     }
-                    else if (/第四节/.test(name)){
+                    else if (/第四节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第四节>' + '$' + url + '#';
                     }
-                    else if (/加时赛/.test(name)){
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
                     else {
@@ -399,19 +399,19 @@ var rule = {
                     if (/全场录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<全场录像>' + '$' + url + '#';
                     }
-                    else if (/第一节/.test(name)){
+                    else if (/第一节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第一节>' + '$' + url + '#';
                     }
-                    else if (/第二节/.test(name)){
+                    else if (/第二节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第二节>' + '$' + url + '#';
                     }
-                    else if (/第三节/.test(name)){
+                    else if (/第三节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第三节>' + '$' + url + '#';
                     }
-                    else if (/第四节/.test(name)){
+                    else if (/第四节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第四节>' + '$' + url + '#';
                     }
-                    else if (/加时赛/.test(name)){
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<加时赛>' + '$' + url + '#';
                     }
                     else {

@@ -326,7 +326,12 @@ var rule = {
                         // 一级图片URL
                         let picUrl1 = split[2]==='快船'?pd(it,'.team-logo&&src'):pd(it,'.col-xs-1 img&&src');
                         // 一级URL
-                        let url1 = pd(it, '.btn&&href').replace(HOST, 'http://www.88kanqiu.one');
+                        let url1;
+                        if(/直播中/.test(pdfh(it, '.btn&&Text'))) {
+                            url1 = HOST + split[2] + 'vs' + split[4];
+                        } else {
+                            url1 = 'http://127.0.0.1';
+                        }
 
                         d.push({
                             desc:desc1,
@@ -529,6 +534,70 @@ var rule = {
             VOD['vod_play_from'] = info.vod_play_from;
             VOD['vod_play_url'] = info.vod_play_url;
         }
+        else if(/vs/.test(input) && /快船/.test(input)) {
+            // 播放列表拼接
+            var playListStr = '';
+            var playListStr_mg = '';
+            var playListStr_tx = '';
+            var playListStr_iqi = '';
+            let playFrom = [];
+            let playList = [];
+            var jrkan_html = request('http://www.jrsyyds.com/?lan=1');
+            var tabs = pdfa(jrkan_html,'body&&.d-touch');
+            tabs.forEach(function(it){
+                var pz = pdfh(it,'.name:eq(1)&&Text');
+                var pk = pdfh(it,'.name:eq(2)&&Text');
+                var vsTitle = input.replace(HOST,'');
+                if(vsTitle === (pz+'vs'+pk)) {
+                    var url1 = pd(it,'a.me&&href');
+                    var jrkan_html_1 = request(url1);
+                    var playUrls = pdfa(jrkan_html_1, '.sub_playlist&&a');
+
+                    playUrls.map(function(it1) {
+                        let name = pdfh(it1,'strong&&Text');
+                        let url = pd(it1,'a&&data-play');
+                        if (/sm.html/.test(url) && /id=262/.test(url)){
+                            name = name.replace('主播解说','主播瑶妹');
+                        }
+                        playListStr = playListStr + name+ '$' + url + '#';
+
+                        // 单独封装咪咕、腾讯、爱奇艺专线
+                        if (/mglx.php|gm.php/.test(url)){
+                            playListStr_mg = playListStr_mg + '咪咕专线'+'$'+url+'#';
+                        }
+                        else if (/txycdn.video.qq.com/.test(url)){
+                            url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                            playListStr_tx = playListStr_tx + '腾讯专线'+'$'+url+'#';
+                        }
+                        else if (/iqi.php/.test(url)){
+                            playListStr_iqi = playListStr_iqi + '爱奇艺专线'+'$'+url+'#';
+                        }
+                    });
+                    if(playListStr!=='') {
+                        playFrom.append('JRKAN直播');
+                        playList.append(playListStr);
+                    }
+                    if(playListStr_tx!=='') {
+                        playFrom.append('腾讯专线');
+                        playList.append(playListStr_tx);
+                    }
+                    if(playListStr_iqi!=='') {
+                        playFrom.append('爱奇艺专线');
+                        playList.append(playListStr_iqi);
+                    }
+                    if(playListStr_mg!=='') {
+                        playFrom.append('咪咕专线');
+                        playList.append(playListStr_mg);
+                    }
+
+                    // 最后封装所有线路
+                    let vod_play_from = playFrom.join('$$$');
+                    let vod_play_url = playList.join('$$$');
+                    VOD['vod_play_from'] = vod_play_from;
+                    VOD['vod_play_url'] = vod_play_url;
+                }
+            });
+        }
         else if(/88kanqiu/.test(input) && /replay/.test(input)) {
             VOD = {
                 vod_name: pdfh(new_html,'.breadcrumb h3&&Text'),
@@ -549,19 +618,19 @@ var rule = {
                     if (/全场录像/.test(name)){
                         playList_weibo = playList_weibo + '<全场录像>' + '$' + url + '#';
                     }
-                    else if (/第一节/.test(name)){
+                    else if (/第一节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第一节>' + '$' + url + '#';
                     }
-                    else if (/第二节/.test(name)){
+                    else if (/第二节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第二节>' + '$' + url + '#';
                     }
-                    else if (/第三节/.test(name)){
+                    else if (/第三节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第三节>' + '$' + url + '#';
                     }
-                    else if (/第四节/.test(name)){
+                    else if (/第四节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第四节>' + '$' + url + '#';
                     }
-                    else if (/加时赛/.test(name)){
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
                     else {
@@ -572,19 +641,19 @@ var rule = {
                     if (/全场录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<全场录像>' + '$' + url + '#';
                     }
-                    else if (/第一节/.test(name)){
+                    else if (/第一节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第一节>' + '$' + url + '#';
                     }
-                    else if (/第二节/.test(name)){
+                    else if (/第二节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第二节>' + '$' + url + '#';
                     }
-                    else if (/第三节/.test(name)){
+                    else if (/第三节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第三节>' + '$' + url + '#';
                     }
-                    else if (/第四节/.test(name)){
+                    else if (/第四节/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<第四节>' + '$' + url + '#';
                     }
-                    else if (/加时赛/.test(name)){
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<加时赛>' + '$' + url + '#';
                     }
                     else {
@@ -635,19 +704,19 @@ var rule = {
                     if (/全场录像/.test(name)){
                         playList_weibo = playList_weibo + '<全场录像>' + '$' + url + '#';
                     }
-                    else if (/第一节/.test(name)){
+                    else if (/第一节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第一节>' + '$' + url + '#';
                     }
-                    else if (/第二节/.test(name)){
+                    else if (/第二节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第二节>' + '$' + url + '#';
                     }
-                    else if (/第三节/.test(name)){
+                    else if (/第三节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第三节>' + '$' + url + '#';
                     }
-                    else if (/第四节/.test(name)){
+                    else if (/第四节/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<第四节>' + '$' + url + '#';
                     }
-                    else if (/加时赛/.test(name)){
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
                     else {
