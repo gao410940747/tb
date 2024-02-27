@@ -47,18 +47,18 @@
 		{"key":"趣盘搜弹幕","name":"夸克趣盘搜","type":3,"api":"csp_QuPanSou","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"playerType":2,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 		{"key":"夸克盘搜弹幕","name":"夸克盘搜","type":3,"api":"csp_Qkpanso","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"playerType":2,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 
-		{"key":"厂长弹幕","name":"厂长(弹幕)","type":3,"api":"csp_Czzy","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"荐片弹幕","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"天天弹幕","name":"天天(弹幕)","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"机器人弹幕","name":"爱看机器人(弹幕)","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-
 		{"key":"豆瓣推荐","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
 		{"key":"量子资源","name":"量子资源","type":1,"api":"https://cj.lzcaiji.com/api.php/provide/vod/","playerType":1,"searchable":1,"changeable":1,"categories":["大陆综艺","篮球","足球","网球","斯诺克","体育","国产剧","韩国剧","日本剧","电影片","综艺片","动漫片","台湾剧","香港剧","欧美剧","海外剧","泰国剧","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","记录片","港台综艺","日韩综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","港台动漫","海外动漫","电影解说","新闻资讯","电影资讯","娱乐新闻","预告片","短剧"]},
 //		{"key":"暴风资源","name":"暴风资源","type":1,"api":"https://bfzyapi.com/api.php/provide/vod","playerType":1,"searchable":1,"changeable":1,"categories":["大陆综艺","篮球","足球","网球","斯诺克","国产剧","韩国剧","日本剧","台湾剧","香港剧","欧美剧","海外剧","泰国剧","电影片","综艺片","动漫片","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","记录片","港台综艺","日韩综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","港台动漫","海外动漫","电影解说","预告片"]},
 //		{"key":"天空资源","name":"天空资源","type":1,"api":"https://tiankongzy.com/api.php/provide/vod/","searchable":1,"quickSearch":1,"categories":["大陆综艺","体育赛事","国产剧","香港剧","台湾剧","美国剧","韩国剧","日本剧","泰剧","海外剧","日韩综艺","港台综艺","欧美综艺","国产动漫","日韩动漫","欧美动漫","动作片","喜剧片","爱情片","科幻片","恐怖片","剧情片","战争片","纪录片","悬疑片","动画片","犯罪片","奇幻片"]},
 		{"key":"在线之家","name":"在线之家","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/在线之家.js"},
 //		{"key":"爱弹幕","name":"爱弹幕","type":3,"api":"./js/drpy2.min.js","ext":"./diy/爱弹幕.js"},
-		{"key":"AnFuns","name":"AnFuns","type":3,"api":"./js/drpy2.min.js","ext":"./diy/AnFuns.js"}
+		{"key":"AnFuns","name":"AnFuns","type":3,"api":"./js/drpy2.min.js","ext":"./diy/AnFuns.js"},
+
+		{"key":"厂长弹幕","name":"厂长(弹幕)","type":3,"api":"csp_Czzy","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
+		{"key":"荐片弹幕","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
+		{"key":"天天弹幕","name":"天天(弹幕)","type":3,"api":"csp_TianTian","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
+		{"key":"机器人弹幕","name":"爱看机器人(弹幕)","type":3,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"}
 	],
 	"parses": [
 			{"name":"巧记","type":1,"url":"https://www.qiaoji8.com/tvbox/json1.php?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","tucheng","sohu","搜狐","letv","乐视","mgtv","芒果","tnmb","seven","yzm","aliyun","RJuMao","bilibili","1905","xinvip","XAL","qiqi","XALS","YuMi-vip"]}},
