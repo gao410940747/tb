@@ -166,14 +166,13 @@ var rule = {
                             playListStr = playListStr + name + '$' + url + '#';
 
                             if (/mglx.php|gm.php/.test(url)){
-                                playListStr_mg = playListStr_mg + '咪咕专线'+'$'+url+'#';
+                                playListStr_mg = playListStr_mg +'咪咕专线'+'$'+url+'#';
                             }
-                            else if (/txycdn.video.qq.com/.test(url)){
-                                url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
-                                playListStr_tx = playListStr_tx + '腾讯专线'+'$'+url+'#';
+                            else if (/i11.html/.test(url)){
+                                playListStr_tx = playListStr_tx +'腾讯专线'+'$'+url+'#';
                             }
                             else if (/iqi.php/.test(url)){
-                                playListStr_iqi = playListStr_iqi + '爱奇艺专线'+'$'+url+'#';
+                                playListStr_iqi = playListStr_iqi +'爱奇艺专线'+'$'+url+'#';
                             }
                         })
                     }
@@ -184,6 +183,10 @@ var rule = {
             playFrom.append('足球巴巴');
             playList.append(playListStr);
         }
+        if(playListStr_mg!=='') {
+            playFrom.append('咪咕专线');
+            playList.append(playListStr_mg);
+        }
         if(playListStr_tx!=='') {
             playFrom.append('腾讯专线');
             playList.append(playListStr_tx);
@@ -191,10 +194,6 @@ var rule = {
         if(playListStr_iqi!=='') {
             playFrom.append('爱奇艺专线');
             playList.append(playListStr_iqi);
-        }
-        if(playListStr_mg!=='') {
-            playFrom.append('咪咕专线');
-            playList.append(playListStr_mg);
         }
 
         // 最后封装所有线路
