@@ -49,11 +49,9 @@ var rule = {
 		pdfa = jsp.pdfa;
 		pd = jsp.pd;
         var html = request(input);
-        var html_txt = request(input.replace(HOST, 'https://javtxt.one'));
+        // var html_txt = request(input.replace(HOST, 'https://javtxt.one'));
         VOD = {
             vod_id: pdfh(html, '.highlight&&Text'),
-            // vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html, '.title&&Text'),
-            vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html_txt, 'h2&&Text'),
             vod_pic: pdfh(html, '#cover-img&&data-src'),
             type_name: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
             // vod_year: pdfh(html, '.attributes&&dt:eq(2)&&Text'),
@@ -61,8 +59,10 @@ var rule = {
             vod_remarks: pdfh(html, '.highlight&&Text'),
             vod_director: pdfh(html, '.attributes&&dt:eq(4)&&Text'),
             vod_actor: pdfh(html, '.actress&&Text'),
-            // vod_content: pdfh(html, '.tags&&Text'),
-            vod_content: pdfh(html_txt, '.intro&&.text-zh&&p&&Text'),
+            vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html, '.title&&Text'),
+            vod_content: pdfh(html, '.tags&&Text'),
+            // vod_name: pdfh(html, '.highlight&&Text') + ' ' + pdfh(html_txt, 'h2&&Text'),
+            // vod_content: pdfh(html_txt, '.intro&&.text-zh&&p&&Text'),
         };
 		var list = pdfa(html, '.magnets&&.magnet');
         let playFrom = [];
