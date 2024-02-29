@@ -16,8 +16,8 @@
 		{"key":"爱看机器人","name":"爱看机器人","type":3,"playerType":1,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:js线路,ik线路,gs线路,sd线路,tp线路,bfzy线路,lz线路,ff线路][不包含:yh线路]","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
 //		{"key":"爱看机器人","name":"爱看机器人","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":1,"changeable":1,"ext":"./diy/机器人.js"},
 
-		{"key":"电视直播","name":"电视直播","type":3,"api":"./diy/live2vod.js","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./live2vod.json"},
-		{"key":"直播平台","name":"直播平台","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"ext":"./diy/JustLive_11_follow.js"},
+		{"key":"电视直播","name":"电视直播","type":3,"playerType":1,"api":"./diy/live2vod.js","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./live2vod.json"},
+		{"key":"直播平台","name":"直播平台","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"ext":"./diy/JustLive_11_follow.js"},
 //		{"key":"快手直播","name":"快手直播","type":3,"api":"csp_KsLive","playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"rect","ratio":1.755},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/ok.png"},
 //		{"key":"斗鱼直播","name":"斗鱼直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/斗鱼直播_2.js"},
 //		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播1080.js"},
