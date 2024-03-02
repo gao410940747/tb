@@ -46,9 +46,9 @@ CCTV-11,http://[2409:8087:2001:20:2800:0:df6e:eb23]/wh7f454c46tw105619488_186643
 CCTV-12,http://[2409:8087:2001:20:2800:0:df6e:eb0a]/wh7f454c46tw97794338_-604599203/ott.mobaibox.com/PLTV/3/224/3221227655/index.m3u8?icpid=3&RTS=1674380213&from=40&popid=40&hms_devid=2038&prioritypopid=40&vqe=3
 CCTV-12,http://[2409:8087:2001:20:2800:0:df6e:eb22]/wh7f454c46tw98162637_2110754422/ott.mobaibox.com/PLTV/3/224/3221228401/index.m3u8?icpid=3&RTS=1674380213&from=40&popid=40&hms_devid=2291&prioritypopid=40&vqe=3
 CCTV-12,http://[2409:8087:2001:20:2800:0:df6e:eb23]/wh7f454c46tw185877003_-533945400/ott.mobaibox.com/PLTV/3/224/3221228401/index.m3u8?icpid=3&RTS=1668594980&from=40&popid=40&hms_devid=2291&prioritypopid=40&vqe=3
-CCTV-13,http://[2409:8087:2001:20:2800:0:df6e:eb15]/wh7f454c46tw98873079_-1249323947/ott.mobaibox.com/PLTV/3/224/3221227387/index.m3u8?icpid=3&RTS=1674380214&from=40&ocs=2_2409:8087:2004:20:2800:0:df6e:ec13_80&popid=40&hms_devid=2115&prioritypopid=40&vqe=3
 CCTV-13,http://[2409:8087:2001:20:2800:0:df6e:eb16]/wh7f454c46tw259647455_-1559913959/ott.mobaibox.com/PLTV/3/224/3221228224/index.m3u8?icpid=3&RTS=1668595054&from=40&popid=40&hms_devid=2114&prioritypopid=40&vqe=3
 CCTV-13,http://[2409:8087:2001:20:2800:0:df6e:eb0f]/wh7f454c46tw1538464012_-199930895/ott.mobaibox.com/PLTV/3/224/3221225560/index.m3u8?icpid=3&RTS=1674385948&from=40&popid=40&hms_devid=2111&prioritypopid=40&vqe=3
+CCTV-13,http://[2409:8087:2001:20:2800:0:df6e:eb15]/wh7f454c46tw98873079_-1249323947/ott.mobaibox.com/PLTV/3/224/3221227387/index.m3u8?icpid=3&RTS=1674380214&from=40&ocs=2_2409:8087:2004:20:2800:0:df6e:ec13_80&popid=40&hms_devid=2115&prioritypopid=40&vqe=3
 CCTV-14,http://[2409:8087:2001:20:2800:0:df6e:eb0a]/wh7f454c46tw1746129949_-891071668/ott.mobaibox.com/PLTV/3/224/3221227656/index.m3u8?icpid=3&RTS=1674386156&from=40&popid=40&hms_devid=2038&prioritypopid=40&vqe=3
 CCTV-14,http://[2409:8087:2001:20:2800:0:df6e:eb22]/wh7f454c46tw340147088_1594094424/ott.mobaibox.com/PLTV/3/224/3221228292/index.m3u8?icpid=3&RTS=1668595134&from=40&popid=40&hms_devid=2291&prioritypopid=40&vqe=3
 CCTV-14,http://[2409:8087:2001:20:2800:0:df6e:eb23]/wh7f454c46tw1184949553_1248271610/ott.mobaibox.com/PLTV/3/224/3221228292/index.m3u8?icpid=3&RTS=1674381300&from=40&popid=40&hms_devid=2291&prioritypopid=40&vqe=3
@@ -866,18 +866,18 @@ TVBS歡樂台,http://198.16.100.90:8278/tvbshuanle_twn/playlist.m3u8?ct=19193&ti
 中天綜合台,http://50.7.238.114:8278/ctizhonghe/playlist.m3u8?ct=19193&tid=MBBB1520797915207979&tsum=3a6f7f0c591c2ec6678d51b741f290b2
 中天綜合台,http://50.7.238.114:8278/ctizhonghe/playlist.m3u8?tid=MBBB1520797915207979&ct=19193&tsum=3a6f7f0c591c2ec6678d51b741f290b2
 
-台视新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist1.m3u8
-台视新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8
+台視新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist1.m3u8
+台視新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8
 台視新聞台,http://38.64.72.148/hls/modn/list/4013/chunklist0.m3u8
 台視新聞台,http://38.64.72.148/hls/modn/list/4013/chunklist1.m3u8
-台视新聞台,http://38.64.72.148/hls/modn/list/4013/playlist.m3u8
-台视新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8?blog.ntnas.top
+台視新聞台,http://38.64.72.148/hls/modn/list/4013/playlist.m3u8
+台視新聞台,http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8?blog.ntnas.top
 
 民視新聞台,http://38.64.72.148/hls/modn/list/4012/chunklist0.m3u8
 民視新聞台,http://38.64.72.148/hls/modn/list/4012/chunklist1.m3u8
-民视新聞台,http://38.64.72.148:80/hls/modn/list/4012/chunklist0.m3u8
-民视新聞台,http://38.64.72.148:80/hls/modn/list/4012/chunklist1.m3u8
-民视新聞台,http://38.64.72.148/hls/modn/list/4012/playlist.m3u8
+民視新聞台,http://38.64.72.148:80/hls/modn/list/4012/chunklist0.m3u8
+民視新聞台,http://38.64.72.148:80/hls/modn/list/4012/chunklist1.m3u8
+民視新聞台,http://38.64.72.148/hls/modn/list/4012/playlist.m3u8
 
 八大综合台,http://198.16.100.90:8278/badazhonghe/playlist.m3u8?tid=MC7C4692263546922635&ct=19225&tsum=ffdc7a6397b511103e0df0b92e678790
 八大综合台,http://198.16.100.90:8278/badazhonghe/playlist.m3u8?tid=mfb8d64b6276514171054&ct=17874&tsum=a87466c997089ea7dce98cd17301667d
@@ -1233,6 +1233,8 @@ IHOT爱院线,http://[2409:8087:7000:20:1000::22]:6060/000000001000/200000000400
 
 
 地方, #genre#
+黑龙江｜五常综合,https://masterpull.hljtv.com/live/R9bOklLT.m3u8
+
 黑龙江｜影视,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226298/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 黑龙江｜文体,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226239/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 黑龙江｜都市,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226301/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
@@ -1269,8 +1271,6 @@ IHOT爱院线,http://[2409:8087:7000:20:1000::22]:6060/000000001000/200000000400
 黑龙江｜哈尔滨生活频道,https://stream.hrbtv.net/shpd/sd/live.m3u8
 黑龙江｜哈尔滨娱乐频道,https://stream.hrbtv.net/ylpd/sd/live.m3u8
 黑龙江｜哈尔滨都市资讯,https://stream.hrbtv.net/zxpd/sd/live.m3u8
-
-黑龙江｜五常综合,https://masterpull.hljtv.com/live/R9bOklLT.m3u8
 
 黑龙江｜齐齐哈尔新闻综合,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226437/index.m3u8
 黑龙江｜齐齐哈尔经济法制,http://[2409:8087:1a01:df::7005]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226555/index.m3u8
