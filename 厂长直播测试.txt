@@ -58,32 +58,66 @@ referer=https://live.bilibili.com/h5
 
 
 
-cctv官网测试,#genre#
-c1,https://ldncctvwbcdali.v.myalicdn.com/ldncctvwbcd/cdrmldcctv1_1/index.m3u8?b=200-2100
-c2,https://ldocctvwbcdtxy.liveplay.myqcloud.com/ldocctvwbcd/cdrmldcctv2_1/index.m3u8?b=200-2100
-c3,https://ldocctvwbcdbd.a.bdydns.com/ldocctvwbcd/cdrmldcctv3_1/index.m3u8?b=200-2100
-c,
-c,
-c,
-c,
-c,
-c,
-c,
-c,
-c,
-c,
-c1,
-c1,
-c1,
-c13, https://ldncctvwbcdali.v.myalicdn.com/ldncctvwbcd/cdrmldcctv13_1/index.m3u8?b=200-2100
-c1,
-c1,
-c1,
-c1,
-c1,
-c1,
+体育测试,#genre#
+体育直播,http://live.jpyex.com/replayer/?id=3736120&type=2#s=1709355468
 
+体育直播,http://play.88player.top/m3u8.html?url=https://pull2.tangyuan1688.com/live/hd-zh-2-3736120.m3u8#s=1709355468
 
+体育直播,http://play.sportsteam363.com/play/wen.php?id=vl&id2=#s=1709355468
+
+体育直播,http://play.88player.top/m3u8.html?url=https://pull2.tangyuan1688.com/live/hd-en-2-3736120.m3u8#s=1709355468
+
+体育直播,https://ani.zq4669.com:31106/live/match?embed=aHR0cHM6Ly9obHMubHZpd3hvZXIzLmNvbS9saXZlL2hkLXpoLTItMzczNjEyMC5tM3U4P3R4U2VjcmV0PTliYjQ3YjllYzFiMzJiNDk2NTcxZjM0OGJiYzFmZWI2JnR4VGltZT02NUUzREVDQg==&flags=13#s=1709355468
+
+体育直播,http://play.sportsteam363.com/play/gm.php?id=901175359&id2=901175359#s=1709355468
+
+体育直播,https://ani.zq4669.com:31106/live/match?embed=aHR0cHM6Ly9wdWxsMi50YW5neXVhbjE2ODguY29tL2xpdmUvaGQtZW4tMi0zNzM2MTIwLm0zdTg=&flags=13#s=1709355751
+
+体育直播,https://ani.zq4669.com:31106/live/match?embed=aHR0cHM6Ly9wdWxsMi50YW5neXVhbjE2ODguY29tL2xpdmUvaGQtemgtMi0zNzM2MTIwLm0zdTg=&flags=13#s=1709355751
+
+体育直播,http://live.jpyex.com/replayer/?id=3736496&type=2#s=1709355829
+
+体育直播,http://play.88player.top/m3u8.html?url=https://play2nm.hnyongshun.cn/live/hd-zh-vjxm8xt5xxy9q6o.m3u8#s=1709355829
+
+体育直播,http://play.88player.top/m3u8.html?url=https://play2nm.hnyongshun.cn/live/hd-en-vjxm8xt5xxy9q6o.m3u8#s=1709355829
+
+体育直播,http://play.sportsteam363.com/play/i11.html?id=56377238&id2=#s=1709355829
+
+体育直播,http://play.sportsteam363.com/play/mglx.php?id=901174949&id2=128669#s=1709355829
+
+体育直播,https://ani.zq4669.com:31106/live/match?embed=aHR0cHM6Ly9obHMubHZpd3hvZXIzLmNvbS9saXZlL2hkLXpoLTItMzczNjQ5Ni5tM3U4P3R4U2VjcmV0PWNkNjY1MmM1ZTUxYTg3NDY2M2I3MjZiODRlZWVmMzZjJnR4VGltZT02NUUzRDdDMw==&flags=13#s=1709355829
+
+体育直播,https://ani.zq4669.com:31106/live/match?embed=aHR0cHM6Ly9wdWxsMi50YW5neXVhbjE2ODguY29tL2xpdmUvaGQtemgtMi0zNzM2NDk2Lm0zdTg=&flags=13#s=1709355829
+
+体育直播,http://play.sportsteam363.com/play/gm.php?id=901174949&id2=901174949#s=1709355829
+
+体育直播,https://ani.zq4669.com:31106/live/match?embed=aHR0cHM6Ly9wdWxsMi50YW5neXVhbjE2ODguY29tL2xpdmUvaGQtZW4tMi0zNzM2NDk2Lm0zdTg=&flags=13#s=1709355829
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
+体育直播,
 
 
 
