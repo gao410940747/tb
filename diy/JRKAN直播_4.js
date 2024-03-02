@@ -117,15 +117,10 @@ var rule = {
         pdfa=jsp.pdfa;
         pd=jsp.pd;
         var new_html = request(input);
-        VOD = {
-            vod_name: pdfh(new_html,'.lab_team_home&&Text') + '🆚' + pdfh(new_html,'.lab_team_away&&Text'),
-            vod_pic: pd(new_html,'.lab_team_home img&&src'),
-            type_name: pdfh(new_html,'.lab_events&&Text'),
-            vod_content: pdfh(new_html,'.sub_list ul&&Text').replaceAll(' ', '_'),
-        };
 
         // 播放列表拼接
         var playListStr = '';
+        var playListUrlStr = '';
         var playListStr_mg = '';
         var playListStr_tx = '';
         var playListStr_iqi = '';
@@ -141,6 +136,7 @@ var rule = {
                 name = name.replace('主播解说','主播瑶妹');
             }
             playListStr = playListStr + name + '$' + url + '#';
+            playListUrlStr = playListUrlStr + name + '：' + url + '\\n';
 
             // 单独封装咪咕、腾讯、爱奇艺专线
             if (/mglx.php|gm.php/.test(url)){
@@ -169,6 +165,12 @@ var rule = {
             playFrom.append('爱奇艺专线');
             playList.append(playListStr_iqi);
         }
+        VOD = {
+            vod_name: pdfh(new_html,'.lab_team_home&&Text') + '🆚' + pdfh(new_html,'.lab_team_away&&Text'),
+            vod_pic: pd(new_html,'.lab_team_home img&&src'),
+            type_name: pdfh(new_html,'.lab_events&&Text'),
+            vod_content: pdfh(new_html,'.sub_list ul&&Text').replaceAll(' ', '_') + '\\n\\n' + playListUrlStr,
+        };
 
         // 最后封装所有线路
         let vod_play_from = playFrom.join('$$$');

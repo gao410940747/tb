@@ -139,6 +139,7 @@ var rule = {
 
         // 播放列表拼接
         var playListStr = '';
+        var playListUrlStr = '';
         var playListStr_mg = '';
         var playListStr_tx = '';
         var playListStr_iqi = '';
@@ -164,6 +165,7 @@ var rule = {
                             var name = pdfh(it,'a&&Text');
                             var url = pd(it,'a&&href');
                             playListStr = playListStr + name + '$' + url + '#';
+                            playListUrlStr = playListUrlStr + name + '：' + url + '\\n';
 
                             if (/mglx.php|gm.php/.test(url)){
                                 playListStr_mg = playListStr_mg +'咪咕专线'+'$'+url+'#';
@@ -174,6 +176,10 @@ var rule = {
                             else if (/iqi.php/.test(url)){
                                 playListStr_iqi = playListStr_iqi +'爱奇艺专线'+'$'+url+'#';
                             }
+                            VOD = {
+                                vod_name: input.replace(HOST,''),
+                                vod_content: playListUrlStr
+                            };
                         })
                     }
                 }
