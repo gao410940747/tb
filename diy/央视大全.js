@@ -1,13 +1,13 @@
 var rule = {
     title:'央视频',
     host:'https://api.cntv.cn',
-    homeUrl: '/lanmu/columnSearch?&fl=&fc=&cid=&p=1&n=500&serviceId=tvcctv&t=json',
+    // homeUrl: '/lanmu/columnSearch?&fl=&fc=&cid=&p=1&n=500&serviceId=tvcctv&t=json',
     url:'/list/getVideoAlbumList?channel=fyfilter&area=&year=&letter=&n=24&serviceId=tvcctv&t=json',
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name: '特别节目&纪录片&电视剧&动画片',
-    class_url: '特别节目&纪录片&电视剧&动画片',
+    class_name: '栏目大全&特别节目&纪录片&电视剧&动画片',
+    class_url: '栏目大全&特别节目&纪录片&电视剧&动画片',
     filterable: 1,
     filter_url: '{{fl.channel}}',
     filter: {
@@ -32,52 +32,73 @@ var rule = {
     `,
     limit:6,
     double:false,
-    推荐:`js:
-        var d = [];
-        var list = JSON.parse(request(input)).response.docs;
-        list.forEach(it => {
-            // 一级标题
-            let title1 = it.column_name;
-            // 一级描述
-            let desc1 = it.channel_name;
-            // 一级图片URL
-            let picUrl1 = it.column_logo;
-            // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 更新至）
-            let url1 = it.lastVIDE.videoSharedCode + '|' + '' + '|' + it.column_firstclass + '|' + it.column_name + '|' + '' + '|' + it.column_playdate + '|' + it.channel_name + '|' + it.column_brief + '|' + it.column_logo + '|' + '' + '|' + it.lastVIDE.videoTitle;
-            d.push({
-                desc : desc1,
-                title : title1,
-                pic_url : picUrl1,
-                url : url1
-            })
-        })
-        setResult(d);
-    `,
+    // 推荐:`js:
+    //     var d = [];
+    //     var list = JSON.parse(request(input)).response.docs;
+    //     list.forEach(it => {
+    //         // 一级标题
+    //         let title1 = it.column_name;
+    //         // 一级描述
+    //         let desc1 = it.channel_name;
+    //         // 一级图片URL
+    //         let picUrl1 = it.column_logo;
+    //         // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 更新至）
+    //         let url1 = it.lastVIDE.videoSharedCode + '|' + '' + '|' + it.column_firstclass + '|' + it.column_name + '|' + '' + '|' + it.column_playdate + '|' + it.channel_name + '|' + it.column_brief + '|' + it.column_logo + '|' + '' + '|' + it.lastVIDE.videoTitle;
+    //         d.push({
+    //             desc : desc1,
+    //             title : title1,
+    //             pic_url : picUrl1,
+    //             url : url1
+    //         })
+    //     })
+    //     setResult(d);
+    // `,
     一级:`js:
         var d = [];
-        var channelMap = {
-            "特别节目": "CHAL1460955953877151",
-            "纪录片": "CHAL1460955924871139",
-            "电视剧": "CHAL1460955853485115",
-            "动画片": "CHAL1460955899450127",
-        };
-        var list = JSON.parse(request(input+'&channelid='+channelMap[MY_CATE]+'&fc='+MY_CATE+'&p='+MY_PAGE)).data.list;
-        list.forEach(it => {
-            // 一级标题
-            let title1 = it.title;
-            // 一级描述
-            let desc1 = it.sc + ((typeof it.year==='undefined' || it.year==='')?'':('•'+it.year)) + ((typeof it.count==='undefined' || it.count==='')?'':('•共' + it.count + '集'));
-            // 一级图片URL
-            let picUrl1 = it.image;
-            // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 集数）
-            let url1 = it.id + '|' + it.area + '|' + it.sc + '|' + it.title + '|' + it.actors + '|' + it.year + '|' + it.channel + '|' + it.brief + '|' + it.image + '|' + it.count + '|' + '' + '|' + MY_CATE;
-            d.push({
-                desc : desc1,
-                title : title1,
-                pic_url : picUrl1,
-                url : url1
+        if(MY_CATE==='栏目大全') {
+            var list = JSON.parse(request(HOST+'/lanmu/columnSearch?&fl=&fc=&cid=&p='+MY_PAGE+'&n=500&serviceId=tvcctv&t=json')).response.docs;
+            list.forEach(it => {
+                // 一级标题
+                let title1 = it.column_name;
+                // 一级描述
+                let desc1 = it.channel_name;
+                // 一级图片URL
+                let picUrl1 = it.column_logo;
+                // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 更新至）
+                let url1 = it.lastVIDE.videoSharedCode + '|' + '' + '|' + it.column_firstclass + '|' + it.column_name + '|' + '' + '|' + it.column_playdate + '|' + it.channel_name + '|' + it.column_brief + '|' + it.column_logo + '|' + '' + '|' + it.lastVIDE.videoTitle;
+                d.push({
+                    desc : desc1,
+                    title : title1,
+                    pic_url : picUrl1,
+                    url : url1
+                })
             })
-        })
+        }
+        else {
+            var channelMap = {
+                "特别节目": "CHAL1460955953877151",
+                "纪录片": "CHAL1460955924871139",
+                "电视剧": "CHAL1460955853485115",
+                "动画片": "CHAL1460955899450127",
+            };
+                var list = JSON.parse(request(input+'&channelid='+channelMap[MY_CATE]+'&fc='+MY_CATE+'&p='+MY_PAGE)).data.list;
+            list.forEach(it => {
+                // 一级标题
+                let title1 = it.title;
+                // 一级描述
+                let desc1 = it.sc + ((typeof it.year==='undefined' || it.year==='')?'':('•'+it.year)) + ((typeof it.count==='undefined' || it.count==='')?'':('•共' + it.count + '集'));
+                // 一级图片URL
+                let picUrl1 = it.image;
+                // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 集数）
+                let url1 = it.id + '|' + it.area + '|' + it.sc + '|' + it.title + '|' + it.actors + '|' + it.year + '|' + it.channel + '|' + it.brief + '|' + it.image + '|' + it.count + '|' + '' + '|' + MY_CATE;
+                d.push({
+                    desc : desc1,
+                    title : title1,
+                    pic_url : picUrl1,
+                    url : url1
+                })
+            })
+        }
         setResult(d);
     `,
     二级: `js:

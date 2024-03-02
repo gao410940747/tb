@@ -6,8 +6,8 @@ var rule = {
     url:'/nba/more.htm?label=fyclass',
     searchable:0,
     quickSearch:0,
-    class_name:'快船视频',
-    class_url:'快船',
+    class_name:'全部视频&快船视频',
+    class_url:'/&快船',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -29,40 +29,40 @@ var rule = {
             }
         }
     `,
-    推荐:`js:
-        var items=[];
-        pdfh=jsp.pdfh;
-        pdfa=jsp.pdfa;
-        pd=jsp.pd;
-        var html=request(input);
-        
-        var list=pdfa(html,'.dataList&&li');
-
-        list.forEach(function(it){
-        
-            if(/集锦/.test(pdfh(it,'li&&data-label')) || /佳球/.test(pdfh(it,'li&&data-label'))) {
-            }
-            else {
-                // 一级标题
-                let title1 = pdfh(it,'a&&Text');
-                // 一级描述
-                let desc1 = pdfh(it,'.postTime&&Text') + pdfh(it,'li&&data-label').replaceAll(',', ' ');
-                // 一级图片URL
-                let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
-                // let picUrl1 = 'http://tu.duoduocdn.com/img/logo8.png';
-                // 一级URL
-                let url1 = pd(it, 'a&&href');
-                
-                items.push({
-                    desc:desc1,
-                    title:title1,
-                    pic_url:picUrl1,
-                    url:url1
-                });
-            }
-        });
-        setResult(items);
-    `,
+    // 推荐:`js:
+    //     var items=[];
+    //     pdfh=jsp.pdfh;
+    //     pdfa=jsp.pdfa;
+    //     pd=jsp.pd;
+    //     var html=request(input);
+    //
+    //     var list=pdfa(html,'.dataList&&li');
+    //
+    //     list.forEach(function(it){
+    //
+    //         if(/集锦/.test(pdfh(it,'li&&data-label')) || /佳球/.test(pdfh(it,'li&&data-label'))) {
+    //         }
+    //         else {
+    //             // 一级标题
+    //             let title1 = pdfh(it,'a&&Text');
+    //             // 一级描述
+    //             let desc1 = pdfh(it,'.postTime&&Text') + pdfh(it,'li&&data-label').replaceAll(',', ' ');
+    //             // 一级图片URL
+    //             let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
+    //             // let picUrl1 = 'http://tu.duoduocdn.com/img/logo8.png';
+    //             // 一级URL
+    //             let url1 = pd(it, 'a&&href');
+    //
+    //             items.push({
+    //                 desc:desc1,
+    //                 title:title1,
+    //                 pic_url:picUrl1,
+    //                 url:url1
+    //             });
+    //         }
+    //     });
+    //     setResult(items);
+    // `,
     一级:`js:
         var items=[];
         
@@ -76,13 +76,32 @@ var rule = {
             
                 if(/集锦/.test(pdfh(it,'li&&data-label')) || /佳球/.test(pdfh(it,'li&&data-label'))) {
                 }
-                else if(/快船/.test(pdfh(it,'li&&data-label'))) {
+                else if(MY_CATE==='快船') {
+                    if(/快船/.test(pdfh(it,'li&&data-label'))) {
+                        // 一级标题
+                        let title1 = pdfh(it,'a&&Text');
+                        // 一级描述
+                        let desc1 = pdfh(it,'.postTime&&Text') + pdfh(it,'li&&data-label').replaceAll(',', ' ');
+                        // 一级图片URL
+                        let picUrl1 = 'https://cdn.leisu.com/basketball/teamflag_s/848b21021b2a1db7bde95ea52a1e021b.png?imageMogr2/auto-orient/thumbnail/200x200';
+                        // 一级URL
+                        let url1 = pd(it, 'a&&href');
+                        
+                        items.push({
+                            desc:desc1,
+                            title:title1,
+                            pic_url:picUrl1,
+                            url:url1
+                        });
+                    }
+                }
+                else {
                     // 一级标题
                     let title1 = pdfh(it,'a&&Text');
                     // 一级描述
                     let desc1 = pdfh(it,'.postTime&&Text') + pdfh(it,'li&&data-label').replaceAll(',', ' ');
                     // 一级图片URL
-                    let picUrl1 = 'https://cdn.leisu.com/basketball/teamflag_s/848b21021b2a1db7bde95ea52a1e021b.png?imageMogr2/auto-orient/thumbnail/200x200';
+                    let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
                     // 一级URL
                     let url1 = pd(it, 'a&&href');
                     
@@ -114,7 +133,7 @@ var rule = {
                     
                     if(/集锦/.test(it.label) || /佳球/.test(it.label)) {
                     }
-                    else if(/快船/.test(it.label)) {
+                    else if(/快船/.test(it.label) && MY_CATE==='快船') {
                         flag = 'true';
                         // 一级标题
                         let title1 = it.title;

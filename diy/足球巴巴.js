@@ -6,7 +6,7 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'全部比赛&NBA&CBA',
+    class_name:'足球巴巴赛事直播&NBA&CBA',
     class_url:'/&NBA&CBA',
     headers:{
         'User-Agent':'PC_UA'

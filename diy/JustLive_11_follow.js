@@ -2,11 +2,11 @@
 var rule = {
     title: 'JustLive',
     host: 'http://live.yj1211.work',
-    homeUrl: '/api/live/getRecommend?page=1&size=20',//网站的首页链接,用于分类获取和推荐获取
+    // homeUrl: '/api/live/getRecommend?page=1&size=20',//网站的首页链接,用于分类获取和推荐获取
 //    homeUrl: '/api/live/getRecommendByPlatformArea?platform=bilibili&area=舞见&page=1&size=1',//网站的首页链接,用于分类获取和推荐获取
     url: '/api/live/getRecommendByPlatformArea?platform=fyclass&area=fyfilter&page=fypage&size=20', //网站的分类页面链接
-    class_name: '斗鱼&虎牙&哔哩哔哩&抖音&快手&网易CC',
-    class_url: 'douyu&huya&bilibili&douyin&kuaishou&cc',
+    class_name: '全部&斗鱼&虎牙&哔哩哔哩&抖音&快手&网易CC',
+    class_url: 'all&douyu&huya&bilibili&douyin&kuaishou&cc',
     filterable: 1,
     filter_url: '{{fl.area}}',
     filter: {
@@ -109,263 +109,276 @@ var rule = {
         }
     `,
     limit: 10,
-    推荐: `js:
-        var d = [];
-        var html = JSON.parse(request(input)).data;
-        html.forEach(it => {
-            d.push({
-                title: it.roomName,
-                desc: '🆙' + it.ownerName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
-                pic_url: it.roomPic,
-                url: it.platForm + '|' + it.roomId
-            });
-        })
-        setResult(d);
-    `,
+    // 推荐: `js:
+    //     var d = [];
+    //     var html = JSON.parse(request(input)).data;
+    //     html.forEach(it => {
+    //         d.push({
+    //             title: it.roomName,
+    //             desc: '🆙' + it.ownerName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
+    //             pic_url: it.roomPic,
+    //             url: it.platForm + '|' + it.roomId
+    //         });
+    //     })
+    //     setResult(d);
+    // `,
     一级: `js:
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
         var douyinow = false;
         var kuaishouflag = false;
         var d = [];
         var html;
-        if (MY_CATE === 'douyu') {
-            let area = MY_FL.area || '守望先锋';
-            if (area === '守望先锋') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+area+'&page='+MY_PAGE+'&size=20')).data;
-            } else if (area === '已关注') {
-                if (MY_PAGE === 1) {
-                    html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
-                }
-            } else if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyu&page='+MY_PAGE+'&size=20')).data;
-            } else if (area === '一起看') {
-                html = JSON.parse(request('https://m.douyu.com/api/room/list?type=yqk&page='+MY_PAGE)).data.list;
-            } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
-            }
-            input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyu';
+        if (MY_CATE === 'all') {
+            html = JSON.parse(request(HOST+'/api/live/getRecommend?page='+MY_PAGE+'&size=20')).data;
+            html.forEach(it => {
+                d.push({
+                    title: it.roomName,
+                    desc: '🆙' + it.ownerName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
+                    pic_url: it.roomPic,
+                    url: it.platForm + '|' + it.roomId
+                });
+            })
         }
-        if (MY_CATE === 'bilibili') {
-            let area = MY_FL.area || '守望先锋';
-            if (area === '守望先锋') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+area+'&page='+MY_PAGE+'&size=20')).data;
-//                html = JSON.parse(request('https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=2&area_id=87&sort_type=online&page=1')).data.list;
-            } else if (area === '已关注') {
-                if (MY_PAGE === 1) {
-                    html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+        else {
+            if (MY_CATE === 'douyu') {
+                let area = MY_FL.area || '守望先锋';
+                if (area === '守望先锋') {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+area+'&page='+MY_PAGE+'&size=20')).data;
+                } else if (area === '已关注') {
+                    if (MY_PAGE === 1) {
+                        html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+                    }
+                } else if (area === '全部') {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyu&page='+MY_PAGE+'&size=20')).data;
+                } else if (area === '一起看') {
+                    html = JSON.parse(request('https://m.douyu.com/api/room/list?type=yqk&page='+MY_PAGE)).data.list;
+                } else {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyu&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
                 }
-            } else if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=bilibili&page='+MY_PAGE+'&size=20')).data;
-            } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
+                input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyu';
             }
-            input = HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili';
-        }
-        if (MY_CATE === 'huya') {
-            let area = MY_FL.area || '守望先锋归来';
-            if (area === '守望先锋归来') {
-                html = JSON.parse(request('https://live.cdn.huya.com/liveHttpUI/getLiveList?iGid=2174&iPageNo='+MY_PAGE+'&iPagesize=20')).vList;
-            } else if (area === '已关注') {
-                if (MY_PAGE === 1) {
-                    html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+            else if (MY_CATE === 'bilibili') {
+                let area = MY_FL.area || '守望先锋';
+                if (area === '守望先锋') {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+area+'&page='+MY_PAGE+'&size=20')).data;
+                    // html = JSON.parse(request('https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=2&area_id=87&sort_type=online&page=1')).data.list;
+                } else if (area === '已关注') {
+                    if (MY_PAGE === 1) {
+                        html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+                    }
+                } else if (area === '全部') {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=bilibili&page='+MY_PAGE+'&size=20')).data;
+                } else {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
                 }
-            } else if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=huya&page='+MY_PAGE+'&size=20')).data;
-            } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=huya&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
+                input = HOST + '/api/live/getRecommendByPlatformArea?platform=bilibili';
             }
-            input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya';
-        }
-        if (MY_CATE === 'douyin') {
-            let area = MY_FL.area || '守望先锋';
-            if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=20')).data;
-            } else if (area === '守望先锋API' || area === '周杰伦') {
-                douyinow = true;
-                var douyinList = JSON.parse(request('http://cfmqy.cn/tv/live.php?type=search&page='+(MY_PAGE-1)+'&wd='+area.replace('API', ''))).data.list;
-                douyinList.forEach(it => {
-                    var 默认 = it.默认===''?'':'默认，'+it.默认+'；';
-                    var 蓝光 = it.蓝光===''?'':'蓝光，'+it.蓝光+'；';
-                    var 超清 = it.超清===''?'':'超清，'+it.超清+'；';
-                    var 高清 = it.高清===''?'':'高清，'+it.高清+'；';
-                    var 标清 = it.标清===''?'':'标清，'+it.标清+'；';
-                    var urls = 默认 + 蓝光 + 超清 + 高清 + 标清;
-                    d.push({
-                        title: it.title,
-                        pic_url: it.live_img,
-                        desc: '🆙' + it.nickname,
-                        url: 'douyinow' + '|' + it.title + '|' + it.nickname + '|' + it.live_img + '|' + urls + '|' + it.uid + '|' + it.aweme_id
-                    });
-                })
-            } else if (area === '守望先锋') {
-                douyinow = true;
-                if (MY_PAGE === 1) {
-                    let new_html = request('https://live.douyin.com/category/1_1_1_1010339');
-                    // let new_html = fetch('https://live.douyin.com/category/1_4603_1_4700');
-                    let list = pdfa(new_html, '.toLyHXZi');
-                    list.forEach(it => {
-                        var platForm = 'douyin';
-                        var roomId = pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','');
-                        var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
-                        var roomPic = roomInfo.roomPic;
-                        // var roomPic = pd(it, ".Xw5Zorxg img&&src", 'https://live.douyin.com');
+            else if (MY_CATE === 'huya') {
+                let area = MY_FL.area || '守望先锋归来';
+                if (area === '守望先锋归来') {
+                    html = JSON.parse(request('https://live.cdn.huya.com/liveHttpUI/getLiveList?iGid=2174&iPageNo='+MY_PAGE+'&iPagesize=20')).vList;
+                } else if (area === '已关注') {
+                    if (MY_PAGE === 1) {
+                        html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+                    }
+                } else if (area === '全部') {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=huya&page='+MY_PAGE+'&size=20')).data;
+                } else {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=huya&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
+                }
+                input = HOST + '/api/live/getRecommendByPlatformArea?platform=huya';
+            }
+            else if (MY_CATE === 'douyin') {
+                let area = MY_FL.area || '守望先锋';
+                if (area === '全部') {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=20')).data;
+                } else if (area === '守望先锋API' || area === '周杰伦') {
+                    douyinow = true;
+                    var douyinList = JSON.parse(request('http://cfmqy.cn/tv/live.php?type=search&page='+(MY_PAGE-1)+'&wd='+area.replace('API', ''))).data.list;
+                    douyinList.forEach(it => {
+                        var 默认 = it.默认===''?'':'默认，'+it.默认+'；';
+                        var 蓝光 = it.蓝光===''?'':'蓝光，'+it.蓝光+'；';
+                        var 超清 = it.超清===''?'':'超清，'+it.超清+'；';
+                        var 高清 = it.高清===''?'':'高清，'+it.高清+'；';
+                        var 标清 = it.标清===''?'':'标清，'+it.标清+'；';
+                        var urls = 默认 + 蓝光 + 超清 + 高清 + 标清;
                         d.push({
-                            title: pdfh(it, ".RiVZaDKC&&Text"),
-                            pic_url: roomPic,
-                            desc: '🆙' + pdfh(it, '.vGMybqZ5&&Text') + (pdfh(it, '.dix8p0es&&Text') == '' ? '' : '｜👥' + pdfh(it, '.dix8p0es&&Text')),
-                            url: platForm + '|' + roomId
+                            title: it.title,
+                            pic_url: it.live_img,
+                            desc: '🆙' + it.nickname,
+                            url: 'douyinow' + '|' + it.title + '|' + it.nickname + '|' + it.live_img + '|' + urls + '|' + it.uid + '|' + it.aweme_id
                         });
                     })
-                }
-            } else if (area === '已关注') {
-                if (MY_PAGE === 1) {
-                    html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
-                }
-            } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyin&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
-            }
-            input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyin';
-        }
-        if (MY_CATE === 'kuaishou') {
-            kuaishouflag = true;
-            let area = MY_FL.area || '13'; // 守望先锋：13
-            let list;
-            if (area === '全部') {
-                list = JSON.parse(request('https://live.kuaishou.com/live_api/hot/list?type=HOT&filterType=0&page='+MY_PAGE+'&pageSize=24')).data.list;
-            } else {
-                list = JSON.parse(request('https://live.kuaishou.com/live_api/gameboard/list?pageSize=20&page='+MY_PAGE+'&filterType=0&gameId=' + area)).data.list;
-                if(list == '') {
-                    list = JSON.parse(request('https://live.kuaishou.com/live_api/non-gameboard/list?pageSize=20&page='+MY_PAGE+'&filterType=0&gameId=' + area)).data.list;
-                }
-            }
-            list.forEach(it => {
-                if(it.author.id==='3xfxiep6i3t6tzw'){
-                    // 过滤掉东北王张作霖
+                } else if (area === '守望先锋') {
+                    douyinow = true;
+                    if (MY_PAGE === 1) {
+                        let new_html = request('https://live.douyin.com/category/1_1_1_1010339');
+                        // let new_html = fetch('https://live.douyin.com/category/1_4603_1_4700');
+                        let list = pdfa(new_html, '.toLyHXZi');
+                        list.forEach(it => {
+                            var platForm = 'douyin';
+                            var roomId = pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','');
+                            var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
+                            var roomPic = roomInfo.roomPic;
+                            // var roomPic = pd(it, ".Xw5Zorxg img&&src", 'https://live.douyin.com');
+                            d.push({
+                                title: pdfh(it, ".RiVZaDKC&&Text"),
+                                pic_url: roomPic,
+                                desc: '🆙' + pdfh(it, '.vGMybqZ5&&Text') + (pdfh(it, '.dix8p0es&&Text') == '' ? '' : '｜👥' + pdfh(it, '.dix8p0es&&Text')),
+                                url: platForm + '|' + roomId
+                            });
+                        })
+                    }
+                } else if (area === '已关注') {
+                    if (MY_PAGE === 1) {
+                        html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+                    }
                 } else {
-                    var title1 = it.caption;
-                    var desc1 = '🆙' + it.author.name + (it.watchingCount == '' ? '' : '｜👥' + it.watchingCount);
-                    var picUrl1 = it.poster;
-                    var urls = it.playUrls[0].adaptationSet.representation.map(function(it1) {
-                        return '快手' + it1.name + "，" + it1.url
-                    }).join("；");
-                    var url1 = it.author.id + "|" + it.author.name + "|" + it.poster + "|" + it.watchingCount + "|" + it.author.description + "|" + it.caption + "|" + urls + "|" + it.gameInfo.name;
-                    d.push({
-                        title: title1,
-                        desc: desc1,
-                        pic_url: picUrl1,
-                        url: url1
-                    });
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=douyin&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
                 }
-            })
-        }
-        if (MY_CATE === 'cc') {
-            let area = MY_FL.area || '全部';
-            if (area === '全部') {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=20')).data;
-            } else if (area === '已关注') {
-                if (MY_PAGE === 1) {
-                    html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
-                }
-            } else {
-                html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=cc&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
+                input = HOST + '/api/live/getRecommendByPlatformArea?platform=douyin';
             }
-            input = HOST + '/api/live/getRecommendByPlatform?platform=cc';
-        }
-        if (!douyinow && !kuaishouflag) {
-            html.forEach(it => {
-                if (/1/.test(it.isLive)) {
-                    if (/douyin/.test(it.platForm)) {
-                        if (MY_CATE === 'douyin') {
-                            d.push({
-                                title: it.roomName,
-                                desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
-                                // 改为展示头像
-                                pic_url: it.ownerHeadPic,
-                                url: it.platForm + '|' + it.roomId
-                            });
-                        }
-                    }
-                    if (/bilibili/.test(it.platForm)) {
-                        if (MY_CATE === 'bilibili') {
-                            d.push({
-                                title: it.roomName,
-                                desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
-                                pic_url: it.roomPic,
-                                url: it.platForm + '|' + it.roomId + '|' + it.ownerName
-                            });
-                        }
-                    }
-                    if (/douyu/.test(it.platForm)) {
-                        if (MY_CATE === 'douyu') {
-                            d.push({
-                                title: it.roomName,
-                                desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
-                                pic_url: it.roomPic,
-                                url: it.platForm + '|' + it.roomId
-                            });
-                        }
-                    }
-                    if (/huya/.test(it.platForm)) {
-                        if (MY_CATE === 'huya') {
-                            d.push({
-                                title: it.roomName,
-                                desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
-                                pic_url: it.roomPic,
-                                url: it.platForm + '|' + it.roomId
-                            });
-                        }
-                    }
-                    if (/cc/.test(it.platForm)) {
-                        if (MY_CATE === 'cc') {
-                            d.push({
-                                title: it.roomName,
-                                desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
-                                pic_url: it.roomPic,
-                                url: it.platForm + '|' + it.roomId
-                            });
-                        }
+            else if (MY_CATE === 'kuaishou') {
+                kuaishouflag = true;
+                let area = MY_FL.area || '13'; // 守望先锋：13
+                let list;
+                if (area === '全部') {
+                    list = JSON.parse(request('https://live.kuaishou.com/live_api/hot/list?type=HOT&filterType=0&page='+MY_PAGE+'&pageSize=24')).data.list;
+                } else {
+                    list = JSON.parse(request('https://live.kuaishou.com/live_api/gameboard/list?pageSize=20&page='+MY_PAGE+'&filterType=0&gameId=' + area)).data.list;
+                    if(list == '') {
+                        list = JSON.parse(request('https://live.kuaishou.com/live_api/non-gameboard/list?pageSize=20&page='+MY_PAGE+'&filterType=0&gameId=' + area)).data.list;
                     }
                 }
-                // 修复虎牙：守望先锋归来
-                if (/overwatch/.test(it.sGameHostName)) {
-                    d.push({
-                        platForm: 'huya',
-                        roomId: it.lProfileRoom,
-                        categoryId: it.iGid,
-                        categoryName: '守望先锋归来',
-                        roomName: it.sIntroduction,
-                        ownerName: it.sNick,
-                        roomPic: it.sScreenshot,
-                        ownerHeadPic: it.sAvatar180,
-                        online: it.lTotalCount,
-                        isLive: 1,
-                        playerType: 2,
-                        title: it.sIntroduction,
-                        desc: '🆙' + it.sNick + (it.lActivityCount == '' ? '' : '｜👥' + it.lActivityCount),
-                        pic_url: it.sScreenshot,
-                        url: 'huya' + '|' + it.lProfileRoom
-                    });
+                list.forEach(it => {
+                    if(it.author.id==='3xfxiep6i3t6tzw'){
+                        // 过滤掉东北王张作霖
+                    } else {
+                        var title1 = it.caption;
+                        var desc1 = '🆙' + it.author.name + (it.watchingCount == '' ? '' : '｜👥' + it.watchingCount);
+                        var picUrl1 = it.poster;
+                        var urls = it.playUrls[0].adaptationSet.representation.map(function(it1) {
+                            return '快手' + it1.name + "，" + it1.url
+                        }).join("；");
+                        var url1 = it.author.id + "|" + it.author.name + "|" + it.poster + "|" + it.watchingCount + "|" + it.author.description + "|" + it.caption + "|" + urls + "|" + it.gameInfo.name;
+                        d.push({
+                            title: title1,
+                            desc: desc1,
+                            pic_url: picUrl1,
+                            url: url1
+                        });
+                    }
+                })
+            }
+            else if (MY_CATE === 'cc') {
+                let area = MY_FL.area || '全部';
+                if (area === '全部') {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=cc&page='+MY_PAGE+'&size=20')).data;
+                } else if (area === '已关注') {
+                    if (MY_PAGE === 1) {
+                        html = JSON.parse(request(HOST + '/api/live/getRoomsOn?uid=77111538fff549039d91dc52038581d2&flag='+MY_PAGE)).data;
+                    }
+                } else {
+                    html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatformArea?platform=cc&area='+MY_FL.area+'&page='+MY_PAGE+'&size=20')).data;
                 }
-                // 修复斗鱼：一起看
-                if (/douyu/.test(it.verticalSrc)) {
-                    d.push({
-                        platForm: 'douyu',
-                        roomId: it.rid,
-                        categoryId: it.cate2Id,
-                        categoryName: '一起看',
-                        roomName: it.roomName,
-                        ownerName: it.nickname,
-                        roomPic: it.roomSrc,
-                        ownerHeadPic: it.avatar,
-                        online: it.lTotalCount,
-                        isLive: 1,
-                        title: it.roomName,
-                        desc: '🆙' + it.nickname + (it.hn == '' ? '' : '｜👥' + it.hn),
-                        pic_url: it.roomSrc,
-                        url: 'douyu' + '|' + it.rid
-                    });
-                }
-            })
+                input = HOST + '/api/live/getRecommendByPlatform?platform=cc';
+            }
+            if (!douyinow && !kuaishouflag) {
+                html.forEach(it => {
+                    if (/1/.test(it.isLive)) {
+                        if (/douyin/.test(it.platForm)) {
+                            if (MY_CATE === 'douyin') {
+                                d.push({
+                                    title: it.roomName,
+                                    desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
+                                    // 改为展示头像
+                                    pic_url: it.ownerHeadPic,
+                                    url: it.platForm + '|' + it.roomId
+                                });
+                            }
+                        }
+                        if (/bilibili/.test(it.platForm)) {
+                            if (MY_CATE === 'bilibili') {
+                                d.push({
+                                    title: it.roomName,
+                                    desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
+                                    pic_url: it.roomPic,
+                                    url: it.platForm + '|' + it.roomId + '|' + it.ownerName
+                                });
+                            }
+                        }
+                        if (/douyu/.test(it.platForm)) {
+                            if (MY_CATE === 'douyu') {
+                                d.push({
+                                    title: it.roomName,
+                                    desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
+                                    pic_url: it.roomPic,
+                                    url: it.platForm + '|' + it.roomId
+                                });
+                            }
+                        }
+                        if (/huya/.test(it.platForm)) {
+                            if (MY_CATE === 'huya') {
+                                d.push({
+                                    title: it.roomName,
+                                    desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
+                                    pic_url: it.roomPic,
+                                    url: it.platForm + '|' + it.roomId
+                                });
+                            }
+                        }
+                        if (/cc/.test(it.platForm)) {
+                            if (MY_CATE === 'cc') {
+                                d.push({
+                                    title: it.roomName,
+                                    desc: '🆙' + it.ownerName + (it.online == '' ? '' : '｜👥' + it.online),
+                                    pic_url: it.roomPic,
+                                    url: it.platForm + '|' + it.roomId
+                                });
+                            }
+                        }
+                    }
+                    // 修复虎牙：守望先锋归来
+                    if (/overwatch/.test(it.sGameHostName)) {
+                        d.push({
+                            platForm: 'huya',
+                            roomId: it.lProfileRoom,
+                            categoryId: it.iGid,
+                            categoryName: '守望先锋归来',
+                            roomName: it.sIntroduction,
+                            ownerName: it.sNick,
+                            roomPic: it.sScreenshot,
+                            ownerHeadPic: it.sAvatar180,
+                            online: it.lTotalCount,
+                            isLive: 1,
+                            playerType: 2,
+                            title: it.sIntroduction,
+                            desc: '🆙' + it.sNick + (it.lActivityCount == '' ? '' : '｜👥' + it.lActivityCount),
+                            pic_url: it.sScreenshot,
+                            url: 'huya' + '|' + it.lProfileRoom
+                        });
+                    }
+                    // 修复斗鱼：一起看
+                    if (/douyu/.test(it.verticalSrc)) {
+                        d.push({
+                            platForm: 'douyu',
+                            roomId: it.rid,
+                            categoryId: it.cate2Id,
+                            categoryName: '一起看',
+                            roomName: it.roomName,
+                            ownerName: it.nickname,
+                            roomPic: it.roomSrc,
+                            ownerHeadPic: it.avatar,
+                            online: it.lTotalCount,
+                            isLive: 1,
+                            title: it.roomName,
+                            desc: '🆙' + it.nickname + (it.hn == '' ? '' : '｜👥' + it.hn),
+                            pic_url: it.roomSrc,
+                            url: 'douyu' + '|' + it.rid
+                        });
+                    }
+                })
+            }
         }
         setResult(d);
     `,

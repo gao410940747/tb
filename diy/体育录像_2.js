@@ -5,8 +5,8 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&直播吧视频',
-    class_url:'nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&zhibo8',
+    class_name:'篮球屋录像&NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&直播吧视频&88比赛录像',
+    class_url:'lanqiuwu&nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&zhibo8&88replay&',
     class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/replay',
     headers:{
         'User-Agent':'PC_UA'
@@ -32,48 +32,48 @@ var rule = {
             }
         }
     `,
-    推荐:`js:
-        pdfh = jsp.pdfh;
-        pdfa = jsp.pdfa;
-        pd = jsp.pd;
-        var items = [];
-        var html = request(input);
-        var tabs = pdfa(html,'.list-group&&.list-group-item');
-
-        tabs.forEach(function(it){
-            // 一级标题
-            let title1;
-            // 一级描述
-            let desc1;
-            // 一级图片URL
-            let picUrl1 = pd(it,'.media-object&&src');
-            // 一级URL
-            let url1 = pd(it, '.media-heading a&&href');
-
-            if (/全明星/.test(pdfh(it, '.media-heading&&Text'))) {
-                // 通过"NBA全明星"进行截取
-                let split1 = pdfh(it, '.media-heading&&Text').split("NBA全明星");
-                // 一级标题
-                title1 = split1[1].replace(' 全场录像集锦','').replace('vs', '🆚').replace('VS', '🆚');
-                // 一级描述
-                desc1 = split1[0] + 'NBA全明星';
-            } else {
-                // 通过" "进行截取
-                let split = pdfh(it, '.media-heading&&Text').split(" ");
-                // 一级标题
-                title1 = split[2].replace('vs', '🆚').replace('VS', '🆚');
-                // 一级描述
-                desc1 = split[0] + ' ' + split[1];
-            }
-            items.push({
-                desc:desc1,
-                title:title1,
-                pic_url:picUrl1,
-                url:url1
-            });
-        });
-        setResult(items);
-    `,
+    // 推荐:`js:
+    //     pdfh = jsp.pdfh;
+    //     pdfa = jsp.pdfa;
+    //     pd = jsp.pd;
+    //     var items = [];
+    //     var html = request(input);
+    //     var tabs = pdfa(html,'.list-group&&.list-group-item');
+    //
+    //     tabs.forEach(function(it){
+    //         // 一级标题
+    //         let title1;
+    //         // 一级描述
+    //         let desc1;
+    //         // 一级图片URL
+    //         let picUrl1 = pd(it,'.media-object&&src');
+    //         // 一级URL
+    //         let url1 = pd(it, '.media-heading a&&href');
+    //
+    //         if (/全明星/.test(pdfh(it, '.media-heading&&Text'))) {
+    //             // 通过"NBA全明星"进行截取
+    //             let split1 = pdfh(it, '.media-heading&&Text').split("NBA全明星");
+    //             // 一级标题
+    //             title1 = split1[1].replace(' 全场录像集锦','').replace('vs', '🆚').replace('VS', '🆚');
+    //             // 一级描述
+    //             desc1 = split1[0] + 'NBA全明星';
+    //         } else {
+    //             // 通过" "进行截取
+    //             let split = pdfh(it, '.media-heading&&Text').split(" ");
+    //             // 一级标题
+    //             title1 = split[2].replace('vs', '🆚').replace('VS', '🆚');
+    //             // 一级描述
+    //             desc1 = split[0] + ' ' + split[1];
+    //         }
+    //         items.push({
+    //             desc:desc1,
+    //             title:title1,
+    //             pic_url:picUrl1,
+    //             url:url1
+    //         });
+    //     });
+    //     setResult(items);
+    // `,
     一级:`js:
         pdfh = jsp.pdfh;
         pdfa = jsp.pdfa;
@@ -146,7 +146,50 @@ var rule = {
             // "马刺": "https://cdn.leisu.com/basketball/teamflag_s/5305d1a7b721b5bef418041eff53ba82.png?imageMogr2/auto-orient/thumbnail/200x200"
         };
 
-        if(MY_CATE==='zhibo8'){
+        if(MY_CATE==='88replay'){
+            var html;
+            if(MY_PAGE===1) {
+                html = request(HOST);
+            }
+            else {
+                html = request(HOST+'?page='+MY_PAGE);
+            }
+            
+            var tabs = pdfa(html,'.list-group&&.list-group-item');
+            tabs.forEach(function(it){
+                // 一级标题
+                let title1;
+                // 一级描述
+                let desc1;
+                // 一级图片URL
+                let picUrl1 = pd(it,'.media-object&&src');
+                // 一级URL
+                let url1 = pd(it, '.media-heading a&&href');
+    
+                if (/全明星/.test(pdfh(it, '.media-heading&&Text'))) {
+                    // 通过"NBA全明星"进行截取
+                    let split1 = pdfh(it, '.media-heading&&Text').split("NBA全明星");
+                    // 一级标题
+                    title1 = split1[1].replace(' 全场录像集锦','').replace('vs', '🆚').replace('VS', '🆚');
+                    // 一级描述
+                    desc1 = split1[0] + 'NBA全明星';
+                } else {
+                    // 通过" "进行截取
+                    let split = pdfh(it, '.media-heading&&Text').split(" ");
+                    // 一级标题
+                    title1 = split[2].replace('vs', '🆚').replace('VS', '🆚');
+                    // 一级描述
+                    desc1 = split[0] + ' ' + split[1];
+                }
+                items.push({
+                    desc:desc1,
+                    title:title1,
+                    pic_url:picUrl1,
+                    url:url1
+                });
+            });
+        }
+        else if(MY_CATE==='zhibo8'){
             if(MY_PAGE===1) {
                 var html = request('https://www.zhibo8.com/nba/more.htm');
                 var list = pdfa(html,'.dataList&&li');
@@ -172,6 +215,78 @@ var rule = {
                     }
                 });
             }
+        }
+        else if(MY_CATE==='lanqiuwu'){
+            var html;
+            if(MY_PAGE===1) {
+                html = request('https://lanqiuwu.com/');
+            }
+            else {
+                html = request('https://lanqiuwu.com/list/index_'+MY_PAGE+'.html');
+            }
+            var list = pdfa(html, '.content&&.excerpt');
+            list.forEach(it => {
+                // 通过" "进行截取
+                let split = pdfh(it, 'h2&&Text').split(" ");
+                // 一级标题
+                let title1 = split[2];
+                // 一级描述
+                let desc1 = split[0].replace('年','.').replace('月','.').replace('日','') + ' ' + split[1];
+                // 一级图片URL
+                let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
+                // 一级URL
+                let url1 = pd(it, 'h2 a&&href').replace('http://www.88kanqiu.one', 'https://lanqiuwu.com');
+
+                if (/vs/.test(pdfh(it, 'h2&&Text'))) {
+                    let vsSplit = pdfh(it, 'h2&&Text').split("vs");
+                    let vs1 = vsSplit[0].split(' ');
+                    let vs2 = vsSplit[1].split(' ');
+                    // 客队名称
+                    let Team1 = vs1[vs1.length-1];
+                    // 主队名称
+                    let Team2 = vs2[0];
+                    // 客队vs主队
+                    let Team1vsTeam2 = Team1 + '🆚' + Team2;
+                    if (/NBA/.test(pdfh(it, 'h2&&Text'))) {
+                        title1 = Team1vsTeam2;
+                        if (TeamLogoMap[Team2] != null) {
+                            // 通过主队名称获取球队LOGO
+                            picUrl1 = TeamLogoMap[Team2];
+                        } else if (TeamLogoMap[Team1] != null) {
+                            // 通过客队名称获取球队LOGO
+                            picUrl1 = TeamLogoMap[Team1];
+                        } else {
+                            // 若主队客队LOGO都不存在，则使用默认LOGO
+                            picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
+                        }
+                    }
+                    else if (/ CBA/.test(pdfh(it, 'h2&&Text'))) {
+                        title1 = Team1vsTeam2;
+                        picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2020/11/11/Fit9bwsfH7ZD-dOf7cPFO5gtWG9W?imageMogr2/auto-orient/thumbnail/200x200%3E';
+                    }
+                    else if (/佳球/.test(pdfh(it, 'h2&&Text'))) {
+                        picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
+                    }
+                    else {
+                        picUrl1 = 'http://www.88kanqiu.one/static/img/default-img.png';
+                    }
+                }
+                if (/全明星/.test(pdfh(it, 'h2&&Text'))) {
+                    // 通过" "进行截取
+                    let split1 = pdfh(it, 'h2&&Text').split("NBA全明星");
+                    // 一级标题
+                    title1 = split1[1].replace(' 全场录像','').replace(' 全场集锦','').replace('vs', '🆚').replace('VS', '🆚');
+                    // 一级描述
+                    desc1 = split1[0].replace('年','.').replace('月','.').replace('日','').replace(' ','') + ' NBA全明星';
+                }
+                // 封装对象
+                items.push({
+                    title: title1,
+                    desc: desc1,
+                    pic_url: picUrl1,
+                    url: url1
+                });
+            });
         }
         else if(MY_CATE==='nbalx' || MY_CATE==='nbajijin' || MY_CATE==='nbatop10' || MY_CATE==='cbalx' || MY_CATE==='cbajijin' || MY_CATE==='lanqiulx'){
             var html;

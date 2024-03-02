@@ -6,7 +6,7 @@ var rule={
     // 联通节点：www.czz9.com/  www.czzy33.com/  www.czzy88.com/  www.czzy22.com/  www.czzy55.com/
     // 移动节点：www.czz9.com/  www.czzy33.com/
     hostJs:'print(HOST);let html=request(HOST,{headers:{"User-Agent":PC_UA}});HOST = jsp.pdfh(html,"h3&&a&&href")',
-    homeUrl: '/reyingzhong',
+    // homeUrl: '/reyingzhong',
     url:'/fyclassfyfilter',
     filterable:1,//是否启用分类筛选,
     filter_url:'{{fl.cateId}}{{fl.class}}{{fl.area}}/page/fypage',
@@ -59,7 +59,7 @@ var rule={
             input
         }
 	`,
-    推荐:'*',
+    // 推荐:'*',
     double:true,
     一级:'.bt_img&&ul&&li;h3.dytit&&Text;img.lazy&&data-original;.jidi&&Text;a&&href',
     二级:{
