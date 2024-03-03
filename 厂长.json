@@ -10,7 +10,7 @@
 	}],
 	"sites": [
 		{"key":"厂长","name":"厂长","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/厂长资源_2.js"},
-		{"key":"荐片","name":"荐片","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/荐片_2.js","playerType":1},
+		{"key":"荐片","name":"荐片","type":3,"api":"./lib/drpy2.min.js","ext":"./diy/荐片_3.js","playerType":1},
 		{"key":"88看球","name":"88看球","type":3,"api":"csp_Kanqiu","searchable":0,"quickSearch":0,"filterable":1,"style":{"type":"list"},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/custom_spider.jar"},
 //		{"key":"88看球","name":"88看球","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list","ratio":1},"ext":"./diy/88看球_4.js"},
 //		{"key":"88看球","name":"88看球","type":3,"api":"csp_XYQBiu","searchable":0,"quickSearch":0,"filterable":0,"ext":"./diy/88看球.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
