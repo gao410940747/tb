@@ -2,7 +2,7 @@
 var rule = {
     title: 'JustLive',
     host: 'http://live.yj1211.work',
-    // homeUrl: '/api/live/getRecommend?page=1&size=20',//网站的首页链接,用于分类获取和推荐获取
+    homeUrl: '/api/live/getRecommend?page=1&size=20',//网站的首页链接,用于分类获取和推荐获取
 //    homeUrl: '/api/live/getRecommendByPlatformArea?platform=bilibili&area=舞见&page=1&size=1',//网站的首页链接,用于分类获取和推荐获取
     url: '/api/live/getRecommendByPlatformArea?platform=fyclass&area=fyfilter&page=fypage&size=20', //网站的分类页面链接
     class_name: '全部&斗鱼&虎牙&哔哩哔哩&抖音&快手&网易CC',
@@ -109,19 +109,19 @@ var rule = {
         }
     `,
     limit: 10,
-    // 推荐: `js:
-    //     var d = [];
-    //     var html = JSON.parse(request(input)).data;
-    //     html.forEach(it => {
-    //         d.push({
-    //             title: it.roomName,
-    //             desc: '🆙' + it.ownerName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
-    //             pic_url: it.roomPic,
-    //             url: it.platForm + '|' + it.roomId
-    //         });
-    //     })
-    //     setResult(d);
-    // `,
+    推荐: `js:
+        var d = [];
+        var html = JSON.parse(request(input)).data;
+        html.forEach(it => {
+            d.push({
+                title: it.roomName,
+                desc: '🆙' + it.ownerName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
+                pic_url: it.roomPic,
+                url: it.platForm + '|' + it.roomId
+            });
+        })
+        setResult(d);
+     `,
     一级: `js:
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
         var douyinow = false;

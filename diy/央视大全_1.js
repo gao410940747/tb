@@ -1,7 +1,7 @@
 var rule = {
     title:'央视频',
     host:'https://api.cntv.cn',
-    // homeUrl: '/lanmu/columnSearch?&fl=&fc=&cid=&p=1&n=500&serviceId=tvcctv&t=json',
+    homeUrl: '/lanmu/columnSearch?&fl=&fc=&cid=&p=1&n=500&serviceId=tvcctv&t=json',
     url:'/list/getVideoAlbumList?channel=fyfilter&area=&year=&letter=&n=24&serviceId=tvcctv&t=json',
     searchUrl:'',
     searchable:0,
@@ -32,27 +32,29 @@ var rule = {
     `,
     limit:6,
     double:false,
-    // 推荐:`js:
-    //     var d = [];
-    //     var list = JSON.parse(request(input)).response.docs;
-    //     list.forEach(it => {
-    //         // 一级标题
-    //         let title1 = it.column_name;
-    //         // 一级描述
-    //         let desc1 = it.channel_name;
-    //         // 一级图片URL
-    //         let picUrl1 = it.column_logo;
-    //         // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 更新至）
-    //         let url1 = it.lastVIDE.videoSharedCode + '|' + '' + '|' + it.column_firstclass + '|' + it.column_name + '|' + '' + '|' + it.column_playdate + '|' + it.channel_name + '|' + it.column_brief + '|' + it.column_logo + '|' + '' + '|' + it.lastVIDE.videoTitle;
-    //         d.push({
-    //             desc : desc1,
-    //             title : title1,
-    //             pic_url : picUrl1,
-    //             url : url1
-    //         })
-    //     })
-    //     setResult(d);
-    // `,
+    推荐:`js:
+        var d = [];
+        var list = JSON.parse(request(input)).response.docs;
+
+        list.forEach(it => {
+            // 一级标题
+            let title1 = it.column_name;
+            // 一级描述
+            let desc1 = it.channel_name;
+            // 一级图片URL
+            let picUrl1 = it.column_logo;
+            // 一级URL（id 地区 类型 标题 演员 年份 频道 简介 图片 更新至）
+            let url1 = it.lastVIDE.videoSharedCode + '|' + '' + '|' + it.column_firstclass + '|' + it.column_name + '|' + '' + '|' + it.column_playdate + '|' + it.channel_name + '|' + it.column_brief + '|' + it.column_logo + '|' + '' + '|' + it.lastVIDE.videoTitle;
+
+            d.push({
+                desc : desc1,
+                title : title1,
+                pic_url : picUrl1,
+                url : url1
+            })
+        })
+        setResult(d);
+    `,
     一级:`js:
         var d = [];
         if(MY_CATE==='栏目大全') {

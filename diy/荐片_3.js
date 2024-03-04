@@ -6,7 +6,7 @@
 var rule = {
     title:'荐片',
     host:'http://api2.rinhome.com',
-    // homeUrl:'/api/tag/hand?code=unknown601193cf375db73d&channel=wandoujia',//网站的首页链接,用于分类获取和推荐获取
+    homeUrl:'/api/tag/hand?code=unknown601193cf375db73d&channel=wandoujia',//网站的首页链接,用于分类获取和推荐获取
     url:'/api/crumb/list?area=0&page=fypage&type=0&limit=24&channel=wandoujia&code=vmosseri39898b78d878c8ca&fyfilter',
     class_name:'全部&电影&电视剧&动漫&综艺',     // 筛选 /api/term/ad_fenlei?limit=10&page=1
     class_url:'0&1&2&3&4',
@@ -47,7 +47,7 @@ var rule = {
     lazy:'',
     // double:true,
     图片来源:'@Referer=www.jianpianapp.com@User-Agent=jianpian-version353',
-    // 推荐:'json:data[0].video;title;path;playlist.title;id',
+    推荐:'json:data[0].video;title;path;playlist.title;id',
     一级:'json:data;title;path;playlist.title;id',
     二级: `js:
         var link = HOST + '/api/node/detail?channel=wandoujia&token=&id=' + input;
