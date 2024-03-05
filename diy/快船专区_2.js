@@ -537,6 +537,7 @@ var rule = {
         else if(/vs/.test(input) && /快船/.test(input)) {
             // 播放列表拼接
             var playListStr = '';
+            var playListUrlStr = '';
             var playListStr_mg = '';
             var playListStr_tx = '';
             var playListStr_iqi = '';
@@ -560,6 +561,7 @@ var rule = {
                             name = name.replace('主播解说','主播瑶妹');
                         }
                         playListStr = playListStr + name+ '$' + url + '#';
+                        playListUrlStr = playListUrlStr + name + '：' + url + '\\n';
 
                         // 单独封装咪咕、腾讯、爱奇艺专线
                         if (/mglx.php|mgxl.php|gm.php/.test(url)){
@@ -589,6 +591,12 @@ var rule = {
                         playFrom.append('咪咕专线');
                         playList.append(playListStr_mg);
                     }
+                    VOD = {
+                        vod_name: pdfh(jrkan_html_1,'.lab_team_home&&Text') + '🆚' + pdfh(jrkan_html_1,'.lab_team_away&&Text'),
+                        vod_pic: pd(jrkan_html_1,'.lab_team_home img&&src'),
+                        type_name: pdfh(jrkan_html_1,'.lab_events&&Text'),
+                        vod_content: pdfh(jrkan_html_1,'.sub_list ul&&Text').replaceAll(' ', '_') + '\\n\\n' + playListUrlStr,
+                    };
 
                     // 最后封装所有线路
                     let vod_play_from = playFrom.join('$$$');
