@@ -1,5 +1,5 @@
 {
-"spider":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/jar/pg.nogo.jar;md5;6af8e2cd00d7e66f76af4f7a40bba7df",
+"spider":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/pg.jar;md5;2b8ee1791855c6e977c13bf78ac9ea13",
 "lives":[{"name":"初秋语","type":0,"url":"./listx.txt"},
 {"name":"YanG","type":0,"url":"https://fongmi.cachefly.net/YanG-1989/m3u/main/Adult.m3u"},
 {"name":"atsushi","type":0,"url":"https://fongmi.cachefly.net/atsushi444/iptv-epg/main/Adult.m3u"},
@@ -12,26 +12,25 @@
   {"key":"lf_js_search","name":"搜索|lf_search","type":3,"searchable":0,"changeable":1,"quickSearch":0,"filterable":0,"api":"./lib/lf_search3_min.js","ext":"18+"},
   {"key":"lf_js_p2p","name":"磁力|lf_p2p","type":3,"searchable":1,"changeable":1,"quickSearch":1,"filterable":1,"api":"./lib/lf_p2p2_min.js","ext":"18+","timeout":60},
   {"key":"lf_js_lf_live","name":"直播|lf_live","type":3,"api":"./lib/lf_live_min.js","style":{"type":"oval"},"searchable":1,"changeable":0,"quickSearch":1,"filterable":1,"ext":"./js/lf_live1.txt"},
-  {"key": "AList",  "name": "AList",  "type": 3,  "api": "csp_AList",  "searchable": 1,  "changeable": 0,  "ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "网盘1","server": "https://alist-caimoui.cloud.okteto.net/私房菜/"}]}},
+  {"key":"AList",  "name": "AList",  "type": 3,  "api": "csp_AList",  "searchable": 1,  "changeable": 0,  "ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "网盘1","server": "https://alist-caimoui.cloud.okteto.net/私房菜/"}]}},
 
   {"key":"Jav8","name":"Jav8(主站)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8.js"},
   {"key":"Jav8_actor","name":"Jav8(演员)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_actor.js"},
   {"key":"Jav8_studio","name":"Jav8(厂商)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_studio.js"},
-//  {"key":"Jav8_actor_search","name":"Jav8(演员搜索)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_actor_search.js","style":{"type":"rect","ratio":1}},
+  {"key":"Jav8_actor_search","name":"Jav8(演员搜索)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_actor_search.js","style":{"type":"rect","ratio":1}},
   {"key":"Jav8_series","name":"Jav8(系列)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_series.js"},
-
-  {"key":"JavTxt","name":"JavTxt(主站)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/JavTxt.js"},
-  {"key":"JavTxt_actor_search","name":"JavTxt(演员)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"style":{"type":"rect","ratio":1},"ext":"./diy/JavTxt_actor_search.js"},
-  {"key":"JavBus","name":"JavBus","type":3,"api":"./lib/drpy2.min.js","changeable":0,"playerType":1,"ext":"./diy/JavBus.js"},
-  {"key":"JavScop","name":"JavScop","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.5},"changeable":0,"playerType":2,"ext":"./diy/JavScop.js"},
-
+  {"key":"0cili","name":"无极磁力","type":3,"api":"./lib/drpy2.min.js","changeable":0,"playerType":1,"ext":"./diy/无极磁力.js"},
   {"key":"sgp","name":"水果派","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"style":{"type":"rect","ratio":1.755},"ext":"./json/sgp.json","jar":"./jar/xo.txt"},
   {"key":"sgp1","name":"水果派(备用)","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":0,"style":{"type":"rect","ratio":1.755},"ext":"./json/sgp.json","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/jar/xo.txt"},
-  {"key":"csp_XYQHiker_快猫短视频","name":"快猫","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/快猫.json","jar": "http://cfmqy.cn/tvbox/XYQHiker/custom_spider.jar"},
-  {"key":"0cili","name":"无极磁力","type":3,"api":"./lib/drpy2.min.js","changeable":0,"playerType":1,"ext":"./diy/无极磁力.js"},
 
+  {"key":"JavBus","name":"JavBus","type":3,"api":"./lib/drpy2.min.js","changeable":0,"playerType":1,"ext":"./diy/JavBus.js"},
+  {"key":"JavScop","name":"JavScop","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.5},"changeable":0,"playerType":2,"ext":"./diy/JavScop.js"},
   {"key":"csp_JavBus","name":"JavBus","type":3,"api":"csp_JavBus","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"style":{"type":"rect","ratio":1.77},"timeout":60},
   {"key":"csp_JavDb","name":"JavDb","type":3,"api":"csp_JavDb","searchable":1,"quickSearch":1,"filterable":1,"changeable":0,"style":{"type":"rect","ratio":1.77},"timeout":60},
+  {"key":"JavTxt","name":"JavTxt(主站)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/JavTxt.js"},
+  {"key":"JavTxt_actor_search","name":"JavTxt(演员)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"style":{"type":"rect","ratio":1},"ext":"./diy/JavTxt_actor_search.js"},
+
+  {"key":"csp_XYQHiker_快猫短视频","name":"快猫","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/快猫.json","jar": "http://cfmqy.cn/tvbox/XYQHiker/custom_spider.jar"},
 
   {"key":"nivod18","name":"泥巴貓","type":3,"api":"./cat/js/nivod_op.js","ext":"做爱"},
   {"key":"mtsp_open","name":"蜜桃貓","type":3,"api":"./cat/js/mtsp_open.js","style":{"type":"rect","ratio":1.485}},
