@@ -327,7 +327,7 @@ var rule = {
                         let picUrl1 = split[2]==='快船'?pd(it,'.team-logo&&src'):pd(it,'.col-xs-1 img&&src');
                         // 一级URL
                         let url1;
-                        if(/直播中/.test(pdfh(it, '.btn&&Text'))) {
+                        if(/直播中|未开始/.test(pdfh(it, '.btn&&Text'))) {
                             url1 = 'http://127.0.0.1/' + split[2] + 'vs' + split[4];
                         } else {
                             url1 = 'http://127.0.0.1';
