@@ -167,7 +167,7 @@ var rule = {
                             playListStr = playListStr + name + '$' + url + '#';
                             playListUrlStr = playListUrlStr + name + '：' + url + '\\n';
 
-                            if (/mglx.php|gm.php/.test(url)){
+                            if (/mglx.php|mgxl.php|gm.php/.test(url)){
                                 playListStr_mg = playListStr_mg +'咪咕专线'+'$'+url+'#';
                             }
                             else if (/i11.html/.test(url)){
