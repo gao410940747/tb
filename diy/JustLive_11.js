@@ -187,9 +187,10 @@ var rule = {
                     list.forEach(it => {
                         var platForm = 'douyin';
                         var roomId = pd(it, ".oaVOFbBx&&href").replace('https://live.douyin.com/','');
-                        var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
-                        var roomPic = roomInfo.roomPic;
-                        // var roomPic = pd(it, ".Xw5Zorxg img&&src", 'https://live.douyin.com');
+//                        var roomInfo = JSON.parse(request("http://live.yj1211.work/api/live/getRoomInfo?platform=" + platForm + "&roomId=" + roomId)).data;
+//                        var roomPic = roomInfo.roomPic;
+//                        var roomPic = pd(it, ".Xw5Zorxg img&&src", 'https://live.douyin.com');
+                        var roomPic = 'https://www.8848seo.cn/zb_users/upload/2022/11/20221112112159_35985.jpeg';
                         d.push({
                             title: pdfh(it, ".RiVZaDKC&&Text"),
                             pic_url: roomPic,
