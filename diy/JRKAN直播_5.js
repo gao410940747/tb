@@ -139,7 +139,7 @@ var rule = {
             playListUrlStr = playListUrlStr + name + '：' + url + '\\n';
 
             // 单独封装咪咕、腾讯、爱奇艺专线
-            if (/mglx.php|gm.php/.test(url)){
+            if (/mglx.php|mgxl.php|gm.php/.test(url)){
                 playListStr_mg = playListStr_mg +'咪咕专线'+'$'+url+'#';
             }
             else if (/i11.html/.test(url)){
