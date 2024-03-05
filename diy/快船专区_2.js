@@ -328,7 +328,7 @@ var rule = {
                         // 一级URL
                         let url1;
                         if(/直播中|未开始/.test(pdfh(it, '.btn&&Text'))) {
-                            url1 = 'http://127.0.0.1/' + split[2] + 'vs' + split[4];
+                            url1 = 'http://play.sportsteam356.com/' + split[2] + 'vs' + split[4];
                         } else {
                             url1 = 'http://127.0.0.1';
                         }
@@ -547,7 +547,7 @@ var rule = {
             tabs.forEach(function(it){
                 var pz = pdfh(it,'.name:eq(1)&&Text');
                 var pk = pdfh(it,'.name:eq(2)&&Text');
-                var vsTitle = input.replace('http://127.0.0.1/','');
+                var vsTitle = input.replace('http://play.sportsteam356.com/','');
                 if(vsTitle === (pz+'vs'+pk)) {
                     var url1 = pd(it,'a.me&&href');
                     var jrkan_html_1 = request(url1);
@@ -562,7 +562,7 @@ var rule = {
                         playListStr = playListStr + name+ '$' + url + '#';
 
                         // 单独封装咪咕、腾讯、爱奇艺专线
-                        if (/mglx.php|gm.php/.test(url)){
+                        if (/mglx.php|mgxl.php|gm.php/.test(url)){
                             playListStr_mg = playListStr_mg + '咪咕专线'+'$'+url+'#';
                         }
                         else if (/txycdn.video.qq.com/.test(url)){
