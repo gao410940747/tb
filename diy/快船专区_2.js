@@ -5,8 +5,10 @@ var rule = {
     searchUrl:'',
     searchable:0,
     quickSearch:0,
-    class_name:'快船赛程&快船集锦&快船录像(篮球屋)&快船录像(88看球)&快船录像(量子源)&快船录像(天空源)&快船录像(飞速源)&快船直播吧视频',
-    class_url:'88kanqiu_clippers&qiudui139_jijin&qiudui139&88kanqiu_clippers_replay&qiudui139_liangzi&qiudui139_tiankong&qiudui139_feisu&zhibo8_clippers',
+    // class_name:'快船赛程&快船集锦&快船录像(篮球屋)&快船录像(88看球)&快船录像(量子源)&快船录像(天空源)&快船录像(飞速源)&快船直播吧视频',
+    // class_url:'88kanqiu_clippers&qiudui139_jijin&qiudui139&88kanqiu_clippers_replay&qiudui139_liangzi&qiudui139_tiankong&qiudui139_feisu&zhibo8_clippers',
+    class_name:'快船赛程&快船集锦&快船录像(篮球屋)&快船录像(88看球)&快船录像(量子源)&快船录像(天空源)&快船直播吧视频',
+    class_url:'88kanqiu_clippers&qiudui139_jijin&qiudui139&88kanqiu_clippers_replay&qiudui139_liangzi&qiudui139_tiankong&zhibo8_clippers',
     headers:{
         'User-Agent':'PC_UA'
     },
