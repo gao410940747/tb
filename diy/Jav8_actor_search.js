@@ -2,7 +2,7 @@ var rule = {
     title:'Jav8_actor_search',
     host:'https://jav8.pro',
     url:'/top-actresses',
-    searchUrl:'',
+    searchUrl:'/actress/**?page=fypage',
     searchable:0,
     quickSearch:0,
     class_name: '最受欢迎女优',
