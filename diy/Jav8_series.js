@@ -4,8 +4,8 @@ var rule = {
     url:'/series/fyclass?page=fypage',
     searchable:0,
     quickSearch:0,
-    class_name: 'NTRリバース',
-    class_url: '40261',
+    class_name: 'S1 GIRLS COLLECTION&新人NO.1 STYLE&NTRリバース',
+    class_url: '2133&10206&40261',
     headers:{
         'User-Agent':'PC_UA'
     },
