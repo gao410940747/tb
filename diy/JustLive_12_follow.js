@@ -575,19 +575,6 @@ var rule = {
                 
                 var playurl = JSON.parse(request("http://live.yj1211.work/api/live/getRealUrlMultiSource?platform=" + jo.platForm + "&roomId=" + jo.roomId)).data;
     
-                // 增加huya官方源
-                if (jo.platForm == 'huya') {
-                    var huyas = [];
-                    huyas.push({
-                        title: "原画（若播放失败需切换EXO播放器）",
-                        input: 'huya_'+jo.roomId
-                    });
-                    playFrom.append('官方线路');
-                    playList.append(huyas.map(function(it) {
-                        return it.title + "$" + it.input
-                    }).join("#"));
-                }
-    
                 // JustLive获取源
                 if (jo.platForm == 'douyin') {
                     // 调换hls线路位置到最前
@@ -620,6 +607,19 @@ var rule = {
                             return it.qualityName + "$" + it.playUrl
                         }).join("#"))
                     });
+                }
+    
+                // 增加huya官方源
+                if (jo.platForm == 'huya') {
+                    var huyas = [];
+                    huyas.push({
+                        title: "原画（若播放失败需切换EXO播放器）",
+                        input: 'huya_'+jo.roomId
+                    });
+                    playFrom.append('官方线路');
+                    playList.append(huyas.map(function(it) {
+                        return it.title + "$" + it.input
+                    }).join("#"));
                 }
     
                 // 网站解析源
