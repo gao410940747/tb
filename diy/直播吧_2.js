@@ -102,7 +102,7 @@ var rule = {
                         // 一级描述
                         let desc1 = pdfh(it,'.postTime&&Text') + pdfh(it,'li&&data-label').replaceAll(',', ' ');
                         // 一级图片URL
-                        let picUrl1 = 'https://cdn.leisu.com/basketball/teamflag_s/848b21021b2a1db7bde95ea52a1e021b.png?imageMogr2/auto-orient/thumbnail/200x200';
+                        let picUrl1 = '            "https://res.nba.cn/media/img/teams/logos/PHX_logo.png';
                         // 一级URL
                         let url1 = pd(it, 'a&&href');
                         
