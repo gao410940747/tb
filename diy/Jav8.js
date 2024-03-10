@@ -12,7 +12,7 @@ var rule = {
     filterable: 1,
     filter_url: '{{fl.area}}',
     filter: {
-        "rank":[{"key":"area","name":"分类","value":[{"n":"90日","v":"90-days"},{"n":"30日","v":"30-days"},{"n":"7日","v":"7-days"},{"n":"昨日","v":"1-days"}]}]
+        "rank":[{"key":"area","name":"分类","value":[{"n":"2023年","v":"2023"},{"n":"90日","v":"90-days"},{"n":"30日","v":"30-days"},{"n":"7日","v":"7-days"},{"n":"昨日","v":"1-days"}]}]
     },
     filter_def:{
         'rank':{area:'7-days'}
