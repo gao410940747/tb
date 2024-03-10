@@ -83,7 +83,7 @@ var rule = {
                 "电视剧": "CHAL1460955853485115",
                 "动画片": "CHAL1460955899450127",
             };
-                var list = JSON.parse(request(input+'&channelid='+channelMap[MY_CATE]+'&fc='+MY_CATE+'&p='+MY_PAGE)).data.list;
+            var list = JSON.parse(request(input+'&channelid='+channelMap[MY_CATE]+'&fc='+MY_CATE+'&p='+MY_PAGE)).data.list;
             list.forEach(it => {
                 // 一级标题
                 let title1 = it.title;

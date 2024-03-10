@@ -105,7 +105,7 @@ var rule = {
                                 desc:desc1,
                                 title:title1,
                                 pic_url:picUrl1,
-                                url:title
+                                url:HOST+title
                             });
                         }
                     }
@@ -115,7 +115,7 @@ var rule = {
                                 desc:desc1,
                                 title:title1,
                                 pic_url:picUrl1,
-                                url:title
+                                url:HOST+title
                             });
                         }
                     }
@@ -124,7 +124,7 @@ var rule = {
                             desc:desc1,
                             title:title1,
                             pic_url:picUrl1,
-                            url:title
+                            url:HOST+title
                         });
                     }
                 }
@@ -178,7 +178,7 @@ var rule = {
                             }
                             VOD = {
                                 vod_name: input.replace(HOST,''),
-                                vod_content: playListUrlStr
+                                vod_content: title + '\\n\\n' + playListUrlStr
                             };
                         })
                     }
