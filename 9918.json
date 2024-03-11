@@ -1,12 +1,11 @@
 {
 "spider":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/pg.jar;md5;2b8ee1791855c6e977c13bf78ac9ea13",
-"lives":[{"name":"初秋语","type":0,"url":"./listx.txt"},
-{"name":"YanG","type":0,"url":"https://fongmi.cachefly.net/YanG-1989/m3u/main/Adult.m3u"},
-{"name":"atsushi","type":0,"url":"https://fongmi.cachefly.net/atsushi444/iptv-epg/main/Adult.m3u"},
-{"name":"小武哥","type":0,"url":"https://qu.ax/PEHy.txt"},
-{"name":"AV","type":0,"url":"./livex.m3u"},
-{"name":"直播","type":0,"url":"https://fongmi.cachefly.net/YanG-1989/m3u/main/XX.m3u"}
-],
+"lives": [{
+  "name": "9918",
+  "type": 0,
+  "url": "./9918.txt",
+  "playerType": 1
+}],
 "wallpaper":"https://liu.chuqiuyu.workers.dev",
 "sites":[
   {"key":"lf_js_search","name":"搜索|lf_search","type":3,"searchable":0,"changeable":1,"quickSearch":0,"filterable":0,"api":"./lib/lf_search3_min.js","ext":"18+"},
