@@ -837,6 +837,9 @@ var rule = {
                     else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
+                    else if (/全场/.test(name) && /集锦/.test(name)){
+                        playList_weibo = playList_weibo + '<全场集锦>' + '$' + url + '#';
+                    }
                     else {
                         playList_weibo = playList_weibo + name + '$' + url + '#';
                     }

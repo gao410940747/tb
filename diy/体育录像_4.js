@@ -8,8 +8,8 @@ var rule = {
     // class_name:'篮球屋录像&NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&直播吧视频&88比赛录像',
     // class_url:'lanqiuwu&nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&zhibo8&88replay',
     // class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/replay',
-    class_name:'88比赛录像&NBA&篮球屋录像&NBA录像&NBA集锦&NBA十佳球&直播吧视频',
-    class_url:'88replay&1&lanqiuwu&nbalx&nbajijin&nbatop10&zhibo8',
+    class_name:'篮球屋录像&88比赛录像&NBA&NBA录像&NBA集锦&NBA十佳球&直播吧视频',
+    class_url:'lanqiuwu&88replay&1&nbalx&nbajijin&nbatop10&zhibo8',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -462,6 +462,9 @@ var rule = {
                     }
                     else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
+                    }
+                    else if (/全场/.test(name) && /集锦/.test(name)){
+                        playList_weibo = playList_weibo + '<全场集锦>' + '$' + url + '#';
                     }
                     else {
                         playList_weibo = playList_weibo + name + '$' + url + '#';
