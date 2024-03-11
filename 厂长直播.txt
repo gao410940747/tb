@@ -946,8 +946,8 @@ TVBS歡樂台,http://198.16.100.90:8278/tvbshuanle_twn/playlist.m3u8?ct=19193&ti
     #湾湾泛绿#
 泛绿↓↓↓↓↓,http://ali.hlspull.yximgs.com/live/twlivepdymvcznzzzcvbcvbztyzzzffcfzvzftozzbvczfednhs.flv
 華視HD,http://ali.hlspull.yximgs.com/live/twlivepdymvcznzzzcvbcvbztyzzzffcfzvzftozzbvczfednhs.flv
-闽壹新聞台,http://ali.hlspull.yximgs.com/live/twlivemzfoyzvzsdvbnweztzuzzxzcvfzzszfhfzddzzlhtbchyxw.flv
-闽镜新聞台,http://ali.hlspull.yximgs.com/live/twliveexcvzzocvuozxucfdexzpzzyxchvlzxzfezhcelethzzdxw.flv
+壹新聞台,http://ali.hlspull.yximgs.com/live/twlivemzfoyzvzsdvbnweztzuzzxzcvfzzszfhfzddzzlhtbchyxw.flv
+镜新聞台,http://ali.hlspull.yximgs.com/live/twliveexcvzzocvuozxucfdexzpzzyxchvlzxzfezhcelethzzdxw.flv
 年代新闻台,http://ali.hlspull.yximgs.com/live/twliveozevdyscvbudlozlnsfzewtzudvbbzxfznzlvczdzdnzxw.flv
 
     #湾湾极绿#
@@ -961,8 +961,6 @@ TVBS歡樂台,http://198.16.100.90:8278/tvbshuanle_twn/playlist.m3u8?ct=19193&ti
 三立LIVE台,http://ali.hlspull.yximgs.com/live/twlivehmcyoywzzubzfdzfvchtcbszzzvfzhncvndvbsxcbmzsllive.flv
 
     #湾湾其他#
-CCM,http://ali.hlspull.yximgs.com/live/twlivevcnydszfzsetzzfcvbcdtszzfvxcvsznmbnlzzhzznmyhszzftydz.flv
-HBO,http://ali.hlspull.yximgs.com/live/twlivemzzlzpwzdctdfhdvzdzduzlvcbeywezweefshzfhhzszzcxhbo.flv
 寰宇新聞台,http://ali.hlspull.yximgs.com/live/twlivephxehmffzuxcxzvezezyhmnzzxzzhzdhnzbnxfdzfhyxw.flv
 非凡新聞台,http://ali.hlspull.yximgs.com/live/twlivesztnfzzozdcbfcxvzfuuzzwezzzszyuhhdzszhzynffxw.flv
 有线新聞台,https://ali.hlspull.yximgs.com/live/twlivezezcxlvofbncvshhzszcvndfncvbdzpeyzhxchzszzhzezzzyxxw.flv
