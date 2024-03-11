@@ -813,6 +813,7 @@ var rule = {
             var playList_weibo = '';
             var playList_cctv = '';
             var playList_tencent = '';
+            var playList_migu = '';
 
             playUrls.map(function(it) {
                 let name = pdfh(it,'a&&Text');
@@ -837,7 +838,7 @@ var rule = {
                     else if (/加时赛/.test(name) && /录像/.test(name)){
                         playList_weibo = playList_weibo + '<加时赛>' + '$' + url + '#';
                     }
-                    else if (/全场/.test(name) && /集锦/.test(name)){
+                    else if (/全场|原声/.test(name) && /集锦/.test(name)){
                         playList_weibo = playList_weibo + '<全场集锦>' + '$' + url + '#';
                     }
                     else {
@@ -902,6 +903,10 @@ var rule = {
                         playList_tencent = playList_tencent + name + '$' + qq_url + '#';
                     }
                 }
+                // 单独封装咪咕源
+                else if (/miguvideo/.test(url)){
+                    playList_migu = playList_migu + name + '$' + url + '#';
+                }
                 else if (url==='' || name==='本场技术统计' || url==='undefined' || /lanqiuwu/.test(url)){
                 }
                 else {
@@ -919,6 +924,10 @@ var rule = {
             if(playList_tencent!=='') {
                 playFrom.append('腾讯');
                 playList.append(playList_tencent);
+            }
+            if(playList_migu!=='') {
+                playFrom.append('咪咕');
+                playList.append(playList_migu);
             }
             if(playListStr!=='') {
                 playFrom.append('篮球屋');
