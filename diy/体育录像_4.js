@@ -8,8 +8,8 @@ var rule = {
     // class_name:'篮球屋录像&NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&直播吧视频&88比赛录像',
     // class_url:'lanqiuwu&nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&zhibo8&88replay',
     // class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/replay',
-    class_name:'篮球屋录像&NBA录像&NBA集锦&NBA十佳球&88比赛录像&NBA&直播吧视频',
-    class_url:'lanqiuwu&nbalx&nbajijin&nbatop10&88replay&1&zhibo8',
+    class_name:'88比赛录像&NBA&篮球屋录像&NBA录像&NBA集锦&NBA十佳球&直播吧视频',
+    class_url:'88replay&1&lanqiuwu&nbalx&nbajijin&nbatop10&zhibo8',
     headers:{
         'User-Agent':'PC_UA'
     },
@@ -431,7 +431,7 @@ var rule = {
         }
         else if(/lanqiuwu/.test(input)) {
             VOD = {
-                vod_name: pdfh(new_html,'.article-header h2&&Text'),
+                vod_name: pdfh(new_html,'.article-header h2&&Text')
             };
             var playUrls = pdfa(new_html, '.article-content&&p:gt(1)');
 
@@ -549,20 +549,22 @@ var rule = {
             }
         }
         else{
-            VOD = {
-                vod_name: pdfh(new_html,'.breadcrumb h3&&Text'),
-                vod_pic: pd(new_html,'.col-md-9 div:eq(3)&&src'),
-            };
             var playUrls = pdfa(new_html, '.col-md-9&&p:gt(0)');
 
             var playListStr = '';
             var playList_weibo = '';
             var playList_kuaiShou = '';
+            var playList_cctv = '';
+            var playList_tencent = '';
+            var playList_migu = '';
+            var playList_alipan = '';
+            var playList_quark = '';
+            var playList_wangpan = '';
 
             playUrls.map(function(it) {
                 let name = pdfh(it,'a&&Text');
                 let url = pd(it,'a&&href');
-                if (/微博/.test(name)){
+                if (/weibo/.test(url)){
                     if (/全场录像/.test(name)){
                         playList_weibo = playList_weibo + '<全场录像>' + '$' + url + '#';
                     }
@@ -585,7 +587,7 @@ var rule = {
                         playList_weibo = playList_weibo + name + '$' + url + '#';
                     }
                 }
-                else if (/快手/.test(name)){
+                else if (/kuaishou/.test(url)){
                     if (/全场录像/.test(name)){
                         playList_kuaiShou = playList_kuaiShou + '<全场录像>' + '$' + url + '#';
                     }
@@ -608,7 +610,87 @@ var rule = {
                         playList_kuaiShou = playList_kuaiShou + name + '$' + url + '#';
                     }
                 }
-                else if (url==='' || url==='undefined' || /lanqiuwu/.test(url)){
+                // 单独封装CCTV源
+                else if (/cctv.com/.test(url)){
+                    var cctv_url = 'https://jx.xyflv.cc/?url=' + url;
+                    if (/全场/.test(name) && /录像/.test(name)){
+                        playList_cctv = playList_cctv + '<全场录像>' + '$' + cctv_url + '#';
+                    }
+                    else if (/第一节/.test(name) && /录像/.test(name)){
+                        playList_cctv = playList_cctv + '<第一节>' + '$' + cctv_url + '#';
+                    }
+                    else if (/第二节/.test(name) && /录像/.test(name)){
+                        playList_cctv = playList_cctv + '<第二节>' + '$' + cctv_url + '#';
+                    }
+                    else if (/第三节/.test(name) && /录像/.test(name)){
+                        playList_cctv = playList_cctv + '<第三节>' + '$' + cctv_url + '#';
+                    }
+                    else if (/第四节/.test(name) && /录像/.test(name)){
+                        playList_cctv = playList_cctv + '<第四节>' + '$' + cctv_url + '#';
+                    }
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
+                        playList_cctv = playList_cctv + '<加时赛>' + '$' + cctv_url + '#';
+                    }
+                    else {
+                        playList_cctv = playList_cctv + name + '$' + cctv_url + '#';
+                    }
+                }
+                // 单独封装腾讯源
+                else if (/qq.com/.test(url)){
+                    // var qq_url = 'https://jx.zui.cm/?url=' + url;
+                    var qq_url = url;
+                    var language = '';
+                    if (/QQ国语/.test(name)){
+                        language = '国语';
+                    }
+                    if (/QQ原声/.test(name)){
+                        language = '原声';
+                    }
+                    if (/全场/.test(name) && /录像/.test(name)){
+                        playList_tencent = playList_tencent + '<'+language+'全场录像>' + '$' + qq_url + '#';
+                    }
+                    else if (/第一节/.test(name) && /录像/.test(name)){
+                        playList_tencent = playList_tencent + '<'+language+'第一节>' + '$' + qq_url + '#';
+                    }
+                    else if (/第二节/.test(name) && /录像/.test(name)){
+                        playList_tencent = playList_tencent + '<'+language+'第二节>' + '$' + qq_url + '#';
+                    }
+                    else if (/第三节/.test(name) && /录像/.test(name)){
+                        playList_tencent = playList_tencent + '<'+language+'第三节>' + '$' + qq_url + '#';
+                    }
+                    else if (/第四节/.test(name) && /录像/.test(name)){
+                        playList_tencent = playList_tencent + '<'+language+'第四节>' + '$' + qq_url + '#';
+                    }
+                    else if (/加时赛/.test(name) && /录像/.test(name)){
+                        playList_tencent = playList_tencent + '<'+language+'加时赛>' + '$' + qq_url + '#';
+                    }
+                    else {
+                        playList_tencent = playList_tencent + name + '$' + qq_url + '#';
+                    }
+                }
+                // 单独封装咪咕源
+                else if (/miguvideo/.test(url)){
+                    playList_migu = playList_migu + name + '$' + url + '#';
+                }
+                // 单独封装阿里云盘
+                else if (/alipan/.test(url) || /阿里云盘/.test(name)){
+                    playList_alipan = playList_alipan + name + '$' + url + '#';
+                    if (playList_wangpan === '') {
+                        playList_wangpan = '阿里云盘: ' + url;
+                    } else {
+                        playList_wangpan = '\\n\\n' + '阿里云盘: ' + url;
+                    }
+                }
+                // 单独封装夸克云盘
+                else if (/quark/.test(url) || /夸克云盘/.test(name)){
+                    playList_quark = playList_quark + name + '$' + url + '#';
+                    if (playList_wangpan === '') {
+                        playList_wangpan = '夸克云盘: ' + url;
+                    } else {
+                        playList_wangpan = '\\n\\n' + '夸克云盘: ' + url;
+                    }
+                }
+                else if (url==='' || url==='undefined' || /lanqiuwu|luxiangwu/.test(url) || name === '' || name === 'undefined'){
                 }
                 else {
                     playListStr = playListStr + name + '$' + url + '#';
@@ -622,10 +704,35 @@ var rule = {
                 playFrom.append('快手');
                 playList.append(playList_kuaiShou);
             }
+            if(playList_cctv!=='') {
+                playFrom.append('央视');
+                playList.append(playList_cctv);
+            }
+            if(playList_tencent!=='') {
+                playFrom.append('腾讯');
+                playList.append(playList_tencent);
+            }
+            if(playList_migu!=='') {
+                playFrom.append('咪咕');
+                playList.append(playList_migu);
+            }
+            if(playList_alipan!=='') {
+                playFrom.append('阿里云盘');
+                playList.append(playList_alipan);
+            }
+            if(playList_quark!=='') {
+                playFrom.append('夸克云盘');
+                playList.append(playList_quark);
+            }
             if(playListStr!=='') {
                 playFrom.append('88录像');
                 playList.append(playListStr);
             }
+            VOD = {
+                vod_name: pdfh(new_html,'.breadcrumb h3&&Text'),
+                vod_pic: pd(new_html,'.col-md-9 div:eq(3)&&src'),
+                vod_content: playList_wangpan
+            };
         }
         // 最后封装所有线路
         let vod_play_from = playFrom.join('$$$');

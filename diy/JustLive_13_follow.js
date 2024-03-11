@@ -109,19 +109,19 @@ var rule = {
         }
     `,
     limit: 10,
-    推荐: `js:
-        var d = [];
-        var html = JSON.parse(request(input)).data;
-        html.forEach(it => {
-            d.push({
-                title: it.roomName,
-                desc: '🆙' + it.ownerName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
-                pic_url: it.roomPic,
-                url: it.platForm + '|' + it.roomId
-            });
-        })
-        setResult(d);
-     `,
+    // 推荐: `js:
+    //     var d = [];
+    //     var html = JSON.parse(request(input)).data;
+    //     html.forEach(it => {
+    //         d.push({
+    //             title: it.roomName,
+    //             desc: '🆙' + it.ownerName + '•' + it.platForm.replace("huya", "虎牙").replace("douyu", "斗鱼").replace("cc", "网易CC").replace("bilibili", "哔哩").replace("douyin", "抖音"),
+    //             pic_url: it.roomPic,
+    //             url: it.platForm + '|' + it.roomId
+    //         });
+    //     })
+    //     setResult(d);
+    //  `,
     一级: `js:
 		pdfh=jsp.pdfh;pdfa=jsp.pdfa;pd=jsp.pd;
         var douyinow = false;
