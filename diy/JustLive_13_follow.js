@@ -535,12 +535,12 @@ var rule = {
                         });
                     })
                     // 封装线路
-                    playFrom.append('官方h5线路');
-                    playList.append(bili_h5_list.map(function(it) {
-                        return it.title + "$" + it.input
-                    }).join("#"));
                     playFrom.append('官方flv线路');
                     playList.append(bili_flv_list.map(function(it) {
+                        return it.title + "$" + it.input
+                    }).join("#"));
+                    playFrom.append('官方h5线路');
+                    playList.append(bili_h5_list.map(function(it) {
                         return it.title + "$" + it.input
                     }).join("#"));
                 }
