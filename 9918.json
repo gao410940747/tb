@@ -11,7 +11,7 @@
   {"key":"lf_js_search","name":"搜索|lf_search","type":3,"searchable":0,"changeable":1,"quickSearch":0,"filterable":0,"api":"./lib/lf_search3_min.js","ext":"18+"},
   {"key":"lf_js_p2p","name":"磁力|lf_p2p","type":3,"searchable":1,"changeable":1,"quickSearch":1,"filterable":1,"api":"./lib/lf_p2p2_min.js","ext":"18+","timeout":60},
   {"key":"lf_js_lf_live","name":"直播|lf_live","type":3,"api":"./lib/lf_live_min.js","style":{"type":"oval"},"searchable":1,"changeable":0,"quickSearch":1,"filterable":1,"ext":"./js/lf_live1.txt"},
-  {"key":"AList",  "name": "AList",  "type": 3,  "api": "csp_AList",  "searchable": 1,  "changeable": 0,  "ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "网盘1","server": "https://alist-caimoui.cloud.okteto.net/私房菜/"}]}},
+  {"key":"点播","name":"点播","type":3,"playerType":1,"api":"./diy/live2vod.js","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./9918vod.json"},
 
   {"key":"Jav8","name":"Jav8(主站)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8.js"},
   {"key":"Jav8_actor","name":"Jav8(演员)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/Jav8_actor.js"},
@@ -30,6 +30,7 @@
   {"key":"JavTxt_actor_search","name":"JavTxt(演员)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"style":{"type":"rect","ratio":1},"ext":"./diy/JavTxt_actor_search.js"},
 
   {"key":"csp_XYQHiker_快猫短视频","name":"快猫","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/快猫.json","jar": "http://cfmqy.cn/tvbox/XYQHiker/custom_spider.jar"},
+  {"key":"AList",  "name": "AList",  "type": 3,  "api": "csp_AList",  "searchable": 1,  "changeable": 0,  "ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "网盘1","server": "https://alist-caimoui.cloud.okteto.net/私房菜/"}]}},
 
   {"key":"nivod18","name":"泥巴貓","type":3,"api":"./cat/js/nivod_op.js","ext":"做爱"},
   {"key":"mtsp_open","name":"蜜桃貓","type":3,"api":"./cat/js/mtsp_open.js","style":{"type":"rect","ratio":1.485}},

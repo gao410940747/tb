@@ -481,6 +481,7 @@ CGTN-阿语,https://livear.cgtn.com/1000a/prog_index.m3u8
 凤凰资讯, http://223.109.210.41/1301-tx.otvstream.otvcloud.com/otv/skcc/live/channel52002/index.m3u8
 凤凰资讯, http://82.115.12.123:8080/live/play/TkhocFFsRlJWWEZHU2t4WU5FWTFaVzFDYzJ0VlIxaFlTMHhQVEZKdFJURmtlWE5wV0daU2JYSkhSVDA9/156407
 凤凰资讯, http://210.210.155.37/session/78cca564-8b8a-11ee-8da8-b3c488b6c752/qwr9ew/s/s21/01.m3u8?app_type=web&userid=50n13N0v14nd1&tkn=829341hrjhaq0q30q&chname=Phoenix
+凤凰中文, http://125.125.199.56:8888/rtp/233.50.200.191:5140
 凤凰中文, http://r.jdshipin.com/cCCzW
 凤凰中文, http://php.17186.eu.org/phtv/fhzw.m3u8
 凤凰中文, http://223.109.210.41/1301-tx.otvstream.otvcloud.com/otv/skcc/live/channel52003/index.m3u8

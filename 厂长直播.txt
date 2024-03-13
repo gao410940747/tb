@@ -877,11 +877,6 @@ CCTV-16,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888
 香港32台,https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream5/streamPlaylist.m3u8
 香港32台,https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream2/streamPlaylist.m3u8
 
-人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
-人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
-人間衛視,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u
-人間衛視,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8
-
 TVB J2,http://ali.hlspull.yximgs.com/live/twlivefhwohdpthzyfiplhdftuzfbvdimhdznbzszbcvxzfzsehbvbztvbd2.flv
 TVB無線新聞台,http://ali.hlspull.yximgs.com/live/twlivefhwzpthlzzszszzbvdlzdmnbzhdhyzyztvbwxxw.flv
 TVB無線財經體育資訊台,http://ali.hlspull.yximgs.com/live/twlivefhwylwpthzyzzfzxvzlmnduhyzmtvbwxcd.flv
@@ -965,14 +960,17 @@ TVBS歡樂台,http://198.16.100.90:8278/tvbshuanle_twn/playlist.m3u8?ct=19193&ti
 非凡新聞台,http://ali.hlspull.yximgs.com/live/twlivesztnfzzozdcbfcxvzfuuzzwezzzszyuhhdzszhzynffxw.flv
 有线新聞台,https://ali.hlspull.yximgs.com/live/twlivezezcxlvofbncvshhzszcvndfncvbdzpeyzhxchzszzhzezzzyxxw.flv
 
+人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w614428743.m3u8
+人間衛視,https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
+人間衛視,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u
+人間衛視,http://61.216.67.119:1935/bltvhd/bltv1/chunklist_w1266569526.m3u8
+
 八大综合台,http://198.16.100.90:8278/badazhonghe/playlist.m3u8?tid=MC7C4692263546922635&ct=19225&tsum=ffdc7a6397b511103e0df0b92e678790
 八大综合台,http://198.16.100.90:8278/badazhonghe/playlist.m3u8?tid=mfb8d64b6276514171054&ct=17874&tsum=a87466c997089ea7dce98cd17301667d
 八大戏剧台,http://198.16.100.90:8278/badadrama/playlist.m3u8?tid=m4970c4e1b988&ct=18335&tsum=20cb1d15d4e116ab9e44edb542cf51a5
 八大戏剧台,http://198.16.100.90:8278/badadrama/playlist.m3u8?tid=MBCB2433143824331438&ct=19254&tsum=51660c351b3991d81434e43bd1ab720e
 八大戏剧台,http://198.16.100.90:8278/badadrama/playlist.m3u8?tid=m4a65d3abd9ee13871929&ct=17924&tsum=8e5ef501e42d00cdc6a761ca3dc693d8
 
-緯來體育台, https://cloud.yumixiu768.com/tmp/123.m3u8
-緯來體育台,https://s2.pub/cctv-13
 緯來體育台, http://hls.szsummer.cn/live/446035/playlist.m3u8?k=32f9ec7c13e4b390289143a8e1b2a898&t=1840341130
 ELEVEN體育台,http://50.7.238.114:8278/golfchannel_twn/playlist.m3u8?tid=MFBF2798068027980680&ct=18393&tsum=d8204023f67120512c75a8882f121120
 
