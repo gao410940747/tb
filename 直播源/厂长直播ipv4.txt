@@ -514,6 +514,7 @@ CGTN-阿语,https://livear.cgtn.com/1000a/prog_index.m3u8
 
 
 港台, #genre#
+凤凰资讯,http://221.7.175.154:8445/tsfile/live/1021_1.m3u8
 凤凰资讯, http://nas.jdshipin.com:8801/fhx.php?id=1
 凤凰资讯, http://r.jdshipin.com/0Rp07
 凤凰资讯, http://php.17186.eu.org/phtv/fhzx.m3u8
