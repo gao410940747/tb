@@ -1,6 +1,6 @@
 var rule = {
     title:'Jav8_actor',
-    host:'https://jav8.pro/top-actresses',
+    host:'https://jav8.one/top-actresses',
     url:'/actress/fyclass?page=fypage',
     searchUrl:'/search?type=actress&q=**',
     searchable:0,
@@ -9,7 +9,7 @@ var rule = {
     headers:{
         'User-Agent':'PC_UA'
     },
-    图片来源:'@Referer=https://jav8.pro',
+    图片来源:'@Referer=https://jav8.one',
     timeout:15000,
     play_parse:true,
     limit:10,
