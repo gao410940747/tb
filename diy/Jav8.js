@@ -1,8 +1,8 @@
 var rule = {
     title:'Jav8',
-    host:'https://jav8.pro',
+    host:'https://jav8.one',
     // 发布页：https://jav8.link/
-    // 备用节点：https://jav8.vip/  https://jav8.lol/  https://jav8.one/  https://jav8.me/
+    // 备用节点：https://jav8.vip/  https://jav8.lol/  https://jav8.pro/  https://jav8.me/
     url:'/fyclass/fyfilter',
     searchUrl:'/search?type=id&q=**',
     searchable:1,
@@ -20,7 +20,7 @@ var rule = {
     headers:{
         'User-Agent':'PC_UA'
     },
-    图片来源:'@Referer=https://jav8.pro',
+    图片来源:'@Referer=https://jav8.one',
     timeout:15000,
     play_parse:true,
     limit:10,
