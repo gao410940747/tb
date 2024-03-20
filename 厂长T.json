@@ -54,7 +54,24 @@
 		{"key":"酷看弹幕","name":"酷看(弹幕)","type":3,"api":"csp_Kkys","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"机器人弹幕","name":"爱看机器人(弹幕)","type":3,"api":"csp_Ikanbot","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"哔嘀弹幕","name":"哔嘀(弹幕)","type":3,"api":"csp_Bdys","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"哔哩","name":"哔哩哔哩4K","type":3,"playerType":1,"api":"csp_Bili","searchable":1,"changeable":0,"style":{"type":"rect","ratio":1.6},"ext":{"json":"./json/bili.json","cookie":"http://127.0.0.1:9978/file/TVBox/bilibili.txt"},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/CatVodSpider/master/jar/custom_spider.jar"},
+		{
+			"key": "哔哩",
+			"name": "哔哩哔哩4K",
+			"type": 3,
+			"playerType":1,
+			"api": "csp_Bili",
+			"searchable": 1,
+			"changeable": 0,
+			"style": {
+				"type": "rect",
+				"ratio": 1.6
+			},
+			"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/CatVodSpider/master/jar/custom_spider.jar",
+			"ext": {
+				"json": "./json/bili.json",
+				"cookie": "http://127.0.0.1:9978/file/TVBox/bilibili.txt"
+			}
+		},
 
 		{"key":"夸克盘搜弹幕","name":"夸克盘搜","type":3,"api":"csp_Qkpanso","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 		{"key":"夸克趣盘搜弹幕","name":"夸克趣盘搜","type":3,"api":"csp_QuPanSou","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
