@@ -1579,6 +1579,8 @@ DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extensi
 DISNEY,http://line.premiumpowers.net/play/live.php?mac=00:1A:79:73:45:10&extension=ts&stream=45588
 
 体育主播, http://hls.szsummer.cn/live/30613190/playlist.m3u8?k=be62aedbe9dbce34b3f393f7f0bffa13&t=1857956810
+体育主播, http://play.sportsteam356.com/play/sm.html?id=262
+体育主播, http://play.sportsteam356.com/play/sm.html?id=263
 
 
 

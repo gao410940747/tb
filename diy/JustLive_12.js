@@ -164,7 +164,7 @@ var rule = {
                 html = JSON.parse(request(HOST + '/api/live/getRecommendByPlatform?platform=douyin&page='+MY_PAGE+'&size=20')).data;
             } else if (area === '守望先锋API' || area === '周杰伦') {
                 douyinow = true;
-                var douyinList = JSON.parse(request('http://cfmqy.cn/tv/live.php?type=search&page='+(MY_PAGE-1)+'&wd='+area.replace('API', ''))).data.list;
+                var douyinList = JSON.parse(request('http://rssv.cn/tv/live.php?type=search&page='+(MY_PAGE-1)+'&wd='+area.replace('API', ''))).data.list;
                 douyinList.forEach(it => {
                     var 默认 = it.默认===''?'':'默认，'+it.默认+'；';
                     var 蓝光 = it.蓝光===''?'':'蓝光，'+it.蓝光+'；';
@@ -460,12 +460,12 @@ var rule = {
                         });
                     })
                     // 封装线路
-                    playFrom.append('官方h5线路');
-                    playList.append(bili_h5_list.map(function(it) {
-                        return it.title + "$" + it.input
-                    }).join("#"));
                     playFrom.append('官方flv线路');
                     playList.append(bili_flv_list.map(function(it) {
+                        return it.title + "$" + it.input
+                    }).join("#"));
+                    playFrom.append('官方h5线路');
+                    playList.append(bili_h5_list.map(function(it) {
                         return it.title + "$" + it.input
                     }).join("#"));
                 }
