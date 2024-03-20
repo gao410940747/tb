@@ -58,7 +58,7 @@
 			"key": "哔哩",
 			"name": "哔哩哔哩4K",
 			"type": 3,
-			"playerType":1,
+			"playerType":2,
 			"api": "csp_Bili",
 			"searchable": 1,
 			"changeable": 0,
