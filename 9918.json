@@ -32,7 +32,7 @@
   {"key":"JavTxt","name":"JavTxt(主站)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"ext":"./diy/JavTxt.js"},
   {"key":"JavTxt_actor_search","name":"JavTxt(演员)","type":3,"api":"./lib/drpy2.min.js","filterable":1,"changeable":0,"playerType":1,"style":{"type":"rect","ratio":1},"ext":"./diy/JavTxt_actor_search.js"},
 
-  {"key":"csp_XYQHiker_快猫短视频","name":"快猫","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/快猫.json","jar": "http://rssv.cn/tvbox/XYQHiker/custom_spider.jar"},
+  {"key":"快猫","name":"快猫","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"./diy/快猫.json","jar": "https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/xyq.jar"},
   {"key":"AList",  "name": "AList",  "type": 3,  "api": "csp_AList",  "searchable": 1,  "changeable": 0,  "ext": {"vodPic": "https://x.imgs.ovh/x/2023/09/05/64f680bb030b4.png","drives": [{"name": "网盘1","server": "https://alist-caimoui.cloud.okteto.net/私房菜/"}]}},
 
   {"key":"nivod18","name":"泥巴貓","type":3,"api":"./cat/js/nivod_op.js","ext":"做爱"},
