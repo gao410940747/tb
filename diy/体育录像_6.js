@@ -327,7 +327,7 @@ var rule = {
                 // 一级图片URL
                 let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
                 // 一级URL
-                let url1 = ('https://lanqiuwu.com' + pd(it, 'h2 a&&href')).replace('http://www.88kanqiu.one', 'https://lanqiuwu.com');
+                let url1 = ('https://lanqiuwu.com' + pdfh(it, 'h2 a&&href')).replace('http://www.88kanqiu.one', '');
 
                 if (/vs/.test(pdfh(it, 'h2&&Text'))) {
                     let vsSplit = pdfh(it, 'h2&&Text').split("vs");
@@ -409,7 +409,7 @@ var rule = {
                 // 一级图片URL
                 let picUrl1 = pd(it,'.media-object&&src');
                 // 一级URL
-                let url1 = pd(it, '.media-heading a&&href');
+                let url1 = pdfh(it, '.media-heading a&&href');
 
                 if (/NBA全明星/.test(pdfh(it, '.media-heading&&Text'))) {
                     // 通过"NBA全明星"进行截取

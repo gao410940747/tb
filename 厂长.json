@@ -33,7 +33,7 @@
 		{"key":"豆瓣推荐","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
 		{"key":"荐片(弹幕)","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 		{"key":"体育直播","name":"体育直播","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/体育直播_1.js"},
-		{"key":"体育录像","name":"体育录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/体育录像_5.js"},
+		{"key":"体育录像","name":"体育录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/体育录像_6.js"},
 
 		{"key":"快船专区","name":"快船专区","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"list"},"ext":"./diy/快船专区_5.js"},
 		{"key":"足球巴巴","name":"足球巴巴","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/足球巴巴_2.js"},
