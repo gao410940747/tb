@@ -16,7 +16,7 @@
 		{"key":"厂长","name":"厂长影视","type":3,"playerType":1,"api":"./lib/drpy2.min.js","ext":"./diy/厂长资源_2.js"},
 		{"key":"荐片","name":"荐片","type":3,"playerType":1,"api":"./lib/drpy2.min.js","ext":"./diy/荐片_3.js"},
 		{"key":"央视大全","name":"央视大全","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/央视大全_2.js"},
-		{"key":"爱看机器人","name":"爱看机器人","type":3,"playerType":1,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:xl线路,fs线路,js线路,tk线路,tp线路,gs线路,sd线路,bfzy线路,lz线路,ff线路,ik线路][不包含:yh线路]","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
+		{"key":"哔哩哔哩","name":"哔哩哔哩","type":3,"playerType":2,"api":"csp_Bili","searchable":1,"changeable":0,"style":{"type":"rect","ratio":1.6},"ext":{"json":"./json/bili.json","cookie":"http://127.0.0.1:9978/file/TVBox/bilibili.txt","mid":"1571050"},"jar":"./diy/custom_spider.jar"},
 
 		{"key":"电视点播","name":"电视点播","type":3,"playerType":1,"api":"./diy/live2vod.js","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./live2vod.json"},
 		{"key":"直播平台","name":"直播平台","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"changeable":0,"ext":"./diy/JustLive_15_follow.js"},
@@ -25,7 +25,7 @@
 //		{"key":"虎牙直播","name":"虎牙直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":2,"searchable":0,"quickSearch":0,"filterable":1,"ext":"./diy/虎牙直播1080.js"},
 //		{"key":"哔哩直播","name":"哔哩直播","type":3,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.755},"playerType":1,"ext":"./diy/哔哩直播_2.js"},
 		{"key":"博看听书","name":"博看听书","type":3,"playerType":1,"api":"./lib/drpy2.min.js","changeable":0,"style":{"type":"rect","ratio":0.75},"ext":"./diy/博看听书.js"},
-		{"key":"家庭KTV","name":"家庭KTV","type":3,"playerType":1,"api":"./diy/live2vod.js","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./mv2vod.json"},
+		{"key":"爱看机器人","name":"爱看机器人","type":3,"playerType":1,"api":"csp_Ikanbot","searchable":1,"quickSearch":1,"changeable":1,"ext":"[排序:xl线路,fs线路,js线路,tk线路,tp线路,gs线路,sd线路,bfzy线路,lz线路,ff线路,ik线路][不包含:yh线路]","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
 
 		{"key":"体育直播","name":"体育直播","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/体育直播_2.js"},
 		{"key":"体育录像","name":"体育录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"list"},"ext":"./diy/体育录像_7.js"},
@@ -41,6 +41,7 @@
 //		{"key":"88比赛录像","name":"88比赛录像","type":3,"playerType":2,"api":"./js/drpy.min.js","style":{"type":"list","ratio":1.755},"ext":"./diy/88比赛录像_1.js"},
 //		{"key":"篮球屋录像","name":"篮球屋录像","type":3,"playerType":2,"api":"./js/drpy.min.js","style":{"type":"list","ratio":1},"ext":"./diy/篮球屋录像_3.js"},
 //		{"key":"篮球帝录像","name":"篮球帝录像","type":3,"playerType":1,"api":"./js/drpy.min.js","style":{"type":"rect","ratio":1},"ext":"./diy/篮球帝录像_1.js"},
+		{"key":"家庭KTV","name":"家庭KTV","type":3,"playerType":1,"api":"./diy/live2vod.js","searchable":0,"quickSearch":0,"filterable":0,"style":{"type":"list"},"ext":"./mv2vod.json"},
 
 //		{"key":"开眼视频","name":"开眼视频","type":3,"api":"https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.js","ext":"https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/js/开眼视频.js"},
 //		{"key":"豆瓣推荐","name":"豆瓣推荐","type":3,"api":"./lib/drpy2.min.js","searchable":1,"quickSearch":0,"changeable":1,"ext":"./diy/豆瓣.js"},
@@ -52,25 +53,24 @@
 //		{"key":"AnFuns","name":"AnFuns","type":3,"playerType":1,"api":"./lib/drpy2.min.js","ext":"./diy/AnFuns.js"},
 //		{"key":"厂长弹幕","name":"厂长(弹幕)","type":3,"api":"csp_Czzy","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"荐片弹幕","name":"荐片(弹幕)","type":3,"api":"csp_Jianpian","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"酷看弹幕","name":"酷看(弹幕)","type":3,"api":"csp_Kkys","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"机器人弹幕","name":"爱看机器人(弹幕)","type":3,"api":"csp_Ikanbot","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"哔嘀弹幕","name":"哔嘀(弹幕)","type":3,"api":"csp_Bdys","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"哔哩哔哩","name":"哔哩哔哩","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.6},"changeable":0,"ext":"./diy/我的哔哩.js"},
-		{"key":"哔哩哔哩4K","name":"哔哩哔哩4K","type":3,"playerType":2,"api":"csp_Bili","searchable":1,"changeable":0,"style":{"type":"rect","ratio":1.6},"ext":{"json":"./json/bili.json","cookie":"http://127.0.0.1:9978/file/TVBox/bilibili.txt"},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/CatVodSpider/master/jar/custom_spider.jar"},
-		{"key":"阿里云搜","name":"阿里云搜","type":3,"api":"csp_Upyunso","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
-		{"key":"阿里易搜","name":"阿里易搜","type":3,"api":"csp_Yisou","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"},
+//		{"key":"哔哩哔哩","name":"哔哩哔哩","type":3,"playerType":1,"api":"./lib/drpy2.min.js","style":{"type":"rect","ratio":1.6},"changeable":0,"ext":"./diy/我的哔哩.js"},
+//		{"key":"阿里易搜","name":"阿里易搜","type":3,"api":"csp_Yisou","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/spider.jar"},
 
-		{"key":"夸克盘搜弹幕","name":"夸克盘搜","type":3,"api":"csp_Qkpanso","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"夸克趣盘搜弹幕","name":"夸克趣盘搜","type":3,"api":"csp_QuPanSou","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"夸克爱盘搜弹幕","name":"夸克爱盘搜","type":3,"api":"csp_AiPanSou","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
-		{"key":"夸克土豆弹幕","name":"夸克土豆","type":3,"api":"csp_Wobg","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","site":"https://aliz.lvdoui.top","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
+		{"key":"夸克盘搜弹幕","name":"夸克盘搜","type":3,"api":"csp_Qkpanso","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/danmu.jar"},
+		{"key":"夸克趣盘搜弹幕","name":"夸克趣盘搜","type":3,"api":"csp_QuPanSou","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/danmu.jar"},
+		{"key":"夸克爱盘搜弹幕","name":"夸克爱盘搜","type":3,"api":"csp_AiPanSou","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/danmu.jar"},
+		{"key":"夸克土豆弹幕","name":"夸克土豆","type":3,"api":"csp_Wobg","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","site":"https://aliz.lvdoui.top","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/danmu.jar"},
 //		{"key":"夸克团长弹幕","name":"夸克团长","type":3,"api":"csp_Tzfile","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"夸克影视车弹幕","name":"夸克影视车","type":3,"api":"csp_Wogg","searchable":1,"quickSearch":1,"filterable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","site":"https://www.weixine.net","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"夸克开心弹幕","name":"夸克开心","type":3,"api":"csp_Wobg","quickSearch":1,"changeable":1,"filterable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","site":"http://www.ttkx.live","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
 //		{"key":"夸克玩偶弹幕","name":"夸克玩偶","type":3,"api":"csp_Wobg","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"token":"http://127.0.0.1:9978/file/TVBox/token.txt","cookie":"http://127.0.0.1:9978/file/TVBox/quark.txt","danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/danmu.jar"},
+		{"key":"阿里云搜","name":"阿里云搜","type":3,"api":"csp_Upyunso","searchable":1,"quickSearch":1,"filterable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/spider.jar"},
+		{"key":"酷看弹幕","name":"酷看(弹幕)","type":3,"api":"csp_Kkys","playerType":1,"searchable":1,"quickSearch":1,"filterable":1,"ext":{"danmu":true},"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/danmu.jar"},
 
 		{"key":"本地视频","name":"本地视频","type":3,"playerType":1,"api":"csp_Local","searchable":0,"changeable":0,"jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/CatVodSpider/master/jar/custom_spider.jar"},
-		{"key":"云盘登录","name":"云盘登录","type":3,"api":"csp_AliYunPan","searchable":0,"quickSearch":0,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/gao410940747/tb/master/diy/spider.jar"}
+		{"key":"云盘登录","name":"云盘登录","type":3,"api":"csp_AliYunPan","searchable":0,"quickSearch":0,"filterable":0,"changeable":0,"ext":"http://127.0.0.1:9978/file/TVBox/token.txt","jar":"https://hub.gitmirror.com/https://raw.githubusercontent.com/PizazzGY/TVBox/main/spider.jar"}
 	],
 	"parses": [
 		// 腾讯视频720P
