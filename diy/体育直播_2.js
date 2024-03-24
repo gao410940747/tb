@@ -224,7 +224,7 @@ var rule = {
                     // 一级描述
                     let desc1 = date[1] + '-' + date[2] + ' ' + time[0] + ':' + time[1] + ' ' + split[1];
                     // 一级图片URL
-                    let picUrl1 = /http/.test(TeamLogoMap[pdfh(it, 'strong:eq(1)&&Text')])?TeamLogoMap[pdfh(it, 'strong:eq(1)&&Text')]:'http://www.88kanqiu.one/static/img/default-img.png';
+                    let picUrl1 = /http/.test(TeamLogoMap[split[0]])?TeamLogoMap[split[0]]:'http://www.88kanqiu.one/static/img/default-img.png';
                     // 一级URL
                     let url1 = pd(it, 'a&&href');
 
