@@ -14,9 +14,9 @@ var rule = {
     filterable: 1,
     filter_url: '{{fl.cateId}}',
     filter: {
-        "game":[{"key":"cateId","name":"分类","value":[{"n":"88看球","v":"88看球"},{"n":"JRS看比赛","v":"JRS看比赛"}]}],
-        "jijin":[{"key":"cateId","name":"分类","value":[{"n":"篮球屋","v":"篮球屋"}]}],
-        "replay":[{"key":"cateId","name":"分类","value":[{"n":"篮球屋","v":"篮球屋"},{"n":"88看球","v":"88看球"},{"n":"量子源","v":"量子源"},{"n":"天空源","v":"天空源"},{"n":"飞速源","v":"飞速源"}]}]
+        // "game":[{"key":"cateId","name":"分类","value":[{"n":"88看球","v":"88看球"},{"n":"JRS看比赛","v":"JRS看比赛"}]}],
+        "jijin":[{"key":"cateId","name":"分类","value":[{"n":"篮球屋","v":"篮球屋"},{"n":"i体育","v":"i体育"}]}],
+        "replay":[{"key":"cateId","name":"分类","value":[{"n":"篮球屋","v":"篮球屋"},{"n":"88看球","v":"88看球"},{"n":"i体育","v":"i体育"},{"n":"量子源","v":"量子源"},{"n":"天空源","v":"天空源"},{"n":"飞速源","v":"飞速源"}]}]
     },
     headers:{
         'User-Agent':'PC_UA'
@@ -28,18 +28,32 @@ var rule = {
             let split = input.replace('https://weibo.com/','').split('/');
             let userid = split[0];
             let pid = split[1];
-            let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
+            let html = 'https://m.weibo.cn/statuses/show?id=' + pid;
             let json = JSON.parse(request(html));
             if (/5861424034/.test(userid)) {
-                input =  json.page_info.media_info.mp4_hd_url;
-            } else if (/1883881851/.test(userid)) {
-                input =  json.page_info.media_info.playback_list[0].play_info.url;
-//            } else if (/7778630492|6364463717/.test(userid)) {
+                input = json.data.page_info.media_info.stream_url_hd;
             } else {
-                input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
+                input = json.data.page_info.urls.mp4_720p_mp4;
             }
         }
     `,
+//     lazy:`js:
+//         if (/weibo/.test(input)) {
+//             let split = input.replace('https://weibo.com/','').split('/');
+//             let userid = split[0];
+//             let pid = split[1];
+//             let html = 'https://weibo.com/ajax/statuses/show?id=' + pid + '&locale=zh-CN';
+//             let json = JSON.parse(request(html));
+//             if (/5861424034/.test(userid)) {
+//                 input = json.page_info.media_info.mp4_hd_url;
+//             } else if (/1883881851/.test(userid)) {
+//                 input = json.page_info.media_info.playback_list[0].play_info.url;
+// //            } else if (/7778630492|6364463717/.test(userid)) {
+//             } else {
+//                 input = 'push://' + json.page_info.media_info.playback_list[0].play_info.url;
+//             }
+//         }
+//     `,
     limit:6,
     double:true,
     一级: `js:
@@ -119,7 +133,7 @@ var rule = {
                 html = request('https://www.zhibo8.com/nba/more.htm?label=快船');
                 var list = pdfa(html,'.dataList&&li');
                 list.forEach(function(it){
-                    if(/集锦/.test(pdfh(it,'li&&data-label')) || /佳球/.test(pdfh(it,'li&&data-label'))) {
+                    if(/集锦|佳球/.test(pdfh(it,'li&&data-label')) || /录像/.test(pdfh(it,'a&&Text'))) {
                     }
                     else if(/快船/.test(pdfh(it,'li&&data-label'))) {
                         // 一级标题
@@ -129,7 +143,7 @@ var rule = {
                         // 一级图片URL
                         let picUrl1 = 'https://cdn.leisu.com/basketball/teamflag_s/848b21021b2a1db7bde95ea52a1e021b.png?imageMogr2/auto-orient/thumbnail/200x200';
                         // 一级URL
-                        let url1 = pd(it, 'a&&href').replace(HOST, 'https://www.zhibo8.com');
+                        let url1 = pdfh(it, 'a&&href').replace(HOST, 'https://www.zhibo8.com');
 
                         d.push({
                             desc:desc1,
@@ -298,8 +312,16 @@ var rule = {
                     }
                 });
             }
-            else if(cateId==='篮球屋'){
-                html = request(HOST + '/e/search/result/index.php?page='+(MY_PAGE-1)+'&searchid=139');
+            else if(cateId==='篮球屋' || cateId==='i体育'){
+                var site = '';
+                if(cateId==='篮球屋'){
+                    site = HOST;
+                    html = request(HOST + '/e/search/result/index.php?page='+(MY_PAGE-1)+'&searchid=139');
+                }
+                else if(cateId==='i体育'){
+                    site = 'https://itiyu.com';
+                    html = request('https://itiyu.com/teams/kuaichuan/'+(MY_PAGE-1));
+                }
                 var list = pdfa(html, '.content&&.excerpt');
                 list.forEach(it => {
                     // 通过" "进行截取
@@ -311,7 +333,7 @@ var rule = {
                     // 一级图片URL
                     let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
                     // 一级URL
-                    let url1 = pd(it, 'h2 a&&href');
+                    let url1 = site + pdfh(it, 'h2 a&&href');
     
                     if (/vs/.test(pdfh(it, 'h2&&Text'))) {
                         let vsSplit = pdfh(it, 'h2&&Text').split("vs");
@@ -352,6 +374,72 @@ var rule = {
                 })
             }
         }
+        else if(MY_CATE==='jijin'){
+            var cateId = MY_FL.cateId || '篮球屋';
+            var site = '';
+            if(cateId==='篮球屋'){
+                site = HOST;
+                html = request(HOST + '/e/search/result/index.php?page='+(MY_PAGE-1)+'&searchid=139_jijin');
+            }
+            else if(cateId==='i体育'){
+                site = 'https://itiyu.com';
+                html = request('https://itiyu.com/teams/kuaichuan/'+(MY_PAGE-1));
+            }
+            var list = pdfa(html, '.content&&.excerpt');
+            list.forEach(it => {
+                if(pdfh(it, 'h2&&Text')!=='') {
+                    // 通过" "进行截取
+                    let split = pdfh(it, 'h2&&Text').split(" ");
+                    // 一级标题
+                    let title1 = split[2];
+                    // 一级描述
+                    let desc1 = split[0].replace('年','.').replace('月','.').replace('日','') + ' ' + split[1];
+                    // 一级图片URL
+                    let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
+                    // 一级URL
+                    let url1 = site + pdfh(it, 'h2 a&&href');
+    
+                    // 客队名称
+                    let Team1 = '';
+                    // 主队名称
+                    let Team2 = '';
+                    if(/vs/.test(pdfh(it, 'h2&&Text'))) {
+                        let vsSplit = pdfh(it, 'h2&&Text').split("vs");
+                        let vs1 = vsSplit[0].split(' ');
+                        let vs2 = vsSplit[1].split(' ');
+                        // 客队名称
+                        Team1 = vs1[vs1.length-1];
+                        // 主队名称
+                        Team2 = vs2[0];
+                        // 客队vs主队
+                        title1 = Team1 + '🆚' + Team2;
+                    }
+                    if (/NBA/.test(pdfh(it, 'h2&&Text'))) {
+                        if(/集锦/.test(pdfh(it, 'h2&&Text'))){
+                            picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
+                        } else if (TeamLogoMap[Team2] != null) {
+                            // 通过主队名称获取球队LOGO
+                            picUrl1 = TeamLogoMap[Team2];
+                        } else if (TeamLogoMap[Team1] != null) {
+                            // 通过客队名称获取球队LOGO
+                            picUrl1 = TeamLogoMap[Team1];
+                        } else {
+                            // 若主队客队LOGO都不存在，则使用默认LOGO
+                            picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
+                        }
+                    }
+                    if(/集锦/.test(pdfh(it, 'h2&&Text'))){
+                        // 封装对象
+                        d.push({
+                            title: title1,
+                            desc: desc1,
+                            pic_url: picUrl1,
+                            url: url1
+                        });
+                    }
+                }
+            })
+        }
         else if(MY_CATE==='game'){
             if(MY_PAGE===1) {
                 html=request('http://www.88kanqiu.one/team/2390/live');
@@ -375,12 +463,11 @@ var rule = {
                         let picUrl1 = split[2]==='快船'?pd(it,'.team-logo&&src'):pd(it,'.col-xs-1 img&&src');
                         // 一级URL
                         let url1;
-                        if(/直播中|未开始/.test(pdfh(it, '.btn&&Text'))) {
-                            url1 = 'http://play.sportsteam356.com/' + split[2] + 'vs' + split[4];
+                        if(!/暂无/.test(pdfh(it, '.btn&&Text'))) {
+                            url1 = 'http://www.88kanqiu.one' + pdfh(it, '.btn&&href') + '|' + split[2] + 'vs' + split[4];
                         } else {
                             url1 = 'http://127.0.0.1';
                         }
-
                         d.push({
                             desc:desc1,
                             title:title1,
@@ -390,58 +477,6 @@ var rule = {
                     }
                 });
             }
-        }
-        else if(MY_CATE==='jijin'){
-            var cateId = MY_FL.cateId || '篮球屋';
-            html = request(HOST + '/e/search/result/index.php?page='+(MY_PAGE-1)+'&searchid=139_jijin');
-            var list = pdfa(html, '.content&&.excerpt');
-            list.forEach(it => {
-                // 通过" "进行截取
-                let split = pdfh(it, 'h2&&Text').split(" ");
-                // 一级标题
-                let title1 = split[2];
-                // 一级描述
-                let desc1 = split[0].replace('年','.').replace('月','.').replace('日','') + ' ' + split[1];
-                // 一级图片URL
-                let picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
-                // 一级URL
-                let url1 = pd(it, 'h2 a&&href');
-
-                let vsSplit = pdfh(it, 'h2&&Text').split("vs");
-                let vs1 = vsSplit[0].split(' ');
-                let vs2 = vsSplit[1].split(' ');
-                // 客队名称
-                let Team1 = vs1[vs1.length-1];
-                // 主队名称
-                let Team2 = vs2[0];
-                // 客队vs主队
-                let Team1vsTeam2 = Team1 + '🆚' + Team2;
-                if (/NBA/.test(pdfh(it, 'h2&&Text'))) {
-                    title1 = Team1vsTeam2;
-                    if(/集锦/.test(vs2[1])){
-                        title1 = Team1vsTeam2;
-                        picUrl1 = TeamLogoMap[Team1!=='快船'?Team1:Team2];
-                    } else if (TeamLogoMap[Team2] != null) {
-                        // 通过主队名称获取球队LOGO
-                        picUrl1 = TeamLogoMap[Team2];
-                    } else if (TeamLogoMap[Team1] != null) {
-                        // 通过客队名称获取球队LOGO
-                        picUrl1 = TeamLogoMap[Team1];
-                    } else {
-                        // 若主队客队LOGO都不存在，则使用默认LOGO
-                        picUrl1 = 'https://cdn.leisu.com/basketball/eventlogo/2021/01/22/FvabFeKVjHyOyva-Bo51rrTrOGao?imageMogr2/auto-orient/thumbnail/200x200%3E';
-                    }
-                }
-                if(/集锦/.test(pdfh(it, 'h2&&Text'))){
-                    // 封装对象
-                    d.push({
-                        title: title1,
-                        desc: desc1,
-                        pic_url: picUrl1,
-                        url: url1
-                    });
-                }
-            })
         }
         setResult(d);
     `,
@@ -506,87 +541,123 @@ var rule = {
         }
         else if(/vs/.test(input) && /快船/.test(input)) {
             // 播放列表拼接
-            var playListStr = '';
+            var playListStr_jrkan = '';
+            var playListStr_88kanqiu = '';
             var playListUrlStr = '';
             var playListStr_mg = '';
             var playListStr_tx = '';
             var playListStr_iqi = '';
             let playFrom = [];
             let playList = [];
+            
+            // 获取88看球直播源
+            var url_88kanqiu = input.split("|")[0];
+            var html_88kanqiu = request(url_88kanqiu);
+
+            let pdata = jsp.pdfh(html_88kanqiu, "#t&&value");
+            pdata = pdata.substring(6, pdata.length);
+            pdata = pdata.substring(0, (pdata.length) - 2)
+            pdata = base64Decode(pdata);
+            let playUrls_88kanqiu = JSON.parse(pdata).links;
+            
+            playUrls_88kanqiu.map(function(it) {
+                let name = it.name;
+                let playUrl = urlencode(it.url);
+                playListStr_88kanqiu = playListStr_88kanqiu + name + '$' + playUrl + '#';
+                playListUrlStr = playListUrlStr + name + '：' + it.url + '\\n';
+    
+                // 单独封装咪咕、腾讯、爱奇艺专线
+                if (/mglx.php|mgxl.php|gm.php/.test(playUrl)){
+                    playListStr_mg = playListStr_mg +'咪咕专线'+'$'+playUrl+'#';
+                }
+                else if (/i11.html/.test(playUrl)){
+                    playListStr_tx = playListStr_tx +'腾讯专线'+'$'+playUrl+'#';
+                }
+                else if (/iqi.php/.test(playUrl)){
+                    playListStr_iqi = playListStr_iqi +'爱奇艺专线'+'$'+playUrl+'#';
+                }
+            });
+            
+            // 获取JRKAN直播源
             var jrkan_html = request('http://www.jrsyyds.com/?lan=1');
             var tabs = pdfa(jrkan_html,'body&&.d-touch');
             tabs.forEach(function(it){
                 var pz = pdfh(it,'.name:eq(1)&&Text');
                 var pk = pdfh(it,'.name:eq(2)&&Text');
-                var vsTitle = input.replace('http://play.sportsteam356.com/','');
+                
+                var vsTitle = input.split("|")[1];
                 if(vsTitle === (pz+'vs'+pk)) {
-                    var url1 = pd(it,'a.me&&href');
-                    var jrkan_html_1 = request(url1);
-                    var playUrls = pdfa(jrkan_html_1, '.sub_playlist&&a');
+                    var jrkan_url = pd(it,'a.me&&href');
+                    var jrkan_html_1 = request(jrkan_url);
+                    var playUrls_jrkan = pdfa(jrkan_html_1, '.sub_playlist&&a');
 
-                    playUrls.map(function(it1) {
+                    playUrls_jrkan.map(function(it1) {
                         let name = pdfh(it1,'strong&&Text');
-                        let url = pd(it1,'a&&data-play');
+                        let url = 'http://play.sportsteam356.com' + pdfh(it1,'a&&data-play');
                         if (/sm.html/.test(url) && /id=262/.test(url)){
                             name = name.replace('主播解说','主播瑶妹');
                         }
-                        playListStr = playListStr + name+ '$' + url + '#';
+                        playListStr_jrkan = playListStr_jrkan + name+ '$' + url + '#';
                         playListUrlStr = playListUrlStr + name + '：' + url + '\\n';
 
                         // 单独封装咪咕、腾讯、爱奇艺专线
                         if (/mglx.php|mgxl.php|gm.php/.test(url)){
                             playListStr_mg = playListStr_mg + '咪咕专线'+'$'+url+'#';
                         }
-                        else if (/txycdn.video.qq.com/.test(url)){
-                            url = 'https://txycdn.video.qq.com' + url.split('txycdn.video.qq.com')[1];
+                        else if (/i11.html/.test(url)){
                             playListStr_tx = playListStr_tx + '腾讯专线'+'$'+url+'#';
                         }
                         else if (/iqi.php/.test(url)){
                             playListStr_iqi = playListStr_iqi + '爱奇艺专线'+'$'+url+'#';
                         }
                     });
-                    if(playListStr!=='') {
-                        playFrom.append('JRKAN直播');
-                        playList.append(playListStr);
-                    }
-                    if(playListStr_tx!=='') {
-                        playFrom.append('腾讯专线');
-                        playList.append(playListStr_tx);
-                    }
-                    if(playListStr_iqi!=='') {
-                        playFrom.append('爱奇艺专线');
-                        playList.append(playListStr_iqi);
-                    }
-                    if(playListStr_mg!=='') {
-                        playFrom.append('咪咕专线');
-                        playList.append(playListStr_mg);
-                    }
-                    VOD = {
-                        vod_name: pdfh(jrkan_html_1,'.lab_team_home&&Text') + '🆚' + pdfh(jrkan_html_1,'.lab_team_away&&Text'),
-                        vod_pic: pd(jrkan_html_1,'.lab_team_home img&&src'),
-                        type_name: pdfh(jrkan_html_1,'.lab_events&&Text'),
-                        vod_content: pdfh(jrkan_html_1,'.sub_list ul&&Text').replaceAll(' ', '_') + '\\n\\n' + playListUrlStr,
-                    };
-
-                    // 最后封装所有线路
-                    let vod_play_from = playFrom.join('$$$');
-                    let vod_play_url = playList.join('$$$');
-                    VOD['vod_play_from'] = vod_play_from;
-                    VOD['vod_play_url'] = vod_play_url;
                 }
             });
+            VOD = {
+                vod_name: pdfh(html_88kanqiu,'.team-name:eq(0)&&Text') + '🆚' + pdfh(html_88kanqiu,'.team-name:eq(1)&&Text'),
+                vod_pic: pd(html_88kanqiu,'.team-logo&&src'),
+                type_name: pdfh(html_88kanqiu,'.game-name&&Text'),
+                vod_content: pdfh(html_88kanqiu,'.col-md-4:eq(1)&&Text').replaceAll(' ', '_') + '\\n\\n' + playListUrlStr,
+            };
+            if(playListStr_jrkan!=='') {
+                playFrom.append('JRKAN直播');
+                playList.append(playListStr_jrkan);
+            }
+            if(playListStr_88kanqiu!=='') {
+                playFrom.append('88看球');
+                playList.append(playListStr_88kanqiu);
+            }
+            if(playListStr_tx!=='') {
+                playFrom.append('腾讯专线');
+                playList.append(playListStr_tx);
+            }
+            if(playListStr_iqi!=='') {
+                playFrom.append('爱奇艺专线');
+                playList.append(playListStr_iqi);
+            }
+            if(playListStr_mg!=='') {
+                playFrom.append('咪咕专线');
+                playList.append(playListStr_mg);
+            }
+            // 最后封装所有线路
+            let vod_play_from = playFrom.join('$$$');
+            let vod_play_url = playList.join('$$$');
+            VOD['vod_play_from'] = vod_play_from;
+            VOD['vod_play_url'] = vod_play_url;
         }
         else if(/88kanqiu/.test(input) && /replay/.test(input)) {
             var playUrls = pdfa(new_html, '.col-md-9&&p:gt(0)');
 
             let playFrom = [];
             let playList = [];
+            
             var playListStr = '';
             var playList_weibo = '';
             var playList_kuaiShou = '';
             var playList_cctv = '';
             var playList_tencent = '';
             var playList_migu = '';
+            var playList_zhibo8 = '';
             var playList_alipan = '';
             var playList_quark = '';
             var playList_wangpan = '';
@@ -702,6 +773,10 @@ var rule = {
                 else if (/miguvideo/.test(url)){
                     playList_migu = playList_migu + name + '$' + url + '#';
                 }
+                // 单独封装直播吧源
+                else if (/duoduocdn|zhibo8/.test(url)){
+                    playList_zhibo8 = playList_zhibo8 + name + '$' + url + '#';
+                }
                 // 单独封装阿里云盘
                 else if (/alipan/.test(url) || /阿里云盘/.test(name)){
                     playList_alipan = playList_alipan + name + '$' + url + '#';
@@ -746,6 +821,10 @@ var rule = {
                 playFrom.append('咪咕');
                 playList.append(playList_migu);
             }
+            if(playList_zhibo8!=='') {
+                playFrom.append('直播吧');
+                playList.append(playList_zhibo8);
+            }
             if(playList_alipan!=='') {
                 playFrom.append('阿里云盘');
                 playList.append(playList_alipan);
@@ -769,7 +848,7 @@ var rule = {
             VOD['vod_play_from'] = vod_play_from;
             VOD['vod_play_url'] = vod_play_url;
         }
-        else{
+        else if(/lanqiuwu|itiyu/.test(input)) {
             VOD = {
                 vod_name: pdfh(new_html,'.article-header h2&&Text')
             };
@@ -777,11 +856,13 @@ var rule = {
 
             let playFrom = [];
             let playList = [];
+            
             var playListStr = '';
             var playList_weibo = '';
             var playList_cctv = '';
             var playList_tencent = '';
             var playList_migu = '';
+            var playList_douyin = '';
 
             playUrls.map(function(it) {
                 let name = pdfh(it,'a&&Text');
@@ -875,7 +956,11 @@ var rule = {
                 else if (/miguvideo/.test(url)){
                     playList_migu = playList_migu + name + '$' + url + '#';
                 }
-                else if (url==='' || name==='本场技术统计' || url==='undefined' || /lanqiuwu/.test(url)){
+                // 单独封装抖音源
+                else if (/douyin/.test(url)){
+                    playList_douyin = playList_douyin + name + '$' + url + '#';
+                }
+                else if (url==='' || name==='本场技术统计' || url==='undefined' || /lanqiuwu|itiyu|98lanqiu|lanqiudi/.test(url)){
                 }
                 else {
                     playListStr = playListStr + name + '$' + url + '#';
@@ -897,11 +982,19 @@ var rule = {
                 playFrom.append('咪咕');
                 playList.append(playList_migu);
             }
+            if(playList_douyin!=='') {
+                playFrom.append('抖音');
+                playList.append(playList_douyin);
+            }
             if(playListStr!=='') {
-                playFrom.append('篮球屋');
+                if(/lanqiuwu/.test(input)) {
+                    playFrom.append('篮球屋');
+                }
+                if(/itiyu/.test(input)) {
+                    playFrom.append('i体育');
+                }
                 playList.append(playListStr);
             }
-
             // 最后封装所有线路
             let vod_play_from = playFrom.join('$$$');
             let vod_play_url = playList.join('$$$');
