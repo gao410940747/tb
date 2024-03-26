@@ -7,15 +7,15 @@ var rule = {
     // class_name:'篮球屋录像&NBA录像&NBA集锦&NBA十佳球&CBA录像&CBA集锦&其他篮球录像&直播吧视频&88比赛录像',
     // class_url:'lanqiuwu&nbalx&nbajijin&nbatop10&cbalx&cbajijin&lanqiulx&zhibo8&88replay',
     // class_parse:'.nav-pills li;a&&Text;a&&href;/match/(\\d+)/replay',
-    class_name:'88比赛录像&篮球屋&i体育&NBA录像&直播吧&CCTV5直播吧',
-    class_url:'88replay&lanqiuwu&itiyu&nbareplay&zhibo8&cctv5zhibo',
+    class_name:'88比赛录像&篮球屋&i体育&点播源&直播吧&CCTV5直播吧',
+    class_url:'88replay&lanqiuwu&itiyu&vod&zhibo8&cctv5zhibo',
     filterable: 1,
     filter_url: '{{fl.cateId}}',
     filter: {
         "88replay":[{"key":"cateId","name":"分类","value":[{"n":"全部","v":"全部"},{"n":"NBA","v":"1"},{"n":"CBA","v":"2"},{"n":"篮球综合","v":"4"},{"n":"足球世界杯","v":"3"},{"n":"英超","v":"8"},{"n":"西甲","v":"9"},{"n":"意甲","v":"10"},{"n":"欧冠","v":"12"},{"n":"欧联","v":"13"},{"n":"德甲","v":"14"},{"n":"法甲","v":"15"},{"n":"欧国联","v":"16"},{"n":"足总杯","v":"27"},{"n":"国王杯","v":"33"},{"n":"中超","v":"7"},{"n":"亚冠","v":"11"},{"n":"足球综合","v":"23"},{"n":"欧协联","v":"28"},{"n":"美职联","v":"26"},{"n":"网球","v":"29"},{"n":"斯诺克","v":"30"},{"n":"MLB","v":"38"},{"n":"UFC","v":"32"},{"n":"NFL","v":"25"}]}],
         "lanqiuwu":[{"key":"cateId","name":"分类","value":[{"n":"NBA录像","v":"nbalx"},{"n":"NBA集锦","v":"nbajijin"},{"n":"NBA十佳球","v":"nbatop10"},{"n":"CBA录像","v":"cbalx"},{"n":"CBA集锦","v":"cbajijin"},{"n":"其他篮球录像","v":"lanqiulx"}]}],
         "itiyu":[{"key":"cateId","name":"分类","value":[{"n":"NBA录像","v":"nbalx"},{"n":"NBA集锦","v":"nbajijin"},{"n":"NBA十佳球","v":"nbatop10"},{"n":"CBA录像","v":"cbalx"},{"n":"CBA集锦","v":"cbajijin"},{"n":"足球录像","v":"zuqiu"},{"n":"足球集锦","v":"zuqiujijin"},{"n":"综合录像","v":"zonghe"},{"n":"其他录像","v":"lanqiuluxiang"}]}],
-        "nbareplay":[{"key":"cateId","name":"分类","value":[{"n":"量子源","v":"量子源"},{"n":"天空源","v":"天空源"},{"n":"飞速源","v":"飞速源"}]}],
+        "vod":[{"key":"cateId","name":"分类","value":[{"n":"量子源NBA","v":"量子源NBA"},{"n":"量子源篮球","v":"量子源38"},{"n":"量子源足球","v":"量子源37"},{"n":"量子源网球","v":"量子源39"},{"n":"量子源斯诺克","v":"量子源40"},{"n":"天空源","v":"天空源"},{"n":"天空源NBA","v":"天空源NBA"},{"n":"飞速源","v":"飞速源"},{"n":"飞速源NBA","v":"飞速源NBA"}]}],
         "zhibo8":[{"key":"cateId","name":"分类","value":[{"n":"全部","v":"全部"},{"n":"快船","v":"快船"},{"n":"太阳","v":"太阳"},{"n":"湖人","v":"湖人"}]}]
     },
     headers:{
@@ -521,26 +521,38 @@ var rule = {
                 });
             });
         }
-        else if(MY_CATE==='nbareplay'){
-            var cateId = MY_FL.cateId || '量子源';
+        else if(MY_CATE==='vod'){
+            var cateId = MY_FL.cateId || '量子源NBA';
             
             var vodList = '';
             var vodDetail = '';
             
-            if(cateId==='量子源'){
-                vodList = 'https://cj.lzcaiji.com/api.php/provide/vod/?pg=';
+            if(cateId==='量子源NBA'){
+                vodList = 'https://cj.lzcaiji.com/api.php/provide/vod/?wd=NBA&pg=';
+                vodDetail = 'https://cj.lzcaiji.com/api.php/provide/vod/?ac=detail&ids=';
+            }
+            else if(cateId==='天空源NBA'){
+                vodList = 'https://tiankongzy.com/api.php/provide/vod/?wd=NBA&pg=';
+                vodDetail = 'https://tiankongzy.com/api.php/provide/vod/?ac=detail&ids=';
+            }
+            else if(cateId==='飞速源NBA'){
+                vodList = 'https://www.feisuzy.com/api.php/provide/vod/?wd=NBA&pg=';
+                vodDetail = 'https://www.feisuzy.com/api.php/provide/vod/?ac=detail&ids=';
+            }
+            else if(/量子源/.test(cateId)){
+                vodList = 'https://cj.lziapi.com/api.php/provide/vod/?t='+cateId.replace('量子源','')+'&ac=detail&pg=';
                 vodDetail = 'https://cj.lzcaiji.com/api.php/provide/vod/?ac=detail&ids=';
             }
             else if(cateId==='天空源'){
-                vodList = 'https://tiankongzy.com/api.php/provide/vod/?pg=';
+                vodList = 'https://tiankongzy.com/api.php/provide/vod/?t=42&ac=detail&pg=';
                 vodDetail = 'https://tiankongzy.com/api.php/provide/vod/?ac=detail&ids=';
             }
             else if(cateId==='飞速源'){
-                vodList = 'https://www.feisuzy.com/api.php/provide/vod/?pg=';
+                vodList = 'https://www.feisuzy.com/api.php/provide/vod/?t=38&ac=detail&pg=';
                 vodDetail = 'https://www.feisuzy.com/api.php/provide/vod/?ac=detail&ids=';
             }
             
-            var list1 = JSON.parse(request(vodList+MY_PAGE+'&wd=NBA')).list;
+            var list1 = JSON.parse(request(vodList+MY_PAGE)).list;
 
             var ids = '';
             list1.forEach(it => {
@@ -555,39 +567,44 @@ var rule = {
                 var list2 = JSON.parse(request(vodDetail+ids)).list;
                 list2.forEach(it => {
                 
-                    // 客队vs主队
-                    let Team1vsTeam2 = '';
+                    // 一级标题
+                    let title1 = it.vod_name;
                     // 一级描述
                     let desc1 = '';
-                    
-                    if(cateId==='量子源'){
-                        // 客队vs主队
-                        Team1vsTeam2 = it.vod_name.split(' ')[1].substring(0, it.vod_name.split(' ')[1].length-8).replace('VS', '🆚').replace('vs', '🆚');
-                        // 一级描述
-                        desc1 = it.vod_name.substring(it.vod_name.length-8, it.vod_name.length);
-                    }
-                    if(cateId==='天空源' || cateId==='飞速源'){
-                        // 客队vs主队
-                        let title2 = it.vod_name.split(' ')[2];
-                        Team1vsTeam2 = title2.replace('VS', '🆚').replace('vs', '🆚');
-                        if(/：/.test(title2)) {
-                            Team1vsTeam2 = title2.split('：')[1].replace('VS', '🆚').replace('vs', '🆚');
-                        }
-                        // 一级描述
-                        desc1 = it.vod_name.split(' ')[0] + ' ' + it.vod_name.split(' ')[1];
-                    }
-                    
-                    // 客队名称
-                    let Team1 = Team1vsTeam2.split("🆚")[0];
-                    // 主队名称
-                    let Team2 = Team1vsTeam2.split("🆚")[1];
-
-                    // 一级标题
-                    let title1 = Team1vsTeam2;
                     // 一级图片URL
-                    let picUrl1 = TeamLogoMap[Team2];
+                    let picUrl1 = it.vod_pic;
                     // 一级URL
                     let url1 = vodDetail + it.vod_id;
+                    
+                    if(/NBA/.test(cateId)){
+                        // 客队vs主队
+                        let Team1vsTeam2 = '';
+                        
+                        if(cateId==='量子源NBA'){
+                            // 客队vs主队
+                            Team1vsTeam2 = it.vod_name.split(' ')[1].substring(0, it.vod_name.split(' ')[1].length-8).replace('VS', '🆚').replace('vs', '🆚');
+                            // 一级描述
+                            desc1 = it.vod_name.substring(it.vod_name.length-8, it.vod_name.length);
+                        }
+                        if(cateId==='天空源NBA' || cateId==='飞速源NBA'){
+                            // 客队vs主队
+                            let title2 = it.vod_name.split(' ')[2];
+                            Team1vsTeam2 = title2.replace('VS', '🆚').replace('vs', '🆚');
+                            if(/：/.test(title2)) {
+                                Team1vsTeam2 = title2.split('：')[1].replace('VS', '🆚').replace('vs', '🆚');
+                            }
+                            // 一级描述
+                            desc1 = it.vod_name.split(' ')[0] + ' ' + it.vod_name.split(' ')[1];
+                        }
+                        // 客队名称
+                        let Team1 = Team1vsTeam2.split("🆚")[0];
+                        // 主队名称
+                        let Team2 = Team1vsTeam2.split("🆚")[1];
+                        // 一级标题
+                        title1 = Team1vsTeam2;
+                        // 一级图片URL
+                        picUrl1 = TeamLogoMap[Team2];
+                    }
 
                     // 封装对象
                     items.push({

@@ -165,6 +165,7 @@ var rule = {
                 let cateId = MY_FL.cateId || 'nba';
                 html=request('http://www.jrsyyds.com/?lan=1');
                 var tabs=pdfa(html,'body&&.d-touch');
+                var items2 = [];
                 tabs.forEach(function(it){
                     var pz=pdfh(it,'.name:eq(1)&&Text');
                     var ps=pdfh(it,'.name:eq(0)&&Text');
@@ -200,7 +201,16 @@ var rule = {
                             });
                         }
                     }
+                    items2.push({
+                        desc:timer+' '+ps,
+                        title:pz+'🆚'+pk,
+                        pic_url:img,
+                        url:url + '|' + 'jrkan'
+                    });
                 });
+                if(items.length===0) {
+                    items = items2;
+                }
             }
             else if(MY_CATE==='310'){
                 let cateId = MY_FL.cateId || '2';
